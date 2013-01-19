@@ -1,0 +1,31 @@
+---
+layout: base
+---
+
+	<header class="container">
+		<div class="row-fluid">
+	  		<span class="offset1">
+	  			<a href="http://www.wholewheattoast.com/">wholewheattoast</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.wholewheattoast.com/sketchbooks.html">sketchbooks</a>&nbsp;&nbsp;|&nbsp;&nbsp;{{ page.title }}
+	  		</span>
+		</div>
+  	</header>
+	
+	<article class="container">
+		
+		<div class="row-fluid">
+	    	<div class="span10 offset1">
+		    	{{ content }}
+	    	</div>
+		</div>
+		
+    </article>
+    
+    <footer class="container">
+    	<div class="row-fluid">
+	    	<nav class="span10 offset1">
+			    <a href="{{ page.prev-page }}">prev</a>
+			    &nbsp;&nbsp;
+			    <a href="{{ page.next-page }}">next</a>
+	    	</nav>
+    	</div>
+    </footer>
