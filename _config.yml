@@ -8,8 +8,7 @@ url: http://localhost:4000
 source:      ./_posts/
 destination: ./_site
 plugins:     ./_plugins
-
-exclude: ./_site/stylesheets
+includes:     ./_includes
 
 future:      false
 lsi:         false

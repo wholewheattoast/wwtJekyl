@@ -1,6 +1,10 @@
 ---
 layout: base
+title: wwt recent
+description: whatever i'm working on at the moment.  subject to change
 ---
+
+{% include menu.ext %}
 
 <div class="row-fluid">
 	<div class="span3">
