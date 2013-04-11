@@ -1,4 +1,98 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* New sass for wholewheattoast
+** Shawn Eisenach
+*/
+/* line 6, ../../sass/screen.scss */
+body {
+  margin: 1em 0 1em;
+  font-size: 1em;
+}
+
+/* Custom container */
+/* line 12, ../../sass/screen.scss */
+.container-narrow {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* line 17, ../../sass/screen.scss */
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* line 21, ../../sass/screen.scss */
+.logo {
+  margin: .5em 0;
+}
+
+/* line 25, ../../sass/screen.scss */
+.siteNav {
+  width: 20em;
+  margin: 0 auto;
+}
+
+/* line 30, ../../sass/screen.scss */
+.bottom-padding {
+  padding-bottom: 1em;
+}
+
+/* bootstrap overrides */
+/* carosel */
+/* line 38, ../../sass/screen.scss */
+.carousel-control {
+  border: 0 solid white;
+}
+
+/* Sketchbooks
+==============================*/
+/* line 45, ../../sass/screen.scss */
+.sketchbook_container {
+  min-height: 713px;
+}
+
+/* Media Querries
+============================================== */
+/* 480px Smartphones */
+@media (max-width: 480px) {
+  /* line 56, ../../sass/screen.scss */
+  body {
+    overflow: hidden;
+    /*padding: 1em .25em 2em 1.25em; */
+  }
+
+  /* line 61, ../../sass/screen.scss */
+  h3 {
+    font-size: 1.25em;
+  }
+
+  /* line 63, ../../sass/screen.scss */
+  ul.inline > li, ol.inline > li {
+    display: inline-block;
+    padding-right: .125em;
+    padding-left: .125em;
+  }
+
+  /* line 69, ../../sass/screen.scss */
+  .container-narrow {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* line 75, ../../sass/screen.scss */
+  .container-narrow > hr {
+    margin: 1.25em 0;
+  }
+
+  /* line 78, ../../sass/screen.scss */
+  li {
+    padding-bottom: .5em;
+  }
+}
+/* 767 "smartphones and small tablets
+========================================= */
+/* 768 Portrait tablets
+========================================= */
+/* ~1100px
+========================================= */
+/*retnia
+========================================= */
