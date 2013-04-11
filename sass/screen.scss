@@ -1,115 +1,54 @@
 /* New sass for wholewheattoast
 ** Shawn Eisenach
 */
- 
 
-body {
-	margin: 1em 0 1em;
-	font-size: 1em;
-}
+/* Variabls
+==============================*/
+$font-size: 1em;
+$baseFontFamily: Helvetica, sans-serif;
+$background-color: #fafaf5;
 
- /* Custom container */
-.container-narrow {
-	margin: 0 auto;
-	max-width: 700px;
-}
+$success-green: #29B473;
 
-.container-narrow > hr {
-	margin: 30px 0;
-}
+$link-color: black;  /* change this */
 
-.logo {
-	margin: .5em 0;
-}
+/* helpers
+==============================*/
 
-.siteNav {
-	width: 20em;
-	margin: 0 auto;
-	}
-	
-.bottom-padding {
+#custom .bottom-padding {
 	padding-bottom: 1em;
 }
 
-/* bootstrap overrides */
+/* bootstrap overrides
+==============================*/
 
-/* carosel */
+/* main
+==============================*/
 
-.carousel-control {
-	border: 0 solid white;
+body {
+	font-size: $font-size;
+	background-color: $background-color;
 }
+
+#custom a {
+	color: $link-color;
+	font-weight: bold;
+}
+
+#custom a:hover {
+	text-decoration: underline;
+}
+
+
 
 /* Sketchbooks
 ==============================*/
 
-.sketchbook_container {
-	min-height: 713px;
-}
+/* About
+==============================*/
 
-	
-/* Media Querries
-============================================== */
 
-	/* 480px Smartphones */
-	@media (max-width: 480px) {
-		
-		body {
-			overflow: hidden;
-			/*padding: 1em .25em 2em 1.25em; */
-		}
-		
-		h3 { font-size: 1.25em; }
-		
-		ul.inline > li, ol.inline > li {
-			display: inline-block;
-			padding-right: .125em;
-			padding-left: .125em;
-			}
-		
-		.container-narrow {
-			width: 100%;
-			margin-right: auto;
-			margin-left: auto;
-		}
-		
-		.container-narrow > hr {
-			margin: 1.25em 0;
-		}
-		li { padding-bottom: .5em; }
-		
-		}
-	
-	/* 767 "smartphones and small tablets
-	========================================= */
-	
-	@media (max-width: 767px) {
-		
-		
-	}
-	
-	/* 768 Portrait tablets
-	========================================= */
-	
-	@media (min-width: 768px) and (max-width: 979px) {
-		
-	 }
-	
-	@media (max-width: 1199px) {
-		}
-	
-	/* ~1100px
-	========================================= */
-	@media (min-width: 970px) and (max-width: 1200px) {		}
-	
-	
-	/*retnia
-	========================================= */
-		
-		
-	@media
-	screen and (-webkit-min-device-pixel-ratio : 1.5),
-	screen and (min-device-pixel-ratio : 1.5) {		}
-	
-	@media
-	only screen and (-webkit-min-device-pixel-ratio : 1.5) and (max-width: 480px),
-	only screen and (min-device-pixel-ratio : 1.5) and (max-width: 480px) {  }
+/* Works
+==============================*/
+
+@import "media-queries";

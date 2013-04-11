@@ -1,89 +1,78 @@
 /* New sass for wholewheattoast
 ** Shawn Eisenach
 */
-/* line 6, ../sass/screen.scss */
-body {
-  margin: 1em 0 1em;
-  font-size: 1em;
-}
-
-/* Custom container */
-/* line 12, ../sass/screen.scss */
-.container-narrow {
-  margin: 0 auto;
-  max-width: 700px;
-}
-
-/* line 17, ../sass/screen.scss */
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* line 21, ../sass/screen.scss */
-.logo {
-  margin: .5em 0;
-}
-
-/* line 25, ../sass/screen.scss */
-.siteNav {
-  width: 20em;
-  margin: 0 auto;
-}
-
-/* line 30, ../sass/screen.scss */
-.bottom-padding {
+/* Variabls
+==============================*/
+/* change this */
+/* helpers
+==============================*/
+/* line 18, ../sass/screen.scss */
+#custom .bottom-padding {
   padding-bottom: 1em;
 }
 
-/* bootstrap overrides */
-/* carosel */
+/* bootstrap overrides
+==============================*/
+/* main
+==============================*/
+/* line 28, ../sass/screen.scss */
+body {
+  font-size: 1em;
+  background-color: #fafaf5;
+}
+
+/* line 33, ../sass/screen.scss */
+#custom a {
+  color: black;
+  font-weight: bold;
+}
+
 /* line 38, ../sass/screen.scss */
-.carousel-control {
-  border: 0 solid white;
+#custom a:hover {
+  text-decoration: underline;
 }
 
 /* Sketchbooks
 ==============================*/
-/* line 45, ../sass/screen.scss */
-.sketchbook_container {
-  min-height: 713px;
-}
-
+/* About
+==============================*/
+/* Works
+==============================*/
 /* Media Querries
 ============================================== */
 /* 480px Smartphones */
 @media (max-width: 480px) {
-  /* line 56, ../sass/screen.scss */
+  /* line 7, ../sass/_media-queries.scss */
   body {
     overflow: hidden;
     /*padding: 1em .25em 2em 1.25em; */
   }
 
-  /* line 61, ../sass/screen.scss */
+  /* line 12, ../sass/_media-queries.scss */
   h3 {
     font-size: 1.25em;
   }
 
-  /* line 63, ../sass/screen.scss */
+  /* line 14, ../sass/_media-queries.scss */
   ul.inline > li, ol.inline > li {
     display: inline-block;
     padding-right: .125em;
     padding-left: .125em;
   }
 
-  /* line 69, ../sass/screen.scss */
+  /* line 20, ../sass/_media-queries.scss */
   .container-narrow {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
 
-  /* line 75, ../sass/screen.scss */
+  /* line 26, ../sass/_media-queries.scss */
   .container-narrow > hr {
     margin: 1.25em 0;
   }
 
-  /* line 78, ../sass/screen.scss */
+  /* line 30, ../sass/_media-queries.scss */
   li {
     padding-bottom: .5em;
   }
