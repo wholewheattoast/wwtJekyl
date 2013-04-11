@@ -1,5 +1,5 @@
 safe:        false
-auto:        false
+auto:        true
 server:      false
 server_port: 4000
 baseurl:    /
@@ -9,7 +9,9 @@ source:      ./_posts/
 destination: ./_site
 plugins:     ./_plugins
 
-future:      true
+exclude: ./_site/stylesheets
+
+future:      false
 lsi:         false
 pygments:    false
 markdown:    maruku
