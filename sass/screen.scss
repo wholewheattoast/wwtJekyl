@@ -7,6 +7,7 @@
 $font-size: 1em;
 $baseFontFamily: Helvetica, sans-serif;
 $background-color: #fafaf5;
+$masthead-accent-color: black;
 
 $success-green: #29B473;
 
@@ -16,11 +17,14 @@ $link-color: black;  /* change this */
 ==============================*/
 
 #custom .bottom-padding {
-	padding-bottom: 1em;
+	padding-bottom: 1.5dem;
 }
+
+.tight { margin: 0; }
 
 /* bootstrap overrides
 ==============================*/
+.row-fluid, .row { margin-bottom: 1.25em; }
 
 /* main
 ==============================*/
@@ -39,7 +43,15 @@ body {
 	text-decoration: underline;
 }
 
-
+/* Masthead
+==============================*/
+.masthead { 
+	background-color: $masthead-accent-color;
+	margin-bottom: 1.75em;
+	h1 { padding-bottom: .25em; }
+	.row, .row-fluid { margin-bottom: 0; }
+	.span8 { background-color: $background-color; }
+	}
 
 /* Sketchbooks
 ==============================*/
