@@ -62,15 +62,20 @@ body {
   background-color: #fafaf5;
 }
 
+/* line 55, ../../sass/screen.scss */
+.small-masthead {
+  margin-top: 2em;
+}
+
 /* Sketchbooks
 ==============================*/
 /* About
 ==============================*/
-/* line 61, ../../sass/screen.scss */
+/* line 64, ../../sass/screen.scss */
 .about-dent {
   margin-bottom: 2.5em;
 }
-/* line 62, ../../sass/screen.scss */
+/* line 65, ../../sass/screen.scss */
 .about-dent p {
   font-size: 1.125em;
 }
