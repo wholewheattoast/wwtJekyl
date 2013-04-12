@@ -61,8 +61,12 @@ body {
 .masthead .span8 {
   background-color: #fafaf5;
 }
+/* line 54, ../../sass/screen.scss */
+.masthead ul {
+  margin: 0;
+}
 
-/* line 55, ../../sass/screen.scss */
+/* line 56, ../../sass/screen.scss */
 .small-masthead {
   margin-top: 2em;
 }
@@ -71,11 +75,11 @@ body {
 ==============================*/
 /* About
 ==============================*/
-/* line 64, ../../sass/screen.scss */
+/* line 65, ../../sass/screen.scss */
 .about-dent {
   margin-bottom: 2.5em;
 }
-/* line 65, ../../sass/screen.scss */
+/* line 66, ../../sass/screen.scss */
 .about-dent p {
   font-size: 1.125em;
 }
