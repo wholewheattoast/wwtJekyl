@@ -66,6 +66,15 @@ body {
 ==============================*/
 /* About
 ==============================*/
+/* line 61, ../../sass/screen.scss */
+.about-dent {
+  margin-bottom: 2.5em;
+}
+/* line 62, ../../sass/screen.scss */
+.about-dent p {
+  font-size: 1.125em;
+}
+
 /* Works
 ==============================*/
 /* Media Querries
