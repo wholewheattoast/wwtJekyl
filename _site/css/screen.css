@@ -97,30 +97,40 @@ body {
   }
 
   /* line 12, ../../sass/_media-queries.scss */
+  .masthead {
+    background-color: #fafaf5;
+  }
+
+  /* line 14, ../../sass/_media-queries.scss */
+  h1 {
+    font-size: 2em;
+  }
+
+  /* line 16, ../../sass/_media-queries.scss */
   h3 {
     font-size: 1.25em;
   }
 
-  /* line 14, ../../sass/_media-queries.scss */
+  /* line 18, ../../sass/_media-queries.scss */
   ul.inline > li, ol.inline > li {
     display: inline-block;
     padding-right: .125em;
     padding-left: .125em;
   }
 
-  /* line 20, ../../sass/_media-queries.scss */
+  /* line 24, ../../sass/_media-queries.scss */
   .container-narrow {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
 
-  /* line 26, ../../sass/_media-queries.scss */
+  /* line 30, ../../sass/_media-queries.scss */
   .container-narrow > hr {
     margin: 1.25em 0;
   }
 
-  /* line 30, ../../sass/_media-queries.scss */
+  /* line 34, ../../sass/_media-queries.scss */
   li {
     padding-bottom: .5em;
   }
