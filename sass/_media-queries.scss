@@ -1,6 +1,12 @@
 /* Media Querries
 ============================================== */
 
+	/* height
+	===================================== */
+	@media (max-height: 670px) {
+		.sketchbook_container { margin-top: 2em; }
+	}
+
 	/* 480px Smartphones */
 	@media (max-width: 480px) {
 		
