@@ -4,7 +4,8 @@
 	/* height
 	===================================== */
 	@media (max-height: 670px) {
-		.sketchbook_container { margin-top: 2em; }
+		.sketchbook_container { margin-top: 1em; }
+		#sketchbook_page .row-fluid { margin-bottom: 0; }
 	}
 
 	/* 480px Smartphones */

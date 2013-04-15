@@ -98,52 +98,57 @@ body {
 @media (max-height: 670px) {
   /* line 7, ../../sass/_media-queries.scss */
   .sketchbook_container {
-    margin-top: 2em;
+    margin-top: 1em;
+  }
+
+  /* line 8, ../../sass/_media-queries.scss */
+  #sketchbook_page .row-fluid {
+    margin-bottom: 0;
   }
 }
 /* 480px Smartphones */
 @media (max-width: 480px) {
-  /* line 13, ../../sass/_media-queries.scss */
+  /* line 14, ../../sass/_media-queries.scss */
   body {
     overflow: hidden;
     /*padding: 1em .25em 2em 1.25em; */
   }
 
-  /* line 18, ../../sass/_media-queries.scss */
+  /* line 19, ../../sass/_media-queries.scss */
   .masthead {
     background-color: #fafaf5;
   }
 
-  /* line 20, ../../sass/_media-queries.scss */
+  /* line 21, ../../sass/_media-queries.scss */
   h1 {
     font-size: 2em;
   }
 
-  /* line 22, ../../sass/_media-queries.scss */
+  /* line 23, ../../sass/_media-queries.scss */
   h3 {
     font-size: 1.25em;
   }
 
-  /* line 24, ../../sass/_media-queries.scss */
+  /* line 25, ../../sass/_media-queries.scss */
   ul.inline > li, ol.inline > li {
     display: inline-block;
     padding-right: .125em;
     padding-left: .125em;
   }
 
-  /* line 30, ../../sass/_media-queries.scss */
+  /* line 31, ../../sass/_media-queries.scss */
   .container-narrow {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
 
-  /* line 36, ../../sass/_media-queries.scss */
+  /* line 37, ../../sass/_media-queries.scss */
   .container-narrow > hr {
     margin: 1.25em 0;
   }
 
-  /* line 40, ../../sass/_media-queries.scss */
+  /* line 41, ../../sass/_media-queries.scss */
   li {
     padding-bottom: .5em;
   }
