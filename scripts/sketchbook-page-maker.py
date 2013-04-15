@@ -19,7 +19,7 @@ spreads = pages // 2
 left_page = 1
 right_page = 2
 
-index_meta = "index-page: " + str(sketchbook_name) + "-index.html"
+index_meta = "index-page: " "index.html"
 
 #images
 img_width = 'width="' + raw_input('Image width? ') + '"'
@@ -69,7 +69,7 @@ while counter == 1:
 	name_of = working_directory_path + sketchbook_name + "/" + sketchbook_name + "-front-cover" + ".html"
 	next_page_meta = """next-page: """ + output_directory_path + "/" + sketchbook_name + """-pp-""" + str(left_page) + """-""" + str(right_page) +  """.html"""
 	next_page_url = sketchbook_name + """-pp-""" + str(left_page) + """-""" + str(right_page) +  """.html"""
-	prev_page_meta = """prev-page: """ + output_domain + "/sketchbooks.html"
+	prev_page_meta = """prev-page: """ + "index.html"
 	title_string = title_string_prepend + " " + "Front Cover"
 	front_cover = write_to_file(name_of, title_string, next_page_url, next_page_meta, prev_page_meta, img_url)
 	counter += 1
@@ -108,7 +108,7 @@ while counter == (spreads + 2):
 	img_url = """<img """ + img_classes + 'src="' + output_directory_path + """/image/""" + sketchbook_name + """-back-cover.jpg" alt=" """ + sketchbook_name + """ sketchbook back cover" """ + img_width +" " + img_height + """>"""
 	name_of = working_directory_path + sketchbook_name + "/" + sketchbook_name + "-back-cover" + ".html"
 	next_page_url = sketchbook_name + "-front-cover" + ".html"
-	next_page_meta = """next-page: """ + output_directory_path + "/" + sketchbook_name + "-front-cover" + ".html"
+	next_page_meta = """next-page: """ + output_directory_path + "/index.html"
 	prev_page_meta = """prev-page: """ + output_directory_path + "/" + sketchbook_name + """-pp-""" + str(left_page) + """-""" + str(right_page) +  """.html"""
 	title_string = title_string_prepend + " " + "Back Cover"
 	back_cover = write_to_file(name_of, title_string, next_page_url, next_page_meta, prev_page_meta, img_url)
