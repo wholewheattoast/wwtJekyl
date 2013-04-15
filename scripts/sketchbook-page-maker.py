@@ -3,7 +3,7 @@
 import os
 
 #name and path
-working_directory_path = "/Users/shawn/Dropbox/Sites/wwtJekyl/_posts/sketchbook/"
+working_directory_path = "/Users/shawn/Dropbox/Sites/wwtJekyl/_posts/sketchbooks/"
 output_directory_path = "."
 output_domain = "http://www.wholewheattoast.com/"
 sketchbook_name = raw_input('Enter sketchbook name: ')
@@ -18,6 +18,8 @@ pages = int(pagesInput)
 spreads = pages // 2
 left_page = 1
 right_page = 2
+
+index_meta = "index-page: " + str(sketchbook_name) + "-index.html"
 
 #images
 img_width = 'width="' + raw_input('Image width? ') + '"'
@@ -40,6 +42,8 @@ def write_to_file(name_of, title_string, next_page_url, next_page_meta, prev_pag
 	f.write("description:")
 	f.write('\n')
 	f.write("tags: sketchbook, moleskine")
+	f.write('\n')
+	f.write(index_meta)
 	f.write('\n')
 	f.write(next_page_meta)
 	f.write('\n')

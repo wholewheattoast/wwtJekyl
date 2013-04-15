@@ -2,7 +2,7 @@
 layout: base
 ---
 	
-	<article class="container">
+	<div class="container" id="sketchbook_page">
 		
 		<div class="row-fluid">
 			<div class="span4">
@@ -14,7 +14,7 @@ layout: base
 	    	</div>
 		</div>
 		
-    </article>
+    </div>
     
     <footer>
     	<div class="row-fluid">
@@ -23,6 +23,8 @@ layout: base
 	    	</div>
 	    	<nav class="span4">
 			    <div class="pull-right">
+			    	<a href="{{ page.index-page }}">index</a>
+			    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			    	<a href="{{ page.prev-page }}">prev</a>
 			    	&nbsp;&nbsp;
 			    	<a href="{{ page.next-page }}">next</a>
