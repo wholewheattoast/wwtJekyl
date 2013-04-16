@@ -4,3 +4,5 @@ _posts/.DS_Store
 *.scssc
 
 .DS_Store
+
+mint/config/db.php
