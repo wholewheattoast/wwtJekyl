@@ -9,6 +9,7 @@ output_domain = "http://www.wholewheattoast.com/"
 sketchbook_name = raw_input('Enter sketchbook name: ')
 title_string_prepend = """title: """ + str(sketchbook_name)
 directory = working_directory_path + sketchbook_name
+img_dir_location = "./image/sketchbooks/"
 
 
 #pages
@@ -65,7 +66,7 @@ if not os.path.exists(directory):
     os.makedirs(directory)
 
 while counter == 1:
-	img_url = """<img """ + img_classes + 'src="' + output_directory_path + """/image/""" + sketchbook_name + """-front-cover.jpg" alt=" """ + sketchbook_name + """ sketchbook front cover" """ + img_width + " " + img_height + """>"""
+	img_url = """<img """ + img_classes + 'src="' + img_dir_location + sketchbook_name + """-front-cover.jpg" alt=" """ + sketchbook_name + """ sketchbook front cover" """ + img_width + " " + img_height + """>"""
 	name_of = working_directory_path + sketchbook_name + "/" + sketchbook_name + "-front-cover" + ".html"
 	next_page_meta = """next-page: """ + output_directory_path + "/" + sketchbook_name + """-pp-""" + str(left_page) + """-""" + str(right_page) +  """.html"""
 	next_page_url = sketchbook_name + """-pp-""" + str(left_page) + """-""" + str(right_page) +  """.html"""
@@ -74,7 +75,7 @@ while counter == 1:
 	front_cover = write_to_file(name_of, title_string, next_page_url, next_page_meta, prev_page_meta, img_url)
 	counter += 1
 while counter == 2:
-	img_url = """<img """ + img_classes + 'src="' + output_directory_path + """/image/""" + sketchbook_name + """-pp-""" + str(left_page) + "-" + str(right_page) + """.jpg" alt=" """ + sketchbook_name + """ sketchbook """ + str(left_page) + """-""" + str(right_page) + '" ' + img_width + " " + img_height + """>"""
+	img_url = """<img """ + img_classes + 'src="' + img_dir_location + sketchbook_name + """-pp-""" + str(left_page) + "-" + str(right_page) + """.jpg" alt=" """ + sketchbook_name + """ sketchbook """ + str(left_page) + """-""" + str(right_page) + '" ' + img_width + " " + img_height + """>"""
 	next_page_url = sketchbook_name + """-pp-""" + str((left_page + 2)) + """-""" + str((right_page + 2)) +  """.html"""
 	next_page_meta = """next-page: """ + output_directory_path + "/" + sketchbook_name + """-pp-""" + str((left_page + 2)) + """-""" + str((right_page + 2)) +  """.html"""
 	prev_page_meta = """prev-page: """ + output_directory_path + "/" + sketchbook_name + "-front-cover" + ".html"
@@ -85,7 +86,7 @@ while counter == 2:
 	right_page += 2
 	counter += 1
 while counter > 2 and counter <= (spreads):
-	img_url = """<img """ + img_classes + 'src="' + output_directory_path + """/image/""" + sketchbook_name + """-pp-""" + str(left_page) + "-" + str(right_page) + """.jpg" alt=" """ + sketchbook_name + """ sketchbook """ + str(left_page) + """-""" + str(right_page) + '" ' + img_width + " " + img_height + """>"""
+	img_url = """<img """ + img_classes + 'src="' + img_dir_location + sketchbook_name + """-pp-""" + str(left_page) + "-" + str(right_page) + """.jpg" alt=" """ + sketchbook_name + """ sketchbook """ + str(left_page) + """-""" + str(right_page) + '" ' + img_width + " " + img_height + """>"""
 	next_page_url = sketchbook_name + """-pp-""" + str((left_page + 2)) + """-""" + str((right_page + 2)) +  """.html"""
 	next_page_meta = """next-page: """ + output_directory_path + "/" + sketchbook_name + """-pp-""" + str((left_page + 2)) + """-""" + str((right_page + 2)) +  """.html"""
 	prev_page_meta = """prev-page: """ + output_directory_path + "/" + sketchbook_name + """-pp-""" + str((left_page - 2)) + """-""" + str((right_page - 2)) +  """.html"""
@@ -96,7 +97,7 @@ while counter > 2 and counter <= (spreads):
 	right_page += 2
 	counter += 1
 while counter == (spreads + 1):
-	img_url = """<img """ + img_classes + 'src="' + output_directory_path + """/image/""" + sketchbook_name + """-pp-""" + str(left_page) + "-" + str(right_page) + """.jpg" alt=" """ + sketchbook_name + """ sketchbook """ + str(left_page) + """-""" + str(right_page) + '" ' + img_width + " " + img_height + """>"""
+	img_url = """<img """ + img_classes + 'src="' + img_dir_location + sketchbook_name + """-pp-""" + str(left_page) + "-" + str(right_page) + """.jpg" alt=" """ + sketchbook_name + """ sketchbook """ + str(left_page) + """-""" + str(right_page) + '" ' + img_width + " " + img_height + """>"""
 	next_page_url = sketchbook_name + "-back-cover" + ".html"
 	next_page_meta = """next-page: """ + output_directory_path + "/" + sketchbook_name + "-back-cover" + ".html"
 	prev_page_meta = """prev-page: """ + output_directory_path + "/" + sketchbook_name + """-pp-""" + str((left_page - 2)) + """-""" + str((right_page - 2)) +  """.html"""
@@ -105,7 +106,7 @@ while counter == (spreads + 1):
 	body_pages = write_to_file(name_of, title_string, next_page_url, next_page_meta, prev_page_meta, img_url)
 	counter += 1
 while counter == (spreads + 2):
-	img_url = """<img """ + img_classes + 'src="' + output_directory_path + """/image/""" + sketchbook_name + """-back-cover.jpg" alt=" """ + sketchbook_name + """ sketchbook back cover" """ + img_width +" " + img_height + """>"""
+	img_url = """<img """ + img_classes + 'src="' + img_dir_location + sketchbook_name + """-back-cover.jpg" alt=" """ + sketchbook_name + """ sketchbook back cover" """ + img_width +" " + img_height + """>"""
 	name_of = working_directory_path + sketchbook_name + "/" + sketchbook_name + "-back-cover" + ".html"
 	next_page_url = sketchbook_name + "-front-cover" + ".html"
 	next_page_meta = """next-page: """ + output_directory_path + "/index.html"
