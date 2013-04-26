@@ -9,7 +9,7 @@ output_domain = "http://www.wholewheattoast.com/"
 sketchbook_name = raw_input('Enter sketchbook name: ')
 title_string_prepend = """title: """ + str(sketchbook_name)
 directory = working_directory_path + sketchbook_name
-img_dir_location = "./image/sketchbooks/"
+img_dir_location = "/image/sketchbooks/" + str(sketchbook_name) + "/"
 
 
 #pages
