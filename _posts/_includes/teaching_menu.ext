@@ -1,8 +1,6 @@
 <div class="row-fluid small-masthead">
 	<a href="/index.html">wholewheattoast</a>
 	<aside>
-		<ul class="unstyled">
-			<li>Email: <a href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a></li>
-		</ul>
+		<i class="icon-envelope"> </i> <a href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
 	</aside>
 </div>

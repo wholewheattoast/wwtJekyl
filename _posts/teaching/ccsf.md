@@ -11,8 +11,12 @@ description: Teaching Resources for CCSF Printmaking courses
 
 	<section class="span8">
 		<h1>Beginning Etching Workshop 2013</h1>
-
 		<h2>Schedule</h2>
+
+			<p>6:30 to 9:30 Tuesdays June 11th to July 23rd</p>
+
+			<p>Fort Mason, Bldg B Rm: 208</p>
+
 
 			<h3>6/11 Week One:  </h3>
 			<ul>
