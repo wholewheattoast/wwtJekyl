@@ -31,7 +31,6 @@ description: Etching How To
 ## ETCHING THE PLATE:
 	
 1. Stop out any unwanted areas.
-2. If using uncoated copper, use shellac or spray enamel the back of the plate to resist biting.
 3. The longer the etch the deeper the line.
 4. You can stage bite to achieve different qualities of line from the same drawing.
 5. The deeper the line (longer the etch), the darker the printed line will be.

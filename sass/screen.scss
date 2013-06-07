@@ -5,6 +5,7 @@
 /* Variabls
 ==============================*/
 $font-size: 1em;
+$line-height: 1.5em;
 $baseFontFamily: Helvetica, sans-serif;
 $background-color: #fafaf5;
 $masthead-accent-color: black;
@@ -27,6 +28,7 @@ $link-color: black;  /* change this */
 
 body {
 	font-size: $font-size;
+	line-height: $line-height;
 	background-color: $background-color;
 }
 
@@ -37,6 +39,10 @@ body {
 
 #custom a:hover {
 	text-decoration: underline;
+}
+
+li {
+  line-height: $line-height;
 }
 
 /* Masthead
