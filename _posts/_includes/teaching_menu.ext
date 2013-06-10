@@ -2,5 +2,12 @@
 	<a href="/index.html">wholewheattoast</a>
 	<aside>
 		<i class="icon-envelope"> </i> <a href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
+
+		Handouts:
+		<ul class="unstyled">
+			<li><a href="">Materials List</a></li>
+			<li><a href="">Intaglio Printing</a></li>
+			<li><a href="">Etching</a></li>
+		</ul>
 	</aside>
 </div>

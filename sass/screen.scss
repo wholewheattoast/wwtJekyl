@@ -10,9 +10,11 @@ $baseFontFamily: Helvetica, sans-serif;
 $background-color: #fafaf5;
 $masthead-accent-color: black;
 
+$black: #000;
 $success-green: #29B473;
 
-$link-color: black;  /* change this */
+$link-color: $black;  /* change this */
+
 
 /* helpers
 ==============================*/
@@ -40,6 +42,8 @@ body {
 #custom a:hover {
 	text-decoration: underline;
 }
+
+h2 { border-bottom: 4px solid $black; }
 
 li {
   line-height: $line-height;

@@ -5,22 +5,48 @@ description: Teaching Resources for CCSF Printmaking courses
 ---
 
 <div class="row-fluid">
-	<div class="span4">
-		{% include teaching_menu.ext %}
+	<header class="span10 offest2">
+		<h1>CCSF Summer 2013<br/>
+			Beginning Etching Workshop</h1>
+	</header>
+</div>
+
+<div class="row-fluid">
+	
+	<div class="span3">
+
+		<h2>When / Where</h2>
+
+		<p>
+			Tuesdays 6:30 to 9:30 PM<br/>
+			June 11th to July 23rd<br/>
+			<a class="hide_link_print" href="https://maps.google.com/maps?q=Fort+Mason+Center,+Golden+Gate+National+Recreation+Area,+Marina+Blvd,+San+Francisco,+California+94123&hl=en&ll=37.806966,-122.431013&spn=0.001464,0.004047&sll=37.269174,-119.306607&sspn=13.049074,33.156738&geocode=Fd_fQAIdz9az-A&hnear=Fort+Mason+Center,+Marina+Blvd,+San+Francisco,+California+94123&t=m&z=19&iwloc=4764892890660691674">Fort Mason, Bldg B Rm: 208</a>
+		</p>
+		<h2>Contact</h2>
+		Shawn Eisenach<br />
+		<i class="icon-mobile-phone"> </i> <a hreff="tel:+17074840051">707-484-0051</a><br />
+		<i class="icon-envelope"> </i> <a href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
+
+		<h2>Handouts</h2>
+			<ul class="unstyled">
+				<li><i class="icon-chevron-right"> </i>  Schedule</li>
+				<li><a href="drypoint.html">Drypoint</a></li>
+				<li><a href="drypoint.html">Drypoint</a></li>
+				<li><a href="materials.html">Materials List</a></li>
+				<li><a href="etching.html">Etching</a></li>
+				<li><a href="intaglio_printing.html">Intaglio Printing</a></li>
+				<li>Aquatint</li>
+				<li>Soft-groud</li>
+				<li>Sugar-lift</li>
+				<li>multi-plate / color</li>
+				<li>Chin Colle</li>
+				<li>Clean up</li>
+			</ul>
 	</div>
-
-	<article class="span8">
-		<h1>Beginning Etching Workshop 2013</h1>
+	
+	<section class="span6 offset2">
 		<h2>Schedule</h2>
-
-			<p>
-				Tuesdays 6:30 to 9:30<br/>
-				June 11th to July 23rd<br/>
-				Fort Mason, Bldg B Rm: 208
-			</p>
-
-
-			<h3>6/11 Week One:  </h3>
+			<h3>6/11 Into &amp; Drypoint </h3>
 			<ol>
 				<li>Into to class &amp; shop</li>
 				<li>Set up shelves / collect fees</li>
@@ -30,7 +56,7 @@ description: Teaching Resources for CCSF Printmaking courses
 				<li>Prep for next week</li>
 			</ol>
 
-			<h3>6/18 Week Two:  Line Etch.</h3>
+			<h3>6/18 Line Etch</h3>
 				<ol>
 					<li>Zinc plate prep</li>
 					<li>Grounding a plate</li>
@@ -38,23 +64,12 @@ description: Teaching Resources for CCSF Printmaking courses
 					<li>Etching demo</li>
 				</ol>
 
-			<h3>6/25 Week Three: Aquatint.</h3>
-			<h3>7/02 Week Four: Soft ground / sugar lift ?</h3>
-			<h3>7/09 Week Five: Multi-plate printing / color?</h3>
-			<h3>7/16 Week Six: Chin colle demo? </h3>
-			<h3>7/23 Week Seven: Cleanup.</h3>
+			<h3>6/25 Aquatint</h3>
+			<h3>7/02 Soft ground &amp; sugar lift</h3>
+			<h3>7/09 Color &amp; Multi-plate Printing</h3>
+			<h3>7/16 Chin colle demo </h3>
+			<h3>7/23 Final Printing &amp; Cleanup</h3>
+	</section>
 
-		<h2>Process Handouts <small>(formatted to print)</small></h2>
-			<ul>
-				<li>drypoint</li>
-				<li><a href="etching.html">Etching</a></li>
-				<li><a href="intaglio_printing.html">Intaglio Printing</a></li>
-				<li>Clean up</li>
-				<li>Aquatint</li>
-				<li>Soft-groud</li>
-				<li>Sugar-lift</li>
-				<li>multi-plate / color</li>
-				<li>Chin Colle</li>
-			</ul>
-	</article>
+
 </div>

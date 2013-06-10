@@ -6,90 +6,95 @@
 /* change this */
 /* helpers
 ==============================*/
-/* line 20, ../../sass/screen.scss */
+/* line 22, ../../sass/screen.scss */
 .tight {
   margin: 0;
 }
 
 /* bootstrap overrides
 ==============================*/
-/* line 24, ../../sass/screen.scss */
+/* line 26, ../../sass/screen.scss */
 .row-fluid, .row {
   margin-bottom: 1.25em;
 }
 
 /* main
 ==============================*/
-/* line 29, ../../sass/screen.scss */
+/* line 31, ../../sass/screen.scss */
 body {
   font-size: 1em;
   line-height: 1.5em;
   background-color: #fafaf5;
 }
 
-/* line 35, ../../sass/screen.scss */
+/* line 37, ../../sass/screen.scss */
 #custom a {
   color: black;
   font-weight: bold;
 }
 
-/* line 40, ../../sass/screen.scss */
+/* line 42, ../../sass/screen.scss */
 #custom a:hover {
   text-decoration: underline;
 }
 
-/* line 44, ../../sass/screen.scss */
+/* line 46, ../../sass/screen.scss */
+h2 {
+  border-bottom: 4px solid black;
+}
+
+/* line 48, ../../sass/screen.scss */
 li {
   line-height: 1.5em;
 }
 
 /* Masthead
 ==============================*/
-/* line 50, ../../sass/screen.scss */
+/* line 54, ../../sass/screen.scss */
 .masthead {
   background-color: black;
   margin-bottom: 1.75em;
 }
-/* line 53, ../../sass/screen.scss */
+/* line 57, ../../sass/screen.scss */
 .masthead h1 {
   padding-bottom: .25em;
 }
-/* line 54, ../../sass/screen.scss */
+/* line 58, ../../sass/screen.scss */
 .masthead .row, .masthead .row-fluid {
   margin-bottom: 0;
 }
-/* line 55, ../../sass/screen.scss */
+/* line 59, ../../sass/screen.scss */
 .masthead .span8 {
   background-color: #fafaf5;
 }
-/* line 56, ../../sass/screen.scss */
+/* line 60, ../../sass/screen.scss */
 .masthead ul {
   margin: 0;
 }
 
-/* line 58, ../../sass/screen.scss */
+/* line 62, ../../sass/screen.scss */
 .small-masthead {
   margin-top: 2em;
 }
 
 /* Sketchbooks
 ==============================*/
-/* line 65, ../../sass/screen.scss */
+/* line 69, ../../sass/screen.scss */
 .sketchbook_container {
   margin-top: 4em;
 }
 
-/* line 66, ../../sass/screen.scss */
+/* line 70, ../../sass/screen.scss */
 .sketchbook-container {
   position: relative;
 }
 
-/* line 67, ../../sass/screen.scss */
+/* line 71, ../../sass/screen.scss */
 .sketchbook-image {
   max-width: 100%;
 }
 
-/* line 68, ../../sass/screen.scss */
+/* line 72, ../../sass/screen.scss */
 .over {
   position: absolute;
   top: 0;
@@ -105,23 +110,23 @@ li {
   -webkit-transition: opacity 1s ease;
   transition: opacity 1s ease;
 }
-/* line 82, ../../sass/screen.scss */
+/* line 86, ../../sass/screen.scss */
 .over dd {
   margin-left: 0;
 }
 
-/* line 85, ../../sass/screen.scss */
+/* line 89, ../../sass/screen.scss */
 a .over:hover {
   opacity: .88;
 }
 
 /* About
 ==============================*/
-/* line 89, ../../sass/screen.scss */
+/* line 93, ../../sass/screen.scss */
 .about-dent {
   margin-bottom: 2.5em;
 }
-/* line 90, ../../sass/screen.scss */
+/* line 94, ../../sass/screen.scss */
 .about-dent p {
   font-size: 1.125em;
 }

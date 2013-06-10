@@ -1,3 +1,55 @@
-/* Welcome to Compass. Use this file to define print styles.
- * Import this file using the following HTML or equivalent:
+/* Print SCSS
+ * Shawn Eisenach
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+
+/* Setup
+==================== */
+
+@page {
+	margin: 0.5cm;
+}
+
+body {
+	font: 12pt Georgia, "Times New Roman", Times, serif;
+	line-height: 1.3;
+}
+
+.hide_print { display: none;}
+
+
+/* Typography
+==================== */
+
+h1 {
+font-size: 24pt;
+}
+
+h2 {
+font-size: 14pt;
+margin-top: 25px;
+}
+
+aside h2 {
+font-size: 18pt;
+}
+
+/* links 
+==================== */
+
+a {
+	color: #000;
+}
+
+p a {
+	word-wrap: break-word;
+}
+
+p a[href^="http://"]:after, a[href^="https://"]:after{
+content: " (" attr(href) ")";
+font-size: 80%;
+}
+
+p a[href^="#"]:after {
+display: none;
+}
