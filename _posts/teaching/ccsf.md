@@ -46,9 +46,9 @@ description: Teaching Resources for CCSF Printmaking courses
 	
 	<section class="span6 offset2">
 		<h2>Schedule</h2>
-			<h3>6/11 Into &amp; Drypoint </h3>
+			<h3>6/11 Intro &amp; Drypoint </h3>
 			<ol>
-				<li>Into to class &amp; shop</li>
+				<li>Intro to class &amp; shop</li>
 				<li>Set up shelves / collect fees</li>
 				<li>Drypoint (plexi) demo</li>
 				<li>Intaglio printing demo</li>
