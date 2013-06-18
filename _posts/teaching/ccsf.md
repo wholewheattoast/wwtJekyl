@@ -64,10 +64,10 @@ description: Teaching Resources for CCSF Printmaking courses
 					<li>Etching demo</li>
 				</ol>
 
-			<h3>6/25 Aquatint</h3>
-			<h3>7/02 Soft ground &amp; sugar lift</h3>
-			<h3>7/09 Color &amp; Multi-plate Printing</h3>
-			<h3>7/16 Chin colle demo </h3>
+			<h3>6/25 Soft ground</h3>
+			<h3>7/02 Aquatint</h3>
+			<h3>7/09 Sugar lift</h3>
+			<h3>7/16 Color &amp; Multi-plate Printing</h3>
 			<h3>7/23 Final Printing &amp; Cleanup</h3>
 	</section>
 
