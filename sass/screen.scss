@@ -98,4 +98,11 @@ a .over:hover { opacity: .88; }
 /* Works
 ==============================*/
 
+/* Teaching
+==============================*/
+
+#etching_handout {
+	ol li { font-size: 1.25em; }
+	.spacer { height: 6em; }
+}
 @import "media-queries";

@@ -133,6 +133,17 @@ a .over:hover {
 
 /* Works
 ==============================*/
+/* Teaching
+==============================*/
+/* line 105, ../../sass/screen.scss */
+#etching_handout ol li {
+  font-size: 1.25em;
+}
+/* line 106, ../../sass/screen.scss */
+#etching_handout .spacer {
+  height: 6em;
+}
+
 /* Media Querries
 ============================================== */
 /* height
