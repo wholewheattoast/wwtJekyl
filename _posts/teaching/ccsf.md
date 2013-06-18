@@ -31,7 +31,6 @@ description: Teaching Resources for CCSF Printmaking courses
 			<ul class="unstyled">
 				<li><i class="icon-chevron-right"> </i>  Schedule</li>
 				<li><a href="drypoint.html">Drypoint</a></li>
-				<li><a href="drypoint.html">Drypoint</a></li>
 				<li><a href="materials.html">Materials List</a></li>
 				<li><a href="etching.html">Etching</a></li>
 				<li><a href="intaglio_printing.html">Intaglio Printing</a></li>
