@@ -34,10 +34,7 @@ description: Teaching Resources for CCSF Printmaking courses
 				<li><a href="materials.html">Materials List</a></li>
 				<li><a href="etching.html">Etching / Intaglio Printing</a></li>
 				<li>Aquatint</li>
-				<li>Soft-groud</li>
-				<li>Sugar-lift</li>
-				<li>multi-plate / color</li>
-				<li>Chin Colle</li>
+				<li><a href="sugarlift.html">Sugar-lift</a></li>
 				<li>Clean up</li>
 			</ul>
 	</div>
