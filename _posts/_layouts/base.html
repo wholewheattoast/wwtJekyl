@@ -3,9 +3,24 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title property="dc:title">{{ page.title }}</title>
+		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" /> 
+		<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" /> 
+		<meta name="DC.title" content="{{ page.title }}" /> 
+		<meta name="DC.creator" content="Shawn Eisenach" />
+		<meta name="DC.creator" content="wholewheattoast" /> 
+		<meta name="DC.description" content="{{ page.description }}" />
+		<meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text" /> 
+		<meta name="DC.format" content="text/html" /> 
+		<meta name="DC.identifier" scheme="DCTERMS.URI" content="http://www.wholewheattoast.com/{{ page.stub }}" />
+		<meta name="DC.modified" content="{{ site.time | date_to_xmlschema }}" />
+		<meta name="DC.created" content="{{ page.date }}" />
+
+		<!-- 
+		<title property="dc:title">{{ page.title }}</title> 
 		<meta name="description" content="{{ page.description }}" />
 		<meta name="author" property="dc:creator" content="Shawn Eisenach" />
+		<meta name="author" property="dc:creator" content="wholewheattoast" />
+		-->
 		
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,7 +40,7 @@
 
 		<link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet" />
 		
 		<!-- Scripts
 		================================================== -->
