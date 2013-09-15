@@ -1,16 +1,20 @@
 	<div>	
-		<h2>Etching Supplies Vender List</h2>
+		<h2>Vender List</h2>
 		<div>
-			<h4>Artist &amp; Craftsman Supply</h4>
-			555 Pacific Avenue<br/>
-			San Francisco, CA 94133<br/>
-			Phone: <a href="tel:+14159311900">415-931-1900<br />
-			<a href="http://www.artistcraftsman.com">www.artistcraftsman.com</a>
+			<h3>Artist &amp; Craftsman Supply</h3>
+				<p>
+				555 Pacific Avenue<br/>
+				San Francisco, CA 94133<br/>
+				Phone: <a href="tel:+14159311900">415-931-1900<br />
+				<a href="http://www.artistcraftsman.com">www.artistcraftsman.com</a>
+			</p>
 		</div>
 
 		<div>
-			<h4>Dick Blick</h4>
-			<a href="http://www.dickblick.com/">www.dickblick.com</a>
+			<h3>Dick Blick</h3>
+			<p>
+				<a href="http://www.dickblick.com/">www.dickblick.com</a>
+			</p>
 			<ul>
 				<li><a href="http://www.dickblick.com/items/45212-0000/">452112-0000</a> Etching Needle Twist</li>
 				<li><a href="http://www.dickblick.com/items/09070-1002/">09070-1002</a> Silverwht Round SZ 2 SH</li>
@@ -21,11 +25,13 @@
 			</ul>
 		</div>
 		<div>
-			<h4>Flax</h4>
-			1699 Market St<br />
-			San Francisco, CA 94103 <br/>
-			Phone: <a href="tel:+14155522355">415-552-2355</a><br/>
-			<a href="http://www.flaxart.com">www.flaxart.com</a><br/>
+			<h3>Flax</h3>
+			<p>
+				1699 Market St<br />
+				San Francisco, CA 94103 <br/>
+				Phone: <a href="tel:+14155522355">415-552-2355</a><br/>
+				<a href="http://www.flaxart.com">www.flaxart.com</a><br/>
+			</p>
 			<ul>
 				<li><a href="http://www.artistcraftsman.com/printmaking/intaglio-etching/intaglio-etching-tools/ec-lyons-twisted-double-point-scribe.html">Twisted Scribe</a></li>
 				<li><a href="http://www.artistcraftsman.com/printmaking/intaglio-etching/intaglio-etching-tools/ec-lyons-large-curved-burnisher-3-blade.html">Burnisher</a></li>
