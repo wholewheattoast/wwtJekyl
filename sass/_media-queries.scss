@@ -11,17 +11,23 @@
 	/* 480px Smartphones */
 	@media (max-width: 480px) {
 		
-		#custom body {
-			overflow: hidden;		}
+		#custom.container { width: 100%; }
+
+		body {
+			overflow: hidden;
+			font-size: 1.125em;
+		}
 
 		#custom .masthead { background-color: $background-color; }
-		
-		#custom h1 { font-size: 2em; }
+
+		#custom h1 { font-size: 1.75em; }
+
+		#custom h2 { font-size: 1.5em; }
 
 		#custom h3 { font-size: 1.25em; }
 		
 		#custom ul.inline > li, ol.inline > li {
-			display: inline-block;
+			display: inline-block;	
 			padding-right: .125em;
 			padding-left: .125em;
 			}

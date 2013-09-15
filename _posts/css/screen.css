@@ -24,7 +24,7 @@
 body {
   font-size: 1.3125em;
   line-height: 1.5em;
-  background-color: #fafaf5;
+  background-color: #fafafa;
 }
 
 /* line 37, ../../sass/screen.scss */
@@ -84,7 +84,7 @@ li {
 }
 /* line 81, ../../sass/screen.scss */
 .masthead .span8 {
-  background-color: #fafaf5;
+  background-color: #fafafa;
 }
 /* line 82, ../../sass/screen.scss */
 .masthead ul {
@@ -123,7 +123,7 @@ li {
   z-index: 3;
   opacity: 0;
   width: 100%;
-  background-color: #fafaf5;
+  background-color: #fafafa;
   -moz-transition: opacity 1s ease;
   -o-transition: opacity 1s ease;
   -webkit-transition: opacity 1s ease;
@@ -181,45 +181,56 @@ a .over:hover {
 /* 480px Smartphones */
 @media (max-width: 480px) {
   /* line 14, ../../sass/_media-queries.scss */
-  #custom body {
+  #custom.container {
+    width: 100%;
+  }
+
+  /* line 16, ../../sass/_media-queries.scss */
+  body {
     overflow: hidden;
-  }
-
-  /* line 17, ../../sass/_media-queries.scss */
-  #custom .masthead {
-    background-color: #fafaf5;
-  }
-
-  /* line 19, ../../sass/_media-queries.scss */
-  #custom h1 {
-    font-size: 2em;
+    font-size: 1.125em;
   }
 
   /* line 21, ../../sass/_media-queries.scss */
+  #custom .masthead {
+    background-color: #fafafa;
+  }
+
+  /* line 23, ../../sass/_media-queries.scss */
+  #custom h1 {
+    font-size: 1.75em;
+  }
+
+  /* line 25, ../../sass/_media-queries.scss */
+  #custom h2 {
+    font-size: 1.5em;
+  }
+
+  /* line 27, ../../sass/_media-queries.scss */
   #custom h3 {
     font-size: 1.25em;
   }
 
-  /* line 23, ../../sass/_media-queries.scss */
+  /* line 29, ../../sass/_media-queries.scss */
   #custom ul.inline > li, ol.inline > li {
     display: inline-block;
     padding-right: .125em;
     padding-left: .125em;
   }
 
-  /* line 29, ../../sass/_media-queries.scss */
+  /* line 35, ../../sass/_media-queries.scss */
   #custom .container-narrow {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
 
-  /* line 35, ../../sass/_media-queries.scss */
+  /* line 41, ../../sass/_media-queries.scss */
   #custom .container-narrow > hr {
     margin: 1.25em 0;
   }
 
-  /* line 39, ../../sass/_media-queries.scss */
+  /* line 45, ../../sass/_media-queries.scss */
   #custom li {
     padding-bottom: .5em;
   }
