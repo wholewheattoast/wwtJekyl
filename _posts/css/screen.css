@@ -181,47 +181,46 @@ a .over:hover {
 /* 480px Smartphones */
 @media (max-width: 480px) {
   /* line 14, ../../sass/_media-queries.scss */
-  body {
+  #custom body {
     overflow: hidden;
-    /*padding: 1em .25em 2em 1.25em; */
   }
 
-  /* line 19, ../../sass/_media-queries.scss */
-  .masthead {
+  /* line 17, ../../sass/_media-queries.scss */
+  #custom .masthead {
     background-color: #fafaf5;
   }
 
-  /* line 21, ../../sass/_media-queries.scss */
-  h1 {
+  /* line 19, ../../sass/_media-queries.scss */
+  #custom h1 {
     font-size: 2em;
   }
 
-  /* line 23, ../../sass/_media-queries.scss */
-  h3 {
+  /* line 21, ../../sass/_media-queries.scss */
+  #custom h3 {
     font-size: 1.25em;
   }
 
-  /* line 25, ../../sass/_media-queries.scss */
-  ul.inline > li, ol.inline > li {
+  /* line 23, ../../sass/_media-queries.scss */
+  #custom ul.inline > li, ol.inline > li {
     display: inline-block;
     padding-right: .125em;
     padding-left: .125em;
   }
 
-  /* line 31, ../../sass/_media-queries.scss */
-  .container-narrow {
+  /* line 29, ../../sass/_media-queries.scss */
+  #custom .container-narrow {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
 
-  /* line 37, ../../sass/_media-queries.scss */
-  .container-narrow > hr {
+  /* line 35, ../../sass/_media-queries.scss */
+  #custom .container-narrow > hr {
     margin: 1.25em 0;
   }
 
-  /* line 41, ../../sass/_media-queries.scss */
-  li {
+  /* line 39, ../../sass/_media-queries.scss */
+  #custom li {
     padding-bottom: .5em;
   }
 }

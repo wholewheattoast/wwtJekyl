@@ -11,34 +11,32 @@
 	/* 480px Smartphones */
 	@media (max-width: 480px) {
 		
-		body {
-			overflow: hidden;
-			/*padding: 1em .25em 2em 1.25em; */
-		}
+		#custom body {
+			overflow: hidden;		}
 
-		.masthead { background-color: $background-color; }
+		#custom .masthead { background-color: $background-color; }
 		
-		h1 { font-size: 2em; }
+		#custom h1 { font-size: 2em; }
 
-		h3 { font-size: 1.25em; }
+		#custom h3 { font-size: 1.25em; }
 		
-		ul.inline > li, ol.inline > li {
+		#custom ul.inline > li, ol.inline > li {
 			display: inline-block;
 			padding-right: .125em;
 			padding-left: .125em;
 			}
 		
-		.container-narrow {
+		#custom .container-narrow {
 			width: 100%;
 			margin-right: auto;
 			margin-left: auto;
 		}
 		
-		.container-narrow > hr {
+		#custom .container-narrow > hr {
 			margin: 1.25em 0;
 		}
 		
-		li { padding-bottom: .5em; }
+		#custom li { padding-bottom: .5em; }
 		
 		}
 	
