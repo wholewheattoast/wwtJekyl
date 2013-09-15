@@ -4,7 +4,7 @@
 
 /* Variabls
 ==============================*/
-$font-size: 1em;
+$font-size: 1.3125em;
 $line-height: 1.5em;
 $baseFontFamily: Helvetica, sans-serif;
 $background-color: #fafaf5;
@@ -34,6 +34,13 @@ body {
 	background-color: $background-color;
 }
 
+#custom.container {
+	width: 92%;
+}
+
+/* Links
+==============================*/
+
 #custom a {
 	color: $link-color;
 	font-weight: bold;
@@ -43,7 +50,22 @@ body {
 	text-decoration: underline;
 }
 
-h2 { border-bottom: 4px solid $black; }
+/* Typography
+==============================*/
+
+#custom h1 {
+	font-size: 4em;
+	line-height: 1em;
+}
+
+#custom h2 {
+	font-size: 3em;
+	line-height: 1em;
+	border-bottom: 4px solid $black;
+}
+
+/* Lists
+==============================*/
 
 li {
   line-height: $line-height;
