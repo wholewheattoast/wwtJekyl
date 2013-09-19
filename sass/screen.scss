@@ -9,6 +9,7 @@ $line-height: 1.5em;
 $baseFontFamily: Helvetica, sans-serif;
 $background-color: #fafafa;
 $masthead-accent-color: black;
+$color: black;
 
 $black: #000;
 $success-green: #29B473;
@@ -30,6 +31,7 @@ $link-color: $black;  /* change this */
 
 body {
 	font-size: $font-size;
+	color: $color;
 	line-height: $line-height;
 	background-color: $background-color;
 }
@@ -52,6 +54,10 @@ body {
 
 /* Typography
 ==============================*/
+
+h1, h2, h3, h4, h5, h6 {
+	color: #110011;
+}
 
 #custom h1 {
 	font-size: 4em;
@@ -123,8 +129,4 @@ a .over:hover { opacity: .88; }
 /* Teaching
 ==============================*/
 
-#etching_handout {
-	ol li { font-size: 1.25em; }
-	.spacer { height: 6em; }
-}
 @import "media-queries";
