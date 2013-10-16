@@ -15,8 +15,8 @@ description: Etching How To
 	<div class="row-fluid">
 		<div class="span6 offset3">
 			<div>
-				<p><strong>Intaglio</strong> comes from Italian word <em>intagliare</em> and roughly means, "to engrave, or to cut into".  In printmaking this refers to a family of techniques where an area below the surface of the plate is created through engraving, etching, or scratching.  This incission is then capable of holding ink, and transfered onto paper.  This form of printmaking was believed to have been invented in Germany around the 1430s</p>
-				<p>In etching process the plate is covered with a protective ground- typically an asphaltum mixture.  The ground is then removed in areas to create a design, and the plate is then submerged in an acid or corrosive bath.  The solution in the bath removes plate material where exposed and creates a recessed area.  The ground is removed and ink is spread on the plate and pushed into the grooves made by the solution.  Dampened paper is placed onto the plate and then run through the press.</p>
+				<p><strong>Intaglio</strong> comes from Italian word <em>intagliare</em> and roughly means, "to engrave, or to cut into".  In printmaking this refers to a family of techniques where an area below the surface of the plate is created through engraving, etching, or scratching.  This incision is then capable of holding ink, and transfered onto paper.</p>
+				<p>In etching the process a plate is covered with a protective ground- typically an asphaltum mixture.  This ground is then removed in areas to create a design, and the plate is submerged in an acid or corrosive bath.  The solution in the bath removes plate material where exposed and creating a recessed area.  The ground is removed and ink is spread over the plate and pushed into the grooves made by the solution.  Dampened paper is placed onto the plate and the whole thing run through a press.</p>
 
 			</div>
 
@@ -26,11 +26,11 @@ description: Etching How To
 				<p>The plate must be beveled and polished, and cleaned before a ground can be applied.</p>
 				<ol>
 					<li>Cut the plate to the required size.</li>
-					<li>Use a scraper and file to bevel edges of plate to a 45 degree angle</li>
-					<li>Use the file to round the corners</li>
+					<li>Use a scraper and file to bevel edges of plate to a 45 degree angle.</li>
+					<li>Use the file to round the corners.</li>
 					<li>Remove any protective film on plate.</li>
-					<li>Use Pommade, Jewelers Rouge, or Brasso to polish the plate</li>
-					<li>Degrease the plate with amonia &amp; Whiting, alcohol, or dishsoap</li>
+					<li>Use Pommade, Jewelers Rouge, or Brasso to polish the plate.</li>
+					<li>Degrease the plate with ammonia &amp; whiting, alcohol, or dish soap.</li>
 				</ol>
 			</div>
 			<div>
@@ -40,20 +40,19 @@ description: Etching How To
 					<li>Set the hot plate to ~ 200 degrees.</li>
 					<li>Lay down a sheet of tin foil / newsprint to keep hot plate clean.</li>
 					<li>Set your plate onto hot plate and let it warm.</li>
-					<li>Apply Ball Ground onto plate covering about a third.</li>
-					<li>Use a roller to even out the coating of ground.</li>
-					<li>Be careful not to overcook the ground.  An overcooked ground is brittle and tends to chip when drawing.</li>
-					<li>When plate is cool you can begin to transfer image and/or draw.</li>
+					<li>Apply Ball Ground covering about a third of the plate.</li>
+					<li>Using a brayer even out the coating across the plate.</li>
+					<li>Be careful not to overcook the ground.  Overcooked ground is brittle and will tend to chip when drawing.</li>
+					<li>When your plate is cool, you can begin to transfer image and/or draw.</li>
 				</ol>
 			</div>
 			<div>
 				<h2>Draw On The Plate</h2>
-				<h3>Drawing Process</h3>
 				<ol>
-					<li>Use etching needle or other tools to remove ground.</li>
-					<li>You cannot amass large areas of open “black” without ink fall-out.</li>
+					<li>A drawing made with soft graphite (6b) can be transfered to the plate by running through the press.</li>
+					<li>Use an etching needle or other tools to remove ground.</li>
 					<li>Group lines in optical gray methods to achieve tone, i.e. crosshatching.</li>
-					<li>A drawing made with soft graphite (6b) can be transfered to the plate by running through the press</li>
+					<li>Amassing too large an area of open space will lead to ink fall-out.</li>
 					<li>Remember that the image will print in reverse to what you see on the plate.</li>
 				</ol>
 			</div>
@@ -77,17 +76,17 @@ description: Etching How To
 			<div>
 				<h2>Clean Off The Ground</h2>
 				<ol>
-					<li>Set the hot plate to ~ 200 degrees.</li>
+					<li>Set the hot plate to ~200 degrees.</li>
 					<li>Lay down a sheet of tin foil / newsprint to keep hot plate clean.</li>
 					<li>Put your etching onto hot plate to warm ground.</li>
 					<li>Apply vegetable oil and work around the plate with an old rag and/or toothbrush.</li>
 					<li>When ground starts coming up remove from heat and continue to clean.</li>
 					<li>Use a detergent to degrease the plate.</li>
-					<li>If not immediately printing you can skip degreaseing the plate. The film left over will help the plate to resist oxidation.  To store the plate, wrap it in newsprint.</li>
+					<li>If not immediately printing you can skip de-greasing the plate. The film left over will help the plate to resist oxidation.  To store the plate, wrap it in newsprint.</li>
 				</ol>
 			</div>
 			<div>
-				<h2>Ink Plate</h2>
+				<h2>Ink The Plate</h2>
 				<ol>
 					<li>Lay out and modify ink.</li>
 					<li>Card ink onto plate.</li>
@@ -98,7 +97,7 @@ description: Etching How To
 				</ol>
 			</div>
 			<div>
-				<h2>Prepare Paper</h2>
+				<h2>Prepare Your Paper</h2>
 				<p>Many Western printmaking papers can take a while to soak before they are flexible enough to print with.  Consider placing some paper in the soaking bath at the start of the class, or preparing a wet pack.</p>
 				<ol>
 					<li>Measure and tear paper down to size.  It can be helpful to initial the back and indicate the type of paper for future reference.</li>
