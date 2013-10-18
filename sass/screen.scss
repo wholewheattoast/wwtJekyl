@@ -97,7 +97,7 @@ li {
 .sketchbook_container { margin-top: 4em; }
 .sketchbook-container { position: relative; }
 .sketchbook-image { max-width: 100%; }
-.over {
+.sketchbook-container .over {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -112,6 +112,7 @@ li {
 	-webkit-transition: opacity 1s ease;
   	transition: opacity 1s ease;
   	dd { margin-left: 0; }
+  	dt {display: none;}
   }
 
 a .over:hover { opacity: .88; }
