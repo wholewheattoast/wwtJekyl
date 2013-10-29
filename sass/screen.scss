@@ -10,6 +10,7 @@ $baseFontFamily: Helvetica, sans-serif;
 $background-color: #fafafa;
 $masthead-accent-color: black;
 $color: black;
+$warm_accent_color: #ff2727;
 
 $black: #000;
 $success-green: #29B473;
@@ -76,6 +77,11 @@ h1, h2, h3, h4, h5, h6 {
 li {
   line-height: $line-height;
 }
+
+/* Misc
+==============================*/
+
+.accent { color: $warm_accent_color; }
 
 /* Masthead
 ==============================*/
