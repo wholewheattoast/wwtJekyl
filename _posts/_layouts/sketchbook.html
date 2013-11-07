@@ -1,34 +1,26 @@
 ---
 layout: base
 ---
-	
-	<div class="container" id="sketchbook_page">
-		
+	<div id="sketchbook_page">
 		<div class="row-fluid">
-			<div class="span4">
-				{% include small-menu.ext %}
-	    	</div>
-
-	    	<div class="span8">
+	    	<div class="span12">
 		    	{{ content }}
 	    	</div>
 		</div>
-		
-    </div>
-    
-    <footer>
-    	<div class="row-fluid">
-	    	<div class="span4 offset4">
-	    		{{ page.title }}
+		<footer>
+	    	<div class="row-fluid">
+		    	<div class="span4">
+		    		{{ page.title }}
+		    	</div>
+		    	<nav class="span4 offset2">
+				    <div>
+				    	<a href="{{ page.index-page }}">index</a>
+				    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				    	<a href="{{ page.prev-page }}">prev</a>
+				    	&nbsp;&nbsp;
+				    	<a href="{{ page.next-page }}">next</a>
+				    </div>
+		    	</nav>
 	    	</div>
-	    	<nav class="span4">
-			    <div class="pull-right">
-			    	<a href="{{ page.index-page }}">index</a>
-			    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			    	<a href="{{ page.prev-page }}">prev</a>
-			    	&nbsp;&nbsp;
-			    	<a href="{{ page.next-page }}">next</a>
-			    </div>
-	    	</nav>
-    	</div>
-    </footer>
+	    </footer>
+    </div>

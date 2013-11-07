@@ -1,4 +1,4 @@
-/* New sass for wholewheattoast
+/* SASS for wholewheattoast.com
 ** Shawn Eisenach
 */
 
@@ -6,16 +6,13 @@
 ==============================*/
 $font-size: 1.3125em;
 $line-height: 1.5em;
+$basline_grid: 6px;
 $baseFontFamily: Helvetica, sans-serif;
 $background-color: #fafafa;
-$masthead-accent-color: black;
-$color: black;
+$color: #000;
 $warm_accent_color: #ff2727;
-
-$black: #000;
 $success-green: #29B473;
-
-$link-color: $black;  /* change this */
+$link-color: #000;  /* change this */
 
 
 /* helpers
@@ -38,6 +35,7 @@ body {
 }
 
 #custom.container {
+	margin-top: 2.25em;
 	width: 90%;
 }
 
@@ -56,6 +54,7 @@ body {
 /* Typography
 ==============================*/
 
+
 h1, h2, h3, h4, h5, h6 {
 	color: #110011;
 }
@@ -68,7 +67,11 @@ h1, h2, h3, h4, h5, h6 {
 #custom h2 {
 	font-size: 3em;
 	line-height: 1em;
-	border-bottom: 4px solid $black;
+	border-bottom: 4px solid #000;
+}
+
+p.text {
+	max-width: ($font-size * 36);
 }
 
 /* Lists
@@ -76,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 
 li {
 	margin-bottom: .5em;
-  line-height: $line-height;
+	line-height: $line-height;
 }
 
 /* Misc
@@ -86,22 +89,9 @@ li {
 
 /* Masthead
 ==============================*/
-.masthead { 
-	background-color: $masthead-accent-color;
-	margin-bottom: 1.75em;
-	h1 { padding-bottom: .25em; }
-	.row, .row-fluid { margin-bottom: 0; }
-	.span8 { background-color: $background-color; }
-	ul { margin: 0; }
-	}
-.small-masthead {
-	margin-top: 2em;
-}
 
 /* Sketchbooks
 ==============================*/
-
-.sketchbook_container { margin-top: 4em; }
 .sketchbook-container { position: relative; }
 .sketchbook-image { max-width: 100%; }
 .sketchbook-container .over {
@@ -126,10 +116,6 @@ a .over:hover { opacity: .88; }
 
 /* About
 ==============================*/
-.about-dent { 
-	p { font-size: 1.125em; }
-	margin-bottom: 2.5em; }
-
 
 /* Works
 ==============================*/

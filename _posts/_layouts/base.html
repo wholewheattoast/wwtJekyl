@@ -71,7 +71,14 @@
 
   <body>
     <div id="custom" class="container">
-      {{ content }}
+      <div class="row-fluid">
+      	<div class="span2">
+      		{% include menu.ext %}
+      	</div>
+      	<div class="span10">
+      		{{ content }}
+      	</div>
+      </div>
     </div>
   </body>
 </html>

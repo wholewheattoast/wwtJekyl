@@ -2,28 +2,28 @@
 layout: base
 title: wwt | Etching
 description: Etching How To
+stub: /teaching/etching.html
 ---
-{% include menu.ext %}
 
 <div id="etching_handout">
-	<div class="row">
-		<header class="span10 offset2">
-			<h1>ETCHING: Plate Making and Printing</h1>
+	<div class="row-fluid">
+		<header class="span8 offset1">
+			<h1>ETCHING <small>Plate Making and Printing</small></h1>
 		</header>
 	</div>
 
 	<div class="row-fluid">
-		<div class="span6 offset3">
-			<div>
-				<p><strong>Intaglio</strong> comes from Italian word <em>intagliare</em> and roughly means, "to engrave, or to cut into".  In printmaking this refers to a family of techniques where an area below the surface of the plate is created through engraving, etching, or scratching.  This incision is then capable of holding ink, and transfered onto paper.</p>
-				<p>In etching the process a plate is covered with a protective ground- typically an asphaltum mixture.  This ground is then removed in areas to create a design, and the plate is submerged in an acid or corrosive bath.  The solution in the bath removes plate material where exposed and creating a recessed area.  The ground is removed and ink is spread over the plate and pushed into the grooves made by the solution.  Dampened paper is placed onto the plate and the whole thing run through a press.</p>
-
+		<div class="span8 offset1">
+			<div class="row-fluid">
+				<p class="text"><strong>Intaglio</strong> comes from Italian word <em>intagliare</em> and roughly means, "to engrave, or to cut into".  In printmaking this refers to a family of techniques where an area below the surface of the plate is created through engraving, etching, or scratching.  This incision is then capable of holding ink, and transfered onto paper.</p>
+				
+				<p class="text">In etching the process a plate is covered with a protective ground- typically an asphaltum mixture.  This ground is then removed in areas to create a design, and the plate is submerged in an acid or corrosive bath.  The solution in the bath removes plate material where exposed and creating a recessed area.  The ground is removed and ink is spread over the plate and pushed into the grooves made by the solution.  Dampened paper is placed onto the plate and the whole thing run through a press.</p>
 			</div>
 
-			<div>
+			<div class="row-fluid">
 				<h2>Preparing the Plate</h2>
 
-				<p>The plate must be beveled and polished, and cleaned before a ground can be applied.</p>
+				<p class="text">The plate must be beveled and polished, and cleaned before a ground can be applied.</p>
 				<ol>
 					<li>Cut the plate to the required size.</li>
 					<li>Use a scraper and file to bevel edges of plate to a 45 degree angle.</li>
@@ -33,9 +33,9 @@ description: Etching How To
 					<li>Degrease the plate with ammonia &amp; whiting, alcohol, or dish soap.</li>
 				</ol>
 			</div>
-			<div>
+			<div class="row-fluid">
 				<h2>Applying the Ball Ground</h2>
-				<p>Most Hard Grounds are a mixture of Beeswax, Asphaltum, and Rosin.  The ball ground used at CCSF is heated and then rolled out with a brayer.</p>
+				<p class="text">Most Hard Grounds are a mixture of Beeswax, Asphaltum, and Rosin.  The ball ground used at CCSF is heated and then rolled out with a brayer.</p>
 				<ol>
 					<li>Set the hot plate to ~ 200 degrees.</li>
 					<li>Lay down a sheet of tin foil / newsprint to keep hot plate clean.</li>
@@ -46,7 +46,7 @@ description: Etching How To
 					<li>When your plate is cool, you can begin to transfer image and/or draw.</li>
 				</ol>
 			</div>
-			<div>
+			<div class="row-fluid">
 				<h2>Draw On The Plate</h2>
 				<ol>
 					<li>A drawing made with soft graphite (6b) can be transfered to the plate by running through the press.</li>
@@ -56,13 +56,13 @@ description: Etching How To
 					<li>Remember that the image will print in reverse to what you see on the plate.</li>
 				</ol>
 			</div>
-			<div>
+			<div class="row-fluid">
 				<h2>Etch The Plate</h2>
-				<p>Once some drawing is complete you can submerge the plate into the etching bath.</p>
-				<p>The two basic approaches to etching are;</p>
-				<p><em>Additive</em> where some drawing is completed, and then etched.  Then additional drawing and etching steps are performed until the image is complete.</p>
-				<p><em>Reductive</em>  where a completed drawing is submerged in the etching bath, and after some amount of time is removed, and parts of the image are stopped out.  The etching and stopping out continues until the image is complete.</p>
-				<p>In Additive etching, the first lines will print the darkest, and in Reductive the last lines will print the darkest.</p>
+				<p class="text">Once some drawing is complete you can submerge the plate into the etching bath.</p>
+				<p class="text">The two basic approaches to etching are;</p>
+				<p class="text"><em>Additive</em> where some drawing is completed, and then etched.  Then additional drawing and etching steps are performed until the image is complete.</p>
+				<p class="text"><em>Reductive</em>  where a completed drawing is submerged in the etching bath, and after some amount of time is removed, and parts of the image are stopped out.  The etching and stopping out continues until the image is complete.</p>
+				<p class="text">In Additive etching, the first lines will print the darkest, and in Reductive the last lines will print the darkest.</p>
 				<h3>Etching Process</h3>
 				<ol>
 					<li>Stop out any unwanted areas.</li>
@@ -73,7 +73,7 @@ description: Etching How To
 					<li>New drawing will start the clock over. Old drawing will continue to etch.  You can add new drawing or stop out some of the old drawing.</li>
 				</ol>
 			</div>
-			<div>
+			<div class="row-fluid">
 				<h2>Clean Off The Ground</h2>
 				<ol>
 					<li>Set the hot plate to ~200 degrees.</li>
@@ -85,7 +85,7 @@ description: Etching How To
 					<li>If not immediately printing you can skip de-greasing the plate. The film left over will help the plate to resist oxidation.  To store the plate, wrap it in newsprint.</li>
 				</ol>
 			</div>
-			<div>
+			<div class="row-fluid">
 				<h2>Ink The Plate</h2>
 				<ol>
 					<li>Lay out and modify ink.</li>
@@ -96,16 +96,16 @@ description: Etching How To
 					<li>Clean the edges of the plate with a rag.  Give a final wipe with a new tarletan or your palm.</li>
 				</ol>
 			</div>
-			<div>
+			<div class="row-fluid">
 				<h2>Prepare Your Paper</h2>
-				<p>Many Western printmaking papers can take a while to soak before they are flexible enough to print with.  Consider placing some paper in the soaking bath at the start of the class, or preparing a wet pack.</p>
+				<p class="text">Many Western printmaking papers can take a while to soak before they are flexible enough to print with.  Consider placing some paper in the soaking bath at the start of the class, or preparing a wet pack.</p>
 				<ol>
 					<li>Measure and tear paper down to size.  It can be helpful to initial the back and indicate the type of paper for future reference.</li>
 					<li>Place paper in soaking tray initials facing up.  (I Recommend ~20-30 min for BFK)</li>
 					<li>Remove paper from soaking tray and blot dry with towels.</li>
 				</ol>
 			</div>
-			<div>
+			<div class="row-fluid">
 				<h2>Printing</h2>
 				<ol>
 					<li>Check that press pressure and blankets are set correctly.</li>

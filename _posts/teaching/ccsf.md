@@ -2,6 +2,7 @@
 layout: base
 title: wwt ccsf teaching
 description: Teaching Resources for CCSF Printmaking courses
+stub: /teaching/ccsf.html
 ---
 
 <div class="row-fluid">
@@ -27,16 +28,8 @@ description: Teaching Resources for CCSF Printmaking courses
 		<i class="icon-mobile-phone"> </i> <a hreff="tel:+17074840051">707-484-0051</a><br />
 		<i class="icon-envelope"> </i> <a href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
 
-		<h2>Handouts</h2>
-			<ul class="unstyled">
-				<li><i class="icon-chevron-right"> </i>  Schedule</li>
-				<li><a href="drypoint.html">Drypoint</a></li>
-				<li><a href="materials.html">Materials List</a></li>
-				<li><a href="etching.html">Etching / Intaglio Printing</a></li>
-				<li>Aquatint</li>
-				<li><a href="sugarlift.html">Sugar-lift</a></li>
-				<li>Clean up</li>
-			</ul>
+		{% include intaglio_handouts.ext %}
+		
 	</div>
 	
 	<section class="span6 offset2">
