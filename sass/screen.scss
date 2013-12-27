@@ -4,7 +4,7 @@
 
 /* Variabls
 ==============================*/
-$font-size: 1.3125em;
+$font-size: 1.75em;
 $line-height: 1.5em;
 $basline_grid: 6px;
 $baseFontFamily: Helvetica, sans-serif;
@@ -28,9 +28,10 @@ $link-color: #000;  /* change this */
 ==============================*/
 
 body {
+	margin-top: 1.5em;
 	font-size: $font-size;
 	color: $color;
-	line-height: $line-height;
+	/* line-height: $line-height; */
 	background-color: $background-color;
 }
 
