@@ -76,6 +76,14 @@ li {
 	margin-bottom: .5em;
 	line-height: $line-height;
 }
+/* Images
+==============================*/
+
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	}
 
 /* Misc
 ==============================*/
@@ -88,7 +96,7 @@ li {
 /* Sketchbooks
 ==============================*/
 .sketchbook-container { position: relative; }
-.sketchbook-image { max-width: 100%; }
+.sketchbook-image { max-width: 100%; height: auto; }
 .sketchbook-container .over {
 	position: absolute;
 	top: 0;

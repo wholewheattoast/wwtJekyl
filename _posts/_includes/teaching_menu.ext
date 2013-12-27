@@ -1,10 +1,11 @@
-<div class="row-fluid small-masthead">
+<div class="row small-masthead">
+	<div class="col-md-12"
 	<a href="/index.html">wholewheattoast</a>
 	<aside>
-		<i class="icon-envelope"> </i> <a href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
+		<i class="glyphicon glyphicon-envelope icon-envelope"> </i> <a href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
 
 		Handouts:
-		<ul class="unstyled">
+		<ul class="list-unstyled">
 			<li><a href="">Materials List</a></li>
 			<li><a href="">Intaglio Printing</a></li>
 			<li><a href="">Etching</a></li>

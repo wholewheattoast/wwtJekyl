@@ -1,13 +1,15 @@
-	<div class="row-fluid small-masthead">
-		<a href="/index.html">wholewheattoast</a>
-		<aside>
-			<ul class="unstyled">
-				<li><a href="/portfolio.html">work</a></li>
-				<li><a href="/recent.html">recent</a></li>
-				<li><a href="/sketchbooks.html">sketchbook</a></li>
-				<li><a href="http://www.wholewheatnotes.com">blog</a></li>
-				<li><a href="/about.html">about</a></li>
-				<li><a href="http://wholewheattoast.bigcartel.com">shop</a></li>
-			</ul>
-		</aside>
+	<div class="row small-masthead">
+		<div class="col-md-12">
+			<a href="/index.html">wholewheattoast</a>
+			<aside>
+				<ul class="list-unstyled">
+					<li><a href="/portfolio.html">work</a></li>
+					<li><a href="/recent.html">recent</a></li>
+					<li><a href="/sketchbooks.html">sketchbook</a></li>
+					<li><a href="http://www.wholewheatnotes.com">blog</a></li>
+					<li><a href="/about.html">about</a></li>
+					<li><a href="http://wholewheattoast.bigcartel.com">shop</a></li>
+				</ul>
+			</aside>
+		</div>
 	</div>
