@@ -11,41 +11,28 @@
 	/* 480px Smartphones */
 	@media (max-width: 480px) {
 		
-		#custom.container { width: 100%; }
-
 		body {
 			overflow: hidden;
 			font-size: 1.125em;
 		}
 
-		#custom .masthead { background-color: $background-color; }
+		.masthead { background-color: $background-color; }
 
-		#custom h1 { font-size: 1.75em; }
-
-		#custom h2 { font-size: 1.5em; }
-
-		#custom h3 { font-size: 1.25em; }
+		h1 { font-size: 1.75em; }
+		h2 { font-size: 1.5em; }
+		h3 { font-size: 1.25em; }
 		
-		#custom ul.inline > li, ol.inline > li {
+		ul.inline > li, ol.inline > li {
 			display: inline-block;	
 			padding-right: .125em;
 			padding-left: .125em;
 			}
 		
-		#custom .container-narrow {
-			width: 100%;
-			margin-right: auto;
-			margin-left: auto;
+		.container-narrow > hr { margin: 1.25em 0; }
+		li { padding-bottom: .5em; }
+
 		}
-		
-		#custom .container-narrow > hr {
-			margin: 1.25em 0;
-		}
-		
-		#custom li { padding-bottom: .5em; }
-		
-		}
-	
+
 	/* 767 "smartphones and small tablets
 	========================================= */
 	
@@ -61,12 +48,10 @@
 	/* ~1100px
 	========================================= */
 	@media (min-width: 970px) and (max-width: 1200px) {	}
-	
-	
+
+
 	/*retnia
 	========================================= */
-		
-		
 	@media
 	screen and (-webkit-min-device-pixel-ratio : 1.5),
 	screen and (min-device-pixel-ratio : 1.5) {	}
