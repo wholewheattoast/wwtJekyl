@@ -4,13 +4,11 @@ layout: base
 
 <div id="Portfolio_page" resource="{{ page.stub }}">
     <div class="row">
-        <div class="col-md-12">
-            <h1 property="dc:title">{{ page.title }}</h1>
-        </div>
-    </div>
-    <div class="row">
         <div class="col-md-6">
             <p>{{ content }}</p>
+        </div>
+        <div class="col-md-6">
+            <h1 property="dc:title"><em>{{ page.title }}</em></h1>
             <dl>
                 <dt>Media</dt>
                 <dd><span property="dc:medium">{{ page.media }}</span></dd>
@@ -21,12 +19,10 @@ layout: base
                 <dt>Date</dt>
                 <dd><span property="dc:created">{{ page.date }}</span></dd>
             </dl>
+            <nav>
+                <a href="{{ page.prev }}" rel="prev">&lt;</a>
+                <a href="{{ page.next }}" rel="next">&gt;</a>
+            </nav>
         </div>
     </div>
-    <div class="row">
-        <nav class="col-md-6">
-            <a href="{{ page.prev }}" rel="prev">&lt;</a>
-            <a href="{{ page.next }}" rel="next">&gt;</a>
-        </nav>
-    </div> 
 </div>
