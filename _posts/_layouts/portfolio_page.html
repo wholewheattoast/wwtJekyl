@@ -2,15 +2,25 @@
 layout: base
 ---
 
-<div id="Portfolio_page">
+<div id="Portfolio_page" resource="{{ page.stub }}">
     <div class="row">
         <div class="col-md-12">
-            <h1>{{ page.title }}</h1>
+            <h1 property="dc:title">{{ page.title }}</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            {{ content }}
+            <p>{{ content }}</p>
+            <dl>
+                <dt>Media</dt>
+                <dd><span property="dc:medium">{{ page.media }}</span></dd>
+
+                <dt>Size</dt>
+                <dd><span property="dc:extent">{{ page.size }}</span></dd>
+
+                <dt>Date</dt>
+                <dd><span property="dc:created">{{ page.date }}</span></dd>
+            </dl>
         </div>
     </div>
     <div class="row">
@@ -18,5 +28,5 @@ layout: base
             <a href="{{ page.prev }}" rel="prev">&lt;</a>
             <a href="{{ page.next }}" rel="next">&gt;</a>
         </nav>
-    </div>
+    </div> 
 </div>

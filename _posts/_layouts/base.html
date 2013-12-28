@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
+	<head prefix="dc: http://purl.org/dc/terms/">
 		<title>{{ page.title }}</title>
 		<meta charset="UTF-8" />
-		<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" /> 
-		<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" /> 
-		<meta name="DC.title" content="{{ page.title }}" /> 
-		<meta name="DC.creator" content="Shawn Eisenach" />
-		<meta name="DC.creator" content="wholewheattoast" /> 
-		<meta name="DC.description" content="{{ page.description }}" />
-		<meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text" /> 
-		<meta name="DC.format" content="text/html" /> 
-		<meta name="DC.identifier" scheme="DCTERMS.URI" content="http://www.wholewheattoast.com/{{ page.stub }}" />
-		<meta name="DC.modified" content="{{ site.time | date_to_xmlschema }}" />
-		<meta name="DC.created" content="{{ page.date }}" />
-		<meta name="DC.language" scheme="DCTERMS.RFC1766" content="en" /> 
+		<meta name="dc.title" content="{{ page.title }}" /> 
+		<meta name="dc.creator" content="Shawn Eisenach" />
+		<meta name="dc.creator" content="wholewheattoast" /> 
+		<meta name="dc.description" content="{{ page.description }}" />
+		<meta name="dc.type" scheme="DCTERMS.DCMIType" content="Text" /> 
+		<meta name="dc.format" content="text/html" /> 
+		<meta name="dc.identifier" scheme="DCTERMS.URI" content="http://www.wholewheattoast.com/{{ page.stub }}" />
+		<meta name="dc.modified" content="{{ site.time | date_to_xmlschema }}" />
+		<meta name="dc.created" content="{{ page.date }}" />
+		<meta name="dc.language" scheme="DCTERMS.RFC1766" content="en" /> 
 
 		<!-- 
 		<title property="dc:title">{{ page.title }}</title> 
@@ -74,7 +72,7 @@
 		
 	</head>
 
-  <body>
+  <body prefix="dc: http://purl.org/dc/terms/">
     <div class="container">
       <div class="row">
       	<div class="col-md-2">
