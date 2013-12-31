@@ -1,45 +1,17 @@
 <article>
+    
+    <div class="row">
+        <div class="col-md-8">
+            <p>
+                <a href="/portfolio/ncd/index.html">
+                    <img src="/image/portfolio/ncd/cactus_deodorant.jpg" />
+                </a>
+            </p>
+        </div>
+    </div>
     <header class="row">
         <div class="col-md-12">
-            <h1>Isometric Tuna <small>Issue #2</small></h1>
+            <h1><a href="/portfolio/ncd/index.html">New Color Drawings</a></h1>
         </div>
     </header>
-    <div class="row">
-        <div class="col-md-4">
-            <p>
-                <img class="img-responsive" src="/image/publications/isometric_tuna_2/isometric_tuna_2_fc.png" title="Isometric Tuna #2 cover" alt="A photo the Isometric Tuna, issue # 2, cover." height=640 width=475 />
-            </p>
-        </div>
-        <div class="col-md-6">
-            <p>Second Issue of Isometric Tuna</p>
-            <p>Six Risographed Comics about Farts and Violence with an eight color hand pulled centerfold.</p>
-            <p>
-                <a href="http://wholewheattoast.bigcartel.com/product/isometric-tuna-2">Buy</a><br />
-                <a href="#isometric_tuna_inside">Look Inside</a>
-            </p>
-            <h3>Details</h3>
-            <ul class="list-unstyled">
-                <li>Risographed Black Ink on paper</li>
-                <li>Hand printed 8 color relief centerfold on Mulberry
-                <li>Saddle Stitched</li>
-                <li>5" x 7"</li>
-                <li>2013</li>
-                <li>First Edition of 60</li>
-            </ul>
-            
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <a id="isometric_tuna_inside"></a>
-            <p>
-                <img class="img-responsive" src="/image/publications/isometric_tuna_2/isometric_tuna_2_pp_1_2.png" title="Isometric Tuna #2 Pages 1 and 2" alt="A photo an Isometric Tuna #2." height=640 width=884 />
-            </p>
-        </div>
-        <div class="col-md-6">
-            <p>
-                <img class="img-responsive" src="/image/publications/isometric_tuna_2/isometric_tuna_2_centerfold.png" title="Isometric Tuna #2 centerfold" alt="A photo an Isometric Tuna #2 centerfold." height=600 width=804 />
-            </p>
-        </div>
-    </div>
 </article>
