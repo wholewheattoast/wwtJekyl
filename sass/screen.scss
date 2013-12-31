@@ -123,7 +123,12 @@ a .over:hover { opacity: .88; }
 /* Works
 ==============================*/
 #Portfolio_page, #NCD_page { margin-top: 2em; }
-#Portfolio_page, #NCD_page h1 { font-size: 1.375em; }
+#Portfolio_page, #NCD_page h1 { font-size: 1.25em; }
+
+#NCD_page nav {
+	position: absolute;
+	top: 5em;
+}
 
 /* Teaching
 ==============================*/
