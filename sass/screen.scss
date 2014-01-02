@@ -105,27 +105,6 @@ img {
 
 /* Sketchbooks
 ==============================*/
-.sketchbook-container { position: relative; }
-.sketchbook-image { max-width: 100%; height: auto; }
-.sketchbook-container .over {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 1em;
-	bottom: 0;
-	z-index: 3;
-	opacity: 0;
-	width: 100%;
-	background-color: $background-color;
-	-moz-transition: opacity 1s ease;
-	-o-transition: opacity 1s ease;
-	-webkit-transition: opacity 1s ease;
-  	transition: opacity 1s ease;
-  	dd { margin-left: 0; }
-  	dt {display: none;}
-  }
-
-a .over:hover { opacity: .88; }
 
 /* About
 ==============================*/

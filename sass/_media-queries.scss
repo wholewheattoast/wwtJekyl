@@ -3,10 +3,7 @@
 
 	/* height
 	===================================== */
-	@media (max-height: 670px) {
-		.sketchbook_container { margin-top: 1em; }
-		#sketchbook_page .row-fluid { margin-bottom: 0; }
-	}
+	@media (max-height: 670px) {}
 
 	/* 480px Smartphones */
 	@media (max-width: 480px) {
@@ -15,8 +12,6 @@
 			overflow: hidden;
 			font-size: 1.125em;
 		}
-
-		.masthead { background-color: $background-color; }
 
 		h1 { font-size: 1.75em; }
 		h2 { font-size: 1.5em; }
