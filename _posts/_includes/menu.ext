@@ -1,12 +1,14 @@
+<header id="Masthead">
+	<a href="/index.html">wholewheattoast</a>
+</header>
 <nav>
 	<ul class="list-unstyled menu">
-		<li><a href="/portfolio.html">work</a></li>
-		<li><a href="/publications.html">publications</a></li>
-		<li><a href="/recent.html">recent</a></li>
-		<li><a href="/sketchbooks.html">sketchbook</a></li>
-		<li><a href="http://www.wholewheatnotes.com">blog</a></li>
-		<li><a href="/about.html">about</a></li>
-		<li><a href="http://wholewheattoast.bigcartel.com">shop</a></li>
+		<li><a href="/portfolio.html">work</a> // </li>
+		<li><a href="/publications.html">publications</a> // </li>
+		<li><a href="/sketchbooks.html">sketchbook</a> // </li>
+		<li><a href="http://www.wholewheatnotes.com">blog</a> // </li>
+		<li><a href="/about.html">about</a> // </li>
+		<li><a href="http://wholewheattoast.bigcartel.com">shop</a> // </li>
 		<li><a href="/teaching/index.html">teaching</a></li>
 	</ul>
 </nav>
