@@ -10,7 +10,7 @@
         </div>
     </div>
     <header class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 page-header">
             <h1><a href="/portfolio/ncd/index.html">New Color Drawings</a></h1>
         </div>
     </header>

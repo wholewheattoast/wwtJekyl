@@ -72,16 +72,19 @@
 		
 	</head>
 
-  <body prefix="dc: http://purl.org/dc/terms/">
-    <div class="container">
-      <div class="row">
-      	<div class="col-md-2">
-      		{% include menu.ext %}
-      	</div>
-      	<div class="col-md-10">
-      		{{ content }}
-      	</div>
-      </div>
-    </div>
+	<body prefix="dc: http://purl.org/dc/terms/">
+		<div class="container">
+      		<div class="row">
+      			<div class="col-md-12">
+      				{% include menu.ext %}
+      			</div>
+      		</div>
+      		<div class="row">
+      			<div class="col-md-12">
+      				{{ content }}
+      			</div>
+      		</div>
+		</div>
+		{% include footer.ext %}
   </body>
 </html>
