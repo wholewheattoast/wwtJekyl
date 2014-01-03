@@ -22,7 +22,7 @@ $link-color: #000;  /* change this */
 
 /* bootstrap overrides
 ==============================*/
-.row-fluid, .row { margin-bottom: 1.25em; }
+.row { margin-bottom: 1.25em; }
 
 /* main
 ==============================*/
@@ -73,10 +73,6 @@ p.text {
 /* Lists
 ==============================*/
 
-li {
-	margin-bottom: .5em;
-	line-height: $line-height;
-}
 /* Images
 ==============================*/
 
@@ -118,6 +114,13 @@ img {
 	position: absolute;
 	top: 5em;
 }
+
+/* Publications
+==============================*/
+#Publications_page h1 { 
+	font-size: 1.5em;
+	margin-top: 0; 
+	}
 
 /* Teaching
 ==============================*/

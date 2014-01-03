@@ -1,0 +1,31 @@
+---
+layout: base
+---
+
+<article id="Publications_page" resource="{{ page.stub }}">
+    <div class="row">
+        <div class="col-lg-6 col-md-4 col-xs-6">
+            <img src="{{ page.cover_image }}" alt="Cover of {{ page.title }}" title="Cover of {{ page.title }}" />
+        </div>
+        <div class="col-md-6 col-xs-6">
+            <header>
+                <h1 property="dc:title">{{ page.title }}</h1>
+            </header>
+            <p><span property="dc:description">{{ page.description }}</span></p>
+            <ul class="list-unstyled">
+                <li><span property="dc:extent">{{ page.pages }} pages</span></li>
+                <li><span property="dc:medium">{{ page.media }}</span></li>
+                <li><span property="dc:format">{{ page.size }} inches</span></li>
+                <li><span property="dc:date">{{ page.date }}</span></li>
+            </ul>
+            {% if page.buy %}
+                <p>
+                    <a href="http://{{ page.buy }}">Buy</a>
+                </p>
+            {% endif %}
+        </div>
+    </div>
+    <div>
+        {{ page.content }}
+    </div>
+</article>

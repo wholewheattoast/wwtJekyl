@@ -5,51 +5,63 @@ description: Sketchbook dump for the year 2013 printed in two volumes
 stub: publications/sb2013.html
 ---
 
-<article>
+<article resource="{{ page.stub }}">
     <header class="row">
         <div class="col-md-12">
-            <h1>Sketchbooks 2013</h1>
+            <h1 property="dc:title">Sketchbook Dump 2013</h1>
         </div>
     </header>
     <div class="row">
-        <div class="col-md-6">
-            <h2>Part A</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <p>
-                        <img src="/image/publications/sb2013_parta.png" alt="Image of the Sketchbooks 2013 Part A cover" title="Sketchbooks 2013 Part A cover" width=600 height=830 />
-                    </p>
+        <section id="PartA" resource="{{ page.stub }}#PartA">
+            <div class="col-md-6">
+                <div class="row">
+                    <header class="col-md-12">
+                        <h2 property="dc:title">Part A</h2>
+                    </header>
                 </div>
-                <div class="col-md-6">
-                    <ul class="list-unstyled">
-                        <li>Forty Pages</li>
-                        <li>Risographed Black Ink on paper</li>
-                        <li>Saddle Stitched</li>
-                        <li>3.75 x 5.5 inches</li>
-                        <li>Black cover with Natural pages</li>
-                        <li>July 2013</li>
-                        <li>First Edition of 50</li>
-                        <li><a href="#sb2013a_inside">Look Inside</a></li>
-                    </ul>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+                            <img src="/image/publications/sb2013a/sb2013a_cover.jpg" alt="Image of the Sketchbooks 2013 Part A cover" title="Sketchbooks 2013 Part A cover" width=600 height=830 />
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li><span property="dc:extent">Forty Pages</span></li>
+                            <li><span property="dc:medium">Black Risograph Ink on paper.  Saddle Stitched</span></li>
+                            <li><span property="dc:format">3.75 x 5.5 inches</span></li>
+                            <li><span property="dc:date">July 2013</span></li>
+                            <li>First Edition of 50</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a id="sb2013a_inside"></a>
+                        <p>
+                            <img src="/image/publications/sb2013a/sb2013a001.jpg" alt="sample page from Part a" width="800" width="800" />
+                        </p>
+                        <p>
+                            <img src="/image/publications/sb2013a/sb2013a002.jpg" lt="sample page from Part a" width="800" width="800"/>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <a id="sb2013a_inside"></a>
-                    <p>
-                        <img src="/image/publications/sb2013a_02.png" alt="sample page from Parta" width="600" width="600" />
-                    </p>
-                    <p>
-                        <img src="/image/publications/sb2013a_03.png" lt="sample page from Parta" width="600" width="600"/>
-                    </p>
+        </section>
+        <section id="PartB" resource="{{ page.stub }}#PartB">
+            <div class="col-md-6">
+                <div class="row">
+                    <header class="col-md-12">
+                        <h2 property="dc:title">Part B</h2>
+                    </header>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Coming In January 2014</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <header class="col-md-12">
-                <h2>Part B <br /><small>Coming In December 2013</small></h2>
-            </header>
-        </div>
+        </section>
     </div>
 </article>
 
