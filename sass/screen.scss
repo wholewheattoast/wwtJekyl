@@ -55,20 +55,9 @@ h1, h2, h3, h4, h5, h6 {
 	color: #110011;
 }
 
-h1 {
-	font-size: 4em;
-	line-height: 1em;
-}
+h2 { border-bottom: 4px solid #000; }
 
-h2 {
-	font-size: 3em;
-	line-height: 1em;
-	border-bottom: 4px solid #000;
-}
-
-p.text {
-	max-width: ($font-size * 36);
-}
+p.text { max-width: ($font-size * 36); }
 
 /* Lists
 ==============================*/
@@ -81,6 +70,9 @@ img {
 	height: auto;
 	max-width: 100%;
 	}
+
+/* Color
+==============================*/
 
 /* Misc
 ==============================*/
@@ -107,8 +99,9 @@ img {
 
 /* Works
 ==============================*/
+
 #Portfolio_page, #NCD_page { margin-top: 2em; }
-#Portfolio_page, #NCD_page h1 { font-size: 1.25em; }
+/* #Portfolio_page, #NCD_page h1 { font-size: 1.25em; } */
 
 #NCD_page nav {
 	position: absolute;
