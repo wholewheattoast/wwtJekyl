@@ -79,6 +79,19 @@ img {
 
 .accent { color: $warm_accent_color; }
 
+/* Nav's
+==============================*/
+
+.nav3 {
+	margin-top: 2em;
+	text-align: center;
+}
+
+#NCD_page nav {
+	position: absolute;
+	top: 5em;
+}
+
 /* Masthead
 ==============================*/
 .menu li { display: inline;}
@@ -101,12 +114,9 @@ img {
 ==============================*/
 
 #Portfolio_page, #NCD_page { margin-top: 2em; }
-/* #Portfolio_page, #NCD_page h1 { font-size: 1.25em; } */
-
-#NCD_page nav {
-	position: absolute;
-	top: 5em;
-}
+#Portfolio_page h1, #NCD_page h1, #Comics_page h1 { 
+	font-size: 1.125em;
+	margin-top: 0; }
 
 /* Publications
 ==============================*/
