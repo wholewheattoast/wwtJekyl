@@ -19,10 +19,9 @@ layout: base
                 <dt>Date</dt>
                 <dd><span property="dc:created">{{ page.date }}</span></dd>
             </dl>
-            <nav>
-                <a href="{{ page.prev }}" rel="prev">&lt;</a>
-                <a href="{{ page.next }}" rel="next">&gt;</a>
-            </nav>
+
+            {% include nav_with_index.ext %}
+        
         </div>
     </div>
 </div>
