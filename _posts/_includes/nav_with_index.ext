@@ -1,0 +1,25 @@
+<nav class="nav_with_index">
+    <div class="row">
+        {% if page.index %}
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <a href="{{ page.prev }}" title="prev" rel="prev"><i class="fa fa-chevron-left"></i></a>
+            </div>
+            
+            <div class="col-md-4 col-xs-4">
+                <p><a href="{{ page.index }}">index</a></p>
+            </div>
+            
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <a href="{{ page.next }}" title="next" rel="next"><i class="fa fa-chevron-right"></i></a>
+            </div>
+        {% else %}
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <a href="{{ page.prev }}" title="prev" rel="prev"><i class="fa fa-chevron-left"></i></a>
+            </div>
+            
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <a href="{{ page.next }}" title="next" rel="next"><i class="fa fa-chevron-right"></i></a>
+            </div>
+        {% endif %}
+    </div>
+</nav>
