@@ -1,14 +1,24 @@
-<header id="Masthead">
-	<a href="/index.html">wholewheattoast</a>
+<header id="Masthead" class="row">
+	<div class="col-md-12">
+		<a href="/index.html">wholewheattoast</a>
+	</div>
 </header>
-<nav>
-	<ul class="list-unstyled menu">
-		<li><a href="/portfolio.html">work</a> // </li>
-		<li><a href="/publications.html">publications</a> // </li>
-		<li><a href="/sketchbooks.html">sketchbooks</a> // </li>
-		<li><a href="http://www.wholewheatnotes.com">blog</a> // </li>
-		<li><a href="/about.html">about</a> // </li>
-		<li><a href="http://wholewheattoast.bigcartel.com">shop</a> // </li>
-		<li><a href="/teaching/index.html">teaching</a></li>
-	</ul>
-</nav>
+
+<div class="row">
+	<div class="col-md-2 col-sm-4 col-xs-12"><span property="dc:creator">shawn eisenach</span></div>
+	<div class="col-md-4 col-sm-6 col-xs-12"><a class="bare_link" href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a></div>
+</div>
+
+<div class="row">
+	<nav class="col-md-12">
+		<ul class="list-unstyled menu">
+			<li><a href="/portfolio.html">work</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+			<li><a href="/publications.html">publications</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+			<li><a href="/sketchbooks.html">sketchbooks</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+			<li><a href="http://www.wholewheatnotes.com">blog</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+			<li><a href="/about.html">about</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+			<li><a href="http://wholewheattoast.bigcartel.com">shop</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+			<li><a href="/teaching/index.html">teaching</a></li>
+		</ul>
+	</nav>
+</div>
