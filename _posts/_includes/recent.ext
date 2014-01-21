@@ -1,12 +1,23 @@
 <article>
     <div class="row">
-        <header class="col-md-6">
-            <h1><a href="/portfolio/ncd/index.html">New Color Drawings</a></h1>
-        </header>
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6">
+            <h1><a href="publications/fax_similie_3.html">Fax Similie Number 3</a></h1>
+            <p>Third Issue in the Fax Simile series.<br />
+            Sketchbook drawings from 2013.<br />
+            Includes a full <a href="publications/fax_similie_3.html#Index">index</a>.</p>
             <p>
-                <a href="/portfolio/ncd/index.html">
-                    <img src="/image/portfolio/ncd/cactus_deodorant.jpg" />
+                72 pages<br/>
+                Risographed Black Ink on gray paper, lilac cover.
+            </p>
+            <p>
+                <a href="wholewheattoast.bigcartel.com/product/fax-simile-number-three">Buy</a> a copy today.</a>
+            </p>
+            <p><a href="publications/fax_similie_3.html">See More</a>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <p>
+                <a href="publications/fax_similie_3.html">
+                    <img src="/image/publications/fax_similie_3/fax_similie_3_06.jpg" title="Fax Simile Number Three" alt="A photo of a Fax Simile Number Three spread." height=480 width=640 />
                 </a>
             </p>
         </div>

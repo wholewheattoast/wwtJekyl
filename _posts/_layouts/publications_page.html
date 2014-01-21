@@ -23,6 +23,12 @@ layout: base
                     <a href="http://{{ page.buy }}">Buy</a>
                 </p>
             {% endif %}
+
+            {%if page.extra %}
+                <p>
+                    {{ page.extra }}
+                </p>
+            {% endif %}
         </div>
     </div>
     <div>
