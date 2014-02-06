@@ -33,6 +33,11 @@ body {
 	color: $color;
 	/* line-height: $line-height; */
 	background-color: $background-color;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern=1";
 }
 
 /* Links
@@ -59,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 { border-bottom: 4px solid #000; }
 
-p.text { max-width: ($font-size * 36); }
+p { max-width: ($font-size * 36); }
 
 /* Lists
 ==============================*/
