@@ -1,37 +1,35 @@
 #output sketchbook page
-
+#
 import os
-
-#name and path
+#
+# Sketchbook name and file paths
 working_directory_path = "/Users/shawn/Dropbox/Sites/wwtJekyl/_posts/sketchbooks/"
 output_directory_path = "."
-output_domain = "http://www.wholewheattoast.com/"
+#output_domain = "http://www.wholewheattoast.com/"
 sketchbook_name = raw_input('Enter sketchbook name: ')
 title_string_prepend = """title: """ + str(sketchbook_name)
 directory = working_directory_path + sketchbook_name
 img_dir_location = "/image/sketchbooks/" + str(sketchbook_name) + "/"
-
-
-#pages
+#
+# Page Setup
 pagesInput = raw_input('How many pages? ')
-#198
 pages = int(pagesInput)
 spreads = pages // 2
 left_page = 1
 right_page = 2
-
+#
+# Other Metadata
+description = raw_input('Enter a description: ')
 index_meta = "index-page: " "index.html"
-
-#images
+#
+# Images
 img_width = 'width="' + raw_input('Image width? ') + '"'
-#'width="900"'
-#img_height = 'height="713"'
 img_height = 'height="' + raw_input('Image height? ') + '"'
 img_classes = """class="img-rounded" """
-
+#
 ## init
 counter = 1
-
+#
 def write_to_file(name_of, title_string, next_page_url, next_page_meta, prev_page_meta, img_url):
 	f = open(name_of, 'w+')
 	f.write("---")
@@ -40,7 +38,7 @@ def write_to_file(name_of, title_string, next_page_url, next_page_meta, prev_pag
 	f.write('\n')
 	f.write(title_string)
 	f.write('\n')
-	f.write("description:")
+	f.write("description: " + description)
 	f.write('\n')
 	f.write("tags: sketchbook, moleskine")
 	f.write('\n')
@@ -59,9 +57,8 @@ def write_to_file(name_of, title_string, next_page_url, next_page_meta, prev_pag
 	f.write("</p>")
 	f.write('\n')
 	f.close()
-	#print f
 
-##create directory if not already exist
+##create directory if it does not already exist
 if not os.path.exists(directory):
     os.makedirs(directory)
 

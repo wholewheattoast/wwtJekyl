@@ -1,0 +1,22 @@
+---
+layout: base
+---
+
+<article>
+    <header>
+        <h1>{{ page.title }}</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <p><time datetime="{{ page.iso_time_start}}">{{ page.time_start }}</time> to <time datetime="{{ page.iso_time_end}}">{{ page.time_end }}</time></p>
+                <p>{{ page.dimensions }}</p>
+                <small><span class="accent">click for larger</span></small>
+            </div>
+        </div>
+    </header>
+    
+    <section class="sketchbook_index">
+        <div class="row">
+            {{ page.content }}
+        </div>
+    </section>
+</article>

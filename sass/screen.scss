@@ -22,7 +22,7 @@ $link-color: #000;  /* change this */
 
 /* bootstrap overrides
 ==============================*/
-.row { margin-bottom: 1.25em; }
+.row { margin-bottom: 1.25em; } // replace w a helper class
 
 /* main
 ==============================*/
@@ -31,7 +31,6 @@ body {
 	margin-top: 1.5em;
 	font-size: $font-size;
 	color: $color;
-	/* line-height: $line-height; */
 	background-color: $background-color;
 	text-rendering: optimizeLegibility;
 	font-feature-settings: "kern";
@@ -48,9 +47,7 @@ a {
 	font-weight: bold;
 }
 
-a:hover {
-	color: $warm_accent_color;
-}
+a:hover { color: $warm_accent_color; }
 
 .bare_link { font-weight: normal; }
 
@@ -85,6 +82,7 @@ img {
 ==============================*/
 
 .accent { color: $warm_accent_color; }
+.center_text { text-align: center; }
 
 /* Nav's
 ==============================*/
@@ -100,7 +98,7 @@ img {
 
 /* Main Footer
 ==============================*/
-#Main_Footer .jumbotron {
+#Main_Footer .jumbotron,  {
 	margin-bottom: 0;
 	background-color: $background-color;
 	text-align: center;
@@ -109,6 +107,19 @@ img {
 
 /* Sketchbooks
 ==============================*/
+.sketchbook_index {
+	li { 
+		display: inline;
+		padding: .75em; 
+	}
+}
+
+.sketchbook_page h1 {
+	font-size: 18px;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.428571429;
+}
 
 /* About
 ==============================*/
@@ -116,7 +127,9 @@ img {
 /* Works
 ==============================*/
 
-#Portfolio_page, #NCD_page { margin-top: 2em; }
+#Portfolio_page, 
+#NCD_page { margin-top: 2em; }
+
 #Portfolio_page h1, #NCD_page h1, { 
 	font-size: 1.125em;
 	margin-top: 0; }
