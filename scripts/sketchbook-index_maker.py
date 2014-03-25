@@ -90,6 +90,7 @@ def write_to_index(name_of_index, sketchbook_page_url, thumbnail_img_url, this_e
     f = open(name_of_index, 'a')
     f.write('<li class="col-xs-4 col-md-3"> <a href="' + sketchbook_page_url + '"><img src="' + thumbnail_img_url + '" alt="Thumbnail image for ' + this_entry_title + '" ' + 'title="' + this_entry_title + '" ' + thumb_img_width + ' ' + thumb_img_height  + """ /></a></li>""")
     f.write('\n')
+    f.write('\n')
     f.close()
 
 ##create directory if it does not already exist
@@ -100,7 +101,7 @@ initial_index_write = write_index_yaml(name_of_index, title_string_prepend, desc
 
 if pages_start_on == "1":
     while counter == 1:
-        sketchbook_page_url = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-front-cover.html"
+        sketchbook_page_url = "/sketchbooks/" + sketchbook_url_name + "/" + sketchbook_url_name + "-front-cover.html"
         thumbnail_img_url = img_dir_location + "thumbs/" + sketchbook_url_name + """-front-cover.jpg"""
         this_entry_title = sketchbook_url_name + "/" + sketchbook_url_name + "-front-cover"
         front_cover_entry = write_to_index(name_of_index, sketchbook_page_url, thumbnail_img_url, this_entry_title)
@@ -114,27 +115,27 @@ if pages_start_on == "1":
         right_page += 2
         counter += 1
     while counter == (spreads + 1):
-        sketchbook_page_url = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-back-cover.html"
+        sketchbook_page_url = "/sketchbooks/" + sketchbook_url_name + "/" + sketchbook_url_name + "-back-cover.html"
         thumbnail_img_url = img_dir_location + "thumbs/" + sketchbook_url_name + """-back-cover"""
         this_entry_title = sketchbook_url_name + "/" + sketchbook_url_name + "-back-cover"
         front_cover_entry = write_to_index(name_of_index, sketchbook_page_url, thumbnail_img_url, this_entry_title)
         counter += 1
 elif pages_start_on == "ifc":
     while counter == 1:
-        sketchbook_page_url = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-front-cover.html"
+        sketchbook_page_url = "/sketchbooks/" + sketchbook_url_name + "/" + sketchbook_url_name + "-front-cover.html"
         thumbnail_img_url = img_dir_location + "thumbs/" + sketchbook_url_name + """-front-cover.jpg"""
         this_entry_title = sketchbook_url_name + "-front-cover"
         front_cover_entry = write_to_index(name_of_index, sketchbook_page_url, thumbnail_img_url, this_entry_title)
         counter += 1
     while counter == 2:
-        sketchbook_page_url = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-pp-" + str(ifc_page) + "-" + str(ifc_right_page) + ".html"
+        sketchbook_page_url = "/sketchbooks/" + sketchbook_url_name + "/" + sketchbook_url_name + "-pp-" + str(ifc_page) + "-" + str(ifc_right_page) + ".html"
         thumbnail_img_url = img_dir_location + "thumbs/" + sketchbook_url_name + """_pp_""" + str(ifc_page) + "_" + str(ifc_right_page) + """.jpg"""
         this_entry_title = sketchbook_url_name + "-pp-" + str(ifc_page) + "-" + str(ifc_right_page) + ".html"
         body_pages = write_to_index(name_of_index, sketchbook_page_url, thumbnail_img_url, this_entry_title)
         ifc_right_page += 2
         counter += 1
     while counter > 2 and counter < (spreads):
-        sketchbook_page_url = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ifc_right_page) + ".html"
+        sketchbook_page_url = "/sketchbooks/" + sketchbook_url_name + "/" + sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ifc_right_page) + ".html"
         thumbnail_img_url = img_dir_location + "thumbs/" + sketchbook_url_name + """_pp_""" + str(ifc_left_page) + "_" + str(ifc_right_page) + """.jpg"""
         this_entry_title = sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ifc_right_page)
         body_pages = write_to_index(name_of_index, sketchbook_page_url, thumbnail_img_url, this_entry_title)
@@ -142,13 +143,13 @@ elif pages_start_on == "ifc":
         ifc_right_page += 2
         counter += 1
     while counter == (spreads):
-        sketchbook_page_url = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ibc_page) + ".html"
+        sketchbook_page_url = "/sketchbooks/" + sketchbook_url_name + "/" + sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ibc_page) + ".html"
         thumbnail_img_url =  img_dir_location + "thumbs/" + sketchbook_url_name + """_pp_""" + str(ifc_left_page) + "_" + str(ibc_page) + """.jpg"""
         this_entry_title = sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ibc_page)
         body_pages = write_to_index(name_of_index, sketchbook_page_url, thumbnail_img_url, this_entry_title)
         counter += 1
     while counter == (spreads + 1):
-        sketchbook_page_url = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-back-cover.html"
+        sketchbook_page_url = "/sketchbooks/" + sketchbook_url_name + "/" + sketchbook_url_name + "-back-cover.html"
         thumbnail_img_url = img_dir_location + "thumbs/" + sketchbook_url_name + """-back-cover.jpg"""
         this_entry_title = sketchbook_url_name + "-back-cover"
         front_cover_entry = write_to_index(name_of_index, sketchbook_page_url, thumbnail_img_url, this_entry_title)
