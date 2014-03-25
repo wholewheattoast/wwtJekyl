@@ -116,7 +116,7 @@ if pages_start_on == "1":
         counter += 1
     while counter == (spreads + 1):
         sketchbook_page_url = "/sketchbooks/" + sketchbook_url_name + "/" + sketchbook_url_name + "-back-cover.html"
-        thumbnail_img_url = img_dir_location + "thumbs/" + sketchbook_url_name + """-back-cover"""
+        thumbnail_img_url = img_dir_location + "thumbs/" + sketchbook_url_name + """-back-cover.jpg"""
         this_entry_title = sketchbook_url_name + "/" + sketchbook_url_name + "-back-cover"
         front_cover_entry = write_to_index(name_of_index, sketchbook_page_url, thumbnail_img_url, this_entry_title)
         counter += 1
