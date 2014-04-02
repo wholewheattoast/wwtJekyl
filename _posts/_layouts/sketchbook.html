@@ -1,28 +1,26 @@
 ---
-layout: base_no_top
+layout: base_full_width
 ---
 	<article class="sketchbook_page">
 		<div class="row">
-	    	<div class="col-md-12">
+	    	<div class="col-lg-8 col-md-6 col-sm-10">
 	    		{{ content }}
 	    	</div>
+	    	<div class="col-md-4 col-sm-12 col-lg-3 col-md-offset-1 col-lg-offset-0">
+	    		<h1 property="dc:title">{{ page.title }}</h1>
+	    		<nav>
+			    	<ol class="list-unstyled list-inline">
+					    <li>
+					        <a class="bare_link" rel="prev" href="{{ page.prev-page }}"> prev</a>
+					    </li>
+					    <li>
+					        <a class="bare_link" rel="contents" href="{{ page.index-page }}">index</a>
+					    </li>
+					    <li>
+					        <a class="bare_link" rel="next" href="{{ page.next-page }}">next</a>
+					    </li>
+					</ol>
+	    		</nav>
+	    	</div>
 	    </div>
-	    <div class="row">
-	    	<div class="col-md-8">
-		    	<h1 property="dc:title">{{ page.title }}</h1>
-		    </div>
-		    <nav class="col-md-4">
-		    	<ol class="list-unstyled list-inline">
-				    <li>
-				        <a class="bare_link" rel="prev" href="{{ page.prev-page }}"> prev</a>
-				    </li>
-				    <li>
-				        <a class="bare_link" rel="contents" href="{{ page.index-page }}">index</a>
-				    </li>
-				    <li>
-				        <a class="bare_link" rel="next" href="{{ page.next-page }}">next</a>
-				    </li>
-				</ol>
-	    	</nav>
-		</div>
     </article>

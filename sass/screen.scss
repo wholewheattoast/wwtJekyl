@@ -37,7 +37,12 @@ body {
 	-webkit-font-feature-settings: "kern";
 	-moz-font-feature-settings: "kern";
 	-moz-font-feature-settings: "kern=1";
+	
 }
+
+#full_width {
+		.container { width: 98%; }
+	}
 
 /* Links
 ==============================*/
@@ -84,13 +89,27 @@ img {
 .accent { color: $warm_accent_color; }
 .center_text { text-align: center; }
 
+
+/* Sidebar
+==============================*/
+
+.sidebar {
+	h1 { font-size: 14px; }
+	font-size: .75em;
+}
+
+
 /* Nav's
 ==============================*/
 
 .nav_with_index {
 	margin-top: 2em;
-	text-align: center;
 }
+
+.side_nav { 
+	font-size: 14px;
+	li { margin-bottom: .5em; }
+	}
 
 /* Masthead
 ==============================*/

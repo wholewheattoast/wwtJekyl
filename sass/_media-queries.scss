@@ -33,7 +33,12 @@
 	/* 767 "smartphones and small tablets
 	========================================= */
 	
-	@media (max-width: 767px) { }
+	@media (max-width: 767px) {
+		.sidebar {
+			margin-bottom: 2em;
+			li { display: inline;}
+		}
+	 }
 	
 	/* 768 Portrait tablets
 	========================================= */
