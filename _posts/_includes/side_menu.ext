@@ -1,7 +1,7 @@
 <section class="sidebar">
 	<h1><a href="/index.html">wholewheattoast</a></h1>
 	<p>
-		<a class="bare_link" href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
+		<a class="bare_link email" href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
 	</p>
 	<nav class="side_nav">
 		<ul class="list-unstyled">

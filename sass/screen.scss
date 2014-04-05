@@ -94,6 +94,7 @@ img {
 ==============================*/
 
 .sidebar {
+	position: fixed;
 	h1 { font-size: 14px; }
 	font-size: .75em;
 }
@@ -146,8 +147,7 @@ img {
 /* Works
 ==============================*/
 
-#Portfolio_page, 
-#NCD_page { margin-top: 2em; }
+#Portfolio_page { margin-top: 2em; }
 
 #Portfolio_page h1, #NCD_page h1, { 
 	font-size: 1.125em;

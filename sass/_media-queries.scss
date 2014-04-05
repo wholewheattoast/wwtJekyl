@@ -11,6 +11,7 @@
 		body {
 			overflow: hidden;
 			font-size: 1.125em;
+			margin-top: 0;
 		}
 
 		h1 { font-size: 1.75em; }
@@ -18,36 +19,95 @@
 		h3 { font-size: 1.25em; }
 		
 		ul.inline > li, ol.inline > li {
-			display: inline-block;	
+			display: inline-block;
 			padding-right: .125em;
 			padding-left: .125em;
 			}
 		
-		.container-narrow > hr { margin: 1.25em 0; }
-		li { padding-bottom: .5em; }
-
-		#Masthead nav { line-height: 2.5em; }
-		
+		.sidebar {
+			margin-bottom: 0;
 		}
+
+		.sidebar .email { display: none; }
+
+		.side_nav { font-size: 1em; }
+
+		.sketchbook_page {
+			h1 {
+				font-size: 1.5em;
+			}
+			nav { 
+				text-align: right; 
+				margin-top: 1em;
+				.list-inline>li {
+    				display: inline-block;
+    				padding-right: 10px;
+    				padding-left: 10px
+				}
+			}
+		}
+	}
 
 	/* 767 "smartphones and small tablets
 	========================================= */
 	
 	@media (max-width: 767px) {
 		.sidebar {
-			margin-bottom: 2em;
+			position: relative;
 			li { display: inline;}
+		}
+
+		.sketchbook_page {
+			h1 {
+				font-size: 1.5em;
+			}
+			nav { 
+				text-align: right; 
+				margin-top: 1em;
+			}
 		}
 	 }
 	
 	/* 768 Portrait tablets
 	========================================= */
 	
-	@media (min-width: 768px) and (max-width: 979px) {}
-	
-	@media (max-width: 991px) {
-		#Main_Footer .jumbotron { padding-top: 0; }
+	@media (min-width: 768px) and (max-width: 979px) {
+		body {
+			font-size: 2.5em;
+			margin-top: 0;
+		}
+
+		.sidebar {
+			h1 { font-size: 1.5em; }
+			h2 { font-size: 1.25em; }
+			h3 { font-size: 1em; }
+			position: relative;
+			li { display: inline;}
+		}
+
+		.side_nav { font-size: 1.125em; }
+
+		.sidebar .email { display: none; }
+
+		.sketchbook_page {
+			h1 {
+				font-size: 1em;
+			}
+			nav { 
+				text-align: right; 
+				margin-top: 2em;
+			}
+		}
+		#NCD_page {
+			margin-top: 2em;
+			nav { 
+				text-align: right; 
+				margin-top: 1em;
+			}
+		}
 	}
+	
+	@media (max-width: 991px) { }
 	
 	/* ~1100px
 	========================================= */
