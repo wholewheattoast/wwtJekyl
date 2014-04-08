@@ -119,7 +119,7 @@ if pages_start_on == "1":
 		counter +=1
 elif pages_start_on == "ifc":
 	while counter == 1:
-		img_url = img_dir_location + sketchbook_url_name + """_front_cover.jpg"""
+		img_url = img_dir_location + sketchbook_url_name + """-front-cover.jpg"""
 		name_of = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-front-cover" + ".html"
 		this_page_meta = sketchbook_url_name + "/" + sketchbook_url_name + "-front-cover"
 		next_page_meta = output_directory_path + "/" + sketchbook_url_name + """-pp-""" + str(ifc_page) + """-""" + str(ifc_right_page) +  """.html"""
@@ -128,7 +128,7 @@ elif pages_start_on == "ifc":
 		front_cover = write_to_file(name_of, title_string, this_page_meta, next_page_meta, prev_page_meta, img_url, img_width, img_height)
 		counter += 1
 	while counter == 2:
-		img_url = img_dir_location + sketchbook_url_name + """_pp_""" + str(ifc_page) + "_" + str(ifc_right_page) + """.jpg"""
+		img_url = img_dir_location + sketchbook_url_name + """-pp-""" + str(ifc_page) + "-" + str(ifc_right_page) + """.jpg"""
 		name_of = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-pp-" + str(ifc_page) + "-" + str(ifc_right_page) + ".html"
 		this_page_meta = sketchbook_url_name + "-pp-" + str(ifc_page) + "-" + str(ifc_right_page)
 		next_page_meta = output_directory_path + "/" + sketchbook_url_name + """-pp-""" + str((ifc_left_page)) + """-""" + str((ifc_right_page + 2)) +  """.html"""
@@ -138,7 +138,7 @@ elif pages_start_on == "ifc":
 		ifc_right_page += 2
 		counter += 1
 	while counter == 3:
-		img_url = img_dir_location + sketchbook_url_name + """_pp_""" + str(ifc_left_page) + "_" + str(ifc_right_page) + """.jpg"""
+		img_url = img_dir_location + sketchbook_url_name + """-pp-""" + str(ifc_left_page) + "-" + str(ifc_right_page) + """.jpg"""
 		name_of = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ifc_right_page) + ".html"
 		this_page_meta = sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ifc_right_page)
 		next_page_meta = output_directory_path + "/" + sketchbook_url_name + """-pp-""" + str((ifc_left_page + 2)) + """-""" + str((ifc_right_page + 2)) +  """.html"""
@@ -149,7 +149,7 @@ elif pages_start_on == "ifc":
 		ifc_right_page += 2
 		counter += 1
 	while counter > 3 and counter <= (spreads):
-		img_url = img_dir_location + sketchbook_url_name + """_pp_""" + str(ifc_left_page) + "_" + str(ifc_right_page) + """.jpg"""
+		img_url = img_dir_location + sketchbook_url_name + """-pp-""" + str(ifc_left_page) + "-" + str(ifc_right_page) + """.jpg"""
 		name_of = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ifc_right_page) + ".html"
 		this_page_meta = sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ifc_right_page)
 		next_page_meta = output_directory_path + "/" + sketchbook_url_name + """-pp-""" + str((ifc_left_page + 2)) + """-""" + str((ifc_right_page + 2)) +  """.html"""
@@ -160,7 +160,7 @@ elif pages_start_on == "ifc":
 		ifc_right_page += 2
 		counter += 1
 	while counter == (spreads + 1):
-		img_url = img_dir_location + sketchbook_url_name + """_pp_""" + str(ifc_left_page) + "_" + str(ibc_page) + """.jpg"""
+		img_url = img_dir_location + sketchbook_url_name + """-pp-""" + str(ifc_left_page) + "-" + str(ibc_page) + """.jpg"""
 		name_of = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ibc_page) + ".html"
 		this_page_meta = sketchbook_url_name + "-pp-" + str(ifc_left_page) + "-" + str(ibc_page)
 		next_page_meta = output_directory_path + "/" + sketchbook_url_name + "-back-cover" + ".html"
@@ -169,7 +169,7 @@ elif pages_start_on == "ifc":
 		body_pages = write_to_file(name_of, title_string, this_page_meta, next_page_meta, prev_page_meta, img_url, img_width, img_height)
 		counter += 1
 	while counter == (spreads + 2):
-		img_url =img_dir_location + sketchbook_url_name + """_back_cover.jpg"""
+		img_url =img_dir_location + sketchbook_url_name + """-back-cover.jpg"""
 		name_of = working_directory_path + sketchbook_url_name + "/" + sketchbook_url_name + "-back-cover.html"
 		this_page_meta = sketchbook_url_name + "-back-cover"
 		next_page_meta = output_directory_path + "/index.html"
