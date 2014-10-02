@@ -1,0 +1,20 @@
+---
+layout: base_full_width
+title: Archive
+---
+
+    <section>
+        <ol class="list-unstyled">
+            {% for post in site.posts %}
+                <li>
+                    <a href="{{site.baseurl}}{{ post.url }}">
+                        <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%F"}}</time>
+                        &nbsp;&nbsp;
+                        {{ post.title }}
+                    </a>
+                    &nbsp;&nbsp;
+                    {{post.categories | category_links}}
+                </li>
+            {% endfor %}
+        </ol>
+    </section>
