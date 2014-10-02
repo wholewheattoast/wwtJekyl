@@ -6,6 +6,7 @@ url: http://localhost:4000
 
 source:      ./_posts/
 destination: ./_site
+#destination: /var/www/wholewheattoast.com/public_html/
 plugins:     ./_plugins
 includes:     ./_includes
 
