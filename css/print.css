@@ -1,0 +1,72 @@
+/* Print SCSS
+ * Shawn Eisenach
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Setup
+==================== */
+/* line 9, ../sass/print.scss */
+body {
+  margin: .25in .5in .25in 1in;
+  font: 14pt Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5;
+}
+
+/* line 15, ../sass/print.scss */
+.hide_print {
+  display: none;
+}
+
+/* hide stuff for printing
+==================== */
+/* line 22, ../sass/print.scss */
+#Masthead,
+.menu {
+  display: none;
+}
+
+/* Typography
+==================== */
+/* line 28, ../sass/print.scss */
+h1 {
+  font-size: 24pt;
+}
+
+/* line 32, ../sass/print.scss */
+h2 {
+  font-size: 14pt;
+  margin-top: 25px;
+}
+
+/* line 37, ../sass/print.scss */
+aside h2 {
+  font-size: 18pt;
+}
+
+/* links 
+==================== */
+/* line 44, ../sass/print.scss */
+a {
+  color: #000;
+}
+
+/* line 48, ../sass/print.scss */
+p a {
+  word-wrap: break-word;
+}
+
+/* line 52, ../sass/print.scss */
+p a[href^="http://"]:after, a[href^="https://"]:after {
+  content: " (" attr(href) ")";
+  font-size: 80%;
+}
+
+/* line 57, ../sass/print.scss */
+p a[href^="#"]:after {
+  display: none;
+}
+
+/* lists 
+==================== */
+/* line 63, ../sass/print.scss */
+li {
+  margin-bottom: .5em;
+}

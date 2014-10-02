@@ -1,0 +1,67 @@
+---
+layout: base_full_width
+---
+
+<article class="post">
+        <header>
+            <div class="row">
+                <!-- <h2>{{ page.title }}</h2> -->
+                <div class="col-md-12">
+                    <p>
+                        <a class="permalink" href="{{site.baseurl}}{{post.url}}"><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></a>
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section class="entry">
+            <div class="row">
+                <div class="col-md-12">
+                    {{ content }}
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="row">
+                <div class="col-md-12">
+                    {% if page.categories %}
+                        <p>
+                            <span class="category">
+                                {{ page.categories | category_links }}
+                            </span>
+                        </p>
+                    {% endif %}
+
+                    {% if page.tags %}
+                        <ul class="list-unstyled">
+                            {% for tag in page.tags %}
+                                <li>{{ tag }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </footer>
+</article>
+
+<div id="paginator">
+    {% if paginator.next_page %}
+            <a href="{{site.baseurl}}/page{{paginator.next_page}}">
+            &laquo; Older Posts</a>
+    {% endif %}
+
+    {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+                <span class="more">
+                <a href="{{site.baseurl}}/">
+                Newer Posts &raquo; </a>
+                </span>
+        {% else %}
+                <span class="more">
+                <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
+                Newer Posts &raquo; </a>
+                </span>
+        {% endif %}
+    {% endif %}
+</div>

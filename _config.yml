@@ -1,44 +1,49 @@
-safe:        false
-auto:        true
+name: wholewheattoast
+description: Personal website of shawn eisenach
+author: shawn eisenach
+author_email: shawn@wholewheattoast.com
+
+# Serving
 port:    4000
-baseurl:    /
-url: http://localhost:4000
+#host:    0.0.0.0
+baseurl:
+url: http://www.wholewheattoast.com
 
-source:      ./_posts/
-destination: ./_site
-plugins:     ./_plugins
-includes:     ./_includes
+# Outputting
+permalink:     date
+paginate_path: /page:num
+timezone: America/Los_Angeles
 
-future:      false
+## Where things are
+#source:      .
+destination: _site/
+plugins:     _plugins/
+includes:    _includes/
+
+## Handling Reading
+safe:        false
+include:      [".htaccess"]
+exclude: [sass, README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+## Filtering Content
+#future:      false
+show_drafts: null
+limit_posts: 0
+#permalink:   pretty
+paginate:    5
+
+# Plugins
+whitelist: []
+gems:      []
+
+# Conversion
+markdown:    rdiscount
+highlighter: pygments
 lsi:         false
-pygments:    false
-markdown:    maruku
-permalink:   title
-pagination: [per_page]
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
+excerpt_separator: "\n\n"
 
 rdiscount:
   extensions: []
-
-redcarpet:
-  extensions: []
-
-kramdown:
-  auto_ids: true,
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-  
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style

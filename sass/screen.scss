@@ -50,9 +50,25 @@ body {
 a {
 	color: $link-color;
 	font-weight: bold;
+	text-decoration: none;
+    outline: 0;
+    -webkit-transition: color .25s;
+    -moz-transition: color .25s;
+    -o-transition: color .25s;
+    -ms-transition: color .25s;
+    transition: color .25s;
 }
 
-a:hover { color: $warm_accent_color; }
+a:visited {
+	color: #000;
+	text-decoration: none; 
+}
+
+a:hover,
+a:focus {
+	color: $warm_accent_color;
+	text-decoration: underline;
+}
 
 .bare_link { font-weight: normal; }
 
@@ -70,6 +86,8 @@ p { max-width: ($font-size * 36); }
 
 /* Lists
 ==============================*/
+
+li { margin-bottom: .5em; }
 
 /* Images
 ==============================*/
@@ -124,6 +142,26 @@ img {
 	text-align: center;
 
 }
+
+/* posts
+==============================*/
+
+.post {
+	margin-bottom: 4em;
+}
+
+.postPermalink { 
+	color: #999; 
+    margin-top: .5em
+    }
+
+.postPermalink a { color: #999; }
+.postPermalink a:hover, 
+.postPermalink a:focus {
+        text-decoration: none;
+        border-bottom: solid;
+        }
+
 
 /* Sketchbooks
 ==============================*/

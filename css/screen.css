@@ -1,0 +1,382 @@
+/* SASS for wholewheattoast.com
+** Shawn Eisenach
+*/
+/* Variabls
+==============================*/
+/* change this */
+/* helpers
+==============================*/
+/* line 21, ../sass/screen.scss */
+.tight {
+  margin: 0;
+}
+
+/* bootstrap overrides
+==============================*/
+/* line 25, ../sass/screen.scss */
+.row {
+  margin-bottom: 1.25em;
+}
+
+/* main
+==============================*/
+/* line 30, ../sass/screen.scss */
+body {
+  margin-top: 1.5em;
+  font-size: 1.75em;
+  color: black;
+  background-color: #fafafa;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+}
+
+/* line 44, ../sass/screen.scss */
+#full_width .container {
+  width: 98%;
+}
+
+/* Links
+==============================*/
+/* line 50, ../sass/screen.scss */
+a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  outline: 0;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -o-transition: color .25s;
+  -ms-transition: color .25s;
+  transition: color .25s;
+}
+
+/* line 62, ../sass/screen.scss */
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 68, ../sass/screen.scss */
+a:hover,
+a:focus {
+  color: #ff2727;
+  text-decoration: underline;
+}
+
+/* line 73, ../sass/screen.scss */
+.bare_link {
+  font-weight: normal;
+}
+
+/* Typography
+==============================*/
+/* line 79, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #110011;
+}
+
+/* line 83, ../sass/screen.scss */
+h2 {
+  border-bottom: 4px solid #000;
+}
+
+/* line 85, ../sass/screen.scss */
+p {
+  max-width: 63em;
+}
+
+/* Lists
+==============================*/
+/* line 90, ../sass/screen.scss */
+li {
+  margin-bottom: .5em;
+}
+
+/* Images
+==============================*/
+/* line 95, ../sass/screen.scss */
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Color
+==============================*/
+/* Misc
+==============================*/
+/* line 107, ../sass/screen.scss */
+.accent {
+  color: #ff2727;
+}
+
+/* line 108, ../sass/screen.scss */
+.center_text {
+  text-align: center;
+}
+
+/* Sidebar
+==============================*/
+/* line 114, ../sass/screen.scss */
+.sidebar {
+  position: fixed;
+  font-size: .75em;
+}
+/* line 116, ../sass/screen.scss */
+.sidebar h1 {
+  font-size: 14px;
+}
+
+/* Nav's
+==============================*/
+/* line 124, ../sass/screen.scss */
+.nav_with_index {
+  margin-top: 2em;
+}
+
+/* line 128, ../sass/screen.scss */
+.side_nav {
+  font-size: 14px;
+}
+/* line 130, ../sass/screen.scss */
+.side_nav li {
+  margin-bottom: .5em;
+}
+
+/* Masthead
+==============================*/
+/* line 135, ../sass/screen.scss */
+.menu li {
+  display: inline;
+}
+
+/* Main Footer
+==============================*/
+/* line 139, ../sass/screen.scss */
+#Main_Footer .jumbotron {
+  margin-bottom: 0;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+/* posts
+==============================*/
+/* line 149, ../sass/screen.scss */
+.post {
+  margin-bottom: 4em;
+}
+
+/* line 153, ../sass/screen.scss */
+.postPermalink {
+  color: #999;
+  margin-top: 0.5em;
+}
+
+/* line 158, ../sass/screen.scss */
+.postPermalink a {
+  color: #999;
+}
+
+/* line 160, ../sass/screen.scss */
+.postPermalink a:hover,
+.postPermalink a:focus {
+  text-decoration: none;
+  border-bottom: solid;
+}
+
+/* Sketchbooks
+==============================*/
+/* line 169, ../sass/screen.scss */
+.sketchbook_index li {
+  display: inline;
+  padding: .75em;
+}
+
+/* line 175, ../sass/screen.scss */
+.sketchbook_page h1 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.428571429;
+}
+
+/* About
+==============================*/
+/* Works
+==============================*/
+/* line 188, ../sass/screen.scss */
+#Portfolio_page {
+  margin-top: 2em;
+}
+
+/* line 190, ../sass/screen.scss */
+#Portfolio_page h1, #NCD_page h1 {
+  font-size: 1.125em;
+  margin-top: 0;
+}
+
+/* Publications
+==============================*/
+/* line 196, ../sass/screen.scss */
+#Publications_page h1 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+/* Teaching
+==============================*/
+/* Media Querries
+============================================== */
+/* height
+===================================== */
+/* 480px Smartphones */
+@media (max-width: 480px) {
+  /* line 11, ../sass/_media-queries.scss */
+  body {
+    overflow: hidden;
+    font-size: 1.125em;
+    margin-top: 0;
+  }
+
+  /* line 17, ../sass/_media-queries.scss */
+  h1 {
+    font-size: 1.75em;
+  }
+
+  /* line 18, ../sass/_media-queries.scss */
+  h2 {
+    font-size: 1.5em;
+  }
+
+  /* line 19, ../sass/_media-queries.scss */
+  h3 {
+    font-size: 1.25em;
+  }
+
+  /* line 21, ../sass/_media-queries.scss */
+  ul.inline > li, ol.inline > li {
+    display: inline-block;
+    padding-right: .125em;
+    padding-left: .125em;
+  }
+
+  /* line 27, ../sass/_media-queries.scss */
+  .sidebar {
+    margin-bottom: 0;
+  }
+
+  /* line 31, ../sass/_media-queries.scss */
+  .sidebar .email {
+    display: none;
+  }
+
+  /* line 33, ../sass/_media-queries.scss */
+  .side_nav {
+    font-size: 1em;
+  }
+
+  /* line 36, ../sass/_media-queries.scss */
+  .sketchbook_page h1 {
+    font-size: 1.5em;
+  }
+  /* line 39, ../sass/_media-queries.scss */
+  .sketchbook_page nav {
+    text-align: right;
+    margin-top: 1em;
+  }
+  /* line 42, ../sass/_media-queries.scss */
+  .sketchbook_page nav .list-inline > li {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+/* 767 "smartphones and small tablets
+========================================= */
+@media (max-width: 767px) {
+  /* line 55, ../sass/_media-queries.scss */
+  .sidebar {
+    position: relative;
+  }
+  /* line 57, ../sass/_media-queries.scss */
+  .sidebar li {
+    display: inline;
+  }
+
+  /* line 61, ../sass/_media-queries.scss */
+  .sketchbook_page h1 {
+    font-size: 1.5em;
+  }
+  /* line 64, ../sass/_media-queries.scss */
+  .sketchbook_page nav {
+    text-align: right;
+    margin-top: 1em;
+  }
+}
+/* 768 Portrait tablets
+========================================= */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 75, ../sass/_media-queries.scss */
+  body {
+    font-size: 2.5em;
+    margin-top: 0;
+  }
+
+  /* line 80, ../sass/_media-queries.scss */
+  .sidebar {
+    position: relative;
+  }
+  /* line 81, ../sass/_media-queries.scss */
+  .sidebar h1 {
+    font-size: 1.5em;
+  }
+  /* line 82, ../sass/_media-queries.scss */
+  .sidebar h2 {
+    font-size: 1.25em;
+  }
+  /* line 83, ../sass/_media-queries.scss */
+  .sidebar h3 {
+    font-size: 1em;
+  }
+  /* line 85, ../sass/_media-queries.scss */
+  .sidebar li {
+    display: inline;
+  }
+
+  /* line 88, ../sass/_media-queries.scss */
+  .side_nav {
+    font-size: 1.125em;
+  }
+
+  /* line 90, ../sass/_media-queries.scss */
+  .sidebar .email {
+    display: none;
+  }
+
+  /* line 93, ../sass/_media-queries.scss */
+  .sketchbook_page h1 {
+    font-size: 1em;
+  }
+  /* line 96, ../sass/_media-queries.scss */
+  .sketchbook_page nav {
+    text-align: right;
+    margin-top: 2em;
+  }
+
+  /* line 101, ../sass/_media-queries.scss */
+  #NCD_page {
+    margin-top: 2em;
+  }
+  /* line 103, ../sass/_media-queries.scss */
+  #NCD_page nav {
+    text-align: right;
+    margin-top: 1em;
+  }
+}
+/* ~1100px
+========================================= */
+/*retnia
+========================================= */
