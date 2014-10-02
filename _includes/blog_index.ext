@@ -20,7 +20,7 @@
     <section>
       <div class="row">
         <div class="col-md-12">
-          {{ post.excerpt }}
+          {{ post.content }}
         </div>
       </div>
     </section>
