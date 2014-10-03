@@ -4,8 +4,8 @@ author: shawn eisenach
 author_email: shawn@wholewheattoast.com
 
 # Serving
-production: false
-port:    4000
+production: true
+#port:    4000
 #host:    0.0.0.0
 baseurl:
 url: http://www.wholewheattoast.com
@@ -17,7 +17,7 @@ timezone: America/Los_Angeles
 
 ## Where things are
 #source:      .
-destination: _site/
+destination: /var/www/wholewheattoast.com/public_html/
 plugins:     _plugins/
 includes:    _includes/
 
