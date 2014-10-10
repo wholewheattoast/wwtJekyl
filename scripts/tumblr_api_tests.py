@@ -38,7 +38,7 @@ client.blog_info('wholewheattoast.tumblr.com')
 # Authenticate via API Key
 #client = pytumblr.TumblrRestClient('NvpHTpkowzT3I4FqoYaYE5UfHguJTl5rMtUcCWyi5hiqJqAwPL')
 
-tumblr_request = client.posts('wholewheattoast.tumblr.com', limit=1, notes_info=True, filter='html')
+tumblr_request = client.posts('wholewheattoast.tumblr.com', limit=10, notes_info=True, filter='html')
 
 file_names = []
 
@@ -56,9 +56,10 @@ mount_point = "../_posts/"
 for i in file_names:
     temp_path = "{}{}".format(mount_point, i)
     if os.path.isfile(temp_path):
-        print "Post exists."
+        print "{}  Post exists.".format(i)
     else:
         for i in tumblr_request["posts"]:
+            # TODO handle other types of tumblr posts.
             if i["type"] == "photo":
                 temp_file_dict = {}
                 temp_file_dict["title"] = (i["slug"].replace("-", " "))
@@ -81,5 +82,6 @@ for i in file_names:
 
                 temp_formated_file_name = "{}-{}.html".format(((i["date"].split())[0]), i["slug"])
                 write_out_template(temp_file_dict, "../_posts/", temp_formated_file_name, "tumblr_photo_post")
+                print "Created {}".format(temp_formated_file_name)
             else:
                 "Not a photo?"
