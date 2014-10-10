@@ -1,19 +1,17 @@
 import pytumblr
-import os
 import os.path
 import pystache
 import json
 import urllib
-import tempfile
+#import pdb
 
-import pdb
-
-# Write out the template
 def write_out_template(dictionary, path, file_name, template):
-    dictionary_formated = json.dumps(dictionary, sort_keys=False, indent=4, separators=(',', ': '))
+    """
+        Read in json of a post.
+        Render the template and save an html file.
+    """
 
-    print "formated****"
-    print dictionary_formated
+    #dictionary_formated = json.dumps(dictionary, sort_keys=False, indent=4, separators=(',', ': '))
 
     html_path = "{}/{}".format(path, file_name)
     html_file = open(html_path,"w")
@@ -52,17 +50,14 @@ for i in tumblr_request["posts"]:
     temp_formated_file_name = "{}-{}.html".format(temp_tumblr_date, temp_tumblr_slug)
     file_names.append(temp_formated_file_name)
 
-print file_names
-
 # look up file name
 mount_point = "../_posts/"
+
 for i in file_names:
     temp_path = "{}{}".format(mount_point, i)
-    print temp_path
     if os.path.isfile(temp_path):
-        print "Post exists"
+        print "Post exists."
     else:
-        # TODO Get the relevent parts
         for i in tumblr_request["posts"]:
             if i["type"] == "photo":
                 temp_file_dict = {}
@@ -73,7 +68,8 @@ for i in file_names:
                 temp_file_dict["source_url"] = i["link_url"]
                 temp_file_dict["caption"] = i["caption"]
 
-                # Get the image
+                # Get the image.
+                # Only getting the original size at this time.
                 for thing in i["photos"]:
                     if thing["original_size"]:
                         temp_tumblr_org_img_url = (thing["original_size"])["url"]
@@ -83,9 +79,6 @@ for i in file_names:
                         temp_file_object = urllib.URLopener()
                         temp_file_object.retrieve(temp_tumblr_org_img_url, "../image/posts/{}".format(temp_tumblr_img))
 
-                print temp_file_dict
-
-                # write file
                 temp_formated_file_name = "{}-{}.html".format(((i["date"].split())[0]), i["slug"])
                 write_out_template(temp_file_dict, "../_posts/", temp_formated_file_name, "tumblr_photo_post")
             else:
