@@ -8,10 +8,10 @@
 	/* 480px Smartphones */
 	@media (max-width: 480px) {
 		
-		body {
-			overflow: hidden;
-			font-size: 1.125em;
-			margin-top: 0;
+		body { margin-top: 0; }
+		
+		#full_width .container {
+    		width: 90%;
 		}
 
 		h1 { font-size: 1.75em; }
@@ -24,13 +24,7 @@
 			padding-left: .125em;
 			}
 		
-		.sidebar {
-			margin-bottom: 0;
-		}
-
-		.sidebar .email { display: none; }
-
-		.side_nav { font-size: 1em; }
+		.sidebar { margin-bottom: 1em; }
 
 		.sketchbook_page {
 			h1 {
@@ -52,10 +46,7 @@
 	========================================= */
 	
 	@media (max-width: 767px) {
-		.sidebar {
-			position: relative;
-			li { display: inline;}
-		}
+    	body { margin-top: 0; }
 
 		.sketchbook_page {
 			h1 {
@@ -73,7 +64,6 @@
 	
 	@media (min-width: 768px) and (max-width: 979px) {
 		body {
-			font-size: 2.5em;
 			margin-top: 0;
 		}
 
@@ -81,13 +71,9 @@
 			h1 { font-size: 1.5em; }
 			h2 { font-size: 1.25em; }
 			h3 { font-size: 1em; }
-			position: relative;
-			li { display: inline;}
 		}
 
-		.side_nav { font-size: 1.125em; }
-
-		.sidebar .email { display: none; }
+		.side_nav { font-size: 1em; }
 
 		.sketchbook_page {
 			h1 {
@@ -98,6 +84,7 @@
 				margin-top: 2em;
 			}
 		}
+		
 		#NCD_page {
 			margin-top: 2em;
 			nav { 

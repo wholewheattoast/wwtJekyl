@@ -12,15 +12,14 @@ layout: base_full_width
     <!-- cover img -->
     
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <img src="{{ page.cover_image }}" alt="Cover of {{ page.title }}" title="Cover of {{ page.title }}" />
+        <div class="col-lg-4 col-md-4">
+            <p>
+                <img src="{{ page.cover_image }}" alt="Cover of {{ page.title }}"
+                title="Cover of {{ page.title }}" />
+            </p>
         </div>
-    </div>
-
-    <!-- details -->
-    
-    <div class="row">
-        <div class="col-md-6 col-sm-8 col-xs-6">
+        
+        <div class="col-md-6">
             
             <p><span property="dc:description">{{ page.description }}</span></p>
             <ul class="list-unstyled">
@@ -41,8 +40,10 @@ layout: base_full_width
                 </p>
             {% endif %}
         </div>
+        
     </div>
-    <div>
-        {{ page.content }}
-    </div>
+
+    <!-- details -->
+    {{ page.content }}
+
 </article>

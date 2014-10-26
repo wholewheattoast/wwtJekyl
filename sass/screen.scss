@@ -4,10 +4,9 @@
 
 /* Variabls
 ==============================*/
-$font-size: 1.75em;
-$line-height: 1.5em;
+$font-size: 18px;
 $basline_grid: 6px;
-$baseFontFamily: Helvetica, sans-serif;
+$baseFontFamily: georgia, serif;
 $background-color: #fafafa;
 $color: #000;
 $warm_accent_color: #ff2727;
@@ -22,14 +21,15 @@ $link-color: #000;  /* change this */
 
 /* bootstrap overrides
 ==============================*/
-.row { margin-bottom: 1.25em; } // replace w a helper class
+//.row { margin-bottom: 1.25em; } // replace w a helper class
 
 /* main
 ==============================*/
 
 body {
-	margin-top: 1.5em;
+	margin-top: .5em;
 	font-size: $font-size;
+	font-family: $baseFontFamily;
 	color: $color;
 	background-color: $background-color;
 	text-rendering: optimizeLegibility;
@@ -41,7 +41,7 @@ body {
 }
 
 #full_width {
-		.container { width: 98%; }
+		.container { width: 80%; }
 	}
 
 /* Links
@@ -75,14 +75,24 @@ a:focus {
 /* Typography
 ==============================*/
 
+h1,h2,h3,h4,h5,h6,p {
+ line-height: 1.45;
+}
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: helvetica, sans-serif;
 	color: #110011;
 }
 
-h2 { border-bottom: 4px solid #000; }
+h1 { font-size: 2em; }
 
-p { max-width: ($font-size * 36); }
+h2 { font-size: 1.5em;
+    border-bottom: 4px solid #000; 
+    }
+
+h3 { font-size: 1.25em; }
+
+// p { max-width: ($font-size * 36); }
 
 /* Lists
 ==============================*/
@@ -112,27 +122,33 @@ img {
 ==============================*/
 
 .sidebar {
-	position: fixed;
-	h1 { font-size: 14px; }
-	font-size: .75em;
+    font-size: 12pt;
+    font-family: helvetica, sans-serif;
+	padding: 1rem;
+	margin-bottom: 2em;
+	h1 { font-size: 12pt; }
+	background-color: pink;
+    li { display: inline;}
+    .email { font-size: 12pt; }
 }
 
 
 /* Nav's
 ==============================*/
 
-.nav_with_index {
-	margin-top: 2em;
-}
-
 .side_nav { 
-	font-size: 14px;
+	font-size: 12pt;
 	li { margin-bottom: .5em; }
 	}
+
+#paginator {
+    font-family: helvetica, sans-serif;
+}
 
 /* Masthead
 ==============================*/
 .menu li { display: inline;}
+
 
 /* Main Footer
 ==============================*/
@@ -143,11 +159,12 @@ img {
 
 }
 
+
 /* posts
 ==============================*/
 
 .post {
-	margin-bottom: 4em;
+	//margin-bottom: 4em;
 }
 
 .postPermalink { 
@@ -179,6 +196,7 @@ img {
 	line-height: 1.428571429;
 }
 
+
 /* About
 ==============================*/
 
@@ -191,12 +209,14 @@ img {
 	font-size: 1.125em;
 	margin-top: 0; }
 
+
 /* Publications
 ==============================*/
 #Publications_page h1 { 
 	font-size: 1.5em;
 	margin-top: 0; 
 	}
+
 
 /* Teaching
 ==============================*/

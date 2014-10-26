@@ -5,8 +5,12 @@
 </header>
 
 <div class="row">
-	<div class="col-md-2 col-sm-4 col-xs-12"><span property="dc:creator">shawn eisenach</span></div>
-	<div class="col-md-4 col-sm-6 col-xs-12"><a class="bare_link" href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a></div>
+	<div class="col-md-6 col-sm-6 col-xs-12">
+	    <span property="dc:creator">shawn eisenach</span>
+    </div>
+	<div class="col-md-6 col-sm-6 col-xs-12">
+	    <a class="bare_link" href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
+    </div>
 </div>
 
 <div class="row">
