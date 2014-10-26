@@ -1,25 +1,17 @@
 <!-- Show last 5 posts here -->
 {% for post in paginator.posts %}
   <article class="post">
-
     <header>
       <div class="row">
-        <div class="col-md-12">
-          <p>
+          <h1 class="col-md-12">
             <a class="permalink" href="{{site.baseurl}}{{post.url}}"><time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time></a>
-          </p>
-          {% if post.categories %}
-            <p>
-              <span class="category">{{ post.categories | category_links }}</span>
-            </p>
-          {% endif %}
-        </div>
+          </h1>
       </div>
     </header>
 
     <section>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-lg-12 col-md-8">
           {{ post.content }}
         </div>
       </div>
@@ -29,28 +21,27 @@
 {% endfor %}
 
 
-<nav id="paginator">
+<nav id="paginator" class="pull-right">
   <div class="row">
     <ul class="inline list-unstyled">
       {% if paginator.next_page %}
-        <li class="col-md-2 col-sm-6 col-xs-6">
-          <a href="{{site.baseurl}}/page{{paginator.next_page}}">
-            &laquo; Older Posts</a>
+        <li>
+          <a href="{{site.baseurl}}/page{{paginator.next_page}}">Older Posts</a>
         </li>
     {% endif %}
 
     {% if paginator.previous_page %}
-      <li class="col-md-2 col-sm-6 col-xs-6">
+      <li>
         {% if paginator.previous_page == 1 %}
           <span class="more">
             <a href="{{site.baseurl}}/">
-              Newer Posts &raquo;
+              Newer Posts
             </a>
           </span>
         {% else %}
           <span class="more">
             <a href="{{site.baseurl}}/page{{paginator.previous_page}}">
-              Newer Posts &raquo;
+              Newer Posts
             </a>
           </span>
         {% endif %}

@@ -1,0 +1,5 @@
+    $('body').flowtype({
+        fontRatio : 45,
+        minFont : 12,
+        maxFont : 31.3
+    });

@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: base_full_width
 title: wwt | Etching
 description: Etching How To
 stub: /teaching/etching.html
@@ -12,7 +12,7 @@ stub: /teaching/etching.html
 		</header>
 	</div>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<p class="text"><strong>Intaglio</strong> comes from Italian word <em>intagliare</em> and roughly means, "to engrave, or to cut into".  In printmaking this refers to a family of techniques where an area below the surface of the plate is created through engraving, etching, or scratching.  This incision is then capable of holding ink, and transfered onto paper.</p>
 
 					<p class="text">In etching the process a plate is covered with a protective ground- typically an asphaltum mixture.  This ground is then removed in areas to create a design, and the plate is submerged in an acid or corrosive bath.  The solution in the bath removes plate material where exposed and creating a recessed area.  The ground is removed and ink is spread over the plate and pushed into the grooves made by the solution.  Dampened paper is placed onto the plate and the whole thing run through a press.</p>
@@ -20,7 +20,7 @@ stub: /teaching/etching.html
 			</div>
 
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<h2>Preparing the Plate</h2>
 
 					<p class="text">The plate must be beveled and polished, and cleaned before a ground can be applied.</p>
@@ -35,7 +35,7 @@ stub: /teaching/etching.html
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<h2>Applying the Ball Ground</h2>
 					<p class="text">Most Hard Grounds are a mixture of Beeswax, Asphaltum, and Rosin.  The ball ground used at CCSF is heated and then rolled out with a brayer.</p>
 					<ol>
@@ -50,7 +50,7 @@ stub: /teaching/etching.html
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<h2>Draw On The Plate</h2>
 					<ol>
 						<li>A drawing made with soft graphite (6b) can be transfered to the plate by running through the press.</li>
@@ -62,7 +62,7 @@ stub: /teaching/etching.html
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<h2>Etch The Plate</h2>
 					<p class="text">Once some drawing is complete you can submerge the plate into the etching bath.</p>
 					<p class="text">The two basic approaches to etching are;</p>
@@ -81,7 +81,7 @@ stub: /teaching/etching.html
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<h2>Clean Off The Ground</h2>
 					<ol>
 						<li>Set the hot plate to ~200 degrees.</li>
@@ -96,7 +96,7 @@ stub: /teaching/etching.html
 			</div>
 			<div class="row">
 				<h2>Ink The Plate</h2>
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<ol>
 						<li>Lay out and modify ink.</li>
 						<li>Card ink onto plate.</li>
@@ -108,7 +108,7 @@ stub: /teaching/etching.html
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<h2>Prepare Your Paper</h2>
 					<p class="text">Many Western printmaking papers can take a while to soak before they are flexible enough to print with.  Consider placing some paper in the soaking bath at the start of the class, or preparing a wet pack.</p>
 					<ol>
@@ -119,7 +119,7 @@ stub: /teaching/etching.html
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<h2>Printing</h2>
 					<ol>
 						<li>Check that press pressure and blankets are set correctly.</li>
