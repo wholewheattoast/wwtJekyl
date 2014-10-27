@@ -11,7 +11,7 @@
 		body { margin-top: 0; }
 		
 		#full_width .container {
-    		width: 90%;
+    		width: 98%;
 		}
 
 		h1 { font-size: 1.75em; }
@@ -25,6 +25,7 @@
 			}
 		
 		.sidebar { margin-bottom: 1em; }
+		.side_nav ul { line-height: 2; }
 
 		.sketchbook_page {
 			h1 {
@@ -49,9 +50,7 @@
     	body { margin-top: 0; }
 
 		.sketchbook_page {
-			h1 {
-				font-size: 1.5em;
-			}
+			h1 { font-size: 1.5em; }
 			nav { 
 				text-align: right; 
 				margin-top: 1em;
@@ -63,9 +62,7 @@
 	========================================= */
 	
 	@media (min-width: 768px) and (max-width: 979px) {
-		body {
-			margin-top: 0;
-		}
+		body { margin-top: 0; }
 
 		.sidebar {
 			h1 { font-size: 1.5em; }
