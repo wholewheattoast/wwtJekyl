@@ -4,15 +4,7 @@ layout: base_full_width
 
 <article id="Publications_page" resource="{{ page.stub }}">
     <div class="row">
-        <header class="col-md-12">
-            <h1 property="dc:title">{{ page.title }}</h1>
-        </header>
-    </div>
-
-    <!-- cover img -->
-    
-    <div class="row">
-        <div class="col-lg-4 col-md-4">
+        <div class="col-md-6">
             <p>
                 <img src="{{ page.cover_image }}" alt="Cover of {{ page.title }}"
                 title="Cover of {{ page.title }}" />
@@ -20,7 +12,9 @@ layout: base_full_width
         </div>
         
         <div class="col-md-6">
-            
+            <header>
+                <h1 property="dc:title">{{ page.title }}</h1>
+            </header>
             <p><span property="dc:description">{{ page.description }}</span></p>
             <ul class="list-unstyled">
                 <li><span property="dc:extent">{{ page.pages }} pages</span></li>
