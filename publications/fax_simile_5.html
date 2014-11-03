@@ -11,28 +11,29 @@ cover_image: /image/publications/fax_simile_5/fax_simile_5_front_cover.jpg
 ---
 
 <article id="Publications_page" resource="{{ page.stub }}">
-
-    <header class="row">
-        <h1 class="col-md-12" property="dc:title">{{ page.title }}</h1>
-    </header>
-
     <section class="row">
         <div class="col-md-6">
-            <p><span property="dc:description">write something about what fax simile is</span></p>
-            <p><span property="dc:extent">{{ page.pages }} pages</span></p>
-            <p><span property="dc:medium">Black risograph on blue paper. Florescent yellow cover.  Saddle stitched.</span></p>
-            <p><span property="dc:format">{{ page.size }} inches</span></p>
-            <p><span property="dc:date">Published August 2014</span></p>
-            <!-- <p><a href="http://{{ page.buy }}">Buy</a></p> -->
-        </div>
-        
-        <div class="col-md-4">
             <p>
                 <img src="{{ page.cover_image }}" alt="Cover of {{ page.title }}"
                 title="Cover of {{ page.title }}" />
             </p>
         </div>
         
+        <div class="col-md-6">
+            <header>
+                <h1 property="dc:title">{{ page.title }}</h1>
+            </header>
+            <p><span property="dc:description">write something about what fax simile is</span></p>
+            <p><span property="dc:extent">{{ page.pages }} pages</span></p>
+            <p><span property="dc:medium">Black risograph on blue paper. Florescent yellow cover.  Saddle stitched.</span></p>
+            <p><span property="dc:format">{{ page.size }} inches</span></p>
+            <p><span property="dc:date">Published August 2014</span></p>
+            {% if page.buy %}
+                <p>
+                    <a href="http://{{ page.buy }}">Buy</a>
+                </p>
+            {% endif %}
+        </div>
     </section>
 
     <section class="row pub-preview">
