@@ -36,61 +36,55 @@ client.blog_info('wholewheattoast.tumblr.com')
 
 tumblr_request = client.posts('wholewheattoast.tumblr.com', limit=10, notes_info=True, filter='html')
 
-file_names = []
-
-for post in tumblr_request["posts"]:
-    tumblr_post_slug = post["slug"]
-    tumblr_post_date = (post["date"].split())[0]
-
-    post_formated_file_name = "{}-{}.html".format(tumblr_post_date, tumblr_post_slug)
-    file_names.append(post_formated_file_name)
-
-# look up file name
 mount_point = "../_posts/"
 
-for i in file_names:
-    temp_path = "{}{}".format(mount_point, i)
-    if os.path.isfile(temp_path):
-        print "{}  Post exists.".format(i)
+for post in tumblr_request["posts"]:
+
+    # Test if post already exists
+    tumblr_post_slug = post["slug"]
+    tumblr_post_date = (post["date"].split())[0]
+    post_formated_file_name = "{}-{}.html".format(tumblr_post_date, tumblr_post_slug)
+    post_path = "{}{}".format(mount_point, post_formated_file_name)
+    if os.path.isfile(post_path):
+        print "Post exists:  {}".format(post_formated_file_name)
     else:
-        for i in tumblr_request["posts"]:
-            # TODO handle other types of tumblr posts.
-            if i["type"] == "photo":
-                #pdb.set_trace()
-                temp_file_dict = {}
-                temp_file_dict["title"] = (i["slug"].replace("-", " "))
-                temp_file_dict["tags"] = i["tags"]
-                temp_file_dict["tumblr_url"] = i["post_url"]
-                temp_file_dict["date"] = i["date"]
+        # TODO handle other types of tumblr posts.
+        # Each post type as a function?
+        if post["type"] == "photo":
+            temp_file_dict = {}
+            temp_file_dict["title"] = (post["slug"].replace("-", " "))
+            temp_file_dict["tags"] = post["tags"]
+            temp_file_dict["tumblr_url"] = post["post_url"]
+            temp_file_dict["date"] = post["date"]
+            try:
+                temp_file_dict["source_url"] = post["link_url"]
+            except:
                 try:
-                    temp_file_dict["source_url"] = i["link_url"]
+                    temp_file_dict["source_url"] = post["post_url"]
                 except:
-                    try:
-                        temp_file_dict["source_url"] = i["post_url"]
-                    except:
-                        print "dunno?"
-                temp_file_dict["caption"] = i["caption"]
-                
-                temp_file_dict["photos"] = []
-                
-                for photo in i["photos"]:
-                    if photo["original_size"]:
-                        distinct_photo = {}
-                        distinct_photo_tumblr_img = (photo["original_size"])["url"]
-                        
-                        distinct_photo["tumblr_img_url"] = distinct_photo_tumblr_img
-                        distinct_photo["img"] = os.path.basename(distinct_photo_tumblr_img)
-
-                        temp_file_object = urllib.URLopener()
-                        
-                        temp_file_object.retrieve(distinct_photo_tumblr_img, "../image/posts/{}".format(os.path.basename(distinct_photo_tumblr_img)))
-                        
-                        temp_file_dict["photos"].append(distinct_photo)
-
-                temp_formated_file_name = "{}-{}.html".format(((i["date"].split())[0]), i["slug"])
+                    print "dunno?"
+            temp_file_dict["caption"] = post["caption"]
+            
+            temp_file_dict["photos"] = []
+            
+            for photo in post["photos"]:
+                if photo["original_size"]:
+                    distinct_photo = {}
+                    distinct_photo_tumblr_img = (photo["original_size"])["url"]
                     
-                write_out_template(temp_file_dict, "../_posts/", 
-                    temp_formated_file_name, "tumblr_photo_post")
-                print "Created {}".format(temp_formated_file_name)
-            else:
-                "Not a photo?"
+                    distinct_photo["tumblr_img_url"] = distinct_photo_tumblr_img
+                    distinct_photo["img"] = os.path.basename(distinct_photo_tumblr_img)
+
+                    temp_file_object = urllib.URLopener()
+                    
+                    temp_file_object.retrieve(distinct_photo_tumblr_img, "../image/posts/{}".format(os.path.basename(distinct_photo_tumblr_img)))
+                    
+                    temp_file_dict["photos"].append(distinct_photo)
+
+            temp_formated_file_name = "{}-{}.html".format(((post["date"].split())[0]), post["slug"])
+                
+            write_out_template(temp_file_dict, "../_posts/", 
+                temp_formated_file_name, "tumblr_photo_post")
+            print "Created:  {}".format(temp_formated_file_name)
+        else:
+            "Not a photo?"
