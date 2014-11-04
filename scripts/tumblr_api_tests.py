@@ -3,7 +3,7 @@ import os.path
 import pystache
 import json
 import urllib
-import pdb
+#import pdb
 
 def write_out_template(dictionary, path, file_name, template):
     """
@@ -35,11 +35,7 @@ client = pytumblr.TumblrRestClient(
 # Make the request
 client.blog_info('wholewheattoast.tumblr.com')
 
-# Authenticate via API Key
-#client = pytumblr.TumblrRestClient('NvpHTpkowzT3I4FqoYaYE5UfHguJTl5rMtUcCWyi5hiqJqAwPL')
-
-
-# To do  store the json somewhere?
+# TODO  store the json somewhere?
 
 tumblr_request = client.posts('wholewheattoast.tumblr.com', limit=10, notes_info=True, filter='html')
 
@@ -78,10 +74,6 @@ for i in file_names:
                     except:
                         print "dunno?"
                 temp_file_dict["caption"] = i["caption"]
-
-                # Get the image.
-                # Only getting the original size at this time.
-                # Need to make img a list of photos and iterate
                 
                 temp_file_dict["photos"] = []
                 
