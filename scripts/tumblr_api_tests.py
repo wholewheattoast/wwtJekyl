@@ -38,6 +38,9 @@ client.blog_info('wholewheattoast.tumblr.com')
 # Authenticate via API Key
 #client = pytumblr.TumblrRestClient('NvpHTpkowzT3I4FqoYaYE5UfHguJTl5rMtUcCWyi5hiqJqAwPL')
 
+
+# To do  store the json somewhere?
+
 tumblr_request = client.posts('wholewheattoast.tumblr.com', limit=10, notes_info=True, filter='html')
 
 file_names = []
@@ -78,20 +81,26 @@ for i in file_names:
 
                 # Get the image.
                 # Only getting the original size at this time.
-                # Need to get all the photos from a set
                 # Need to make img a list of photos and iterate
+                
+                temp_file_dict["photos"] = []
+                
                 for photo in i["photos"]:
                     if photo["original_size"]:
-                        temp_tumblr_org_img_url = (photo["original_size"])["url"]
-                        temp_file_dict["tumblr_img_url"] = (photo["original_size"])["url"]
-                        temp_tumblr_img = os.path.basename(temp_tumblr_org_img_url)
-                        temp_file_dict["img"] = os.path.basename(temp_tumblr_org_img_url)
-                        temp_file_object = urllib.URLopener()
-                        temp_file_object.retrieve(temp_tumblr_org_img_url, 
-                            "../image/posts/{}".format(temp_tumblr_img))
+                        distinct_photo = {}
+                        distinct_photo_tumblr_img = (photo["original_size"])["url"]
+                        
+                        distinct_photo["tumblr_img_url"] = distinct_photo_tumblr_img
+                        distinct_photo["img"] = os.path.basename(distinct_photo_tumblr_img)
 
-                temp_formated_file_name = "{}-{}.html".format(((i["date"].split())[0]), 
-                    i["slug"])
+                        temp_file_object = urllib.URLopener()
+                        
+                        temp_file_object.retrieve(distinct_photo_tumblr_img, "../image/posts/{}".format(os.path.basename(distinct_photo_tumblr_img)))
+                        
+                        temp_file_dict["photos"].append(distinct_photo)
+
+                temp_formated_file_name = "{}-{}.html".format(((i["date"].split())[0]), i["slug"])
+                    
                 write_out_template(temp_file_dict, "../_posts/", 
                     temp_formated_file_name, "tumblr_photo_post")
                 print "Created {}".format(temp_formated_file_name)
