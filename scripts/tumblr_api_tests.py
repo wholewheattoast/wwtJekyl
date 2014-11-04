@@ -3,7 +3,7 @@ import os.path
 import pystache
 import json
 import urllib
-#import pdb
+import pdb
 
 def write_out_template(dictionary, path, file_name, template):
     """
@@ -61,27 +61,39 @@ for i in file_names:
         for i in tumblr_request["posts"]:
             # TODO handle other types of tumblr posts.
             if i["type"] == "photo":
+                #pdb.set_trace()
                 temp_file_dict = {}
                 temp_file_dict["title"] = (i["slug"].replace("-", " "))
                 temp_file_dict["tags"] = i["tags"]
                 temp_file_dict["tumblr_url"] = i["post_url"]
                 temp_file_dict["date"] = i["date"]
-                temp_file_dict["source_url"] = i["link_url"]
+                try:
+                    temp_file_dict["source_url"] = i["link_url"]
+                except:
+                    try:
+                        temp_file_dict["source_url"] = i["post_url"]
+                    except:
+                        print "dunno?"
                 temp_file_dict["caption"] = i["caption"]
 
                 # Get the image.
                 # Only getting the original size at this time.
-                for thing in i["photos"]:
-                    if thing["original_size"]:
-                        temp_tumblr_org_img_url = (thing["original_size"])["url"]
-                        temp_file_dict["tumblr_img_url"] =(thing["original_size"])["url"]
+                # Need to get all the photos from a set
+                # Need to make img a list of photos and iterate
+                for photo in i["photos"]:
+                    if photo["original_size"]:
+                        temp_tumblr_org_img_url = (photo["original_size"])["url"]
+                        temp_file_dict["tumblr_img_url"] = (photo["original_size"])["url"]
                         temp_tumblr_img = os.path.basename(temp_tumblr_org_img_url)
                         temp_file_dict["img"] = os.path.basename(temp_tumblr_org_img_url)
                         temp_file_object = urllib.URLopener()
-                        temp_file_object.retrieve(temp_tumblr_org_img_url, "../image/posts/{}".format(temp_tumblr_img))
+                        temp_file_object.retrieve(temp_tumblr_org_img_url, 
+                            "../image/posts/{}".format(temp_tumblr_img))
 
-                temp_formated_file_name = "{}-{}.html".format(((i["date"].split())[0]), i["slug"])
-                write_out_template(temp_file_dict, "../_posts/", temp_formated_file_name, "tumblr_photo_post")
+                temp_formated_file_name = "{}-{}.html".format(((i["date"].split())[0]), 
+                    i["slug"])
+                write_out_template(temp_file_dict, "../_posts/", 
+                    temp_formated_file_name, "tumblr_photo_post")
                 print "Created {}".format(temp_formated_file_name)
             else:
                 "Not a photo?"
