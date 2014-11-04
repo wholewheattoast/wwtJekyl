@@ -11,8 +11,6 @@ def write_out_template(dictionary, path, file_name, template):
         Render the template and save an html file.
     """
 
-    #dictionary_formated = json.dumps(dictionary, sort_keys=False, indent=4, separators=(',', ': '))
-
     html_path = "{}/{}".format(path, file_name)
     html_file = open(html_path,"w")
 
@@ -32,22 +30,20 @@ client = pytumblr.TumblrRestClient(
   'W8BaOGaabnQUrgTVZAly2TLRWo4Rrjz7HjLmm7rqmu4x0x81nA'
 )
 
-# Make the request
 client.blog_info('wholewheattoast.tumblr.com')
 
-# TODO  store the json somewhere?
+# TODO store the json somewhere?
 
 tumblr_request = client.posts('wholewheattoast.tumblr.com', limit=10, notes_info=True, filter='html')
 
 file_names = []
 
-for i in tumblr_request["posts"]:
-    temp_tumblr_slug = i["slug"]
-    temp_date = (i["date"].split())
-    temp_tumblr_date = temp_date[0]
+for post in tumblr_request["posts"]:
+    tumblr_post_slug = post["slug"]
+    tumblr_post_date = (post["date"].split())[0]
 
-    temp_formated_file_name = "{}-{}.html".format(temp_tumblr_date, temp_tumblr_slug)
-    file_names.append(temp_formated_file_name)
+    post_formated_file_name = "{}-{}.html".format(tumblr_post_date, tumblr_post_slug)
+    file_names.append(post_formated_file_name)
 
 # look up file name
 mount_point = "../_posts/"
