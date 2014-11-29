@@ -14,20 +14,11 @@ $success-green: #29B473;
 $link-color: #000;  /* change this */
 
 
-/* helpers
-==============================*/
-
-.tight { margin: 0; }
-
-/* bootstrap overrides
-==============================*/
-//.row { margin-bottom: 1.25em; } // replace w a helper class
 
 /* main
 ==============================*/
 
 body {
-	margin-top: .5em;
 	font-size: $font-size;
 	font-family: $baseFontFamily;
 	color: $color;
@@ -40,9 +31,6 @@ body {
 	
 }
 
-#full_width {
-		.container { width: 80%; }
-	}
 
 /* Links
 ==============================*/
@@ -111,12 +99,31 @@ img {
 /* Color
 ==============================*/
 
-/* Misc
+.accent { color: $warm_accent_color; }
+
+/* helpers
 ==============================*/
 
-.accent { color: $warm_accent_color; }
+.tight { margin: 0; }
 .center_text { text-align: center; }
 
+
+/* site header and footer
+==============================*/
+    .site_header {
+        background-color: pink;
+        li { display: inline;}
+    }
+    
+    .main_body {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    }
+    
+    .site_footer {
+        background-color: pink;
+        padding-bottom: 6em;
+    }
 
 /* Sidebar
 ==============================*/
@@ -164,7 +171,12 @@ img {
 ==============================*/
 
 .post {
-	//margin-bottom: 4em;
+    h1 {
+        font-size: 1em;
+        margin-top: 0;
+    }
+	
+	margin-bottom: 2em;
 }
 
 .postPermalink { 
