@@ -101,6 +101,11 @@ img {
 
 .accent { color: $warm_accent_color; }
 
+.color-bg-om2014 { background-color: violet; }
+.color-bg-om2013 { background-color: #e69340; }
+.color-bg-ncd2013 { background-color: #e10926; }
+.color-bg-comics2013 { background-color: #52ad14; }
+
 /* helpers
 ==============================*/
 
@@ -215,11 +220,14 @@ img {
 /* Works
 ==============================*/
 
-#Portfolio_page { margin-top: 2em; }
-
-#Portfolio_page h1, #NCD_page h1, { 
-	font-size: 1.125em;
-	margin-top: 0; }
+#Portfolio {
+    .color-block {
+        height: 8em;
+        max-width: 100%;
+        display: inline-block;
+        padding: 1.75em 1em 0;
+    }
+}
 
 
 /* Publications
