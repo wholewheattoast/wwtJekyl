@@ -11,8 +11,7 @@ $background-color: #fafafa;
 $color: #000;
 $warm_accent_color: #ff2727;
 $success-green: #29B473;
-$link-color: #000;  /* change this */
-
+$link-color: #000;
 
 
 /* main
@@ -28,7 +27,6 @@ body {
 	-webkit-font-feature-settings: "kern";
 	-moz-font-feature-settings: "kern";
 	-moz-font-feature-settings: "kern=1";
-	
 }
 
 
@@ -80,7 +78,6 @@ h2 { font-size: 1.5em;
 
 h3 { font-size: 1.25em; }
 
-// p { max-width: ($font-size * 36); }
 
 /* Lists
 ==============================*/
@@ -160,16 +157,6 @@ img {
 /* Masthead
 ==============================*/
 .menu li { display: inline;}
-
-
-/* Main Footer
-==============================*/
-#Main_Footer .jumbotron,  {
-	margin-bottom: 0;
-	background-color: $background-color;
-	text-align: center;
-
-}
 
 
 /* posts
