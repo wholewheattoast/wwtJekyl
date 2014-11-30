@@ -11,23 +11,13 @@ $background-color: #fafafa;
 $color: #000;
 $warm_accent_color: #ff2727;
 $success-green: #29B473;
-$link-color: #000;  /* change this */
+$link-color: #000;
 
-
-/* helpers
-==============================*/
-
-.tight { margin: 0; }
-
-/* bootstrap overrides
-==============================*/
-//.row { margin-bottom: 1.25em; } // replace w a helper class
 
 /* main
 ==============================*/
 
 body {
-	margin-top: .5em;
 	font-size: $font-size;
 	font-family: $baseFontFamily;
 	color: $color;
@@ -37,12 +27,8 @@ body {
 	-webkit-font-feature-settings: "kern";
 	-moz-font-feature-settings: "kern";
 	-moz-font-feature-settings: "kern=1";
-	
 }
 
-#full_width {
-		.container { width: 80%; }
-	}
 
 /* Links
 ==============================*/
@@ -92,7 +78,6 @@ h2 { font-size: 1.5em;
 
 h3 { font-size: 1.25em; }
 
-// p { max-width: ($font-size * 36); }
 
 /* Lists
 ==============================*/
@@ -111,12 +96,36 @@ img {
 /* Color
 ==============================*/
 
-/* Misc
+.accent { color: $warm_accent_color; }
+
+.color-bg-om2014 { background-color: violet; }
+.color-bg-om2013 { background-color: #e69340; }
+.color-bg-ncd2013 { background-color: #e10926; }
+.color-bg-comics2013 { background-color: #52ad14; }
+
+/* helpers
 ==============================*/
 
-.accent { color: $warm_accent_color; }
+.tight { margin: 0; }
 .center_text { text-align: center; }
 
+
+/* site header and footer
+==============================*/
+    .site_header {
+        background-color: pink;
+        li { display: inline;}
+    }
+    
+    .main_body {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    }
+    
+    .site_footer {
+        background-color: pink;
+        padding-bottom: 6em;
+    }
 
 /* Sidebar
 ==============================*/
@@ -150,21 +159,16 @@ img {
 .menu li { display: inline;}
 
 
-/* Main Footer
-==============================*/
-#Main_Footer .jumbotron,  {
-	margin-bottom: 0;
-	background-color: $background-color;
-	text-align: center;
-
-}
-
-
 /* posts
 ==============================*/
 
 .post {
-	//margin-bottom: 4em;
+    h1 {
+        font-size: 1em;
+        margin-top: 0;
+    }
+	
+	margin-bottom: 2em;
 }
 
 .postPermalink { 
@@ -203,11 +207,14 @@ img {
 /* Works
 ==============================*/
 
-#Portfolio_page { margin-top: 2em; }
-
-#Portfolio_page h1, #NCD_page h1, { 
-	font-size: 1.125em;
-	margin-top: 0; }
+#Portfolio {
+    .color-block {
+        height: 8em;
+        max-width: 100%;
+        display: inline-block;
+        padding: 1.75em 1em 0;
+    }
+}
 
 
 /* Publications
