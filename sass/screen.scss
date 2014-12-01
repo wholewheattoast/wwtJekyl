@@ -98,10 +98,6 @@ img {
 
 .accent { color: $warm_accent_color; }
 
-.color-bg-om2014 { background-color: violet; }
-.color-bg-om2013 { background-color: #e69340; }
-.color-bg-ncd2013 { background-color: #e10926; }
-.color-bg-comics2013 { background-color: #52ad14; }
 
 /* helpers
 ==============================*/
@@ -114,7 +110,12 @@ img {
 ==============================*/
     .site_header {
         background-color: pink;
-        li { display: inline;}
+        li { 
+            display: inline;
+            margin-right: 1em;
+            }
+        li:last-child { margin-right: 0; }
+        nav a { font-weight: normal;}
     }
     
     .main_body {
@@ -204,25 +205,31 @@ img {
 /* About
 ==============================*/
 
-/* Works
+
+/* Publications
 ==============================*/
 
 #Portfolio {
     .color-block {
-        height: 8em;
-        max-width: 100%;
-        display: inline-block;
-        padding: 1.75em 1em 0;
+        li { height: 8em; }
+        span {
+            display: inline-block;
+            padding: 1em;
+            margin: 1.5em 2em;
+            }
     }
 }
-
-
-/* Publications
-==============================*/
-#Publications_page h1 { 
-	font-size: 1.5em;
-	margin-top: 0; 
-	}
+	
+.bg-om2014 { 
+    background-image: url(/image/portfolio/mail2014/om-2014-07-14-crop.jpg);
+    span { background-color: white; }
+    }
+.bg-om2013 { background-color: #e69340; }
+.bg-ncd2013 { 
+    background-color: #e10926; 
+    span { margin: 1.5em 1.75em !important; }
+    }
+.bg-comics2013 { background-color: #52ad14; }
 
 
 /* Teaching
