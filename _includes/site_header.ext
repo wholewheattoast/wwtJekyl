@@ -1,11 +1,12 @@
 <header class="site_header">
     <div class="container">
         <h1><a href="/index.html">wholewheattoast</a></h1>
-
         <nav>
             <ul class="list-unstyled">
-        	    <li><a href="/work.html">work</a> &#183; </li>
-            	<li><a href="/about.html">about</a>  &#183; </li>
+        	    <li><a href="/portfolio.html">portfolio</a></li>
+        	    <li><a href="/publications.html">zines</a></li>
+        	    <li><a href="/sketchbooks.html">sketchbooks</a></li>
+            	<li><a href="/about.html">about</a></li>
             	<li><a href="http://wholewheattoast.bigcartel.com">shop</a></li>
             </ul>
         </nav>
