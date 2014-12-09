@@ -1,0 +1,24 @@
+---
+layout: base_full_width
+title: Tag Archive
+---
+
+<h3 class="post_title">{{page.title}}</h3>
+
+<section>
+    <ul class="list-unstyled">
+        {% for post in site.posts %}
+            {% for tag in post.tags %}
+                {% if tag == page.tag %}
+                    <li class="archive_list list-unstyled">
+                        <a href='{{post.url}}'>
+                            <time datetime='{{post.date | date: "%F"}}'>{{post.date | date: "%F"}}</time>
+                            &nbsp;&nbsp;
+                            {{post.title}}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</section>

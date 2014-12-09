@@ -30,7 +30,9 @@ layout: base_full_width
                 <div class="col-md-12">
                     <ul class="list-unstyled post_tags">
                         {% for tag in page.tags %}
-                            <li>{{ tag }}</li>
+                            <li>
+                                <a href="/tag/{{ tag }}">{{ tag }}</a>
+                            </li>
                         {% endfor %}
                     </ul>
                 </div>
