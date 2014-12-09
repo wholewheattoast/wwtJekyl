@@ -35,7 +35,6 @@ body {
 
 a {
 	color: $link-color;
-	font-weight: bold;
 	text-decoration: none;
     outline: 0;
     -webkit-transition: color .25s;
@@ -114,7 +113,7 @@ img {
             margin-right: 1em;
             }
         li:last-child { margin-right: 0; }
-        nav a { font-weight: normal;}
+        nav a { font-weight: normal; }
     }
     
     .main_body {
