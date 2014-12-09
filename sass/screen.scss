@@ -109,7 +109,6 @@ img {
 /* site header and footer
 ==============================*/
     .site_header {
-        background-color: pink;
         li { 
             display: inline;
             margin-right: 1em;
@@ -165,24 +164,20 @@ img {
 
 .post {
     h1 {
-        font-size: 1em;
+        font-size: .8em;
         margin-top: 0;
-    }
-	
+        }
 	margin-bottom: 2em;
-}
-
-.postPermalink { 
-	color: #999; 
-    margin-top: .5em
-    }
-
-.postPermalink a { color: #999; }
-.postPermalink a:hover, 
-.postPermalink a:focus {
+	.permalink { 
+	    color: #999; 
+        }
+    .permalink a { color: #999; }
+    .permalink a:hover, 
+    .permalink a:focus {
         text-decoration: none;
         border-bottom: solid;
         }
+}
 
 
 /* Sketchbooks
