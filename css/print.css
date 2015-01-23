@@ -17,7 +17,7 @@ body {
 
 /* hide stuff for printing
 ==================== */
-/* line 22, ../sass/print.scss */
+/* line 21, ../sass/print.scss */
 #Masthead,
 .menu {
   display: none;

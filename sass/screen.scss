@@ -1,14 +1,15 @@
 // SASS for wholewheattoast.com
 // Shawn Eisenach
 
+@import 'bootstrap-custom';
+
 
 // Variabls
 $font-size: 18px;
 $line-height: 27px; //(font-size * 1.5)
 $basline_grid: 6px;
-$baseFontFamily: georgia, serif;
 
-$white: fff;
+$white: #fff;
 $background-color: #fafafa;
 $color: #000;
 $warm_accent_color: #ff2727;
@@ -16,24 +17,41 @@ $success-green: #29b473;
 $link-color: #000;
 
 
+html { font:1em/1.5 helvetica, sans-serif; }
+
+
 body {
   background-color: $background-color;
   color: $color;
-  font-family: $baseFontFamily;
   -webkit-font-feature-settings: 'kern';
   font-feature-settings: 'kern';
-  font-size: $font-size;
   text-rendering: optimizeLegibility;
 }
+
+// set up verticle spacing
+// via http://csswizardry.com/2012/06/single-direction-margin-declarations/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ul,
+ol,
+dd,
+p,
+figure,
+pre,
+table,
+fieldset,
+hr { margin-bottom:1.5rem; }
 
 a {
   color: $link-color;
   outline: 0;
   text-decoration: none;
-  -moz-transition: color .25s;
-  -ms-transition: color .25s;
-  -o-transition: color .25s;
-  -webkit-transition: color .25s;
   transition: color .25s;
 }
 
@@ -55,18 +73,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p { line-height: 1.45; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #101;
-  font-family: helvetica, sans-serif;
-}
+h6 { color: #101; }
 
 h1 { font-size: 2em; }
 
@@ -102,6 +109,8 @@ img {
 // site header and footer
 
 .site_header {
+  text-align: center;
+  
   li { 
     display: inline;
     margin-right: 1em;
@@ -111,6 +120,8 @@ img {
 
   nav a { font-weight: normal; }
 }
+
+.menu li { display: inline; }
     
 .main_body {
   margin-bottom: 1.5em;
@@ -124,7 +135,6 @@ img {
 
 .sidebar {
   background-color: #ffc0cb;
-  font-family: helvetica, sans-serif;
   font-size: 12pt;
   margin-bottom: 2em;
   padding: 1rem;
@@ -145,22 +155,13 @@ img {
   li { margin-bottom: .5em; }
 }
 
-#paginator { font-family: helvetica, sans-serif; }
-
-
-// Masthead
-.menu li { display: inline; }
-
 
 // Posts
 
 .post {
-  margin-bottom: 2em;
+  margin-bottom: 3rem;
 
-  h1 {
-    font-size: .8em;
-    margin-top: 0;
-    }
+  h1 { font-size: 1rem; }
 
   .permalink { 
     color: #999;
@@ -190,7 +191,6 @@ img {
   font-size: 18px;
   line-height: 1.428571429;
   margin-bottom: 0;
-  margin-top: 0;
 }
 
 
@@ -198,6 +198,8 @@ img {
 
 #Portfolio {
   .color-block {
+    font-size: 1.5rem;
+    
     li { height: 8em; }
   
     span {
