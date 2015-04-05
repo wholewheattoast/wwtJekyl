@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/wholewheattoast
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.wholewheattoast.com
+  * I am wholewheattoast (https://keybase.io/wholewheattoast) on keybase.
+  * I have a public key with fingerprint C1EA 6872 E816 C3F7 9B7A  C7FA FF9F 76AA 9BF9 3BD0
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "c1ea6872e816c3f79b7ac7faff9f76aa9bf93bd0",
+            "host": "keybase.io",
+            "key_id": "ff9f76aa9bf93bd0",
+            "kid": "01019ff23d86942e25ea08933c99c344e85556b308bf63e1afced24e69fe51878ad70a",
+            "uid": "fd6e2015cbcf87865dcf97aa95612e00",
+            "username": "wholewheattoast"
+        },
+        "service": {
+            "hostname": "www.wholewheattoast.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1423460095,
+    "expire_in": 157680000,
+    "prev": "9b156dbbd8a2a0602544c7ce654e08e9e015afb3366294b4f02bba3c022f958c",
+    "seqno": 2,
+    "tag": "signature"
+}
+
+which yields the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.1
+Comment: https://keybase.io/crypto
+
+yMIfAnicbZJZaFNBFIZTl1LjgoKiD0VlCkIlxLnb3DuxEdfivhSRUgpxZu5Mc23N
+jclNY6m1oqJ11wcRF9SUgis+KC1SUKq0ipao4I4b4lvBBamoiMvcqi/ivAxzzn++
+/5zDdI8cHAgWVBbP/WzfObeooPdaRSaw8kn5z0ZAXbsBRBpBLR+4hJOo4alkykl4
+IAKYwgmyTJVbCmKaMDE1CTMFEQILExGCqcAatSEIgbib9iskhpI0DzuujMlHzLFl
+9D/62oEEVKCChVA120JYV7lqcAItrGkMY6bpOrcMw0BUgxYVSOMKEYzbqs4RFtxQ
+LNMitgmJxGV++9iIq1AxGGVCJpFhM4FN6WsgReXQ982keSpB1nKpzsbdOp6Nc+J5
+LpHdN4WATNY7jPub8Af6K8xmw/+Iw8xdK2nJlOu5zK2TorjnJSM+w2tIDhRxGvuD
+i1EnYcvFyoJ6nko7bgJEFKlknuPzFV3VdAQhNkKAr086KR5zfIVhIgvK49vweonE
+VDGQTaltEZVABFVD15nJODJ0Di2OuRydCKppCKlYp7qAKqVEY1BVBTYsBvwB1yVc
+EFFlm6RGItNOTYJ4mRQHTde7qocECoKBwqGD/K8RCA4b/ffDFL0uCuxYun/Xgvri
+c4XbcumFV6eVNL/IN024/yp7ZPXZy+cflHeM2rhlavQlH7f51c2L+V7WXnQj9mn9
+12/D51uhSLyt+0Dtk+kber6Uzh6Sq5gz7+HWe3sT9Pujp2hKX8fMA92V53ceGz8l
+ujs9YjHGiwh73geVGduHr7kUffzsxPy342blQvn+Q3MOHxzf35d/va/qRW1V2fuS
+1mbQdj8TBGNjk0825qLX2u9+O9XDym4XjzEaTuf3rCo/smTi42Gg0/4Y2lRaWtiS
+ubCvrvxteGTD9OitXE1dVM+YwXeNLVOX95Pwm64rvfuVSWd+dLYexx92VzeDVZVl
+R3fqpz+X9Sz7sCL77BcOQzBS
+=vyZy
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/wholewheattoast
+
+==================================================================
+

@@ -1,231 +1,225 @@
-/* SASS for wholewheattoast.com
-** Shawn Eisenach
-*/
+// SASS for wholewheattoast.com
+// Shawn Eisenach
 
-/* Variabls
-==============================*/
+@import 'bootstrap-custom';
+
+
+// Variabls
 $font-size: 18px;
+$line-height: 27px; //(font-size * 1.5)
 $basline_grid: 6px;
-$baseFontFamily: georgia, serif;
+
+$white: #fff;
 $background-color: #fafafa;
 $color: #000;
 $warm_accent_color: #ff2727;
-$success-green: #29B473;
+$success-green: #29b473;
 $link-color: #000;
 
 
-/* main
-==============================*/
+html { font:1em/1.5 helvetica, sans-serif; }
+
 
 body {
-	font-size: $font-size;
-	font-family: $baseFontFamily;
-	color: $color;
-	background-color: $background-color;
-	text-rendering: optimizeLegibility;
-	font-feature-settings: "kern";
-	-webkit-font-feature-settings: "kern";
-	-moz-font-feature-settings: "kern";
-	-moz-font-feature-settings: "kern=1";
+  background-color: $background-color;
+  color: $color;
+  -webkit-font-feature-settings: 'kern';
+  font-feature-settings: 'kern';
+  text-rendering: optimizeLegibility;
 }
 
+// set up verticle spacing
+// via http://csswizardry.com/2012/06/single-direction-margin-declarations/
 
-/* Links
-==============================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ul,
+ol,
+dd,
+p,
+figure,
+pre,
+table,
+fieldset,
+hr { margin-bottom:1.5rem; }
 
 a {
-	color: $link-color;
-	text-decoration: none;
-    outline: 0;
-    -webkit-transition: color .25s;
-    -moz-transition: color .25s;
-    -o-transition: color .25s;
-    -ms-transition: color .25s;
-    transition: color .25s;
+  color: $link-color;
+  outline: 0;
+  text-decoration: none;
+  transition: color .25s;
 }
 
 a:visited {
-	color: #000;
-	text-decoration: none; 
+  color: #000;
+  text-decoration: none;
 }
 
 a:hover,
 a:focus {
-	color: $warm_accent_color;
-	text-decoration: underline;
+  color: $warm_accent_color;
+  text-decoration: underline;
 }
 
 .bare_link { font-weight: normal; }
 
-/* Typography
-==============================*/
-
-h1,h2,h3,h4,h5,h6,p {
- line-height: 1.45;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: helvetica, sans-serif;
-	color: #110011;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { color: #101; }
 
 h1 { font-size: 2em; }
 
-h2 { font-size: 1.5em;
-    border-bottom: 4px solid #000; 
-    }
+h2 { font-size: 1.5em; }
 
 h3 { font-size: 1.25em; }
 
 
-/* Lists
-==============================*/
-
 li { margin-bottom: .5em; }
 
-/* Images
-==============================*/
-
 img {
-	display: block;
-	height: auto;
-	max-width: 100%;
-	}
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
 
-/* Color
-==============================*/
+
+// Color
 
 .accent { color: $warm_accent_color; }
 
 
-/* helpers
-==============================*/
+// helpers
 
 .tight { margin: 0; }
+
 .center_text { text-align: center; }
 
 
-/* site header and footer
-==============================*/
-    .site_header {
-        li { 
-            display: inline;
-            margin-right: 1em;
-            }
-        li:last-child { margin-right: 0; }
-        nav a { font-weight: normal; }
-    }
-    
-    .main_body {
-        margin-top: 1em;
-        margin-bottom: 1.5em;
-    }
-    
-    .site_footer {
-        padding-bottom: 6em;
+// site header and footer
+
+.site_header {
+  text-align: center;
+  
+  li { 
+    display: inline;
+    margin-right: 1em;
     }
 
-/* Sidebar
-==============================*/
+  li:last-child { margin-right: 0; }
+
+  nav a { font-weight: normal; }
+}
+
+.menu li { display: inline; }
+    
+.main_body {
+  margin-bottom: 1.5em;
+  margin-top: 1em;
+}
+
+.site_footer { padding-bottom: 6em; }
+
+
+// Sidebar
 
 .sidebar {
-    font-size: 12pt;
-    font-family: helvetica, sans-serif;
-	padding: 1rem;
-	margin-bottom: 2em;
-	h1 { font-size: 12pt; }
-	background-color: pink;
-    li { display: inline;}
-    .email { font-size: 12pt; }
+  background-color: #ffc0cb;
+  font-size: 12pt;
+  margin-bottom: 2em;
+  padding: 1rem;
+
+  h1 { font-size: 12pt; }
+
+  li { display: inline;}
+
+  .email { font-size: 12pt; }
 }
 
 
-/* Nav's
-==============================*/
+// Nav's
 
 .side_nav { 
-	font-size: 12pt;
-	li { margin-bottom: .5em; }
-	}
-
-#paginator {
-    font-family: helvetica, sans-serif;
+  font-size: 12pt;
+  
+  li { margin-bottom: .5em; }
 }
 
-/* Masthead
-==============================*/
-.menu li { display: inline;}
 
-
-/* posts
-==============================*/
+// Posts
 
 .post {
-    h1 {
-        font-size: .8em;
-        margin-top: 0;
-        }
-	margin-bottom: 2em;
-	.permalink { 
-	    color: #999; 
-        }
-    .permalink a { color: #999; }
-    .permalink a:hover, 
-    .permalink a:focus {
-        text-decoration: none;
-        border-bottom: solid;
-        }
+  margin-bottom: 3rem;
+
+  h1 { font-size: 1rem; }
+
+  .permalink { 
+    color: #999;
+    a { color: #999; }
+  }
+
+  .permalink a:hover, 
+  .permalink a:focus {
+    border-bottom: solid;
+    text-decoration: none;
+  }
 }
 
 
-/* Sketchbooks
-==============================*/
+// PAGES
+
+// Sketchbooks
+
 .sketchbook_index {
-	li { 
-		display: inline;
-		padding: .75em; 
-	}
+  li { 
+    display: inline;
+    padding: .75em; 
+  }
 }
 
 .sketchbook_page h1 {
-	font-size: 18px;
-	margin-top: 0;
-	margin-bottom: 0;
-	line-height: 1.428571429;
+  font-size: 18px;
+  line-height: 1.428571429;
+  margin-bottom: 0;
 }
 
 
-/* About
-==============================*/
-
-
-/* Publications
-==============================*/
+// Publications
 
 #Portfolio {
-    .color-block {
-        li { height: 8em; }
-        span {
-            display: inline-block;
-            padding: 1em;
-            margin: 1.5em 2em;
-            }
+  .color-block {
+    font-size: 1.5rem;
+    
+    li { height: 8em; }
+  
+    span {
+      display: inline-block;
+      margin: 1.5em 2em;
+      padding: 1em;
     }
+  }
 }
-	
-.bg-om2014 { 
-    background-image: url(/image/portfolio/mail2014/om-2014-07-14-crop.jpg);
-    span { background-color: white; }
-    }
+
+.bg-om2014 {
+  background-image: url('/image/portfolio/mail2014/om-2014-07-14-crop.jpg');
+  span { background-color: $white; }
+}
+
 .bg-om2013 { background-color: #e69340; }
+
 .bg-ncd2013 { 
-    background-color: #e10926; 
-    span { margin: 1.5em 1.75em !important; }
-    }
+  background-color: #e10926; 
+  span { margin: 1.5em 1.75em !important; }
+}
+
 .bg-comics2013 { background-color: #52ad14; }
 
 
-/* Teaching
-==============================*/
-
-@import "media-queries";
+@import 'media-queries';
