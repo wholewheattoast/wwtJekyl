@@ -7,8 +7,6 @@ import time
 import uuid
 
 
-import pdb
-
 def write_out_template(dictionary, path, file_name, template):
     """
         Read in json
@@ -20,7 +18,7 @@ def write_out_template(dictionary, path, file_name, template):
     html_path = "{}/{}".format(path, file_name)
     html_file = open(html_path,"w")
 
-    results_template = open("../_templates/{}.mustache".format(template)).read()
+    results_template = open("../_templates/{}".format(template)).read()
 
     html_results = pystache.render(results_template, dictionary)
     html_file.write(html_results)

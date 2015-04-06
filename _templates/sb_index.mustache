@@ -7,9 +7,15 @@ date:
 dimensions:
 ---
 
-hi i'm {{sb_name}}
+<h2>{{sb_name}}</h2>
 
-{{#sb_spreads}}
-    <li></li>
-{{/sb_spreads}}
+<ol class="list-unstyled">
+  {{#sb_spreads}}
+    <li class="col-xs-4 col-md-3">
+      <a href="/sketchbooks/{{spread_name}}.html">
+        <img src="/{{image_dir}}/thumbs/{{spread_name}}.jpg" />
+      </a>
+    </li>
+  {{/sb_spreads}}
+</ol>
 
