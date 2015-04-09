@@ -8,12 +8,15 @@ parser = argparse.ArgumentParser()
 parser.add_argument("sb_name", help="The name of the sketchbook")
 
 # Only old sketchbooks will start with ifc
-parser.add_argument("pages_start_on", help="Does the sketchbook start on 1 or ifc")
+# parser.add_argument("pages_start_on", help="Does the sketchbook start on 1 or ifc")
 args = parser.parse_args()
 
+sb_display_name = args.sb_name
 sb_url_safe_name = args.sb_name.replace(" ", "-")
 
-sb_image_dir = os.path.dirname("../image/sketchbooks/{}/".format(sb_url_safe_name))
+sb_image_dir = os.path.dirname(
+    "../image/sketchbooks/{}/".format(sb_url_safe_name)
+    )
 
 sb_image_files = []
 
@@ -29,14 +32,14 @@ for root, dirs, files in os.walk(sb_image_dir):
             else:
                 strip_ext = name.replace(".jpg", "")
                 strip_base = strip_ext.replace(sb_url_safe_name, "")
-                
-                # I plan on dropping this pp nonsesense
-                sb_numbers_only = strip_base.replace("-pp-", "")
+                sb_numbers_only = strip_base.replace("-", " ").lstrip()
                 sb_image_files.append(sb_numbers_only)
 
-
 sorted_image_list = sorted(sb_image_files)
-print sorted_image_list
+
+# Effectivaly send fc to front of list.
+# This should leave bc (if exists) at end of list
+sorted_image_list.insert(0, sorted_image_list.pop())
 
 sb_directory = "../sketchbooks/{}".format(sb_url_safe_name)
 
@@ -50,33 +53,49 @@ sb_dict = {}
 
 spreads_list = []
 
-for i in sorted_image_list:
+for i, item in enumerate(sorted_image_list):
     temp_spread_dict = {}
     
-    i_without_dash = i.replace("-", " ")
+    print "-------------------- i is {}".format(item)
     
-    i_split = i_without_dash.split()
+    i_split = item.split()
     
-    # Drop the pp ???
-    # sketchbook_name-6-7 is clear enough
-    # will need to rename images to match for existing
-    temp_spread_dict["spread_name"] = "{}-pp-{}".format(sb_url_safe_name,i)
+    temp_spread_dict["sb_display_name"] = sb_display_name
+    temp_spread_dict["sb_url_safe_name"] = sb_url_safe_name
+    temp_spread_dict["spread"] = "{}".format(
+        item.replace(" ", "-")
+    )
     
     try:
-        temp_spread_dict["left_page_number"] = i_split[0]
-        temp_spread_dict["right_page_numer"] = i_split[1]
+        temp_spread_dict["next"] = "{}".format(
+            (sorted_image_list[i + 1]).replace(" ", "-")
+        )
     except IndexError:
-        # TODO test for fc, ifc, ibc, bc
-        print "is this fc or ???"
-    except:
-        print "error"
+        temp_spread_dict["next"] = "{}".format(
+            (sorted_image_list[0]).replace(" ", "-")
+        )
+
+    try: 
+        temp_spread_dict["prev"] = "{}".format(
+            (sorted_image_list[i - 1]).replace(" ", "-")
+        )
+    except IndexError:
+        print "woops index error on prev"
+        
     
-    # Maybe I can just render the pages here and only iterate once
+    temp_file_name = "{}-{}.html".format(
+        sb_url_safe_name, item.replace(" ", "-")
+    )
+    
+    toast_tools.write_out_template(
+        temp_spread_dict, sb_directory, temp_file_name, "sb_page.mustache"
+    )
+    
     spreads_list.append(temp_spread_dict)
 
-# Flesh out sb_dict metadata
 
-sb_dict["sb_name"] = sb_url_safe_name
+sb_dict["sb_display_name"] = sb_display_name
+sb_dict["sb_url_safe_name"] = sb_url_safe_name
 sb_dict["sb_spreads"] = spreads_list
 sb_dict["image_dir"] = sb_image_dir
 sb_dict["html_dir"] = sb_directory
@@ -90,9 +109,4 @@ sb_dict["html_dir"] = sb_directory
 # Generate index file
 # write_out_template(dictionary, path, file_name, template)
 
-sb_index_template = "sb_index.mustache"
-
-toast_tools.write_out_template(sb_dict, sb_directory, "index.html", sb_index_template)
-
-# TODO write out individual pages
-# use spreads_list
+toast_tools.write_out_template(sb_dict, sb_directory, "index.html", "sb_index.mustache")

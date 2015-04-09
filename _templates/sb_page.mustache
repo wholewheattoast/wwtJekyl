@@ -1,0 +1,36 @@
+---
+layout: base_full_width
+title: {{sb_display_name}} {{spread}}
+description: {{sb_display_name}} {{spread}}
+stub: sketchbooks/{{sb_url_safe_name}}/index.html
+date: 
+dimensions:
+---
+
+<article class="sb_page">
+
+  <div class="col-md-10">
+    <img src="/image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.jpg" 
+      title="{{sb_display_name}} {{spread}}" 
+      alt="{{sb_display_name}} {{spread}}" 
+    />
+  </div>
+  
+  <div class="col-md-2">
+    <h2>{{sb_display_name}}<br/> {{spread}}</h2>
+    <nav>
+      <ul class="list-unstyled">
+        <li>
+          <a href="{{sb_url_safe_name}}-{{prev}}.html" rel="prev" title="prev">{{prev}}</a>
+        </li>
+        <li>
+          <a href="{{sb_url_safe_name}}-{{next}}.html" rel="next" title="next">{{next}}</a>
+        </li>
+        <li>
+          <a href="index.html" title="index">index</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+</article>
