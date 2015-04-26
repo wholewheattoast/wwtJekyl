@@ -12,11 +12,16 @@ parser.add_argument("sb_name", help="The name of the sketchbook")
 args = parser.parse_args()
 
 sb_display_name = args.sb_name
-sb_url_safe_name = args.sb_name.replace(" ", "-")
+sb_url_safe_name = (args.sb_name.replace(" ", "-")).lower()
+
+print sb_display_name
+print sb_url_safe_name
 
 sb_image_dir = os.path.dirname(
     "../image/sketchbooks/{}/".format(sb_url_safe_name)
     )
+    
+print sb_image_dir
 
 sb_image_files = []
 
