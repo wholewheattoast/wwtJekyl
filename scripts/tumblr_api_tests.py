@@ -76,12 +76,20 @@ for post in tumblr_request["posts"]:
             temp_file_dict["img_permalink"] = post["image_permalink"]
             temp_file_dict["tumblr_post_type"] = post["type"]
             temp_file_dict["tumblr_post_id"] = post["id"]
-            temp_file_dict["tags"] = post["tags"]
             temp_file_dict["caption"] = post["caption"]
             temp_file_dict["date"] = post["date"]
             temp_file_dict["format"] = post["format"]
             temp_file_dict["tumblr_slug"] = post["slug"]
             
+            #format tags
+            formated_tags = []
+            
+            for i in post["tags"]:
+                tag = str(i)
+                formated_tags.append(i)
+                
+            temp_file_dict["tags"] = post[formated_tags]
+                
             try:
                 temp_file_dict["source_url"] = post["link_url"]
             except:
