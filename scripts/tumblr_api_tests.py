@@ -3,7 +3,7 @@ import os.path
 import pystache
 import json
 import urllib
-#import pdb
+import pdb
 
 def write_out_template(dictionary, path, file_name, template):
     """
@@ -21,6 +21,7 @@ def write_out_template(dictionary, path, file_name, template):
 
     html_file.close()
 
+pdb.set_trace()
 
 # Authenticate via OAuth
 client = pytumblr.TumblrRestClient(
@@ -34,7 +35,12 @@ client.blog_info('wholewheattoast.tumblr.com')
 
 # TODO store the json somewhere?
 
-tumblr_request = client.posts('wholewheattoast.tumblr.com', limit=10, notes_info=True, filter='html')
+tumblr_request = client.posts(
+    'wholewheattoast.tumblr.com',
+    limit=10,
+    notes_info=True,
+    filter='html'
+)
 
 mount_point = "../_posts/"
 
@@ -63,7 +69,7 @@ for post in tumblr_request["posts"]:
                     temp_file_dict["source_url"] = post["post_url"]
                 except:
                     print "dunno?"
-            temp_file_dict["caption"] = post["caption"]
+            temp_file_dict["caption"] = post["caption"].encode("utf-8")
             
             temp_file_dict["photos"] = []
             
