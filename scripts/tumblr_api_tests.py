@@ -88,7 +88,7 @@ for post in tumblr_request["posts"]:
                 tag = str(i)
                 formated_tags.append(i)
                 
-            temp_file_dict["tags"] = post[formated_tags]
+            temp_file_dict["tags"] = formated_tags
                 
             try:
                 temp_file_dict["source_url"] = post["link_url"]
