@@ -3,7 +3,7 @@ import os.path
 import pystache
 import json
 import urllib
-#import pdb
+import pdb
 #from bs4 import BeautifulSoup
 
 def write_out_template(dictionary, path, file_name, template):
@@ -81,12 +81,12 @@ for post in tumblr_request["posts"]:
             temp_file_dict["format"] = post["format"]
             temp_file_dict["tumblr_slug"] = post["slug"]
             
+            pdb.set_trace()
             #format tags
             formated_tags = []
             
             for i in post["tags"]:
-                tag = str(i)
-                formated_tags.append(i)
+                formated_tags.append(str(i))
                 
             temp_file_dict["tags"] = formated_tags
                 
