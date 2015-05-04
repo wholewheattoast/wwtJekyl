@@ -73,7 +73,7 @@ for post in tumblr_request["posts"]:
             
             temp_file_dict["title"] = (post["slug"].replace("-", " "))
             temp_file_dict["tumblr_url"] = post["post_url"]
-            temp_file_dict["img_permalink"] = post["image_permalink"]
+            #temp_file_dict["img_permalink"] = post["image_permalink"]
             temp_file_dict["tumblr_post_type"] = post["type"]
             temp_file_dict["tumblr_post_id"] = post["id"]
             temp_file_dict["caption"] = post["caption"]
