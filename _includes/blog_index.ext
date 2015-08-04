@@ -49,17 +49,11 @@
             {% endif %}
 
             {% if paginator.previous_page %}
-                <li>
-                {% if paginator.previous_page == 1 %}
-                    <span class="more">
-                        <a href="{{site.baseurl}}/">Newer</a>
-                    </span>
-                {% else %}
-                    <span class="more">
-                        <a href="{{site.baseurl}}{{paginator.previous_page_path}}">Newer</a>
-                    </span>
-                {% endif %}
-                </li>
+              <li>
+                <span class="more">
+                  <a href="{{site.baseurl}}{{paginator.previous_page_path}}">Newer</a>
+                </span>
+              </li>
             {% endif %}
             <li><a href="{{site.baseurl}}/blog/archive.html">Archive</a></li>
         </ul>
