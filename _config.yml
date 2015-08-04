@@ -12,7 +12,7 @@ url: http://www.wholewheattoast.com
 
 # Outputting
 permalink:     date
-paginate_path: /page:num
+paginate_path: /blog/page:num
 timezone: America/Los_Angeles
 
 ## Where things are

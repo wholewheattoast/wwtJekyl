@@ -3,6 +3,7 @@
     <h1><a href="/index.html">wholewheattoast</a></h1>
       <nav>
         <ul class="list-unstyled">
+          <li><a href="/blog/">blog</a></li>
           <li><a href="/portfolio.html">portfolio</a></li>
           <li><a href="/publications.html">zines</a></li>
     	    <li><a href="/sketchbooks.html">sketchbooks</a></li>

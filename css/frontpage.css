@@ -1,0 +1,59 @@
+body {
+  overflow: hidden;
+  font-family: helvetica, sans-serif;
+}
+
+article {
+  width: 75%;
+  margin: 0px auto;
+}
+
+header {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header h1 {
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #000;
+  padding: 1em;
+}
+
+nav ul {
+  margin-top: 0;
+  list-style: none;
+}
+
+nav ul li {
+  color: white;
+}
+
+.nav_links {
+  background-color: #000;
+  display: inline-block;
+  width: 1.5em;
+  height: 2em;
+  padding-right: 1em;
+  padding-top: .5em;
+}
+
+.nav_links a {
+  padding: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.figure {
+  width: 100%;
+}
