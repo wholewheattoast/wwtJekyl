@@ -2,42 +2,32 @@
 layout: base_full_width
 ---
 
-<article class="post row">
-    <header class="col-md-3">
-        <h1>
-            <a class="permalink" href="{{site.baseurl}}{{post.url}}"><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%F"}}</time></a>
-        </h1>
-    </header>
+<article class="post">
+  <h2>
+    <a class="permalink" href="{{site.baseurl}}{{post.url}}">
+      <time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%F"}}</time>
+    </a>
+  </h2>
 
-    <section class="col-md-6 col-lg-8">
-        {{ content }}
-    </section>
+{{ content }}
 
-    <footer>
-        {% if page.categories %}
-            <div class="row">
-                <div class="col-md-12">
-                    <p>
-                        <span class="category">
-                            {{ page.categories | category_links }}
-                        </span>
-                    </p>
-                </div>
-            </div>
-        {% endif %}
-        {% if page.tags %}
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="list-unstyled post_tags">
-                        {% for tag in page.tags %}
-                            <li>
-                                <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        {% endif %}
-    </footer>
+<footer>
+  {% if page.categories %}
+    <p>
+      <span class="category">
+          {{ page.categories | category_links }}
+      </span>
+    </p>
+  {% endif %}
+  {% if page.tags %}
+    <ul class="list-unstyled post_tags">
+      {% for tag in page.tags %}
+        <li>
+          <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  </footer>
 </article>
 
