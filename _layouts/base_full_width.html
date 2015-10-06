@@ -71,19 +71,19 @@
 		
 	</head>
 
-	<body prefix="dc: http://purl.org/dc/terms/" id="full_width">
-        
-        {% include site_header.ext %}
-		
-		<div class="container main_body">
-      		<div class="row">
-      			<div class="col-md-12">
-          			{{ content }}
-          		</div>
-      		</div>
-		</div>
-
-		{% include footer.ext %}
-
-    </body>
+  <body prefix="dc: http://purl.org/dc/terms/" id="full_width">
+  
+    {% include site_header.ext %}
+  
+    <div class="container main_body">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  
+    {% include footer.ext %}
+  
+  </body>
 </html>
