@@ -5,11 +5,11 @@
     {% for post in paginator.posts %}
       <article class="post">
         <header>
-         <h1> 
+         <h2> 
             <a class="permalink" href="{{site.baseurl}}{{post.url}}">
               <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time>
             </a>
-          </h1>
+          </h2>
         </header>
         
         <section>
@@ -34,7 +34,6 @@
               {% endfor %}
             </ul>
           {% endif %}
-          
         </footer>
       </article>
     {% endfor %}
