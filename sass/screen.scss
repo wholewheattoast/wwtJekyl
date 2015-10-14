@@ -173,6 +173,14 @@ img {
   }
 }
 
+// post_tags is depricated
+.post_tags a,
+.tags a {
+  color: white;
+  background-color: black;
+  padding: 6px 8px;
+}
+
 
 // PAGES
 
