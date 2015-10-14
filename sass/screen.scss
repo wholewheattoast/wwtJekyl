@@ -106,7 +106,8 @@ img {
 // site header and footer
 
 .site_header {
-  text-align: center;
+  text-align: right;
+  margin-right: 2em;
   
   li { 
     display: inline;
@@ -184,17 +185,18 @@ img {
   }
 }
 
-.sketchbook_page h1 {
-  font-size: 18px;
-  line-height: 1.428571429;
-  margin-bottom: 0;
-}
-
 .sb_page {
   h2 {
     font-size: 16px;
     text-transform: capitalize;
   }
+}
+
+.sb-nav {
+  // will need media queries to set this lower on narrow viewports.
+  position: fixed;
+  top: calc(50% - 4em);
+  right: 2em;
 }
 
 
