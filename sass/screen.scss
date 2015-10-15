@@ -19,7 +19,6 @@ $link-color: #000;
 
 html { font:1em/1.5 helvetica, sans-serif; }
 
-
 body {
   background-color: $background-color;
   color: $color;
@@ -46,7 +45,7 @@ figure,
 pre,
 table,
 fieldset,
-hr { margin-bottom:1.5rem; }
+hr { margin-bottom: 1.5rem; }
 
 a {
   color: $link-color;
@@ -92,19 +91,15 @@ img {
 
 
 // Color
-
 .accent { color: $warm_accent_color; }
 
 
 // helpers
-
-.tight { margin: 0; }
-
 .center_text { text-align: center; }
+.tight { margin: 0; }
 
 
 // site header and footer
-
 .site_header {
   text-align: right;
   margin-right: 2em;
@@ -123,39 +118,12 @@ img {
     
 .main_body {
   margin-bottom: 1.5em;
-  margin-top: 1em;
-}
-
-.site_footer { padding-bottom: 6em; }
-
-
-// Sidebar
-
-.sidebar {
-  background-color: #ffc0cb;
-  font-size: 12pt;
-  margin-bottom: 2em;
-  padding: 1rem;
-
-  h1 { font-size: 12pt; }
-
-  li { display: inline;}
-
-  .email { font-size: 12pt; }
-}
-
-
-// Nav's
-
-.side_nav { 
-  font-size: 12pt;
-  
-  li { margin-bottom: .5em; }
+  // TODO set mediaquery so not overlap on narrow viewports.
+  margin-top: -6.25em;
 }
 
 
 // Posts
-
 .post {
   margin-bottom: 3rem;
 
@@ -182,10 +150,7 @@ img {
 }
 
 
-// PAGES
-
 // Sketchbooks
-
 .sketchbook_index {
   li { 
     display: inline;
@@ -209,7 +174,6 @@ img {
 
 
 // Publications
-
 #Portfolio {
   .color-block {
     font-size: 1.5rem;
