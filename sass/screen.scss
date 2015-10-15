@@ -165,8 +165,12 @@ img {
   }
 }
 
+.sb_index {
+  h2 { text-transform: capitalize; }
+  margin-top: 4em;
+}
+
 .sb-nav {
-  // will need media queries to set this lower on narrow viewports.
   position: fixed;
   top: calc(50% - 4em);
   right: 2em;

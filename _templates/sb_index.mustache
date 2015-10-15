@@ -4,22 +4,24 @@ title: {{sb_display_name}}
 description: {{sb_display_name}} sketchbook
 stub: sketchbooks/{{sb_url_safe_name}}/index.html
 date:
-dimensions:
 ---
 
-<h2>{{sb_display_name}}</h2>
+<section class="sb_index">
+  <h2>{{sb_display_name}}</h2>
 
-<ol class="list-unstyled row">
-  {{#sb_spreads}}
-    <li class="col-xs-4 col-md-3">
-      <a href="/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.html"
-        title="{{sb_display_name}} {{spread}}" >
-        <img src="/{{image_dir}}/thumbs/{{sb_url_safe_name}}-{{spread}}.jpg" 
-          title="{{sb_display_name}} {{spread}}"
-          alt="{{sb_display_name}} {{spread}}"
-        />
-      </a>
-    </li>
-  {{/sb_spreads}}
-</ol>
+  <ol class="list-unstyled row">
+    {{#sb_spreads}}
+      <li class="col-xs-6 col-sm-4 col-md-3">
+        <a href="/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.html"
+          title="{{sb_display_name}} {{spread}}" >
+          <img 
+            src="/{{image_dir}}/thumbs/{{sb_url_safe_name}}-{{spread}}.jpg" 
+            title="{{sb_display_name}} {{spread}}"
+            alt="{{sb_display_name}} {{spread}} page"
+          />
+        </a>
+      </li>
+    {{/sb_spreads}}
+  </ol>
+</h2>
 
