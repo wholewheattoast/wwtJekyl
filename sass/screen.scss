@@ -167,8 +167,9 @@ img {
 }
 
 .sb_index {
-  h2 { text-transform: capitalize; }
   margin-top: 4em;
+  h2 { text-transform: capitalize; }
+  li { margin-bottom: 2em; }
 }
 
 .sb-nav {
