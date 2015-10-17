@@ -1,8 +1,5 @@
 /* Media Querries
 ============================================== */
-
-	/* height
-	===================================== */
 	@media (max-height: 670px) {}
 
 	/* 480px Smartphones */
@@ -10,93 +7,61 @@
 		
 		body { margin-top: 0; }
 		
-		#full_width .container {
-    		width: 98%;
-		}
+		#full_width .container { width: 98%; }
 
 		h1 { font-size: 1.75em; }
 		h2 { font-size: 1.5em; }
 		h3 { font-size: 1.25em; }
 		
-		ul.inline > li, ol.inline > li {
+		ol.inline > li,
+		ul.inline > li {
 			display: inline-block;
-			padding-right: .125em;
 			padding-left: .125em;
+			padding-right: .125em;
 			}
-		
-		.sidebar { margin-bottom: 1em; }
-		.side_nav ul { line-height: 2; }
-
-		.sketchbook_page {
-			h1 {
-				font-size: 1.5em;
-			}
-			nav { 
-				text-align: right; 
-				margin-top: 1em;
-				.list-inline>li {
-    				display: inline-block;
-    				padding-right: 10px;
-    				padding-left: 10px
-				}
-			}
-		}
 	}
 
 	/* 767 "smartphones and small tablets
 	========================================= */
-	
 	@media (max-width: 767px) {
-    	body { margin-top: 0; }
-
-		.sketchbook_page {
-			h1 { font-size: 1.5em; }
-			nav { 
-				text-align: right; 
-				margin-top: 1em;
-			}
-		}
-	 }
+    body { margin-top: 0; }
+  }
 	
 	/* 768 Portrait tablets
 	========================================= */
-	
 	@media (min-width: 768px) and (max-width: 979px) {
 		body { margin-top: 0; }
-
-		.sidebar {
-			h1 { font-size: 1.5em; }
-			h2 { font-size: 1.25em; }
-			h3 { font-size: 1em; }
-		}
-
-		.side_nav { font-size: 1em; }
-
-		.sketchbook_page {
-			h1 {
-				font-size: 1em;
-			}
-			nav { 
-				text-align: right; 
-				margin-top: 2em;
-			}
-		}
 		
 		#NCD_page {
 			margin-top: 2em;
-			nav { 
-				text-align: right; 
-				margin-top: 1em;
+			nav {
+  			margin-top: 1em;
+				text-align: right;
 			}
 		}
 	}
 	
-	@media (max-width: 991px) { }
+	
+	@media (max-width: 980px) {
+  	.sb-nav {
+      position: relative;
+      right: 0px;
+      text-align: right;
+      top: 0;
+    }
+	}
+	
+	@media (max-width: 1280px) {
+    .site_header {
+      position: relative;
+      right: 0;
+      text-align: center;
+    }
+  }
 	
 	/* ~1100px
 	========================================= */
-	@media (min-width: 970px) and (max-width: 1200px) {	}
-
+	@media (min-width: 970px) and (max-width: 1200px) { }
 
 	/*retnia
 	========================================= */
@@ -107,3 +72,4 @@
 	@media
 	only screen and (-webkit-min-device-pixel-ratio : 1.5) and (max-width: 480px),
 	only screen and (min-device-pixel-ratio : 1.5) and (max-width: 480px) { }
+	

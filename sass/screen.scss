@@ -19,7 +19,6 @@ $link-color: #000;
 
 html { font:1em/1.5 helvetica, sans-serif; }
 
-
 body {
   background-color: $background-color;
   color: $color;
@@ -46,7 +45,7 @@ figure,
 pre,
 table,
 fieldset,
-hr { margin-bottom:1.5rem; }
+hr { margin-bottom: 1.5rem; }
 
 a {
   color: $link-color;
@@ -92,21 +91,20 @@ img {
 
 
 // Color
-
 .accent { color: $warm_accent_color; }
 
 
 // helpers
-
-.tight { margin: 0; }
-
 .center_text { text-align: center; }
+.tight { margin: 0; }
 
 
 // site header and footer
-
 .site_header {
-  text-align: center;
+  position: absolute;
+  right: 2em;
+  text-align: right;
+  top: 0;
   
   li { 
     display: inline;
@@ -122,39 +120,11 @@ img {
     
 .main_body {
   margin-bottom: 1.5em;
-  margin-top: 1em;
-}
-
-.site_footer { padding-bottom: 6em; }
-
-
-// Sidebar
-
-.sidebar {
-  background-color: #ffc0cb;
-  font-size: 12pt;
-  margin-bottom: 2em;
-  padding: 1rem;
-
-  h1 { font-size: 12pt; }
-
-  li { display: inline;}
-
-  .email { font-size: 12pt; }
-}
-
-
-// Nav's
-
-.side_nav { 
-  font-size: 12pt;
-  
-  li { margin-bottom: .5em; }
+  margin-top: 2em;
 }
 
 
 // Posts
-
 .post {
   margin-bottom: 3rem;
 
@@ -172,22 +142,21 @@ img {
   }
 }
 
+// post_tags is depricated
+.post_tags a,
+.tags a {
+  color: white;
+  background-color: black;
+  padding: 6px 8px;
+}
 
-// PAGES
 
 // Sketchbooks
-
 .sketchbook_index {
   li { 
     display: inline;
     padding: .75em; 
   }
-}
-
-.sketchbook_page h1 {
-  font-size: 18px;
-  line-height: 1.428571429;
-  margin-bottom: 0;
 }
 
 .sb_page {
@@ -197,9 +166,20 @@ img {
   }
 }
 
+.sb_index {
+  margin-top: 4em;
+  h2 { text-transform: capitalize; }
+  li { margin-bottom: 2em; }
+}
+
+.sb-nav {
+  position: fixed;
+  top: calc(50% - 4em);
+  right: 2em;
+}
+
 
 // Publications
-
 #Portfolio {
   .color-block {
     font-size: 1.5rem;
