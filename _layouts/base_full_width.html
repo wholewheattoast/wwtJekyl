@@ -13,7 +13,9 @@
 		<meta name="dc.identifier" content="http://www.wholewheattoast.com/{{ page.stub }}" />
 		<meta name="dc.modified" content="{{ site.time | date_to_xmlschema }}" />
 		<meta name="dc.created" content="{{ page.date }}" />
-		<meta name="dc.language" content="en" /> 
+		<meta name="dc.language" content="en" />
+		
+		<link href='{{site.url}}/feed.xml' rel='alternate' type='application/atom+xml'>
 		
 		<!-- Mobile Specific Metas
 		================================================== -->
@@ -27,8 +29,6 @@
 		================================================== -->
 		<link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<link href="/css/print.css" media="print" rel="stylesheet" type="text/css" />
-		
-
 		
 		<!-- Scripts
 		================================================== -->
