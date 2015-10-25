@@ -1,10 +1,9 @@
-import pytumblr
-import os.path
-import pystache
+from ConfigParser import SafeConfigParser
 import json
+import os.path
+import pytumblr
+import pystache
 import urllib
-#import pdb
-#from bs4 import BeautifulSoup
 
 def write_out_template(dictionary, path, file_name, template):
     """
@@ -29,11 +28,21 @@ def write_out_template(dictionary, path, file_name, template):
     html_file.close()
 
 # Authenticate via OAuth
+parser = SafeConfigParser()
+parser.read("tumblr_jekyll.ini")
+
+TUMBLR_BLOG = parser.get('tumblr_api', 'tumblr_blog')
+CONSUMER_KEY = parser.get('tumblr_api', 'tumblr_consumer_key')
+CONSUMER_SECRET = parser.get('tumblr_api', 'tumblr_consumer_secret')
+OAUTH_TOKEN = parser.get('tumblr_api', 'tumblr_oauth_token')
+OAUTH_SECRET = parser.get('tumblr_api', 'tumblr_oauth_secret')
+MNT_PNT = parser.get('tumblr_api', 'mount_point')
+
 client = pytumblr.TumblrRestClient(
-  'NvpHTpkowzT3I4FqoYaYE5UfHguJTl5rMtUcCWyi5hiqJqAwPL',
-  'QK10sUUoA6osskA3vVgIz0lUdMM6OgrHgpbMpuDqlfRwZu17m8',
-  '3ojJTqCtP7apBR681FhSRJfpYSgtDoCr9hiXShTrJNVIZO9cbI',
-  'W8BaOGaabnQUrgTVZAly2TLRWo4Rrjz7HjLmm7rqmu4x0x81nA'
+    CONSUMER_KEY,
+    CONSUMER_SECRET,
+    OAUTH_TOKEN,
+    OAUTH_SECRET,
 )
 
 client.blog_info('wholewheattoast.tumblr.com')
@@ -45,11 +54,8 @@ tumblr_request = client.posts(
     filter='html'
 )
 
-mount_point = "../_posts/"
-
 for post in tumblr_request["posts"]:
     # Gather some useful information
-    #print post
     tumblr_post_type = post["type"]
     tumblr_post_id = post["id"]
     tumblr_post_tags = post["tags"]
@@ -60,7 +66,7 @@ for post in tumblr_request["posts"]:
     
     post_formated_file_name = "{}-{}.html".format(tumblr_post_date, tumblr_post_slug)
     
-    post_path = "{}{}".format(mount_point, post_formated_file_name)
+    post_path = "{}{}".format(MNT_PNT, post_formated_file_name)
     
     # Test if post already exists
     if os.path.isfile(post_path):
@@ -81,7 +87,7 @@ for post in tumblr_request["posts"]:
             temp_file_dict["format"] = post["format"]
             temp_file_dict["tumblr_slug"] = post["slug"]
             
-            #format tags
+            # format tags
             formated_tags = []
             
             for i in post["tags"]:
@@ -118,15 +124,15 @@ for post in tumblr_request["posts"]:
                     
                     temp_file_dict["photos"].append(distinct_photo)
 
-            temp_formated_file_name = "{}-{}.html".format(
+            temp_formated_file_name = u'{}-{}.html'.format(
                 ((post["date"].split())[0]), 
                 post["slug"]
             )
                 
             write_out_template(
-                temp_file_dict, 
-                "../_posts/", 
-                temp_formated_file_name, 
+                temp_file_dict,
+                "../_posts/",
+                temp_formated_file_name,
                 "tumblr_photo_post"
             )
             
