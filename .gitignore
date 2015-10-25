@@ -1,6 +1,4 @@
 
-_posts/.DS_Store
-
 *.scssc
 
 .DS_Store
@@ -13,8 +11,6 @@ _posts/css/screen.css
 
 _posts/image/publications/milk_boy/milk_boy_fc.png
 
-scripts/tumblr_api_tests.py
-
 css/screen.css
 
 .Python
@@ -26,3 +22,5 @@ lib/
 include/
 
 *.pyc
+
+scripts/tumblr_jekyll.ini
