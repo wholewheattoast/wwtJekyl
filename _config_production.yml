@@ -18,7 +18,7 @@ timezone: America/Los_Angeles
 ## Where things are
 #source:      .
 destination: /var/www/wholewheattoast.com/public_html/
-plugins:     _plugins/
+plugins_dir:     _plugins/
 includes:    _includes/
 
 ## Handling Reading
@@ -38,7 +38,7 @@ paginate:    5
 
 # Plugins
 whitelist: []
-gems:      []
+gems:      [jekyll-paginate]
 
 # Conversion
 markdown:    rdiscount
