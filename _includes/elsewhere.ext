@@ -1,19 +1,20 @@
-<h3>Elsewhere</h3>
-	<ul class="list-unstyled">
-		<li>
-			<a href="http://wholewheattoast.bigcartel.com">bigcartel</a>
-		</li>
-		<li>
-			<a href="http://www.flickr.com/photos/wholewheattoast/">flickr</a>
-		</li>
-		<li><a href="http://instagram.com/wholewheattoast">instagram</a></li>
-		<li>
-			<a href="http://pinboard.in/u:wholewheattoast">pinboard</a>
-		</li>
-		<li>
-			<a href="http://wholewheatnotes.com">tumblr</a>
-		</li>
-		<li>
-			<a href="http://www.twitter.com/wholewheattoast">twitter</a>
-		</li>
-	</ul>
+<aside>
+  <h3>Elsewhere</h3>
+  <ul class="list-unstyled">
+    <li>
+      <a href="http://www.flickr.com/photos/wholewheattoast/">Flickr</a>
+    </li>
+    <li>
+      <a href="http://instagram.com/wholewheattoast">Instagram</a>
+    </li>
+    <li>
+      <a href="http://pinboard.in/u:wholewheattoast">Pinboard</a>
+    </li>
+    <li>
+      <a href="http://wholewheattoast.tumblr.com">Tumblr</a>
+    </li>
+    <li>
+      <a href="http://www.twitter.com/wholewheattoast">Twitter</a>
+    </li>
+  </ul>
+</aside>
