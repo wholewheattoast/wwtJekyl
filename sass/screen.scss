@@ -97,6 +97,8 @@ img {
 // helpers
 .center_text { text-align: center; }
 .tight { margin: 0; }
+.margin_top { margin-top: 1.5rem; }
+.margin_top_more { margin-top: 3rem; }
 
 
 // site header and footer
@@ -210,11 +212,9 @@ img {
 
 
 // Shop
-
-.item {
-  h2 {
-    font-size: 1em;
-  }
+.item h2 { 
+  font-size: 1.25em;
+  margin-bottom: 1em;
 }
 
 @import 'media-queries';

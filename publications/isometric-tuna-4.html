@@ -1,5 +1,5 @@
 ---
-layout: publications_page
+layout: base_full_width
 title: Isometric Tuna no. 4
 description: Fourth Issue of Isometric Tuna.
 stub: publications/isometric-tuna-3.html
@@ -10,15 +10,53 @@ size: 4.25 x 6.5
 buy: wholewheattoast.bigcartel.com/product/isometric-tuna-4
 cover_image: /image/publications/isometric-tuna-4/iso-tuna-4-cover.jpg
 ---
-    <div class="row">
-        <ul class="list-unstyled">
-            <li class="col-lg-8 col-md-6">
-                <img src="/image/publications/isometric-tuna-4/iso-tuna-4-pp-03-04.jpg" 
-                    alt="Image of Isometric Tuna 4 Pages 3-4" title="Isometric Tuna 4 Pages 3-4" />
-            </li>
-            <li class="col-lg-8 col-md-6">
-                <img src="/image/publications/isometric-tuna-4/iso-tuna-4-pp-19-20.jpg" 
-                    alt="Image of Isometric Tuna 4 Pages 19-20" title="Isometric Tuna 4 Pages 19-20" />
-            </li>
-        </ul>
+
+<article id="Publications_page" resource="{{ page.stub }}">
+  <div class="row">
+    <div class="col-md-4">
+      <p>
+        <img src="/image/publications/isometric-tuna-4/isometric-tuna-4-icon.png" alt="" />
+      </p>
     </div>
+    
+    <div class="col-md-6 col-md-offset-1">
+      <h2 property="dc:title">Isometric Tuna 4</h2>
+      <ol class="list-unstyled">
+        <li>36 pages</li>
+        <li>Ink on paper.  Saddle Stitched.</li>
+        <li>4.25 x 6.5 inches</li>
+        <li>Summer 2014</li>
+      </ol>
+      <p>
+        <!-- Isometric Tuna 4 paypal button -->
+        <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+          <div class="form-group">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="9YX94BRFFT3MA">
+            <input type="hidden" name="on0" value="Shipping">
+            <select name="os0">
+            	<option value="US">US $4.50 USD</option>
+            	<option value="Non-US">Non-US $5.25 USD</option>
+            </select>
+            <input type="hidden" name="currency_code" value="USD">
+            <button type="submit" name="submit" class="btn btn-default btn-sm">Add to Cart</button>
+            <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          </div>
+        </form>
+      </p>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-6 col-xs-6">
+      <p>
+        <img src="/image/publications/isometric-tuna-4/iso-tuna-4-pp-03-04.jpg" alt="" />
+      </p>
+    </div>
+    <div class="col-md-6 col-xs-6">
+      <p>
+        <img src="/image/publications/isometric-tuna-4/iso-tuna-4-pp-19-20.jpg" alt="" />
+      </p>
+    </div>
+  </div>
+</article>
