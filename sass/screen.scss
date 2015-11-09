@@ -84,6 +84,16 @@ h3 { font-size: 1.25em; }
 
 li { margin-bottom: .5em; }
 
+// Inline Definition List 
+dl.inline_dl dt {
+  clear: left;
+  float: left;
+  text-align: right;
+  margin: 0 2rem 0 0;
+}
+
+dl.inline_dl dd { margin: 0 0 .5rem 0; }
+
 img {
   display: block;
   height: auto;
