@@ -48,10 +48,16 @@ def create_photo_post(post):
         print "\n"
     print "*" * 10
     
+    # TODO how am i referencing primary img in template?
+    # TODO do I need to handle tags in a certian way?
+    # .. I don't think so?
+    
     for photo in post["photos"]:
         if photo["original_size"]:
             distinct_photo_tumblr_img = (photo["original_size"])["url"]
             get_photo(distinct_photo_tumblr_img)
+            # Do i need to store this image for the mustache template?
+            
         elif photo["alt_sizes"]:
             for i in photo["alt_sizes"]
                 distinct_photo_tumblr_img = (photo["original_size"])["url"]
@@ -77,6 +83,7 @@ for post in tumblr_request["posts"]:
     # What do I do here if slug is empty?
     # Not sure if this is a good way to do this?
     if post[u"slug"] == "":
+        # TODO strip html from caption here !!!
         this_post_title = (post[u"caption"].replace(" ", "-"))
     else:
         this_post_title = post[u"slug"]
