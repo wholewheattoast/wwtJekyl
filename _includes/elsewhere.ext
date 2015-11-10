@@ -2,19 +2,34 @@
   <h3>Elsewhere</h3>
   <ul class="list-unstyled">
     <li>
-      <a href="http://www.flickr.com/photos/wholewheattoast/">Flickr</a>
+      <a href="http://www.flickr.com/photos/wholewheattoast/" rel="me">
+        wholewheattoast on Flickr
+      </a>
     </li>
     <li>
-      <a href="http://instagram.com/wholewheattoast">Instagram</a>
+      <a href="https://github.com/wholewheattoast" rel="me">
+        wholewheattoast on Github
+      </a>
     </li>
     <li>
-      <a href="http://pinboard.in/u:wholewheattoast">Pinboard</a>
+      <a href="http://instagram.com/wholewheattoast" rel="me">
+        @wholewheattoast on Instagram
+      </a>
     </li>
     <li>
-      <a href="http://wholewheattoast.tumblr.com">Tumblr</a>
+      <a href="http://pinboard.in/u:wholewheattoast" rel="me">
+        wholewheattoast on Pinboard
+      </a>
     </li>
     <li>
-      <a href="http://www.twitter.com/wholewheattoast">Twitter</a>
+      <a href="http://wholewheattoast.tumblr.com" rel="me">
+        wholewheattoast.tumblr.com
+      </a>
+    </li>
+    <li>
+      <a href="http://www.twitter.com/wholewheattoast" rel="me">
+        @wholewheattoast on Twitter
+      </a>
     </li>
   </ul>
 </aside>
