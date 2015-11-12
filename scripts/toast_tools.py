@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 import os.path
+import re
 import time
 import uuid
 
@@ -40,15 +41,16 @@ def write_out_template(dictionary, path, file_name, template):
     """
 
     html_path = "{}/{}".format(path, file_name)
-    results_template = open("../_templates/{}".format(template)).read()
+    results_template = open("../_templates/{}.mustache".format(template)).read()
     html_results = pystache.render(results_template, dictionary)
+    # need to encode to pass to write()
+    html_results_encoded = html_results.encode(encoding='UTF-8', errors='strict')
     
     with open(html_path, "w") as html_file:
-        html_file.write(html_results)
+        html_file.write(html_results_encoded)
 
 
 # From http://nedbatchelder.com/blog/200712.html#e20071211T054956
-import re
 def sort_nicely( l ):
     """ Sort the given list in the way that humans expect.
     """
