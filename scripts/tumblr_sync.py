@@ -26,7 +26,9 @@ tumblr_request = authed_client.posts(
     filter='html'
 )
 
-def get_photo(photo):
+
+# Should this move to toast_tools if i need it for other syncing?
+def get_img(photo):
     photo_path = "{}/{}".format(
             BLOG_IMG_DIR,
             os.path.basename(photo)
@@ -44,7 +46,7 @@ def create_photo_post(post):
     for photo in post["photos"]:
         if photo["original_size"]:
             distinct_photo_tumblr_img = (photo["original_size"])["url"]
-            get_photo(distinct_photo_tumblr_img)
+            get_img(distinct_photo_tumblr_img)
             original_size_local = os.path.basename(distinct_photo_tumblr_img)
             post["img"] = original_size_local
     
