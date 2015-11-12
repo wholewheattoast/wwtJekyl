@@ -33,8 +33,9 @@ def get_photo(photo):
         )
         
     if os.path.isfile(photo_path):
-        print "---------- {} already downloaded.".format(photo)
+        print "---------- Already downloaded {} ".format(photo)
     else:
+        print "---------- Downloading {}".format(photo)
         file_object = urllib.URLopener()
         file_object.retrieve(photo, photo_path)
 
@@ -46,6 +47,12 @@ def create_photo_post(post):
             get_photo(distinct_photo_tumblr_img)
             original_size_local = os.path.basename(distinct_photo_tumblr_img)
             post["img"] = original_size_local
+    
+    # Not sure ATM how to deal with unicode in liqued? str them for now.
+    formated_tags = []
+    for i in post["tags"]:
+        formated_tags.append(str(i))
+    post["formated_tags"] = formated_tags
 
     write_out_template(
         post,
@@ -65,25 +72,24 @@ for post in tumblr_request["posts"]:
     post_date = (post["date"].split())[0]
 
     if post[u"slug"] == "":
-        tumblr_post_dict["title"] = post[u"id"]
+        post_title = str(post[u"id"])
     else:
-        tumblr_post_dict["title"] = post[u"slug"]
+        post_title = post[u"slug"]
 
-    post_formated_file_name = u"{}-{}.html".format(
-        post_date,
-        tumblr_post_dict["title"],
-    )
+    tumblr_post_dict["title"] = post_title.replace("-", " ")
+
+    post_formated_file_name = u"{}-{}.html".format(post_date, post_title)
     
     post_path = u"{}/{}".format(BLOG_POSTS_DIR, post_formated_file_name)
     
     if os.path.isfile(post_path):
-        print "========== {} already exists".format(post_formated_file_name)
+        print "========== Already exists: {} ".format(post_formated_file_name)
     else:
         if post["type"] == "photo":
-            print u"========== Creating {}".format(post_formated_file_name)
+            print u"========== Creating: {}".format(post_formated_file_name)
             create_photo_post(tumblr_post_dict)
         # TODO handle other types of tumblr posts.
         else:
-            print "========== {} is unsupported.".format(post["type"])
+            print "********** {} is unsupported.".format(post["type"])
             
             
