@@ -4,36 +4,38 @@ title: About | wholewheattoast
 description: some personal details about shawn eisenach
 stub: about.html
 ---
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h2>About</h2>
+<article class="h-card">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2>About</h2>
+    </div>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-md-3">
-    <p>
-      <img src="/image/sp_summer_2015.gif" alt="" title="Self Portrait" />
-    </p>
+  
+  <div class="row">
+    <div class="col-md-3">
+      <p>
+        <img class="u-photo" src="/image/sp_summer_2015.gif" alt="Shawn Eisenach" title="Self Portrait" />
+      </p>
+    </div>
+    <div class="col-md-6">
+    	<p class="lead">
+        <em>Work is the curse of the drawing class.</em>
+    	</p>
+      <p>
+        <spam class="p-name">Shawn Eisenach</spam> lives in northern 
+        <span class="p-locality">California</span> where he draws in 
+        pocket notebooks and semi regularly puts out zines with titles like, 
+        "Fax Simile", "Isometric Tuna", and "Objective Non Narrative".
+      </p>
+  		<p>
+        <a class="u-email" href="mailto:shawn@wholewheattoast.com" rel="me">
+          shawn@wholewheattoast.com
+        </a>
+  		</p>
+      <p>
+        <a href="/cv.html">Curriculum vitae</a>
+      </p>
+      {% include elsewhere.ext %}
+    </div>
   </div>
-  <div class="col-md-6">
-  	<p class="lead">
-      <em>Work is the curse of the drawing class.</em>
-  	</p>
-    <p>
-      Shawn Eisenach lives in northern California where he draws in 
-      pocket notebooks and semi regularly puts out zines with titles like, 
-      "Fax Simile", "Isometric Tuna", and "Objective Non Narrative".
-    </p>
-		<p>
-      <a href="mailto:shawn@wholewheattoast.com" rel="me">
-        shawn@wholewheattoast.com
-      </a>
-		</p>
-    <p>
-      <a href="/cv.html">Curriculum vitae</a>
-    </p>
-    {% include elsewhere.ext %}
-  </div>
-</div>
+</article>
