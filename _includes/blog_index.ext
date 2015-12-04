@@ -2,17 +2,18 @@
   <div class ="col-md-8 col-md-offset-2">
 
     <!-- Show last 5 posts here -->
+    <!-- I should inherit the post template here -->
     {% for post in paginator.posts %}
-      <article class="post">
+      <article class="post h-entry">
         <header>
          <h2> 
-            <a class="permalink" href="{{site.baseurl}}{{post.url}}">
-              <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time>
+            <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}">
+              <time class="dt-published" datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time>
             </a>
           </h2>
         </header>
         
-        <section>
+        <section class="e-content">
           {{ post.content }}
         </section>
         

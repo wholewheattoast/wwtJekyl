@@ -2,15 +2,19 @@
 layout: base_full_width
 ---
 
-<article class="post">
+<article class="post h-entry">
   <h2>
-    <a class="permalink" href="{{site.baseurl}}{{post.url}}">
-      <time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%F"}}</time>
+    <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}">
+      <time class="dt-published" datetime="{{page.date|date:"%F"}}">
+        {{page.date|date:"%F"}}
+      </time>
     </a>
   </h2>
-
-{{ content }}
-
+  
+  <section class="e-content">
+    {{ content }}
+  </section>>
+  
 <footer>
   {% if page.categories %}
     <p>
