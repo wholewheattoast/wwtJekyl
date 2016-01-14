@@ -2,7 +2,10 @@ import argparse
 import json
 import pystache
 import os
+import re
 import time
+import yaml
+
 import toast_tools
 
 parser = argparse.ArgumentParser()
@@ -36,6 +39,8 @@ if not os.path.exists(sb_directory):
     os.makedirs(sb_directory)
     print "---------- Created  {}".format(sb_directory)
 
+
+# TODO break page creation out into function
 
 sb_image_files = []
 
@@ -73,25 +78,56 @@ spreads_list = []
 for i, item in enumerate(sorted_image_list):
     temp_spread_dict = {}
     
-    print "----------  i is {}".format(item)
+    spread = {}
     
+    print "---------- item is {}".format(item)
     
-    i_split = item.split()
+    # At some point this logic needs a check.
+    # Bigger sketchbooks may have img of each page?
     
     spread_name = "{}-{}".format(sb_url_safe_name, item.replace(" ", "-"))
     
-    # Open a file that matches name of current spread
-    # File should contain any available 'metadata' for spread
-    try:
-        metadata_file_path= "{}/metadata/{}.json".format(sb_image_dir,spread_name)
-        with open(metadata_file_path, 'r') as metadata_file:
-            metadata_file_obj = json.load(metadata_file)
-            temp_spread_dict["metadata"] = metadata_file_obj
-            print "..........  found metadata for {}".format(item)
-    except:
-        pass
-
-    temp_spread_dict["sb_display_name"] = sb_display_name
+    item_split = item.split()
+    
+    if item_split[1] == "cover":
+        spread[item] = item
+    else:
+        print "---------- item_split is {}".format(item_split)
+        spread["verso"] = item_split[0]
+        spread["recto"] = item_split[1]
+    
+    # this stips leading zeros out, might be useful
+    # display_split = []
+    # try:
+    #     striped_split = re.sub("^0+", "", split)
+    #     display_split.append(striped_split)
+    # except:
+    #     pass
+    # print "----------  display_split is now {}".format(display_split)
+    
+    for key, value in spread.iteritems():
+        page_name = "{}-{}".format(sb_url_safe_name, value.replace(" ", "-"))
+    
+        # Open a file that matches name of current spread
+        # File should contain any available 'metadata' for spread
+        try:
+            metadata_file_path= "{}/metadata/{}.yaml".format(
+                sb_image_dir,
+                page_name,
+            )
+            print ".......... metadata_file_path = {}".format(metadata_file_path)
+            with open(metadata_file_path, 'r') as metadata_file:
+                # load yaml file
+                metadata_file_obj = yaml.load(metadata_file)
+                
+                # convert to json
+                metadata_file_json = json.dumps(metadata_file_obj)
+                temp_spread_dict["{}_metadata".format(key)] = metadata_file_json
+                print ".......... found metadata for {}".format(page_name)
+        except:
+            print ".......... no metadata found for {}".format(page_name)
+    
+    temp_spread_dict["sb_display_name"] = sb_display_name.title()
     temp_spread_dict["sb_url_safe_name"] = sb_url_safe_name
     temp_spread_dict["spread"] = "{}".format(
         item.replace(" ", "-")
@@ -128,6 +164,7 @@ for i, item in enumerate(sorted_image_list):
     spreads_list.append(temp_spread_dict)
 
 # Write Index
+# TODO break out into function
 
 sb_dict["sb_display_name"] = sb_display_name
 sb_dict["sb_url_safe_name"] = sb_url_safe_name
@@ -136,6 +173,8 @@ sb_dict["image_dir"] = sb_image_dir
 sb_dict["html_dir"] = sb_directory
 
 # TODO grab top level metadata for index page
+# Perhaps have a metadata file for index
+# and grab it in similar maner as pages
 
 # Generate index file
 toast_tools.write_out_template(sb_dict, sb_directory, "index.html", "sb_index.mustache")
