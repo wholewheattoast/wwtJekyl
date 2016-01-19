@@ -37,6 +37,10 @@ date:
   </div>
   <div class="row">
   <!-- once i get partials to work, replace -->
+    
+      {{> sbPageMetadata }}
+      {{> body }}
+  <!-- they should be here -->
     {{#verso_metadata}}
       <section class="col-md-6 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
         <h3 itemprop="name">{{sb_display_name}} | {{page_number}}</h3>
@@ -46,13 +50,12 @@ date:
           {{#latest_date}}<dt>Latest Date:</dt><dd><time itemprop="dateCreated" datetime="{{latest_date}}">{{latest_date}}</time></dd>{{/latest_date}}
           {{#contributor}}<dt>contributor:</dt><dd><span itemprop="contributor">{{contributor}}</span></dd>{{/contributor}}
           {{#location}}<dt>Location:</dt><dd><span itemprop="locationCreated">{{location}}</span></dd>{{/location}}
-          {{#medium}}<dt>Medium:</dt><dd><span itemprop="artform">{{medium}}</span></dd>{{/medium}}
-          {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd></dd>{{/description}}
+          {{#medium}}<dt>Medium:</dt><dd>{{{medium}}}</dd>{{/medium}}
+          {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd>{{/description}}
           {{#subject}}<dt>Subject:</dt><dd><span itemprop="about">{{subject}}</span></dd>{{/subject}}
           {{#transcription}}<dt>Transcription:</dt><dd><span itemprop="text">{{transcription}}</span></dd>{{/transcription}}
         </dl>
       </section>
-      {{> sb_page_metadata}}
     {{/verso_metadata}}
     {{#recto_metadata}}
       <section class="col-md-6 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
@@ -63,8 +66,8 @@ date:
           {{#latest_date}}<dt>Latest Date:</dt><dd><time itemprop="dateCreated" datetime="{{latest_date}}">{{latest_date}}</time></dd>{{/latest_date}}
           {{#contributor}}<dt>contributor:</dt><dd><span itemprop="contributor">{{contributor}}</span></dd>{{/contributor}}
           {{#location}}<dt>Location:</dt><dd><span itemprop="locationCreated">{{location}}</span></dd>{{/location}}
-          {{#medium}}<dt>Medium:</dt><dd><span itemprop="artform">{{medium}}</span></dd>{{/medium}}
-          {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd></dd>{{/description}}
+          {{#medium}}<dt>Medium:</dt><dd>{{{medium}}}</dd>{{/medium}}
+          {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd>{{/description}}
           {{#subject}}<dt>Subject:</dt><dd><span itemprop="about">{{subject}}</span></dd>{{/subject}}
           {{#transcription}}<dt>Transcription:</dt><dd><span itemprop="text">{{transcription}}</span></dd>{{/transcription}}
         </dl>
@@ -79,8 +82,8 @@ date:
           {{#latest_date}}<dt>Latest Date:</dt><dd><time itemprop="dateCreated" datetime="{{latest_date}}">{{latest_date}}</time></dd>{{/latest_date}}
           {{#contributor}}<dt>contributor:</dt><dd><span itemprop="contributor">{{contributor}}</span></dd>{{/contributor}}
           {{#location}}<dt>Location:</dt><dd><span itemprop="locationCreated">{{location}}</span></dd>{{/location}}
-          {{#medium}}<dt>Medium:</dt><dd><span itemprop="artform">{{medium}}</span></dd>{{/medium}}
-          {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd></dd>{{/description}}
+          {{#medium}}<dt>Medium:</dt><dd>{{{medium}}}</dd>{{/medium}}
+          {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd>{{/description}}
           {{#subject}}<dt>Subject:</dt><dd><span itemprop="about">{{subject}}</span></dd>{{/subject}}
           {{#transcription}}<dt>Transcription:</dt><dd><span itemprop="text">{{transcription}}</span></dd>{{/transcription}}
         </dl>
@@ -95,8 +98,8 @@ date:
           {{#latest_date}}<dt>Latest Date:</dt><dd><time itemprop="dateCreated" datetime="{{latest_date}}">{{latest_date}}</time></dd>{{/latest_date}}
           {{#contributor}}<dt>contributor:</dt><dd><span itemprop="contributor">{{contributor}}</span></dd>{{/contributor}}
           {{#location}}<dt>Location:</dt><dd><span itemprop="locationCreated">{{location}}</span></dd>{{/location}}
-          {{#medium}}<dt>Medium:</dt><dd><span itemprop="artform">{{medium}}</span></dd>{{/medium}}
-          {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd></dd>{{/description}}
+          {{#medium}}<dt>Medium:</dt><dd>{{{medium}}}</dd>{{/medium}}
+          {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd>{{/description}}
           {{#subject}}<dt>Subject:</dt><dd><span itemprop="about">{{subject}}</span></dd>{{/subject}}
           {{#transcription}}<dt>Transcription:</dt><dd><span itemprop="text">{{transcription}}</span></dd>{{/transcription}}
         </dl>
