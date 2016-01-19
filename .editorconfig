@@ -19,11 +19,11 @@ charset = utf-8
 
 
 # 4 space indentation
-[*.py]
+[*.{py,yaml}]
 indent_style = space
 indent_size = 4
 
-[*.{html, md, yaml}]
+[*.{html, md}]
 indent_style = space
 indent_size = 2
 

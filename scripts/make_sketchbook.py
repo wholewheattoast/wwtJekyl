@@ -90,7 +90,7 @@ for i, item in enumerate(sorted_image_list):
     item_split = item.split()
     
     if item_split[1] == "cover":
-        spread[item] = item
+        spread[item] = item.replace(" ", "-")
     else:
         print "---------- item_split is {}".format(item_split)
         spread["verso"] = item_split[0]
@@ -119,11 +119,9 @@ for i, item in enumerate(sorted_image_list):
             with open(metadata_file_path, 'r') as metadata_file:
                 # load yaml file
                 metadata_file_obj = yaml.load(metadata_file)
-                
-                # convert to json
-                metadata_file_json = json.dumps(metadata_file_obj)
-                temp_spread_dict["{}_metadata".format(key)] = metadata_file_json
+                temp_spread_dict["{}_metadata".format(key)] = metadata_file_obj
                 print ".......... found metadata for {}".format(page_name)
+                print metadata_file_json
         except:
             print ".......... no metadata found for {}".format(page_name)
     
@@ -153,6 +151,18 @@ for i, item in enumerate(sorted_image_list):
     
     # Write file
     temp_file_name = "{}.html".format(spread_name)
+    
+    # write out a json file of results
+    results_path = "{}/json".format(sb_directory)
+    results_json = "{}.json".format(spread_name)
+    if not os.path.exists(results_path):
+        os.makedirs(results_path)
+        print "---------- Created  {}".format(results_path)
+    
+    loaded_json = json.dumps(temp_spread_dict)
+    with open("{}/{}".format(results_path, results_json), "w") as json_results_file:
+        json_results_file.write(loaded_json)
+    # end results json
     
     toast_tools.write_out_template(
         temp_spread_dict,

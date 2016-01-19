@@ -172,18 +172,29 @@ img {
   }
 }
 
-.sb_page {
-  h2 {
-    font-size: 16px;
-    text-transform: capitalize;
-  }
-}
-
 .sb_index {
   margin-top: 4em;
   h2 { text-transform: capitalize; }
   li { margin-bottom: 2em; }
 }
+
+.sketchbook_page {
+  h2 {
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+  h3 { font-size: 1em; }
+  .inline_dl {
+    font-size: .85rem;
+    dd { margin: 0 0 .5rem 6rem ;}
+    dt {
+      font-weight: normal;
+      margin: 0 0 0 0;
+      width: 2em;
+    }
+  }
+}
+
 
 .sb-nav {
   position: fixed;
