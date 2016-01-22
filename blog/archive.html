@@ -3,9 +3,9 @@ layout: base_full_width
 title: Archive
 ---
 
+<div class="row">
   <section class="col-md-6">
     <h2>Posts</h2>
-    
     <ol class="list-unstyled">
         {% for post in site.posts %}
             <li>
@@ -14,8 +14,6 @@ title: Archive
                     &nbsp;&nbsp;
                     {{ post.title }}
                 </a>
-                &nbsp;&nbsp;
-                {{post.categories | category_links}}
             </li>
         {% endfor %}
     </ol>
@@ -23,7 +21,6 @@ title: Archive
     
   <section class="col-md-6" id="Tags">
     <h2>Tags</h2>
-    
       <ul class="list-unstyled list-inline">
         {% for tag in site.tags %}
           {% assign t = tag | first %}
@@ -35,5 +32,5 @@ title: Archive
           </li>
         {% endfor %}
       </ul>
-      
-</section>
+  </section>
+</div>
