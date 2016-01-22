@@ -46,7 +46,7 @@ isPartOf:
 image:
 latest_date:
 location:
-medium:
+medium: <span property='material' itemprop='artMedium' resource='http://vocab.getty.edu/aat/300022443'>graphite</span>
 page_number:
 subject:
 surface:

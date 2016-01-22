@@ -8,7 +8,7 @@ date:
 
 <article itemscope itemtype="http://schema.org/VisualArtwork" class="sketchbook_page">
   <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-8 col-lg-10">
       <img 
         itemprop="image"
         src="/image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.jpg" 
@@ -19,7 +19,7 @@ date:
   </div>
   <div class="row">
     <div class="col-md-12">
-      <h2 itemprop="name">{{spread}}</h2>
+      <h2 itemprop="name">{{sb_display_name}} | {{spread}}</h2>
       <nav>
         <ul class="list-unstyled sb-nav">
           <li>
@@ -36,14 +36,9 @@ date:
     </div>
   </div>
   <div class="row">
-  <!-- once i get partials to work, replace -->
-    
-      {{> sbPageMetadata }}
-      {{> body }}
-  <!-- they should be here -->
     {{#verso_metadata}}
-      <section class="col-md-6 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
-        <h3 itemprop="name">{{sb_display_name}} | {{page_number}}</h3>
+      <section class="col-md-4 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
+        <h3 itemprop="name">{{page_number}}</h3>
         <dl class="inline_dl">
           {{#created}}<dt>Date:</dt><dd><time itemprop="dateCreated" datetime="{{created}}">{{created}}</time></dd>{{/created}}
           {{#earliest_date}}<dt>Earliest Date:</dt><dd><time itemprop="dateCreated" datetime="{{earliest_date}}">{{earliest_date}}</time></dd>{{/earliest_date}}
@@ -58,8 +53,8 @@ date:
       </section>
     {{/verso_metadata}}
     {{#recto_metadata}}
-      <section class="col-md-6 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
-        <h3 itemprop="name">{{sb_display_name}} | {{page_number}}</h3>
+      <section class="col-md-4 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
+        <h3 itemprop="name">{{page_number}}</h3>
         <dl class="inline_dl">
           {{#created}}<dt>Date:</dt><dd><time itemprop="dateCreated" datetime="{{created}}">{{created}}</time></dd>{{/created}}
           {{#earliest_date}}<dt>Earliest Date:</dt><dd><time itemprop="dateCreated" datetime="{{earliest_date}}">{{earliest_date}}</time></dd>{{/earliest_date}}
@@ -74,8 +69,8 @@ date:
       </section>
     {{/recto_metadata}}
     {{#front-cover_metadata}}
-      <section class="col-md-6 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
-        <h3 itemprop="name">{{sb_display_name}} | {{page_number}}</h3>
+      <section class="col-md-4 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
+        <h3 itemprop="name">{{page_number}}</h3>
         <dl class="inline_dl">
           {{#created}}<dt>Date:</dt><dd><time itemprop="dateCreated" datetime="{{created}}">{{created}}</time></dd>{{/created}}
           {{#earliest_date}}<dt>Earliest Date:</dt><dd><time itemprop="dateCreated" datetime="{{earliest_date}}">{{earliest_date}}</time></dd>{{/earliest_date}}
@@ -90,8 +85,8 @@ date:
       </section>
     {{/front-cover_metadata}}
     {{#back-cover_metadata}}
-      <section class="col-md-6 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
-        <h3 itemprop="name">{{sb_display_name}} | {{page_number}}</h3>
+      <section class="col-md-4 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
+        <h3 itemprop="name">{{page_number}}</h3>
         <dl class="inline_dl">
           {{#created}}<dt>Date:</dt><dd><time itemprop="dateCreated" datetime="{{created}}">{{created}}</time></dd>{{/created}}
           {{#earliest_date}}<dt>Earliest Date:</dt><dd><time itemprop="dateCreated" datetime="{{earliest_date}}">{{earliest_date}}</time></dd>{{/earliest_date}}
@@ -107,14 +102,4 @@ date:
     {{/back-cover_metadata}}
   </div>
 </article>
-
-<script>
-{{#verso_metadata}}
-    {{verso_metadata}}
-{{/verso_metadata}}
-    
-{{#recto_metadata}}
-  {{recto_metadata}}
-{{/recto_metadata}}
-</script>
 
