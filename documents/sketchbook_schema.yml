@@ -1,0 +1,58 @@
+# v .02 2016-01-14 shawn@wholewheattoast.com
+# Use this if I need to crosswalk or generate json-ld
+# Keep original file clean of schemas for simplicity
+# Assign a set order for schemas?
+
+context:
+    dc: http://purl.org/dc/elements/1.1/
+    dcterms: http://purl.org/dc/terms
+    aat: http://vocab.getty.edu/aat
+    schema: http://schema.org
+    cdwalite: http://www.getty.edu/CDWA/CDWALite/CDWALite-xsd-public-v1-1.xsd
+    tgn: http://vocab.getty.edu/tgn
+    
+"@id": ["dc:identifier"]
+created: ["dc:created", "schema:dateCreated"]
+creator: ["dc:creator", "schema:author"]
+contributor: ["dc:creator", "schema:contributor"] 
+description: ["schema:description"]
+earliest_date: ["cdwalite:earliestDate"]
+hasPart: ["schema:hasPart"]
+height: ["schema:height"]
+isPartOf: ["dcterms:isPartOf", "schema:isPartOf"
+image: ["schema:image"]
+latest_date: ["cdwalite:latestDate"]
+location: ["cdwalite:locationName", "schema:locationCreated"] # use if possible controlled vocab from tgn
+medium: ["dcterms:medium", "cdwalite:objectWorkType", "schema:artMedium"] # use if possible controlled vocab from aat
+page_number: ["schema:position"]
+subject: ["dc:subject", "schema:about"]
+surface: # use if possible controlled vocab from aat
+title: ["dc:title", "schema:name"]
+thumbnail: ["schema:thumbnailUrl"]
+transcription: ["schema:text"]
+type: ["dc:type", "schema:artform"] # use if possible controlled vocab from aat
+url: ["dc:identifier", "schema:url"]
+width: ["schema:width"]
+
+
+created:
+creator:
+contributor:
+description:
+earliest_date:
+hasPart:
+height:
+isPartOf:
+image:
+latest_date:
+location:
+medium: <span property='material' itemprop='artMedium' resource='http://vocab.getty.edu/aat/300022443'>graphite</span>
+page_number:
+subject:
+surface:
+title:
+thumbnail:
+transcription:
+type:
+url:
+width:
