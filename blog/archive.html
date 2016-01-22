@@ -22,10 +22,11 @@ title: Archive
   <section class="col-md-6" id="Tags">
     <h2>Tags</h2>
       <ul class="list-unstyled list-inline">
-        {% for tag in site.tags %}
+        {% assign sorted_tags = (site.tags | sort:last) %}
+        {% for tag in sorted_tags %}
           {% assign t = tag | first %}
           {% assign posts = tag | last %}
-          <li>
+           <li>
             <a href="/tag/{{ t }}">
               <span class="badge">{{ posts | size }}</span>  {{t | downcase | replace:" ","-" }}
             </a> 
