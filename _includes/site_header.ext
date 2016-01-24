@@ -1,12 +1,14 @@
 <header class="site_header">
+  <img class="logo" src="/image/logos/face_01.gif" alt="" />
   <h1><a href="/index.html">wholewheattoast</a></h1>
     <nav>
       <ul class="list-unstyled">
+        <li><a href="/about.html">about</a></li>
+        <li><a href="/index.html">blog</a></li>
         <!-- <li><a href="/portfolio.html">portfolio</a></li> -->
+        <li><a href="/sketchbooks.html">sketchbooks</a></li>
+        <li><a href="/shop.html">shop</a></li>
         <li><a href="/publications.html">zines</a></li>
-  	    <li><a href="/sketchbooks.html">sketchbooks</a></li>
-      	<li><a href="/about.html">about</a></li>
-      	<li><a href="/shop.html">shop</a></li>
       </ul>
   </nav>
 </header>

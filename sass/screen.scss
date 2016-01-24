@@ -14,7 +14,7 @@ $background-color: #fafafa;
 $color: #000;
 $warm_accent_color: #ff2727;
 $success-green: #29b473;
-$link-color: #000;
+$link-color: #ff2727;
 
 
 html { font:1em/1.5 helvetica, sans-serif; }
@@ -56,17 +56,15 @@ a {
 }
 
 a:visited {
-  color: #000;
+  color: $link-color;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: $warm_accent_color;
+  color: #000;
   text-decoration: underline;
 }
-
-.bare_link { font-weight: normal; }
 
 h1,
 h2,
@@ -114,9 +112,16 @@ img {
 
 // site header and footer
 .site_header {
+  text-align: center;
+  
+  a { color: #000; }
   h1 { 
     font-size: 1.75rem; 
     margin-bottom: 1rem;
+    }
+  .logo { 
+    display: inline;
+    width: 100px ;
     }
   li { 
     display: inline;
@@ -126,11 +131,19 @@ img {
   li:last-child { margin-right: 0; }
 
   nav a { font-weight: normal; }
+  nav a:hover,
+  nav a:focus {
+    color: #000;
+    text-decoration: underline;
+  }
 }
 
 .menu li { display: inline; }
     
-.main_body { margin-bottom: 2rem; }
+.main_body { 
+  margin-bottom: 2rem;
+  margin-top: 2rem; 
+  }
 
 
 // Posts
@@ -138,6 +151,7 @@ img {
   margin-bottom: 3rem;
 
   h1 { font-size: 1rem; }
+  p {font-size: 1.375rem; }
 
   .permalink { 
     color: #999;

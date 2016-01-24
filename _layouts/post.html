@@ -3,35 +3,38 @@ layout: base_full_width
 ---
 
 <article class="post h-entry">
-  <h2>
-    <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}">
-      <time class="dt-published" datetime="{{page.date|date:"%F"}}">
-        {{page.date|date:"%F"}}
-      </time>
-    </a>
-  </h2>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <section class="e-content">
+        <h2>
+          <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}" title="permalink | {{page.title}}">
+            <time class="dt-published" datetime="{{page.date|date:"%F"}}">
+              {{page.date|date:"%F"}}
+            </time>
+          </a>
+        </h2>
+
+        {{ content }}
+
+        </section>
+    </div>
+  </div>
   
-  <section class="e-content">
-    {{ content }}
-  </section>
-  
-<footer>
-  {% if page.categories %}
-    <p>
-      <span class="category">
-          {{ page.categories | category_links }}
-      </span>
-    </p>
-  {% endif %}
-  {% if page.tags %}
-    <ul class="list-unstyled post_tags">
-      {% for tag in page.tags %}
-        <li>
-          <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+  <footer>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        {% if page.tags %}
+          <ul class="list-unstyled post_tags">
+            {% assign sorted_tags = (page.tags | sort:last) %}
+            {% for tag in sorted_tags %}
+              <li>
+                <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
   </footer>
 </article>
 
