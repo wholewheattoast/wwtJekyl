@@ -1,5 +1,5 @@
 <header class="site_header">
-  <img class="logo" src="/image/logos/face_01.gif" alt="" />
+  <img class="logo u-photo" src="/image/logos/face_01.gif" alt="" />
   <h1><a href="/index.html">wholewheattoast</a></h1>
     <nav>
       <ul class="list-unstyled">

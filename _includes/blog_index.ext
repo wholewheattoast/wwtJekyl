@@ -6,7 +6,7 @@
         <section class="e-content">
           <header>
            <h2> 
-              <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}" title="permalink | post.title">
+              <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}" title="permalink | {{post.title}}">
                 <time class="dt-published" datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time>
               </a>
             </h2>
@@ -37,17 +37,17 @@
       <ul class="list-unstyled">
         {% if paginator.next_page %}
           <li>
-            <a href="{{site.baseurl}}{{paginator.next_page_path}}">Older</a>
+            <a href="{{site.baseurl}}{{paginator.next_page_path}}">older</a>
           </li>
         {% endif %}
         {% if paginator.previous_page %}
           <li>
             <span class="more">
-              <a href="{{site.baseurl}}{{paginator.previous_page_path}}">Newer</a>
+              <a href="{{site.baseurl}}{{paginator.previous_page_path}}">newer</a>
             </span>
           </li>
         {% endif %}
-        <li><a href="{{site.baseurl}}/blog/archive.html">Archive</a></li>
+        <li><a href="{{site.baseurl}}/blog/archive.html">archive</a></li>
       </ul>
     </nav>
   </div>
