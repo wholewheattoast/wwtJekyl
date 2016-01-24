@@ -41,7 +41,7 @@ def write_out_template(dictionary, path, file_name, template):
     """
 
     html_path = "{}/{}".format(path, file_name)
-    results_template = open("../_templates/{}.mustache".format(template)).read()
+    results_template = open("../_templates/{}".format(template)).read()
     html_results = pystache.render(results_template, dictionary)
     # need to encode to pass to write()
     html_results_encoded = html_results.encode(encoding='UTF-8', errors='strict')
