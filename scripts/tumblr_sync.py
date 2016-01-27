@@ -60,7 +60,7 @@ def create_photo_post(post):
         post,
         BLOG_POSTS_DIR,
         post_formated_file_name,
-        "tumblr_photo_post"
+        "tumblr_photo_post.mustache"
     )
 
 
