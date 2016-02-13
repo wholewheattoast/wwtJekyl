@@ -1,6 +1,8 @@
 /* Media Querries
 ============================================== */
-	@media (max-height: 670px) {}
+  @media (max-height: 720px) {
+    #full_width .container { width: 66%; }
+  }
 
 	/* 480px Smartphones */
 	@media (max-width: 480px) {
