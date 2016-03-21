@@ -9,6 +9,7 @@
         <li><a href="/sketchbooks.html">sketchbooks</a></li>
         <li><a href="/shop.html">shop</a></li>
         <li><a href="/publications.html">zines</a></li>
+        <li>{% include paypal_cart.ext %}</li>
       </ul>
   </nav>
 </header>
