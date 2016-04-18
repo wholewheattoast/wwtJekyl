@@ -1,54 +1,20 @@
 <!-- Show last 5 posts here -->
 {% for post in paginator.posts %}
-  <article class="post h-entry">
-    <div class="row">
-      <div class ="col-md-8 col-md-offset-2">
-        <section class="e-content">
-          <header>
-           <h2> 
-              <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}" title="permalink | {{post.title}}">
-                <time class="dt-published" datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time>
-              </a>
-            </h2>
-          </header>
-          {{ post.content }}
-        </section>
-        
-        <footer>
-          {% if post.tags %}
-            <ul class="list-unstyled list-inline tags">
-              {% assign sorted_tags = (post.tags | sort:last) %}
-              {% for tag in sorted_tags %}
-                <li>
-                  <a href="/tag/{{ tag }}">{{ tag }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        </footer>
-      </div>
-    </div>
-  </article>
+  {% include post.ext %}
 {% endfor %}
 
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <nav id="paginator" class="pull-right">
-      <ul class="list-unstyled">
-        {% if paginator.next_page %}
-          <li>
-            <a href="{{site.baseurl}}{{paginator.next_page_path}}">older</a>
-          </li>
-        {% endif %}
-        {% if paginator.previous_page %}
-          <li>
-            <span class="more">
-              <a href="{{site.baseurl}}{{paginator.previous_page_path}}">newer</a>
-            </span>
-          </li>
-        {% endif %}
-        <li><a href="{{site.baseurl}}/blog/archive.html">archive</a></li>
-      </ul>
-    </nav>
-  </div>
-</div>
+  <nav id="blog-pagination">
+    <ul class="list-unstyled list-inline">
+      {% if paginator.next_page %}
+        <li>
+          <a href="{{site.baseurl}}{{paginator.next_page_path}}" rel="next">older</a>
+        </li>
+      {% endif %}
+      <li><a href="{{site.baseurl}}/blog/archive.html" rel="archives">archive</a></li>
+      {% if paginator.previous_page %}
+        <li>
+          <a href="{{site.baseurl}}{{paginator.previous_page_path}}" rel="prev">newer</a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
