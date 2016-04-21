@@ -1,15 +1,17 @@
-// SASS for wholewheattoast.com
-// Shawn Eisenach
+/*
+  SASS for wholewheattoast.com
+  Shawn Eisenach
+*/
 
 @import 'bootstrap-custom';
 
 
-// Variables
+/* Variables */
 $font-size: 18px;
-$line-height: 27px; //(font-size * 1.5)
+$line-height: 27px; /* (font-size * 1.5) */
 $basline_grid: 6px;
 
-// Colors
+/* Colors */
 $white: #fff;
 $background-color: #fafafa;
 $body_color: #101;
@@ -30,8 +32,10 @@ body {
   font-size: 1rem;
 }
 
-// set up verticle spacing
-// via http://csswizardry.com/2012/06/single-direction-margin-declarations/
+/* 
+  set up verticle spacing 
+  via http:/*csswizardry.com/2012/06/single-direction-margin-declarations/
+*/
 
 h1,
 h2,
@@ -85,7 +89,6 @@ h3 { font-size: 1.25em; }
 
 li { margin-bottom: .5em; }
 
-// Inline Definition List 
 dl.inline_dl dt {
   clear: left;
   float: left;
@@ -102,18 +105,18 @@ img {
 }
 
 
-// color
+/* color */
 .accent { color: $warm_accent_color; }
 
 
-// helpers
+/* helpers */
 .center_text { text-align: center; }
 .tight { margin: 0; }
 .margin_top { margin-top: 1.5rem; }
 .margin_top_more { margin-top: 3rem; }
 
 
-// site header and footer
+/* site header and footer */
 .site_header {
   a { color: #000; }
   h1 { 
@@ -141,6 +144,7 @@ img {
   }
 }
 
+/* is this used anywhere? */
 .menu li { display: inline; }
 
 .main_body {
@@ -148,7 +152,7 @@ img {
   margin-top: .5rem;
   }
 
-// Posts
+/* Posts */
 .post {
   margin-bottom: 1.125rem;
 
@@ -167,7 +171,7 @@ img {
   footer { margin-top: 1rem; }
 }
 
-#blog-pagination { text-align: center; }
+#blog-pagination { margin-top: 2rem; }
 
 a.tag {
   color: white;
@@ -176,7 +180,7 @@ a.tag {
 }
 
 
-// Sketchbooks
+/* Sketchbooks */
 .sketchbook_index {
   li {
     display: inline;
@@ -214,7 +218,7 @@ a.tag {
 }
 
 
-// Publications
+/* Publications */
 #Portfolio {
   .color-block {
     font-size: 1.5rem;
@@ -247,7 +251,7 @@ a.tag {
   span { background-color: $white; }
 }
 
-// portfolio block
+/* portfolio block */
 .portfolio-block {
   font-size: 1.5rem;
 
@@ -261,7 +265,7 @@ a.tag {
 }
 
 
-// Shop
+/* Shop */
 .item h2 {
   font-size: 1.25em;
   margin-bottom: 1em;
