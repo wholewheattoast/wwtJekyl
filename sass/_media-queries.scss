@@ -1,80 +1,56 @@
 /* Media Querries
 ============================================== */
-  @media (max-height: 720px) {
-    #full_width .container { width: 66%; }
+@media (max-height: 720px) {
+  #full_width .container { width: 66%; }
+}
+
+/* 480px Smartphones */
+@media (max-width: 480px) {
+  #full_width .container { width: 98%; }
+
+  h1 { font-size: 1.75em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.25em; }
+
+  ol.inline > li,
+  ul.inline > li {
+    display: inline-block;
+    padding-left: .125em;
+    padding-right: .125em;
   }
+  .post p { font-size: 1rem; }
 
-	/* 480px Smartphones */
-	@media (max-width: 480px) {
-		
-		body { margin-top: 0; }
-		
-		#full_width .container { width: 98%; }
+  #blog-pagination { text-align: right; }
+}
 
-		h1 { font-size: 1.75em; }
-		h2 { font-size: 1.5em; }
-		h3 { font-size: 1.25em; }
-		
-		ol.inline > li,
-		ul.inline > li {
-			display: inline-block;
-			padding-left: .125em;
-			padding-right: .125em;
-			}
-		.post {
-      p {font-size: 1rem; }
-		}
-	}
-	
-	@media (min-width: 640px) {
-    .about,
-    .posts {
-      p {font-size: 1.375rem; }
-    }
-	}
-
-	/* 767 "smartphones and small tablets
-	========================================= */
-	@media (max-width: 767px) {
-    body { margin-top: 0; }
+@media (min-width: 640px) {
+  .about,
+  .posts {
+    p { font-size: 1.375rem; }
   }
-	
-	/* 768 Portrait tablets
-	========================================= */
-	@media (min-width: 768px) and (max-width: 979px) {
-		body { margin-top: 0; }
-		
-		#NCD_page {
-			margin-top: 2em;
-			nav {
-  			margin-top: 1em;
-				text-align: right;
-			}
-		}
-	}
-	
-	
-	@media (max-width: 980px) {
-  	.sb-nav {
-      position: relative;
-      right: 0px;
+}
+
+/* 767 "smartphones and small tablets */
+@media (max-width: 767px) {
+  body { margin-top: 0; }
+}
+
+/* 768 Portrait tablets */
+@media (min-width: 768px) and (max-width: 979px) {
+  #NCD_page {
+    nav {
+      margin-top: 1em;
       text-align: right;
-      top: 0;
     }
-	}
+  }
+}
 
-	
-	/* ~1100px
-	========================================= */
-	@media (min-width: 970px) and (max-width: 1200px) { }
 
-	/*retnia
-	========================================= */
-	@media
-	screen and (-webkit-min-device-pixel-ratio : 1.5),
-	screen and (min-device-pixel-ratio : 1.5) {	}
-	
-	@media
-	only screen and (-webkit-min-device-pixel-ratio : 1.5) and (max-width: 480px),
-	only screen and (min-device-pixel-ratio : 1.5) and (max-width: 480px) { }
-	
+@media (max-width: 980px) {
+  .sb-nav {
+    position: relative;
+    right: 0px;
+    text-align: right;
+    top: 0;
+  }
+}
