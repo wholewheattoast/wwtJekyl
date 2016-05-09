@@ -1,12 +1,14 @@
 import argparse
 import json
-import pystache
 import os
-import re
-import time
 import yaml
-
 import toast_tools
+
+# from argh import (
+#    safe_input,
+# )
+
+# safe_input()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("sb_name", help="The name of the sketchbook")
@@ -27,8 +29,8 @@ print "========== sb_url_safe_name = {}".format(sb_url_safe_name)
 
 sb_image_dir = os.path.dirname(
     "../image/sketchbooks/{}/".format(sb_url_safe_name)
-    )
-    
+)
+
 print "========== sb_image_dir = {}".format(sb_image_dir)
 
 sb_directory = "../sketchbooks/{}".format(sb_url_safe_name)
@@ -49,9 +51,13 @@ for root, dirs, files in os.walk(sb_image_dir):
         if root == sb_image_dir:
             if name == ".DS_Store":
                 pass
-            elif name == "{}-front-cover-icon.jpg".format(sb_url_safe_name):
+            elif name == "{}-front-cover-icon.jpg".format(
+                sb_url_safe_name
+            ):
                 pass
-            elif name == "{}_cover_icon.jpg".format(sb_url_safe_name.replace("-", "_")):
+            elif name == "{}_cover_icon.jpg".format(
+                sb_url_safe_name.replace("-", "_")
+            ):
                 pass
             else:
                 strip_ext = name.replace(".jpg", "")
@@ -77,25 +83,27 @@ spreads_list = []
 
 for i, item in enumerate(sorted_image_list):
     temp_spread_dict = {}
-    
+
     spread = {}
-    
+
     print "---------- item is {}".format(item)
-    
-    # At some point this logic needs a check.
+
+    # TODO At some point this logic needs a check.
     # Bigger sketchbooks may have img of each page?
-    
-    spread_name = "{}-{}".format(sb_url_safe_name, item.replace(" ", "-"))
-    
+
+    spread_name = "{}-{}".format(
+        sb_url_safe_name,
+        item.replace(" ", "-")
+    )
     item_split = item.split()
-    
+
     if item_split[1] == "cover":
         spread[item] = item.replace(" ", "-")
     else:
         print "---------- item_split is {}".format(item_split)
         spread["verso"] = item_split[0]
         spread["recto"] = item_split[1]
-    
+
     # this stips leading zeros out, might be useful
     # display_split = []
     # try:
@@ -104,34 +112,38 @@ for i, item in enumerate(sorted_image_list):
     # except:
     #     pass
     # print "----------  display_split is now {}".format(display_split)
-    
+
     for key, value in spread.iteritems():
-        page_name = "{}-{}".format(sb_url_safe_name, value.replace(" ", "-"))
-    
+        page_name = "{}-{}".format(
+            sb_url_safe_name,
+            value.replace(" ", "-")
+        )
+
         # Open a file that matches name of current spread
         # File should contain any available 'metadata' for spread
         try:
-            metadata_file_path= "{}/metadata/{}.yaml".format(
+            metadata_file_path = "{}/metadata/{}.yaml".format(
                 sb_image_dir,
                 page_name,
             )
-            print ".......... metadata_file_path = {}".format(metadata_file_path)
+            print ".......... metadata_file_path = {}".format(
+                metadata_file_path
+            )
             with open(metadata_file_path, 'r') as metadata_file:
                 # load yaml file
                 metadata_file_obj = yaml.load(metadata_file)
                 temp_spread_dict["{}_metadata".format(key)] = metadata_file_obj
                 print ".......... found metadata for {}".format(page_name)
-                print metadata_file_json
         except:
             print ".......... no metadata found for {}".format(page_name)
-    
+
     temp_spread_dict["sb_display_name"] = sb_display_name.title()
     temp_spread_dict["sb_url_safe_name"] = sb_url_safe_name
     temp_spread_dict["spread"] = "{}".format(
         item.replace(" ", "-")
     )
 
-    # Build pagination
+    # build pagination
     try:
         temp_spread_dict["next"] = "{}".format(
             (sorted_image_list[i + 1]).replace(" ", "-")
@@ -141,41 +153,41 @@ for i, item in enumerate(sorted_image_list):
             (sorted_image_list[0]).replace(" ", "-")
         )
 
-    try: 
+    try:
         temp_spread_dict["prev"] = "{}".format(
             (sorted_image_list[i - 1]).replace(" ", "-")
         )
     except IndexError:
         print "woops index error on prev"
-        
-    
+
     # Write file
     temp_file_name = "{}.html".format(spread_name)
-    
+
     # write out a json file of results
     results_path = "{}/json".format(sb_directory)
     results_json = "{}.json".format(spread_name)
     if not os.path.exists(results_path):
         os.makedirs(results_path)
         print "---------- Created  {}".format(results_path)
-    
+
     loaded_json = json.dumps(temp_spread_dict)
-    with open("{}/{}".format(results_path, results_json), "w") as json_results_file:
+    with open("{}/{}".format(
+        results_path, results_json
+    ), "w") as json_results_file:
         json_results_file.write(loaded_json)
     # end results json
-    
+
     toast_tools.write_out_template(
         temp_spread_dict,
         sb_directory,
         temp_file_name,
         "sb_page.mustache",
     )
-    
+
     spreads_list.append(temp_spread_dict)
 
 # Write Index
 # TODO break out into function
-
 sb_dict["sb_display_name"] = sb_display_name
 sb_dict["sb_url_safe_name"] = sb_url_safe_name
 sb_dict["sb_spreads"] = spreads_list
@@ -187,4 +199,9 @@ sb_dict["html_dir"] = sb_directory
 # and grab it in similar maner as pages
 
 # Generate index file
-toast_tools.write_out_template(sb_dict, sb_directory, "index.html", "sb_index.mustache")
+toast_tools.write_out_template(
+    sb_dict,
+    sb_directory,
+    "index.html",
+    "sb_index.mustache"
+)
