@@ -4,27 +4,24 @@ layout: base_full_width
 
 <article class="post h-entry">
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <section class="e-content">
-        <h2>
+    <div class="col-md-8 ">
+      <header>
+        <h1>
           <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}" title="permalink | {{page.title}}">
             <time class="dt-published" datetime="{{page.date|date:"%F"}}">
               {{page.date|date:"%b %d, %Y"}}
             </time>
           </a>
-        </h2>
-
+        </h1>
+      </header>
+      
+      <section class="e-content">
         {{ content }}
+      </section>
 
-        </section>
-    </div>
-  </div>
-  
-  <footer>
-    <div class="row">
-      <div class="col-md-4 col-md-offset-2">
+      <footer>
         {% if page.tags %}
-          <ul class="list-unstyled post_tags">
+          <ul class="list-unstyled">
             {% assign sorted_tags = (page.tags | sort:last) %}
             {% for tag in sorted_tags %}
               <li>
@@ -33,13 +30,12 @@ layout: base_full_width
             {% endfor %}
           </ul>
         {% endif %}
-      </div>
-      <div class="col-md-4">
-        <p class="pull-right">
-          <a href="{{site.baseurl}}/blog/archive.html">archive</a>
+        <p>
+          <a href="{{site.baseurl}}/blog/archive.html" rel="archives">archive</a>
         </p>
-      </div>
-    </div>
-  </footer>
-</article>
+      </footer>
 
+    </div>
+  </div>
+
+</article>

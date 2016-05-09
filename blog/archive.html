@@ -3,35 +3,34 @@ layout: base_full_width
 title: Archive
 ---
 
-<div class="row">
-  <section class="col-md-6">
-    <h2>Posts</h2>
-    <ol class="list-unstyled">
-        {% for post in site.posts %}
-            <li>
-                <a href="{{site.baseurl}}{{ post.url }}">
-                    <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%F"}}</time>
-                    &nbsp;&nbsp;
-                    {{ post.title }}
-                </a>
-            </li>
-        {% endfor %}
-    </ol>
-  </section>
-    
-  <section class="col-md-6" id="Tags">
-    <h2>Tags</h2>
-      <ul class="list-unstyled list-inline">
-        {% assign sorted_tags = (site.tags | sort:last) %}
-        {% for tag in sorted_tags %}
-          {% assign t = tag | first %}
-          {% assign posts = tag | last %}
-           <li>
-            <a href="/tag/{{ t }}">
-              <span class="badge">{{ posts | size }}</span>  {{t | downcase | replace:" ","-" }}
-            </a> 
-          </li>
-        {% endfor %}
-      </ul>
-  </section>
-</div>
+<section id="Tags">
+  <h2>Tags</h2>
+    <ul class="list-unstyled list-inline">
+      {% assign sorted_tags = (site.tags | sort:last) %}
+      {% for tag in sorted_tags %}
+        {% assign t = tag | first %}
+        {% assign posts = tag | last %}
+         <li>
+          <a href="/tag/{{ t }}">
+            {{t | downcase | replace:" ","-" }} ({{ posts | size }})
+          </a> 
+        </li>
+      {% endfor %}
+    </ul>
+</section>
+
+<section>
+  <h2>Posts</h2>
+  <ol class="list-unstyled">
+    {% for post in site.posts %}
+      <li>
+        <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%F"}}</time>
+        &nbsp;&nbsp;
+        <a href="{{site.baseurl}}{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+
