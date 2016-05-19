@@ -115,6 +115,15 @@ img {
 .margin_top { margin-top: 1.5rem; }
 .margin_top_more { margin-top: 3rem; }
 
+/* grid fixes */
+/* This is to allow using bootstrap syntax on li without junking
+  up the markup with all those extra rows.
+*/
+
+.list-grid {
+  li { margin-bottom: 2em; }
+}
+
 
 /* site header and footer */
 .site_header {
@@ -188,9 +197,8 @@ a.tag {
 }
 
 .sb_index {
-  margin-top: 4em;
+  //margin-top: 4em;
   h2 { text-transform: capitalize; }
-  li { margin-bottom: 2em; }
 }
 
 .sketchbook_page {

@@ -9,11 +9,11 @@ date:
 <section class="sb_index">
   <h2>{{sb_display_name}}</h2>
 
-  <ol class="list-unstyled row">
+  <ol class="list-unstyled row list-grid">
     {{#sb_spreads}}
       <li class="col-xs-6 col-sm-4 col-md-3">
         <a href="/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.html"
-          title="{{sb_display_name}} {{spread}}" >
+          title="{{sb_display_name}} {{spread}}">
           <img 
             src="/{{image_dir}}/thumbs/{{sb_url_safe_name}}-{{spread}}.jpg" 
             title="{{sb_display_name}} {{spread}}"
@@ -24,4 +24,3 @@ date:
     {{/sb_spreads}}
   </ol>
 </h2>
-
