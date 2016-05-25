@@ -67,15 +67,21 @@ for root, dirs, files in os.walk(sb_image_dir):
 
 sorted_image_list = toast_tools.sort_nicely(sb_image_files)
 
+
 if sorted_image_list[0] == "back cover":
     temp_item = sorted_image_list[0]
     sorted_image_list.pop(0)
     sorted_image_list.append(temp_item)
 
-if sorted_image_list[-2] == "pp ifc 1":
-    temp_item = sorted_image_list[-2]
-    sorted_image_list.pop(-2)
-    sorted_image_list.insert(1, temp_item)
+if sorted_image_list[-1] == "ifc 001":
+    temp_item = sorted_image_list[-1]
+    sorted_image_list.pop(-1)
+    sorted_image_list.insert(0, temp_item)
+    
+if sorted_image_list[-1] == "front cover":
+    temp_item = sorted_image_list[-1]
+    sorted_image_list.pop(-1)
+    sorted_image_list.insert(0, temp_item)
 
 sb_dict = {}
 
@@ -103,15 +109,6 @@ for i, item in enumerate(sorted_image_list):
         print "---------- item_split is {}".format(item_split)
         spread["verso"] = item_split[0]
         spread["recto"] = item_split[1]
-
-    # this stips leading zeros out, might be useful
-    # display_split = []
-    # try:
-    #     striped_split = re.sub("^0+", "", split)
-    #     display_split.append(striped_split)
-    # except:
-    #     pass
-    # print "----------  display_split is now {}".format(display_split)
 
     for key, value in spread.iteritems():
         page_name = "{}-{}".format(
