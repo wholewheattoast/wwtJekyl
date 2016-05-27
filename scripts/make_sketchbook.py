@@ -4,19 +4,19 @@ import os
 import yaml
 import toast_tools
 
-# from argh import (
-#    safe_input,
-# )
+import pdb
 
-# safe_input()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("sb_name", help="The name of the sketchbook")
 
-# TODO Add param to override sb name when not same as dir name
+# TODO add param for single page sketchbooks
+
+# TODO add param to override sb name when not same as dir name
 # For example "perdef"
 # OR use a config file per sb
 # Only old sketchbooks will start with ifc
+
 # TODO logic to handle IFC
 # parser.add_argument("pages_start_on", help="Does the sketchbook start on 1 or ifc")
 args = parser.parse_args()
@@ -67,7 +67,6 @@ for root, dirs, files in os.walk(sb_image_dir):
 
 sorted_image_list = toast_tools.sort_nicely(sb_image_files)
 
-
 if sorted_image_list[0] == "back cover":
     temp_item = sorted_image_list[0]
     sorted_image_list.pop(0)
@@ -93,9 +92,6 @@ for i, item in enumerate(sorted_image_list):
     spread = {}
 
     print "---------- item is {}".format(item)
-
-    # TODO At some point this logic needs a check.
-    # Bigger sketchbooks may have img of each page?
 
     spread_name = "{}-{}".format(
         sb_url_safe_name,
