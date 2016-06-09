@@ -7,47 +7,47 @@ date: 2014-09-10
 pages: 40
 media: Black risograph on blue paper. Florescent yellow cover.  Saddle stitched.
 size: 4.5 x 7
-cover_image: /image/publications/fax_simile_5/fax_simile_5_front_cover.jpg
-buy: wholewheattoast.bigcartel.com/product/fax-simile-number-five
 ---
 
-<article id="Publications_page" resource="{{ page.stub }}">
-    <section class="row">
-        <div class="col-md-4">
-            <p>
-                <img src="/image/publications/fax_simile_5/fax-simile-5-icon.png" alt=""
-                title="{{ page.title }}" />
-            </p>
+<article resource="{{ page.stub }}">
+  <section class="row">
+    <div class="col-md-4">
+      <p>
+        <img
+          src="/image/publications/fax_simile_5/fax-simile-5-icon.png"
+          alt=""
+          title="{{ page.title }}"
+        />
+      </p>
+    </div>
+
+    <div class="col-md-6 col-md-offset-1">
+      <h1 property="dc:title">{{ page.title }}</h1>
+      <dl class="inline_dl">
+        <dt>Pages</dt>
+        <dd>40</dd>
+        <dt>Media</dt>
+        <dd>Black risograph on blue paper. Florescent yellow cover. Saddle stitched.</dd>
+        <dt>Size</dt>
+        <dd>4.5 x 7 inches</dd>
+      </dl>
+      <!-- Fax Simile 5 paypal button -->
+      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <div class="form-group">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="GHDNBWCR7J6RW">
+          <input type="hidden" name="on0" value="Shipping">
+          <select name="os0">
+            <option value="US">US $4.50 USD</option>
+            <option value="Non-US">Non-US $5.25 USD</option>
+          </select>
+          <input type="hidden" name="currency_code" value="USD">
+          <button type="submit" name="submit" class="btn btn-default btn-sm">Add to Cart</button>
+          <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
         </div>
-        
-        <div class="col-md-6 col-md-offset-1">
-            <header>
-                <h1 property="dc:title">{{ page.title }}</h1>
-            </header>
-            <!-- <p><span property="dc:description">write something about what fax simile is</span></p> -->
-            <p><span property="dc:extent">{{ page.pages }} pages</span></p>
-            <p><span property="dc:medium">Black risograph on blue paper. Florescent yellow cover. Saddle stitched.</span></p>
-            <p><span property="dc:format">{{ page.size }} inches</span></p>
-            <p><span property="dc:date">Published August 2014</span></p>
-            <p>
-              <!-- Fax Simile 5 paypal button -->
-              <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <div class="form-group">
-                  <input type="hidden" name="cmd" value="_s-xclick">
-                  <input type="hidden" name="hosted_button_id" value="GHDNBWCR7J6RW">
-                  <input type="hidden" name="on0" value="Shipping">
-                  <select name="os0">
-                  	<option value="US">US $4.50 USD</option>
-                  	<option value="Non-US">Non-US $5.25 USD</option>
-                  </select>
-                  <input type="hidden" name="currency_code" value="USD">
-                  <button type="submit" name="submit" class="btn btn-default btn-sm">Add to Cart</button>
-                  <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                </div>
-              </form>
-          </p>
-        </div>
-    </section>
+      </form>
+    </div>
+  </section>
 
   <section>
     <div class="row">
