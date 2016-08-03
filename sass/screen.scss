@@ -17,8 +17,9 @@ $background-color: #fafafa;
 $body_color: #101;
 $warm_accent_color: #ff2727;
 $success-green: #29b473;
-$link-color: #4b9be9;
-$muted: #999;
+/* $link-color: #4b9be9; i like this color */
+$link-color: #176abe;
+$muted: #4c4c4c;
 
 
 html { font:1em/1.5 helvetica, sans-serif; }
@@ -131,7 +132,6 @@ img {
 .site_header {
   a { color: #000; }
   h1 { 
-    font-size: 1.75rem; 
     margin-bottom: 1rem;
     }
   .logo { 
@@ -148,8 +148,8 @@ img {
     }
     li { 
       display: inline;
-      font-size: .825rem;
-      margin-right: .75rem;
+      font-size: 1.75rem;
+      margin-right: 1rem;
     }
     li:last-child { margin-right: 0; }
   }

@@ -10,7 +10,7 @@
           <a href="{{site.baseurl}}{{paginator.next_page_path}}" rel="next">older</a>
         </li>
       {% endif %}
-      <li><a href="{{site.baseurl}}/blog/archive.html" rel="archives">archive</a></li>
+      <li><a href="{{site.baseurl}}/blog/archive.html">archive</a></li>
       {% if paginator.previous_page %}
         <li>
           <a href="{{site.baseurl}}{{paginator.previous_page_path}}" rel="prev">newer</a>

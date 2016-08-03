@@ -3,25 +3,21 @@ layout: base_full_width
 ---
 
 <article class="post h-entry">
+  <h2>
+    <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}" title="permalink | {{page.title}}">
+      <time class="dt-published" datetime="{{page.date|date:"%F"}}">
+        {{page.date|date:"%b %d, %Y"}}
+      </time>
+    </a>
+  </h2>
   <div class="row">
-    <div class="col-md-8 ">
-      <header>
-        <h1>
-          <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}" title="permalink | {{page.title}}">
-            <time class="dt-published" datetime="{{page.date|date:"%F"}}">
-              {{page.date|date:"%b %d, %Y"}}
-            </time>
-          </a>
-        </h1>
-      </header>
-      
+    <div class="col-md-8">
       <section class="e-content">
         {{ content }}
       </section>
-
       <footer>
         {% if page.tags %}
-          <ul class="list-unstyled">
+          <ul class="list-unstyled list-inline">
             {% assign sorted_tags = (page.tags | sort:last) %}
             {% for tag in sorted_tags %}
               <li>
@@ -31,11 +27,9 @@ layout: base_full_width
           </ul>
         {% endif %}
         <p>
-          <a href="{{site.baseurl}}/blog/archive.html" rel="archives">archive</a>
+          <a href="{{site.baseurl}}/blog/archive.html">archive</a>
         </p>
       </footer>
-
     </div>
   </div>
-
 </article>

@@ -1,9 +1,5 @@
 /* Media Querries
 ============================================== */
-@media (max-height: 720px) {
-  #full_width .container { width: 66%; }
-}
-
 /* 480px Smartphones */
 @media (max-width: 480px) {
   #full_width .container { width: 98%; }
@@ -18,6 +14,9 @@
     padding-left: .125em;
     padding-right: .125em;
   }
+  
+  .site_header nav li { font-size: 1.125rem; }
+  
   .post p { font-size: 1rem; }
 
   #blog-pagination { text-align: right; }
