@@ -11,7 +11,6 @@ import toast_tools
 import pdb
 
 
-
 parser = SafeConfigParser()
 parser.read("instagram-sync.ini")
 
@@ -23,7 +22,7 @@ BLOG_POSTS_DIR = parser.get('blog_setup', 'mount_point')
 BLOG_IMG_DIR = parser.get('blog_setup', 'posts_img_dir')
 
 
-def create_image_post_from_instagram(post):
+def create_image_post_from_instagram(post, file_name):
     """
         Iterate through images.
         Get each format, rename for clarity.
@@ -40,18 +39,25 @@ def create_image_post_from_instagram(post):
             post["id"],
             image,
             file_extension)
+        post["images"][image]["local"] = "instagram-{}-{}{}".format(
+            post["id"],
+            image,
+            file_extension)
         toast_tools.get_img_from_url(image_path, clean_url)
-    # TODO after getting images write out html with a template file
-    # TODO check if I can use existing write_out_template()
+
+    pdb.set_trace()
+    toast_tools.write_out_template(
+        post,
+        BLOG_POSTS_DIR,
+        file_name,
+        "instagram_image_post.mustache"
+    )
 
 
 # TODO set up some way on sever to re auth?
 # I don't think i can automate this?
 
-# 
-# do_auth = request.get(auth_url)
-
-# auth dace
+# auth dance
 # TODO will need to add scope to get likes
 # https://www.instagram.com/developer/authorization/
 # 1. Step One: Direct your user to our authorization URL
@@ -91,8 +97,9 @@ else:
         instagram_post_dict = {}
         
         # make a copy of everything
-        for i in post:
-            instagram_post_dict[i] = post[i]
+        # I don't think i need this?
+#         for i in post:
+#             instagram_post_dict[i] = post[i]
         
         # make a title from post.title
         # TODO add to toast_tools ?
@@ -113,12 +120,23 @@ else:
         post_formated_file_name = u"{}-{}.html".format(post_date, title_wo_tags)
         post_path = u"{}/{}".format(BLOG_POSTS_DIR, post_formated_file_name)
         
+        # Add formated date, title, etc to post
+        # I don't know the timezone this is in?
+        # possibly local time of device pic was taken in???
+        post["display_date"] = datetime.datetime.fromtimestamp(
+            int(post["created_time"])
+        ).strftime('%Y-%m-%d %H:%M:%S')
+
+        post["title"] = title_wo_tags
+        
         # TODO how to format same as old tumblr posts???
         if os.path.isfile(post_path):
-            print "========== Already exists: {} ".format(post_formated_file_name)
+            print "========== Already exists: {} ".format(
+                post_formated_file_name)
         else:
             if post["type"] == "image":
-                create_image_post_from_instagram(post)
+                print u"========== Creating: {}".format(post_formated_file_name)
+                create_image_post_from_instagram(post, post_formated_file_name)
             else:
                 print "********** {} is unsupported.".format(post["type"])
 

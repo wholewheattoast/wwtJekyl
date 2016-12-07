@@ -1,0 +1,22 @@
+---
+layout: post
+title: {{title}}
+tags: {{tags}}
+date: {{display_date}}
+---
+
+<!--
+  is there a way to dump all items?
+-->
+
+  <p>
+    {{#images}}
+      {{#standard_resolution}}
+        <img src="/image/posts/{{local}}" alt="" title="{{title}}" width="{{width}}" height="{{height}}" />
+      {{/standard_resolution}}
+    {{/images}}
+  </p>
+
+  {{#caption}}
+    {{text}}
+  {{/caption}}
