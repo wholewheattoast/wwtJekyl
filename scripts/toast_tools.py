@@ -8,7 +8,7 @@ import re
 import requests
 # import time
 # import uuid
-import urllib
+# import urllib
 
 import pystache
 import pytumblr
@@ -53,7 +53,6 @@ def write_out_template(dictionary, path, file_name, template):
         html_file.write(html_results_encoded)
 
 
-
 def sort_nicely(l):
     """
         Sort the given list in the way that humans expect.
@@ -69,8 +68,8 @@ def sort_nicely(l):
 def split_on_sep(seperator, thing):
     result = thing.split(seperator, 1)[0]
     return result
-    
-    
+
+
 def get_img_from_url(image_path, url):
     if os.path.isfile(image_path):
         print "---------- Already downloaded {}".format(url)
@@ -78,4 +77,3 @@ def get_img_from_url(image_path, url):
         print "---------- Downloading {}".format(url)
         with open(image_path, 'w') as f:
             f.write(requests.get(url).content)
-
