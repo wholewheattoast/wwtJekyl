@@ -1,17 +1,10 @@
 from ConfigParser import SafeConfigParser
 
-# import argparse
-# import json
-# import os
 import os.path
-import re
-import requests
-# import time
-# import uuid
-# import urllib
-
 import pystache
 import pytumblr
+import re
+import requests
 
 
 def auth_tumblr(config):
@@ -40,7 +33,6 @@ def write_out_template(dictionary, path, file_name, template):
         Save the file with file_name
         to the location specified by the path
     """
-
     html_path = "{}/{}".format(path, file_name)
     results_template = open("../_templates/{}".format(template)).read()
     html_results = pystache.render(results_template, dictionary)
@@ -77,3 +69,13 @@ def get_img_from_url(image_path, url):
         print "---------- Downloading {}".format(url)
         with open(image_path, 'w') as f:
             f.write(requests.get(url).content)
+
+
+def clean_string(dirty_string):
+    import string
+    import re
+
+    chars = re.escape(string.punctuation)
+    clean_string = re.sub(r'['+chars+']', '', dirty_string)
+    clean_string.lstrip().rstrip()
+    return clean_string

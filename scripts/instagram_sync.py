@@ -8,8 +8,6 @@ import requests
 
 import toast_tools
 
-import pdb
-
 
 parser = SafeConfigParser()
 parser.read("instagram-sync.ini")
@@ -20,6 +18,29 @@ ACCESS_TOKEN = parser.get("instagram_api", "access_token")
 
 BLOG_POSTS_DIR = parser.get('blog_setup', 'mount_point')
 BLOG_IMG_DIR = parser.get('blog_setup', 'posts_img_dir')
+POSTS_ARCHIVE = parser.get('blog_setup', 'posts_archive')
+
+
+def munge_instagram_images(post, image):
+    """
+        formating urls to get paths
+        save local path info to post
+        initiate image download
+    """
+    url = post["images"][image]["url"]
+    # remove cache paramiter
+    clean_url = toast_tools.split_on_sep("?", url)
+    filename, file_extension = os.path.splitext(clean_url)
+    image_path = "{}/instagram-{}-{}{}".format(
+        BLOG_IMG_DIR,
+        post["id"],
+        image,
+        file_extension)
+    post["images"][image]["local"] = "instagram-{}-{}{}".format(
+        post["id"],
+        image,
+        file_extension)
+    toast_tools.get_img_from_url(image_path, clean_url)
 
 
 def create_image_post_from_instagram(post, file_name):
@@ -28,24 +49,26 @@ def create_image_post_from_instagram(post, file_name):
         Get each format, rename for clarity.
         Create a post for post.
     """
-    for image in post["images"]:
-        url = post["images"][image]["url"]
-        # remove cache paramiter
-        clean_url = toast_tools.split_on_sep("?", url)
-        filename, file_extension = os.path.splitext(clean_url)
-        # instagram-{id}-{image}.jpg
-        image_path = "{}/instagram-{}-{}{}".format(
-            BLOG_IMG_DIR,
-            post["id"],
-            image,
-            file_extension)
-        post["images"][image]["local"] = "instagram-{}-{}{}".format(
-            post["id"],
-            image,
-            file_extension)
-        toast_tools.get_img_from_url(image_path, clean_url)
+    post["images"]["full_resolution"] = {}
 
-    pdb.set_trace()
+    for image in post["images"]:
+        if image == "full_resolution":
+            url = post["images"]["standard_resolution"]["url"]
+            # attempt to "guess" full image url, may break in future
+            to_remove = "s640x640/sh0.08/e35/"
+            full_image_url = url.replace(to_remove, "")
+            # save "full" url to image
+            post["images"]["full_resolution"]["url"] = full_image_url
+            munge_instagram_images(post, "full_resolution")
+        else:
+            munge_instagram_images(post, image)
+
+    # save a copy of th edited json
+        edited_post_archive_file_path = "{}_edited/{}.json".format(
+            POSTS_ARCHIVE, formated_file_name)
+        with open(edited_post_archive_file_path, "w") as f:
+            json.dump(post, f)
+
     toast_tools.write_out_template(
         post,
         BLOG_POSTS_DIR,
@@ -54,36 +77,46 @@ def create_image_post_from_instagram(post, file_name):
     )
 
 
-# TODO set up some way on sever to re auth?
-# I don't think i can automate this?
+def format_post_title_and_dates(post):
+    post_converted_dt = datetime.datetime.fromtimestamp(
+        int(post["created_time"]))
 
-# auth dance
-# TODO will need to add scope to get likes
-# https://www.instagram.com/developer/authorization/
-# 1. Step One: Direct your user to our authorization URL
-# auth_url = "https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=code"
+    # TODO What timezone this is in?
+    post["display_date"] = post_converted_dt.strftime('%Y-%m-%d %H:%M:%S')
 
-# auth_url = "https://api.instagram.com/oauth/authorize/?client_id={CLIENT_ID}&redirect_uri={REDIRECT_URI}&response_type=code".format(CLIENT_ID, REDIRECT_URI)
+    # remove tags from display title
+    title_wo_tags = toast_tools.split_on_sep(
+        "#", post["caption"]["text"]).rstrip()
+    # make a version of caption test w/o tags
+    # here since i don't want 'id' for post caption
+    # don't save if no content
+    if len(title_wo_tags) > 0:
+        post["caption"]["cleaned_text"] = title_wo_tags
+    # if post has no title (for file name)
+    if len(title_wo_tags) == 0:
+        title_wo_tags = post["id"]
 
-# https://api.instagram.com/oauth/authorize/?client_id=ff3becfe4fbf4097a044d4ab142d7b06&redirect_uri=https://www.wholewheattoast.com&response_type=code
+    post["title"] = title_wo_tags
 
-# 2. Step Two: Receive the redirect from Instagram
-redirect_code = parser.get("instagram_api", "redirect_code")
+    # clean up title
+    # tumblr tunc-ed around 48 chars
+    cleaned_title = toast_tools.clean_string(title_wo_tags).replace(" ", "-").lower()[0:48]
 
-# 3. Step Three: Request the access_token
-# curl -F 'client_id=CLIENT_ID' \
-#     -F 'client_secret=CLIENT_SECRET' \
-#     -F 'grant_type=authorization_code' \
-#     -F 'redirect_uri=AUTHORIZATION_REDIRECT_URI' \
-#     -F 'code=CODE' \
-#     https://api.instagram.com/oauth/access_token
+    formated_file_name = u"{}-{}.html".format(
+        post_converted_dt.strftime('%Y-%m-%d'),
+        cleaned_title
+    )
+
+    title_wo_tags, formated_file_name, post_converted_dt
+    return post, formated_file_name
+
 
 # get my recent posts
 recent_posts = "https://api.instagram.com/v1/users/self/media/recent/?access_token={}".format(ACCESS_TOKEN)
 
 get_recent_posts = requests.get(recent_posts)
 
-# insta api docs refer to this as an envelope
+# instagram api docs refer to this as an envelope
 envelope = json.loads(get_recent_posts.content)
 
 
@@ -94,49 +127,24 @@ if envelope['meta']['code'] != 200:
         print "!!!!!!!!!! {}".format(envelope['meta']['error_message'])
 else:
     for post in envelope["data"]:
-        instagram_post_dict = {}
+        updated_post, formated_file_name = format_post_title_and_dates(post)
         
-        # make a copy of everything
-        # I don't think i need this?
-#         for i in post:
-#             instagram_post_dict[i] = post[i]
-        
-        # make a title from post.title
-        # TODO add to toast_tools ?
-        # date is formated as unix timestamp
-        formated_date = datetime.datetime.fromtimestamp(
-            int(post["created_time"])
-        ).strftime('%Y-%m-%d')
-        
-        post_date = (formated_date)
+        # save a copy of the original json
+        # TODO consider adding a timestamp to title to keep historical records
+        post_archive_file_path = "{}/{}.json".format(
+            POSTS_ARCHIVE, formated_file_name)
+        with open(post_archive_file_path, "w") as f:
+            json.dump(post, f)
 
-        # remove tags from display title
-        title_wo_tags = toast_tools.split_on_sep(
-            "#", post["caption"]["text"]).rstrip()
-        # check if title
-        if len(title_wo_tags) == 0:
-            title_wo_tags = "untitled"
+        post_path = u"{}/{}".format(BLOG_POSTS_DIR, formated_file_name)
 
-        post_formated_file_name = u"{}-{}.html".format(post_date, title_wo_tags)
-        post_path = u"{}/{}".format(BLOG_POSTS_DIR, post_formated_file_name)
-        
-        # Add formated date, title, etc to post
-        # I don't know the timezone this is in?
-        # possibly local time of device pic was taken in???
-        post["display_date"] = datetime.datetime.fromtimestamp(
-            int(post["created_time"])
-        ).strftime('%Y-%m-%d %H:%M:%S')
-
-        post["title"] = title_wo_tags
-        
-        # TODO how to format same as old tumblr posts???
         if os.path.isfile(post_path):
-            print "========== Already exists: {} ".format(
-                post_formated_file_name)
+            print "========== Already exists: {} ".format(formated_file_name)
         else:
-            if post["type"] == "image":
-                print u"========== Creating: {}".format(post_formated_file_name)
-                create_image_post_from_instagram(post, post_formated_file_name)
+            if updated_post["type"] == "image":
+                print u"========== Creating: {}".format(formated_file_name)
+                create_image_post_from_instagram(
+                    updated_post, formated_file_name)
             else:
-                print "********** {} is unsupported.".format(post["type"])
-
+                print "********** {} is unsupported.".format(
+                    updated_post["type"])
