@@ -12,3 +12,4 @@ lib/
 include/
 *.pyc
 scripts/tumblr_jekyll.ini
+scripts/instagram-sync.ini
