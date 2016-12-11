@@ -63,11 +63,17 @@ def create_image_post_from_instagram(post, file_name):
         else:
             munge_instagram_images(post, image)
 
+    # Not sure ATM how to deal with unicode in liqued? str them for now.
+    formated_tags = []
+    for i in post["tags"]:
+        formated_tags.append(str(i))
+    post["formated_tags"] = formated_tags
+
     # save a copy of th edited json
-        edited_post_archive_file_path = "{}_edited/{}.json".format(
-            POSTS_ARCHIVE, formated_file_name)
-        with open(edited_post_archive_file_path, "w") as f:
-            json.dump(post, f)
+    edited_post_archive_file_path = "{}_edited/{}.json".format(
+        POSTS_ARCHIVE, formated_file_name)
+    with open(edited_post_archive_file_path, "w") as f:
+        json.dump(post, f)
 
     toast_tools.write_out_template(
         post,
@@ -128,7 +134,7 @@ if envelope['meta']['code'] != 200:
 else:
     for post in envelope["data"]:
         updated_post, formated_file_name = format_post_title_and_dates(post)
-        
+
         # save a copy of the original json
         # TODO consider adding a timestamp to title to keep historical records
         post_archive_file_path = "{}/{}.json".format(
