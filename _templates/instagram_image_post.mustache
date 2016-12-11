@@ -1,0 +1,82 @@
+---
+layout: post
+title: {{{title}}}
+tags: {{formated_tags}}
+date: {{display_date}}
+---
+
+{{#images}}
+{{#full_resolution}}
+  <p>
+    <img src="/image/posts/{{local}}" alt="" title="{{title}}" />
+  </p>
+{{/full_resolution}}
+{{/images}}
+
+
+{{#caption}}
+{{#cleaned_text}}
+<p>{{{cleaned_text}}}</p>
+{{/cleaned_text}}
+{{/caption}}
+
+{{#location}}
+<div class="post_location" itemscope itemtype="http://schema.org/Place">
+  <p>
+    At <span itemprop="name">{{name}}</span>
+    <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+      <meta itemprop="latitude" content="{{latitude}}" />
+      <meta itemprop="longitude" content="{{longitude}}" />
+    </div>
+  </p>
+</div>
+{{/location}}
+
+<!--
+  created_time: {{created_time}}
+  instagram-link: {{link}}
+  id: {{id}}
+  tags: {{formated_tags}}
+  {{#images}}
+  images: {
+    {{#low_resolution}}
+    low_resolution: {
+      url: {{url}}
+      local: {{local}}
+      width: {{width}}
+      height: {{height}}
+    }
+    {{/low_resolution}}
+    {{#thumbnail}}
+    thumbnail: {
+      url: {{url}}
+      local: {{local}}
+      width: {{width}}
+      height: {{height}}
+    }
+    {{/thumbnail}}
+    {{#standard_resolution}}
+    standard_resolution: {
+      url: {{url}}
+      local: {{local}}
+      width: {{width}}
+      height: {{height}}
+    }
+    {{/standard_resolution}}
+    {{#full_resolution}}
+    standard_resolution: {
+      url: {{url}}
+      local: {{local}}
+    }
+    {{/full_resolution}}
+  }
+  {{/images}}
+  {{#location}}
+  location: {
+    latitude: {{latitude}}
+    name: {{name}}
+    longitude: {{longitude}}
+    id: {{id}}
+  }
+  {{/location}}
+-->
