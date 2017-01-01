@@ -90,19 +90,21 @@ def format_post_title_and_dates(post):
     # TODO What timezone this is in?
     post["display_date"] = post_converted_dt.strftime('%Y-%m-%d %H:%M:%S')
 
-    # remove tags from display title
+    # remove tags from display title.
+    # also removing quotation marks due to issues with yaml headers.
+    # was issue where an emoji followed a qutoed sting.
     title_wo_tags = toast_tools.split_on_sep(
-        "#", post["caption"]["text"]).rstrip()
+        "#", post[u"caption"][u"text"]).replace('"', '').rstrip()
+    
     # make a version of caption test w/o tags
     # here since i don't want 'id' for post caption
-    # don't save if no content
     if len(title_wo_tags) > 0:
-        post["caption"]["cleaned_text"] = title_wo_tags
+        post[u"caption"][u"cleaned_text"] = title_wo_tags
     # if post has no title (for file name)
     if len(title_wo_tags) == 0:
         title_wo_tags = post["id"]
 
-    post["title"] = title_wo_tags
+    post[u"title"] = title_wo_tags
 
     # clean up title
     # tumblr tunc-ed around 48 chars
@@ -145,7 +147,7 @@ else:
         post_path = u"{}/{}".format(BLOG_POSTS_DIR, formated_file_name)
 
         if os.path.isfile(post_path):
-            print "========== Already exists: {} ".format(formated_file_name)
+            print u"========== Already exists: {} ".format(formated_file_name)
         else:
             if updated_post["type"] == "image":
                 print u"========== Creating: {}".format(formated_file_name)
