@@ -31,7 +31,7 @@ def munge_instagram_images(post, image):
     # remove cache paramiter
     clean_url = toast_tools.split_on_sep("?", url)
     filename, file_extension = os.path.splitext(clean_url)
-    image_path = "{}/instagram-{}-{}{}".format(
+    image_path = u"{}/instagram-{}-{}{}".format(
         BLOG_IMG_DIR,
         post["id"],
         image,
@@ -70,7 +70,7 @@ def create_image_post_from_instagram(post, file_name):
     post["formated_tags"] = formated_tags
 
     # save a copy of th edited json
-    edited_post_archive_file_path = "{}_edited/{}.json".format(
+    edited_post_archive_file_path = u"{}_edited/{}.json".format(
         POSTS_ARCHIVE, formated_file_name)
     with open(edited_post_archive_file_path, "w") as f:
         json.dump(post, f)
@@ -137,7 +137,7 @@ else:
 
         # save a copy of the original json
         # TODO consider adding a timestamp to title to keep historical records
-        post_archive_file_path = "{}/{}.json".format(
+        post_archive_file_path = u"{}/{}.json".format(
             POSTS_ARCHIVE, formated_file_name)
         with open(post_archive_file_path, "w") as f:
             json.dump(post, f)

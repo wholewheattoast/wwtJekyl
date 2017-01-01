@@ -33,7 +33,7 @@ def write_out_template(dictionary, path, file_name, template):
         Save the file with file_name
         to the location specified by the path
     """
-    html_path = "{}/{}".format(path, file_name)
+    html_path = u"{}/{}".format(path, file_name)
     results_template = open("../_templates/{}".format(template)).read()
     html_results = pystache.render(results_template, dictionary)
     # need to encode to pass to write()
