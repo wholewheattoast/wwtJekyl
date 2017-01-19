@@ -1,10 +1,13 @@
 from ConfigParser import SafeConfigParser
 
+import json
+import os
 import os.path
 import pystache
 import pytumblr
 import re
 import requests
+import sys
 
 
 def auth_tumblr(config):
@@ -27,13 +30,38 @@ def auth_tumblr(config):
     return client
 
 
-def write_out_template(dictionary, path, file_name, template):
+def write_out_json(thing, directory, fn):
+    """
+        JSON Load a 'thing'
+        Write to 'dir'/'filename'
+    """
+    results_path = "{}/json".format(directory)
+    results_json = "{}.json".format(fn)
+    fullpath = "{}/{}".format(results_path, results_json)
+
+    if not os.path.exists(results_path):
+        os.makedirs(results_path)
+        print ".......... Created  {}".format(results_path)
+
+    try:
+        loaded_json = json.dumps(thing)
+        with open(fullpath, "w") as json_results_file:
+            json_results_file.write(loaded_json)
+            print ".......... Wrote out {}".format(results_json)
+    except ValueError as e:
+        print ".......... ValueError {}".format(e)
+        print "!!!!!!!!!! {}".format(thing)
+    except:
+        print ".......... Unexpected error:", sys.exc_info()[0]
+
+
+def write_out_template(dictionary, path, fn, template):
     """
         Render the dictionary using the given template
         Save the file with file_name
         to the location specified by the path
     """
-    html_path = u"{}/{}".format(path, file_name)
+    html_path = u"{}/{}".format(path, fn)
     results_template = open("../_templates/{}".format(template)).read()
     html_results = pystache.render(results_template, dictionary)
     # need to encode to pass to write()
@@ -43,6 +71,7 @@ def write_out_template(dictionary, path, file_name, template):
 
     with open(html_path, "w") as html_file:
         html_file.write(html_results_encoded)
+        print ".......... Wrote out  {}".format(html_path)
 
 
 def sort_nicely(l):
