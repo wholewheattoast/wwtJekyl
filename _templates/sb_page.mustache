@@ -9,7 +9,9 @@ date:
 <article itemscope itemtype="http://schema.org/VisualArtwork" class="sketchbook_page">
   <div class="row">
     <div class="col-md-10">
-      <h2 itemprop="name">{{sb_display_name}} | {{spread}}</h2>
+      <h2 itemprop="name"><a class="bare-link" href="/sketchbooks/{{sb_url_safe_name}}/index.html">
+        {{sb_display_name}}</a> | {{spread}}
+      </h2>
       <p>
         <img 
           itemprop="image"
@@ -46,8 +48,12 @@ date:
               {{#medium}}<dt>Medium:</dt><dd>{{{medium}}}</dd>{{/medium}}
               {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd>{{/description}}
               {{#subject}}<dt>Subject:</dt><dd><span itemprop="about">{{subject}}</span></dd>{{/subject}}
-              {{#transcription}}<dt>Transcription:</dt><dd><span itemprop="text">{{transcription}}</span></dd>{{/transcription}}
             </dl>
+            {{#html-transcription}}
+            <div class="transcription">
+              {{{html-transcription}}}
+            </div>
+            {{/html-transcription}}
           </section>
         {{/verso_metadata}}
         {{#recto_metadata}}
@@ -62,8 +68,12 @@ date:
               {{#medium}}<dt>Medium:</dt><dd>{{{medium}}}</dd>{{/medium}}
               {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd>{{/description}}
               {{#subject}}<dt>Subject:</dt><dd><span itemprop="about">{{subject}}</span></dd>{{/subject}}
-              {{#transcription}}<dt>Transcription:</dt><dd><span itemprop="text">{{transcription}}</span></dd>{{/transcription}}
             </dl>
+            {{#html-transcription}}
+            <div class="transcription">
+              {{{html-transcription}}}
+            </div>
+            {{/html-transcription}}
           </section>
         {{/recto_metadata}}
         {{#front-cover_metadata}}
@@ -102,4 +112,3 @@ date:
     </div>
   </div>
 </article>
-

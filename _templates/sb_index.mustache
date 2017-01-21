@@ -9,6 +9,10 @@ date:
 <section class="sb_index">
   <h2>{{sb_display_name}}</h2>
 
+  {{#metadata}}
+    <p>{{date}}</p>
+  {{/metadata}}
+  
   <ol class="list-unstyled row list-grid">
     {{#sb_spreads}}
       <li class="col-xs-6 col-sm-4 col-md-3">
