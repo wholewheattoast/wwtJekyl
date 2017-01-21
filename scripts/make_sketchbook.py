@@ -175,12 +175,19 @@ def make_index(spreads_list):
             print ".......... found metadata for {} index".format(sb_url_safe_name)
     except:
         print ".......... no metadata found for {} index".format(sb_display_name)
-    
+
     # TODO something about sb_dict is causing an error FIXME
-    toast_tools.write_out_json(
+#     toast_tools.write_out_json(
+#         sb_dict,
+#         sb_directory,
+#         "{}-index".format(sb_url_safe_name),
+#     )
+
+    # Let's try to just write out as YAML
+    toast_tools.write_out_yaml(
         sb_dict,
         sb_directory,
-        "{}-index".format(sb_url_safe_name),
+        "{}-index-full".format(sb_url_safe_name)
     )
 
     toast_tools.write_out_template(
@@ -225,8 +232,7 @@ if not os.path.exists(sb_directory):
 
 this_sorted_image_list = make_image_list()
 this_spreads = assemble_spreads(this_sorted_image_list)
-make_pages(this_spreads)
-# can i make the index first somehow?
 make_index(this_spreads)
+make_pages(this_spreads)
 
 print ".......... All Done!!!"

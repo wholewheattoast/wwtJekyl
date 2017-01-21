@@ -1,6 +1,7 @@
 from ConfigParser import SafeConfigParser
 
 import json
+import yaml
 import os
 import os.path
 import pystache
@@ -51,6 +52,27 @@ def write_out_json(thing, directory, fn):
     except ValueError as e:
         print ".......... ValueError {}".format(e)
         print "!!!!!!!!!! {}".format(thing)
+    except:
+        print ".......... Unexpected error:", sys.exc_info()[0]
+
+
+def write_out_yaml(thing, directory, fn):
+    """
+        Write thing as yaml to a file.
+    """
+    results_path = "{}/yaml".format(directory)
+    results_yaml = "{}.yaml".format(fn)
+    fullpath = "{}/{}".format(results_path, results_yaml)
+    
+    if not os.path.exists(results_path):
+        os.makedirs(results_path)
+        print ".......... Created  {}".format(results_path)
+
+    try:
+        dumped_yaml = yaml.dump(thing)
+        with open(fullpath, "w") as yaml_results_file:
+            yaml_results_file.write(dumped_yaml)
+            print ".......... Wrote out {}".format(results_yaml)
     except:
         print ".......... Unexpected error:", sys.exc_info()[0]
 
