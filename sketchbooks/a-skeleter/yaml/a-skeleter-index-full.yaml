@@ -1,0 +1,40 @@
+html_dir: ../sketchbooks/a-skeleter
+image_dir: ../image/sketchbooks/a-skeleter
+metadata: {date: November 24 2016 - December 31 2016, locations: "<ul class=\"list-unstyled\"\
+    >\n  <li>Sebastopol, CA</li>\n  <li>Santa Rosa, CA</li>\n  <li>Forestville, CA</li>\n\
+    \  <li>Menlo Park, CA</li>\n  <li>Bodega Bay, CA</li>\n</ul>\n"}
+sb_display_name: a skeleter
+sb_spreads: &id001
+- all-data: *id001
+  next: 047-048
+  prev: 047-048
+  sb_display_name: A Skeleter
+  sb_url_safe_name: a-skeleter
+  spread: front-cover
+- all-data: *id001
+  next: front-cover
+  prev: front-cover
+  recto_metadata: null
+  sb_display_name: A Skeleter
+  sb_url_safe_name: a-skeleter
+  spread: 047-048
+  verso_metadata: {created: '2016-12-01', height: 5.5 inches, html-transcription: '<p>Post
+      card</p>
+
+      <h2>4 1/4 x 6</h2>
+
+      <p>stamp 2.75 x</p>
+
+      ', image: 'https://wholewheattoast.com/image/sketchbooks/a-skeleter/a-skeleter-047-048.jpg',
+    isPartOf: A Skeleter, medium: '<span property=''material'' itemprop=''artMedium''
+      resource=''http://vocab.getty.edu/aat/300022443''>graphite</span>', page_number: 47,
+    surface: paper, title: A Skeleter page 47, transcription: 'Post card
+
+      4 1/4 x 6
+
+      ------------
+
+      stamp 2.75 x
+
+      ', type: image, width: 3.5 inches}
+sb_url_safe_name: a-skeleter
