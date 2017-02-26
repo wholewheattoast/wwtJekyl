@@ -1,42 +1,44 @@
-/*
-  SASS for wholewheattoast.com
-  Shawn Eisenach
-*/
+//
+//  SASS for wholewheattoast.com
+//  Shawn Eisenach
+//
 
 @import 'bootstrap-custom';
 
-
-/* Variables */
+// Variables
 $font-size: 18px;
 $line-height: 27px; /* (font-size * 1.5) */
 $basline_grid: 6px;
 
-/* Colors */
+// Colors
 $white: #fff;
 $background-color: #fafafa;
-$body_color: #101;
+$body-color: #101;
+// TODO name this color, and define funcion in class
 $warm_accent_color: #ff2727;
-$success-green: #29b473;
-/* $link-color: #4b9be9; i like this color */
+// $link-color: #4b9be9; i like this color //
+// TODO name this color, and define funcion in class
 $link-color: #176abe;
 $muted: #4c4c4c;
+// green
+$success-green: #29b473;
+// yellow
+$grandis: #ffd390;
 
 
-html { font:1em/1.5 helvetica, sans-serif; }
+html { font: 1em/1.5 helvetica, sans-serif; }
 
 body {
   background-color: $background-color;
-  color: $body_color;
+  color: $body-color;
+  -webkit-font-feature-settings: 'kern';
   font-feature-settings: 'kern';
-      -webkit-font-feature-settings: 'kern';
-  text-rendering: optimizeLegibility;
   font-size: 1rem;
+  text-rendering: optimizeLegibility;
 }
 
-/* 
-  set up verticle spacing 
-  via http:/*csswizardry.com/2012/06/single-direction-margin-declarations/
-*/
+// set up verticle spacing
+// via http:/*csswizardry.com/2012/06/single-direction-margin-declarations/
 
 h1,
 h2,
@@ -69,18 +71,18 @@ a:visited {
 
 a:hover,
 a:focus {
-  color: $body_color;
+  color: $body-color;
   text-decoration: underline;
 }
 
-a.bare-link { color: $body_color; }
+a.bare-link { color: $body-color; }
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 { color: $body_color; }
+h6 { color: $body-color; }
 
 h1 { font-size: 2em; }
 
@@ -106,11 +108,16 @@ img {
 }
 
 
-/* color */
+// color
 .accent { color: $warm_accent_color; }
 
+// buttons
+.btn-paypall {
+  background-color: $grandis;
+  border: 0;
+}
 
-/* helpers */
+// helpers
 .center_text { text-align: center; }
 .tight { margin: 0; }
 .margin_top { margin-top: 1.5rem; }
@@ -118,44 +125,44 @@ img {
 .margin_bottom { margin-bottom: 1.5rem; }
 .margin_bottom_more { margin-bottom: 3rem; }
 
-/* grid fixes */
-/* This is to allow using bootstrap syntax on li without junking
-  up the markup with all those extra rows.
-*/
-
+// grid fixes
+// This is to allow using bootstrap syntax on li without junking
+// up the markup with all those extra rows.
 .list-grid {
-  p, li { margin-bottom: 2em; }
+  p,
+  li { margin-bottom: 2em; }
 }
 
 
 /* site header and footer */
 .site_header {
-  a { color: #000; }
-  h1 { 
-    margin-bottom: 1rem;
-    }
-  .logo { 
+  a { color: $body-color; }
+  h1 { margin-bottom: 1rem; }
+
+  .logo {
     display: inline;
-    width: 100px ;
+    width: 100px;
     }
 
   nav {
     a { font-weight: normal; }
     a:hover,
     a:focus {
-      color: #000;
+      color: $body-color;
       text-decoration: underline;
     }
-    li { 
+
+    li {
       display: inline;
       font-size: 1.75rem;
       margin-right: 1rem;
     }
+
     li:last-child { margin-right: 0; }
   }
 }
 
-/* is this used anywhere? */
+// is this used anywhere?
 .menu li { display: inline; }
 
 .main_body {
@@ -163,8 +170,10 @@ img {
   margin-top: .5rem;
   }
 
-/* Posts */
+// Posts
 .post {
+  margin-bottom: 1.125rem;
+
   .permalink {
     color: $muted;
     a { color: $muted; }
@@ -174,10 +183,9 @@ img {
       text-decoration: none;
     }
   }
-  
+
   footer { margin-top: 1rem; }
   h1 { font-size: 1rem; }
-  margin-bottom: 1.125rem;
   p { font-size: 1.375rem; }
 }
 
@@ -185,12 +193,12 @@ img {
 
 a.tag {
   color: white;
-  background-color: black;
+  background-color: $body-color;
   padding: 6px 8px;
 }
 
 
-/* Sketchbooks */
+// Sketchbooks
 .sketchbook_index {
   li {
     display: inline;
@@ -199,7 +207,6 @@ a.tag {
 }
 
 .sb_index {
-  //margin-top: 4em;
   h2 { text-transform: capitalize; }
 }
 
@@ -208,13 +215,15 @@ a.tag {
     font-size: 16px;
     text-transform: capitalize;
   }
+
   h3 { font-size: 1em; }
+
   .inline_dl {
     font-size: .85rem;
-    dd { margin: 0 0 .5rem 6rem ;}
+    dd { margin: 0 0 .5rem 6rem;}
     dt {
       font-weight: normal;
-      margin: 0 0 0 0;
+      margin: 0;
       width: 2em;
     }
   }
@@ -222,12 +231,12 @@ a.tag {
 
 .sb-nav {
   position: fixed;
-  top: calc(50% - 4em);
   right: 2em;
+  top: calc(50% - 4em);
 }
 
 
-/* Publications */
+// Publications
 #Portfolio {
   .color-block {
     font-size: 1.5rem;
@@ -249,7 +258,7 @@ a.tag {
 
 .bg-om2013 { background-color: #e69340; }
 
-.bg-ncd2013 { 
+.bg-ncd2013 {
   background-color: #e10926;
   span { margin: 1.5em 1.75em !important; }
 }
@@ -260,7 +269,7 @@ a.tag {
   span { background-color: $white; }
 }
 
-/* portfolio block */
+// portfolio block
 .portfolio-block {
   font-size: 1.5rem;
 
@@ -273,27 +282,20 @@ a.tag {
   }
 }
 
-/* TODO these layouts are exactley the same.  Concat and update pages */
+// TODO these layouts are exactley the same.
+// Concat and update pages
+#Comics_page,
 #NCD_page {
   h1,
   .nav_with_index { text-align: right; }
 }
 
-#Comics_page {
-  h1,
-  .nav_with_index { text-align: right; }
-}
-
-
-/* Shop */
+// Shop
 .item h2 {
   font-size: 1.25em;
   margin-bottom: 1em;
 }
 
-form.cart {
-    display: inline-block;
-  }
-
+form.cart { display: inline-block; }
 
 @import 'media-queries';
