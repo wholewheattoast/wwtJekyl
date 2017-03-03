@@ -9,7 +9,7 @@ import toast_tools
 
 def make_image_list():
     """
-        Find imgages for a given sketchbook.
+        Find images for a given sketchbook.
         Make a sorted list of them.
     """
     sb_image_files = []
@@ -114,7 +114,7 @@ def assemble_spreads(sorted_image_list):
             temp_spread_dict["next"] = "{}".format(
                 (sorted_image_list[0]).replace(" ", "-")
             )
-    
+
         try:
             temp_spread_dict["prev"] = "{}".format(
                 (sorted_image_list[i - 1]).replace(" ", "-")
@@ -141,12 +141,12 @@ def make_pages(spreads_list):
             sb_url_safe_name, item["spread"].replace(" ", "-")
         )
         temp_file_name = "{}.html".format(spread_name)
-        
+
         # add full list to each pages item?
         # TODO break out "same as today" look up as a def
         # call it here and write out.
         item["all-data"] = spreads_list
-        
+
         toast_tools.write_out_template(
             item,
             sb_directory,

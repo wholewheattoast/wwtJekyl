@@ -1,0 +1,39 @@
+html_dir: ../sketchbooks/24-inch-curved
+image_dir: ../image/sketchbooks/24-inch-curved
+metadata:
+  date: October 12 2016 - November 23 2016
+  locations: ['Sebastopol, CA', 'Occidental, CA', 'Menlo Park, CA', 'Petaluma, CA',
+    'Palo Alto, CA', 'Bodega Bay, CA', 'San Francisco, CA', 'Seattle, WA']
+sb_display_name: 24 Inch Curved
+sb_spreads:
+- {next: 005-006, prev: 163-164, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: front-cover}
+- {next: 007-008, prev: front-cover, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 005-006}
+- {next: 021-022, prev: 005-006, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 007-008}
+- {next: 023-024, prev: 007-008, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 021-022}
+- {next: 025-026, prev: 021-022, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 023-024}
+- {next: 031-032, prev: 023-024, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 025-026}
+- {next: 067-068, prev: 025-026, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 031-032}
+- {next: 073-074, prev: 031-032, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 067-068}
+- {next: 077-078, prev: 067-068, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 073-074}
+- {next: 101-102, prev: 073-074, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 077-078}
+- {next: 129-130, prev: 077-078, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 101-102}
+- {next: 131-132, prev: 101-102, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 129-130}
+- {next: 151-152, prev: 129-130, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 131-132}
+- {next: 163-164, prev: 131-132, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 151-152}
+- {next: front-cover, prev: 151-152, sb_display_name: 24 Inch Curved, sb_url_safe_name: 24-inch-curved,
+  spread: 163-164}
+sb_url_safe_name: 24-inch-curved
