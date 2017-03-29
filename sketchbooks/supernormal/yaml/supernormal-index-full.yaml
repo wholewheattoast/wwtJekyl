@@ -1,0 +1,92 @@
+html_dir: ../sketchbooks/supernormal
+image_dir: ../image/sketchbooks/supernormal
+metadata:
+  date: September 19 2016 - October 11 2016
+  locations: ['Menlo Park, CA', 'Sebastopol, CA', 'Santa Rosa, CA']
+sb_display_name: supernormal
+sb_spreads:
+- {next: 001-002, prev: back-cover, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: front-cover}
+- {next: 003-004, prev: front-cover, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 001-002}
+- {next: 005-006, prev: 001-002, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 003-004}
+- {next: 007-008, prev: 003-004, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 005-006}
+- {next: 009-010, prev: 005-006, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 007-008}
+- {next: 011-012, prev: 007-008, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 009-010}
+- {next: 013-014, prev: 009-010, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 011-012}
+- {next: 015-016, prev: 011-012, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 013-014}
+- {next: 017-018, prev: 013-014, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 015-016}
+- {next: 019-020, prev: 015-016, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 017-018}
+- {next: 021-022, prev: 017-018, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 019-020}
+- {next: 023-024, prev: 019-020, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 021-022}
+- {next: 025-026, prev: 021-022, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 023-024}
+- {next: 029-030, prev: 023-024, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 025-026}
+- {next: 031-032, prev: 025-026, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 029-030}
+- {next: 033-034, prev: 029-030, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 031-032}
+- {next: 035-036, prev: 031-032, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 033-034}
+- {next: 037-038, prev: 033-034, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 035-036}
+- {next: 039-040, prev: 035-036, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 037-038}
+- {next: 041-042, prev: 037-038, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 039-040}
+- {next: 043-044, prev: 039-040, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 041-042}
+- {next: 045-046, prev: 041-042, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 043-044}
+- {next: 047-048, prev: 043-044, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 045-046}
+- {next: 049-050, prev: 045-046, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 047-048}
+- {next: 051-052, prev: 047-048, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 049-050}
+- {next: 053-054, prev: 049-050, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 051-052}
+- {next: 055-056, prev: 051-052, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 053-054}
+- {next: 057-058, prev: 053-054, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 055-056}
+- {next: 059-060, prev: 055-056, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 057-058}
+- {next: 061-062, prev: 057-058, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 059-060}
+- {next: 063-064, prev: 059-060, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 061-062}
+- {next: 065-066, prev: 061-062, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 063-064}
+- {next: 067-068, prev: 063-064, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 065-066}
+- {next: 069-070, prev: 065-066, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 067-068}
+- {next: 071-072, prev: 067-068, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 069-070}
+- {next: 075-076, prev: 069-070, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 071-072}
+- {next: 077-078, prev: 071-072, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 075-076}
+- {next: 079-080, prev: 075-076, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 077-078}
+- {next: 081-082, prev: 077-078, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 079-080}
+- {next: 085-086, prev: 079-080, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 081-082}
+- {next: back-cover, prev: 081-082, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: 085-086}
+- {next: front-cover, prev: 085-086, sb_display_name: Supernormal, sb_url_safe_name: supernormal,
+  spread: back-cover}
+sb_url_safe_name: supernormal

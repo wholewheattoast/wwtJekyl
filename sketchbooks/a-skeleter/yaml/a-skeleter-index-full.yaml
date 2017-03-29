@@ -1,18 +1,14 @@
 html_dir: ../sketchbooks/a-skeleter
 image_dir: ../image/sketchbooks/a-skeleter
-metadata: {date: November 24 2016 - December 31 2016, locations: "<ul class=\"list-unstyled\"\
-    >\n  <li>Sebastopol, CA</li>\n  <li>Santa Rosa, CA</li>\n  <li>Forestville, CA</li>\n\
-    \  <li>Menlo Park, CA</li>\n  <li>Bodega Bay, CA</li>\n</ul>\n"}
+metadata:
+  date: November 24 2016 - December 31 2016
+  locations: ['Sebastopol, CA', 'Santa Rosa, CA', 'Forestville, CA', 'Menlo Park,
+      CA', 'Bodega Bay, CA']
 sb_display_name: a skeleter
-sb_spreads: &id001
-- all-data: *id001
-  next: 047-048
-  prev: 047-048
-  sb_display_name: A Skeleter
-  sb_url_safe_name: a-skeleter
-  spread: front-cover
-- all-data: *id001
-  next: front-cover
+sb_spreads:
+- {next: 047-048, prev: 173-174, sb_display_name: A Skeleter, sb_url_safe_name: a-skeleter,
+  spread: front-cover}
+- next: 051-052
   prev: front-cover
   recto_metadata: null
   sb_display_name: A Skeleter
@@ -37,4 +33,20 @@ sb_spreads: &id001
       stamp 2.75 x
 
       ', type: image, width: 3.5 inches}
+- {next: 103-104, prev: 047-048, sb_display_name: A Skeleter, sb_url_safe_name: a-skeleter,
+  spread: 051-052}
+- {next: 123-124, prev: 051-052, sb_display_name: A Skeleter, sb_url_safe_name: a-skeleter,
+  spread: 103-104}
+- {next: 153-154, prev: 103-104, sb_display_name: A Skeleter, sb_url_safe_name: a-skeleter,
+  spread: 123-124}
+- {next: 157-158, prev: 123-124, sb_display_name: A Skeleter, sb_url_safe_name: a-skeleter,
+  spread: 153-154}
+- {next: 165-166, prev: 153-154, sb_display_name: A Skeleter, sb_url_safe_name: a-skeleter,
+  spread: 157-158}
+- {next: 171-172, prev: 157-158, sb_display_name: A Skeleter, sb_url_safe_name: a-skeleter,
+  spread: 165-166}
+- {next: 173-174, prev: 165-166, sb_display_name: A Skeleter, sb_url_safe_name: a-skeleter,
+  spread: 171-172}
+- {next: front-cover, prev: 171-172, sb_display_name: A Skeleter, sb_url_safe_name: a-skeleter,
+  spread: 173-174}
 sb_url_safe_name: a-skeleter
