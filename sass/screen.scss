@@ -7,17 +7,17 @@
 
 // Variables
 $font-size: 18px;
-$line-height: 27px; /* (font-size * 1.5) */
-$basline_grid: 6px;
+$line-height: 27px;  // (font-size * 1.5)
+$basline-grid: 6px;
 
 // Colors
 $white: #fff;
 $background-color: #fafafa;
 $body-color: #101;
-// TODO name this color, and define funcion in class
-$warm_accent_color: #ff2727;
+// TODO name this color, and define function in class
+$warm-accent-color: #ff2727;
 // $link-color: #4b9be9; i like this color //
-// TODO name this color, and define funcion in class
+// TODO name this color, and define function in class
 $link-color: #176abe;
 $muted: #4c4c4c;
 // green
@@ -37,7 +37,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-// set up verticle spacing
+// set up vertical spacing
 // via http:/*csswizardry.com/2012/06/single-direction-margin-declarations/
 
 h1,
@@ -62,6 +62,7 @@ a {
   outline: 0;
   text-decoration: none;
   transition: color .25s;
+  &.bare-link { color: $body-color; }
 }
 
 a:visited {
@@ -74,8 +75,6 @@ a:focus {
   color: $body-color;
   text-decoration: underline;
 }
-
-a.bare-link { color: $body-color; }
 
 h1,
 h2,
@@ -92,14 +91,14 @@ h3 { font-size: 1.25em; }
 
 li { margin-bottom: .5em; }
 
-dl.inline_dl dt {
+.inline_dl dt {
   clear: left;
   float: left;
-  text-align: right;
   margin: 0 2rem 0 0;
+  text-align: right;
 }
 
-dl.inline_dl dd { margin: 0 0 .5rem 0; }
+.inline_dl dd { margin: 0 0 .5rem; }
 
 img {
   display: block;
@@ -109,7 +108,7 @@ img {
 
 
 // color
-.accent { color: $warm_accent_color; }
+.accent { color: $warm-accent-color; }
 
 // buttons
 .btn-paypall {
@@ -134,7 +133,7 @@ img {
 }
 
 
-/* site header and footer */
+// site header and footer
 .site_header {
   a { color: $body-color; }
   h1 { margin-bottom: 1rem; }
@@ -185,15 +184,13 @@ img {
   }
 
   footer { margin-top: 1rem; }
-  h1 { font-size: 1rem; }
-  p { font-size: 1.375rem; }
 }
 
 #blog-pagination { margin-top: 2rem; }
 
-a.tag {
-  color: white;
+.tag {
   background-color: $body-color;
+  color: $white;
   padding: 6px 8px;
 }
 
@@ -282,7 +279,7 @@ a.tag {
   }
 }
 
-// TODO these layouts are exactley the same.
+// TODO these layouts are exactly the same.
 // Concat and update pages
 #Comics_page,
 #NCD_page {
