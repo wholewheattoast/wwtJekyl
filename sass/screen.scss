@@ -188,7 +188,10 @@ img {
 
 #blog-pagination { margin-top: 2rem; }
 
-.tag {
+.tag,
+.tag:focus,
+.tag:hover,
+.tag:visited {
   background-color: $body-color;
   color: $white;
   padding: 6px 8px;
