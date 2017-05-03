@@ -171,6 +171,7 @@ img {
 
 // Posts
 .post {
+  font-size: 1.25rem;
   margin-bottom: 1.125rem;
 
   .permalink {
@@ -193,8 +194,9 @@ img {
 .tag:hover,
 .tag:visited {
   background-color: $body-color;
+  border-radius: 2px;
   color: $white;
-  padding: 6px 8px;
+  padding: 4px 6px;
 }
 
 

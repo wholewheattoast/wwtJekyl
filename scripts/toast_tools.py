@@ -63,7 +63,7 @@ def write_out_yaml(thing, directory, fn):
     results_path = "{}/yaml".format(directory)
     results_yaml = "{}.yaml".format(fn)
     fullpath = "{}/{}".format(results_path, results_yaml)
-    
+
     if not os.path.exists(results_path):
         os.makedirs(results_path)
         print ".......... Created  {}".format(results_path)
@@ -79,8 +79,9 @@ def write_out_yaml(thing, directory, fn):
 
 def write_out_template(dictionary, path, fn, template):
     """
-        Render the dictionary using the given template
-        Save the file with file_name
+        Render the dictionary using the given template.
+
+        Saves the file with file_name
         to the location specified by the path
     """
     html_path = u"{}/{}".format(path, fn)
@@ -93,7 +94,7 @@ def write_out_template(dictionary, path, fn, template):
 
     with open(html_path, "w") as html_file:
         html_file.write(html_results_encoded)
-        print ".......... Wrote out  {}".format(html_path)
+        print u".......... Wrote out  {}".format(html_path)
 
 
 def sort_nicely(l):
