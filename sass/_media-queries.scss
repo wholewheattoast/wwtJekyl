@@ -1,6 +1,7 @@
 /* Media Querries
 ============================================== */
 /* 480px Smartphones */
+/*
 @media (max-width: 480px) {
   #full_width .container { width: 98%; }
 
@@ -21,6 +22,7 @@
 
   #blog-pagination { text-align: right; }
 }
+*/
 
 @media (min-width: 640px) {
   .about,
@@ -30,9 +32,11 @@
 }
 
 /* 767 "smartphones and small tablets */
+/*
 @media (max-width: 767px) {
   body { margin-top: 0; }
 }
+*/
 
 /* 768 Portrait tablets */
 @media (min-width: 768px) and (max-width: 979px) {

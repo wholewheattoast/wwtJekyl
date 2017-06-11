@@ -7,13 +7,12 @@
     <ul class="list-unstyled list-inline">
       {% if paginator.next_page %}
         <li>
-          <a href="{{site.baseurl}}{{paginator.next_page_path}}" rel="next">older</a>
+          <a href="{{site.baseurl}}{{paginator.next_page_path}}" rel="next">Older Posts</a>
         </li>
       {% endif %}
-      <li><a href="{{site.baseurl}}/blog/archive.html">archive</a></li>
       {% if paginator.previous_page %}
         <li>
-          <a href="{{site.baseurl}}{{paginator.previous_page_path}}" rel="prev">newer</a>
+          <a href="{{site.baseurl}}{{paginator.previous_page_path}}" rel="prev">Newer Posts</a>
         </li>
       {% endif %}
     </ul>

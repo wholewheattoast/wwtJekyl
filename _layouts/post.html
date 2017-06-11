@@ -4,7 +4,7 @@ layout: base_full_width
 
 <article class="post h-entry">
   <h2>
-    <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}" title="permalink | {{page.title}}">
+    <a class="permalink u-url bare-link" href="{{site.baseurl}}{{post.url}}" title="permalink | {{page.title}}">
       <time class="dt-published" datetime="{{page.date|date:"%F"}}">
         {{page.date|date:"%b %d, %Y"}}
       </time>
@@ -26,9 +26,6 @@ layout: base_full_width
             {% endfor %}
           </ul>
         {% endif %}
-        <p>
-          <a href="{{site.baseurl}}/blog/archive.html">archive</a>
-        </p>
       </footer>
     </div>
   </div>

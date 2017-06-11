@@ -1,6 +1,6 @@
 <article class="post h-entry">
   <h2>
-    <a class="permalink u-url" href="{{site.baseurl}}{{post.url}}" title="permalink | {{post.title}}">
+    <a class="permalink u-url bare-link" href="{{site.baseurl}}{{post.url}}" title="permalink | {{post.title}}">
       <time class="dt-published" datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time>
     </a>
   </h2>
@@ -11,14 +11,14 @@
       </section>
       <footer>
         {% if post.tags %}
-          <ul class="list-unstyled list-inline">
-            {% assign sorted_tags = (post.tags | sort:last) %}
-            {% for tag in sorted_tags %}
-              <li>
+          <p>
+            <span class="tags">Tagged: 
+              {% assign sorted_tags = (post.tags | sort:last) %}
+              {% for tag in sorted_tags %}
                 <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
-              </li>
-            {% endfor %}
-          </ul>
+              {% endfor %}
+            </span>
+          </p>
         {% endif %}
       </footer>
     </div>

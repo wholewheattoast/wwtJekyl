@@ -1,30 +1,23 @@
 <aside>
   <h3>Elsewhere</h3>
-  <ul class="list-unstyled">
+  <ul class="list-unstyled list-inline">
     <li>
-      <a href="http://www.flickr.com/photos/wholewheattoast/" rel="me">
-        wholewheattoast</a> on Flickr
+      <a href="http://www.flickr.com/photos/wholewheattoast/" rel="me">Flickr</a>
+     </li>
+    <li>
+      <a href="https://github.com/wholewheattoast" rel="me">Github</a>
     </li>
     <li>
-      <a href="https://github.com/wholewheattoast" rel="me">
-        wholewheattoast</a> on Github
+      <a href="http://instagram.com/wholewheattoast" rel="me">Instagram</a>
     </li>
     <li>
-      <a href="http://instagram.com/wholewheattoast" rel="me">
-        @wholewheattoast</a> on Instagram
+      <a href="http://pinboard.in/u:wholewheattoast" rel="me">Pinboard</a>
     </li>
     <li>
-      <a href="http://pinboard.in/u:wholewheattoast" rel="me">
-        wholewheattoast</a> on Pinboard
+      <a href="http://wholewheattoast.tumblr.com" rel="me">Tumblr</a>
     </li>
     <li>
-      <a href="http://wholewheattoast.tumblr.com" rel="me">
-        wholewheattoast.tumblr.com
-      </a>
-    </li>
-    <li>
-      <a href="http://www.twitter.com/wholewheattoast" rel="me">
-        @wholewheattoast</a> on Twitter
+      <a href="http://www.twitter.com/wholewheattoast" rel="me">Twitter</a>
     </li>
   </ul>
 </aside>
