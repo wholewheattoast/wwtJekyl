@@ -1,3 +1,23 @@
 <footer class="site_footer">
-  <!--<a class="h-card" rel="me" href="http://www.wholewheattoast.com">Shawn Eisenach</a>-->
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="list-unstyled">
+        <li><a class="bare-link" href="/index.html">Blog</a></li>
+        <li><a class="bare-link" href="/blog/archive.html">Blog Archive</a></li>
+        <li><a class="bare-link" href="/about.html">About</a></li>
+        <li><a class="bare-link" href="/works.html">Portfolio</a></li>
+        <li><a class="bare-link" href="/sketchbooks.html">Sketchbooks</a></li>
+        <li><a class="bare-link" href="/shop.html">Shop</a></li>
+        <li><a class="bare-link" href="/publications.html">Zines</a></li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <ul class="list-unstyled">
+        <li>Shawn Eisenach 2002-2017</li>
+        <li>
+          <a class="bare-link" href="mailto:hello@wholewheattoast.com">hello@wholewheattoast.com</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </footer>

@@ -12,7 +12,7 @@ $basline-grid: 6px;
 
 // Colors
 $white: #fff;
-$background-color: #fafafa;
+//$background-color: #fafafa;
 $body-color: #101;
 // TODO name this color, and define function in class
 $warm-accent-color: #ff2727;
@@ -29,7 +29,7 @@ $grandis: #ffd390;
 html { font: 1em/1.5 helvetica, sans-serif; }
 
 body {
-  background-color: $background-color;
+  background-color: $white;
   color: $body-color;
   -webkit-font-feature-settings: 'kern';
   font-feature-settings: 'kern';
@@ -57,23 +57,22 @@ table,
 fieldset,
 hr { margin-bottom: 1.5rem; }
 
-a {
-  color: $link-color;
-  outline: 0;
-  text-decoration: none;
-  transition: color .25s;
-  &.bare-link { color: $body-color; }
-}
-
+a,
 a:visited {
-  color: $link-color;
-  text-decoration: none;
+  color: $body-color;
+  outline: 0;
+  text-decoration: underline;
+  transition: color .25s;
+  &.bare-link {
+    color: $body-color;
+    text-decoration: none;
+    }
 }
 
 a:hover,
 a:focus {
-  color: $body-color;
-  text-decoration: underline;
+  color: $link-color;
+  text-decoration: none;
 }
 
 h1,
@@ -83,11 +82,11 @@ h4,
 h5,
 h6 { color: $body-color; }
 
-h1 { font-size: 2em; }
+h1 { font-size: 1.5em; }
 
-h2 { font-size: 1.5em; }
+h2 { font-size: 1.25em; }
 
-h3 { font-size: 1.25em; }
+h3 { font-size: 1em; }
 
 li { margin-bottom: .5em; }
 
@@ -161,6 +160,10 @@ img {
   }
 }
 
+.site_footer {
+  margin-top: 6em;
+}
+
 // is this used anywhere?
 .menu li { display: inline; }
 
@@ -193,10 +196,18 @@ img {
 .tag:focus,
 .tag:hover,
 .tag:visited {
-  background-color: $body-color;
-  border-radius: 2px;
-  color: $white;
-  padding: 4px 6px;
+  //background-color: $body-color;
+  //border-radius: 2px;
+  //color: $white;
+  //padding: 4px 6px;
+}
+
+.tag:after {
+  content: ',';
+}
+
+.tag:last-of-type:after {
+  content: '';
 }
 
 
