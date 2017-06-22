@@ -13,5 +13,6 @@ include/
 *.pyc
 scripts/tumblr_jekyll.ini
 scripts/instagram-sync.ini
+scripts/twitter-sync.ini
 
 .com.apple.backupd.mdmv36926116
