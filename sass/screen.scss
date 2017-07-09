@@ -3,7 +3,7 @@
 //  Shawn Eisenach
 //
 
-@import 'bootstrap-custom';
+// @import 'bootstrap-custom';
 
 // Variables
 $font-size: 18px;
@@ -18,6 +18,7 @@ $body-color: #101;
 $warm-accent-color: #ff2727;
 // $link-color: #4b9be9; i like this color //
 // TODO name this color, and define function in class
+// TODO i want a different link color???
 $link-color: #176abe;
 $muted: #4c4c4c;
 // green
@@ -25,21 +26,29 @@ $success-green: #29b473;
 // yellow
 $grandis: #ffd390;
 
+@import 'typography';
+@import 'grid';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 html { font: 1em/1.5 helvetica, sans-serif; }
 
 body {
   background-color: $white;
   color: $body-color;
-  -webkit-font-feature-settings: 'kern';
   font-feature-settings: 'kern';
   font-size: 1rem;
+  margin-top: 0;
   text-rendering: optimizeLegibility;
 }
 
 // set up vertical spacing
 // via http:/*csswizardry.com/2012/06/single-direction-margin-declarations/
-
 h1,
 h2,
 h3,
@@ -57,54 +66,11 @@ table,
 fieldset,
 hr { margin-bottom: 1.5rem; }
 
-a,
-a:visited {
-  color: $body-color;
-  outline: 0;
-  text-decoration: underline;
-  transition: color .25s;
-  &.bare-link {
-    color: $body-color;
-    text-decoration: none;
-    }
-}
-
-a:hover,
-a:focus {
-  color: $link-color;
-  text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 { color: $body-color; }
-
-h1 { font-size: 1.5em; }
-
-h2 { font-size: 1.25em; }
-
-h3 { font-size: 1em; }
-
-li { margin-bottom: .5em; }
-
-.inline_dl dt {
-  clear: left;
-  float: left;
-  margin: 0 2rem 0 0;
-  text-align: right;
-}
-
-.inline_dl dd { margin: 0 0 .5rem; }
-
 img {
   display: block;
   height: auto;
   max-width: 100%;
 }
-
 
 // color
 .accent { color: $warm-accent-color; }
@@ -116,12 +82,17 @@ img {
 }
 
 // helpers
-.center_text { text-align: center; }
+// TODO replace center_text with center-text
+.center-text { text-align: center; }
 .tight { margin: 0; }
-.margin_top { margin-top: 1.5rem; }
-.margin_top_more { margin-top: 3rem; }
-.margin_bottom { margin-bottom: 1.5rem; }
-.margin_bottom_more { margin-bottom: 3rem; }
+// TODO replace margin_top with margin-top
+.margin-top { margin-top: 1.5rem; }
+// TODO replace margin_top_more with margin-top-more
+.margin-top-more { margin-top: 3rem; }
+// TODO replace margin-bottom with margin-bottom
+.margin-bottom { margin-bottom: 1.5rem; }
+// TODO replace margin_bottom_more with margin-bottom-more
+.margin-bottom-more { margin-bottom: 3rem; }
 
 // grid fixes
 // This is to allow using bootstrap syntax on li without junking
@@ -133,7 +104,8 @@ img {
 
 
 // site header and footer
-.site_header {
+// TODO replace site_header with site-header
+.site-header {
   a { color: $body-color; }
   h1 { margin-bottom: 1rem; }
 
@@ -141,36 +113,26 @@ img {
     display: inline;
     width: 100px;
     }
-
-  nav {
-    a { font-weight: normal; }
-    a:hover,
-    a:focus {
-      color: $body-color;
-      text-decoration: underline;
-    }
-
-    li {
-      display: inline;
-      font-size: 1.75rem;
-      margin-right: 1rem;
-    }
-
-    li:last-child { margin-right: 0; }
-  }
 }
 
-.site_footer {
-  margin-top: 6em;
+.site-nav {
+  a:hover,
+  a:focus { text-decoration: underline; }
+
+  ul { margin-bottom: 0; }
+  li {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  li:last-child { margin-right: 0; }
 }
 
 // is this used anywhere?
 .menu li { display: inline; }
 
-.main_body {
-  margin-bottom: 2rem;
-  margin-top: .5rem;
-  }
+// TODO replace main_body with main-body
+.main-body { margin-bottom: 2rem; }
 
 // Posts
 .post {
@@ -190,7 +152,8 @@ img {
   footer { margin-top: 1rem; }
 }
 
-#blog-pagination { margin-top: 2rem; }
+//TODO replace #blog-pagination with .blog-pagination
+.blog-pagination { margin-top: 2rem; }
 
 .tag,
 .tag:focus,
@@ -202,28 +165,29 @@ img {
   //padding: 4px 6px;
 }
 
-.tag:after {
-  content: ',';
-}
+.tag::after { content: ','; }
 
-.tag:last-of-type:after {
-  content: '';
-}
+.tag:last-of-type::after { content: ''; }
 
 
 // Sketchbooks
-.sketchbook_index {
+// TODO merge (if used) sketchbook_index and sb_index
+// TODO replace sketchbook_index with sketchbook-index
+.sketchbook-index {
   li {
     display: inline;
     padding: .75em;
   }
 }
 
-.sb_index {
+// TODO check if sb_index used
+// TODO replace sb_index with sb-index
+.sb-index {
   h2 { text-transform: capitalize; }
 }
 
-.sketchbook_page {
+// TODO replace sketchbook_page with sketchbook-page
+.sketchbook-page {
   h2 {
     font-size: 16px;
     text-transform: capitalize;
@@ -231,7 +195,8 @@ img {
 
   h3 { font-size: 1em; }
 
-  .inline_dl {
+  // TODO replace inline_dl with inline-dl
+  .inline-dl {
     font-size: .85rem;
     dd { margin: 0 0 .5rem 6rem;}
     dt {
@@ -250,7 +215,8 @@ img {
 
 
 // Publications
-#Portfolio {
+// TODO replace #Portfolio with .portfolio
+.portfolio {
   .color-block {
     font-size: 1.5rem;
 
@@ -269,14 +235,21 @@ img {
   span { background-color: $white; }
 }
 
-.bg-om2013 { background-color: #e69340; }
+.bg-om2013 {
+  // scss-lint:disable ColorVariable
+  background-color: #e69340; }
 
 .bg-ncd2013 {
+  // scss-lint:disable ColorVariable
   background-color: #e10926;
-  span { margin: 1.5em 1.75em !important; }
+  span { margin: 1.5em 1.75em; }
 }
 
-.bg-comics2013 { background-color: #52ad14; }
+.bg-comics2013 {
+  // scss-lint:disable ColorVariable
+  background-color: #52ad14;
+  }
+
 .bg-qs-b-2016 {
   background-image: url('/image/drawing/quarter_sheet/qs-crop.gif');
   span { background-color: $white; }
@@ -295,12 +268,14 @@ img {
   }
 }
 
-// TODO these layouts are exactly the same.
-// Concat and update pages
+// TODO these layouts are exactly the same, Concat and update pages.
+// TODO replace #NCD_page with .ncd-page
+// TODO replace #Comics_page with .comics-page
 #Comics_page,
 #NCD_page {
   h1,
-  .nav_with_index { text-align: right; }
+  // todo replace nav_with_index with nav-with-index
+  .nav-with-index { text-align: right; }
 }
 
 // Shop
@@ -311,6 +286,4 @@ img {
 
 form.cart { display: inline-block; }
 
-@import 'grid';
 @import 'media-queries';
-// @import 'media-object';
