@@ -4,9 +4,15 @@
   grid-column: 1 / -1;
 }
 
+// scss-lint:disable MergeableSelector
 .site-nav { grid-area: site-nav; }
 .site-footer { grid-area: site-footer; }
 .site-content { grid-area: site-content; }
+
+.entry-header { grid-area: entry-header; }
+.entry-content { grid-area: entry-content; }
+.entry-pagination { grid-area: entry-pagination; }
+// scss-lint:enable MergeableSelector
 
 // no grid support
 // scss-lint:disable MergeableSelector
@@ -27,14 +33,45 @@
                          "site-nav"
                          "site-content"
                          "site-footer";
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-template-rows: 40px auto auto;
     margin: 0 auto;
   }
 }
 
-// Item Grid for use with sketchbooks, zines, drawings, etc...
+// entry grid
+.entry {
+  display: flex;
+  flex-wrap: wrap;
+  // scss-lint:disable PropertySpelling
+  grid-template-areas: "entry-header"
+                       "entry-content"
+                       "entry-footer";
+}
 
+@supports( display: grid ) {
+  .entry {
+    display: grid;
+    // scss-lint:disable PropertySpelling
+    grid-template-rows: auto;
+    margin: 0;
+  }
+}
+
+.entry-header,
+.entry-footer {
+  flex: 0 1 100%;
+  grid-column: 1 / -1;
+}
+
+.entry-content {
+  // scss-lint:disable MergeableSelector
+  // needed for the flex layout
+  flex: 1 1 200px;
+  margin-bottom: 1rem;
+}
+
+
+// Use Item Grid for sketchbooks, zines, drawings, etc...
 // flex fallback where no grid support
 .item-grid {
   display: flex;
@@ -80,7 +117,7 @@
     grid-template-columns: auto;
     grid-template-rows: 40px 45px auto;
     margin: 0 auto;
-    max-width: 940px;
+    max-width: 640px;
   }
 
   .item-grid {

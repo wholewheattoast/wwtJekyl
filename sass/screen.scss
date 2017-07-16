@@ -3,29 +3,12 @@
 //  Shawn Eisenach
 //
 
-// @import 'bootstrap-custom';
-
 // Variables
 $font-size: 18px;
 $line-height: 27px;  // (font-size * 1.5)
 $basline-grid: 6px;
 
-// Colors
-$white: #fff;
-//$background-color: #fafafa;
-$body-color: #101;
-// TODO name this color, and define function in class
-$warm-accent-color: #ff2727;
-// $link-color: #4b9be9; i like this color //
-// TODO name this color, and define function in class
-// TODO i want a different link color???
-$link-color: #176abe;
-$muted: #4c4c4c;
-// green
-$success-green: #29b473;
-// yellow
-$grandis: #ffd390;
-
+@import 'colors';
 @import 'typography';
 @import 'grid';
 
@@ -134,10 +117,17 @@ img {
 // TODO replace main_body with main-body
 .main-body { margin-bottom: 2rem; }
 
-// Posts
+// entries
+// TODO i'm leaning towards using the term entry rather then post
+.entry,
 .post {
   font-size: 1.25rem;
-  margin-bottom: 1.125rem;
+}
+
+.entry-header {
+  h1 {
+    margin-bottom: 8px;
+  }
 
   .permalink {
     color: $muted;
@@ -148,12 +138,15 @@ img {
       text-decoration: none;
     }
   }
-
-  footer { margin-top: 1rem; }
 }
 
 //TODO replace #blog-pagination with .blog-pagination
-.blog-pagination { margin-top: 2rem; }
+.blog-pagination {
+  margin-top: 2rem;
+  ul { text-align: right; }
+  li:first-child { margin-right: 2em; }
+  li:last-of-type { margin-right: 0; }
+  }
 
 .tag,
 .tag:focus,

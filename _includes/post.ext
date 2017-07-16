@@ -1,26 +1,27 @@
-<article class="post h-entry">
-  <h2>
-    <a class="permalink u-url bare-link" href="{{site.baseurl}}{{post.url}}" title="permalink | {{post.title}}">
-      <time class="dt-published" datetime="{{post.date|date:"%F"}}">{{post.date|date:"%b %d, %Y"}}</time>
-    </a>
-  </h2>
-  <div class="row">
-    <div class="col-md-8">
-      <section class="e-content">
-        {{ post.content }}
-      </section>
-      <footer>
-        {% if post.tags %}
-          <p>
-            <span class="tags">Tagged: 
-              {% assign sorted_tags = (post.tags | sort:last) %}
-              {% for tag in sorted_tags %}
-                <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
-              {% endfor %}
-            </span>
-          </p>
-        {% endif %}
-      </footer>
-    </div>
-  </div>
+<article class="entry h-entry blog-post">
+  <header class="entry-header">
+    <h1>
+      <a class="bare-link permalink u-url" href="{{site.baseurl}}{{post.url}}"
+        title="permalink | {{post.title}}">
+        <time class="dt-published" datetime="{{post.date|date:"%F"}}">
+          {{post.date|date:"%b %d, %Y"}}
+        </time>
+      </a>
+    </h1>
+  </header>
+  <section class="e-content entry-content">
+    {{ post.content }}
+  </section>
+  <footer class="entry-footer">
+    {% if post.tags %}
+      <ul class="list-inline list-unstyled">
+        {% assign sorted_tags = (post.tags | sort:last) %}
+        {% for tag in sorted_tags %}
+          <li>
+            <a href="/tag/{{ tag }}" class="tag">{{ tag }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </footer>
 </article>
