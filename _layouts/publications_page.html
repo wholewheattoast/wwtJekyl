@@ -1,43 +1,31 @@
 ---
-layout: base_full_width
+layout: base_grid
 ---
 
-<article id="Publications_page" resource="{{ page.stub }}">
-    <div class="row">
-        <div class="col-md-6">
-            <p>
-                <img src="{{ page.cover_image }}" alt="Cover of {{ page.title }}"
-                title="Cover of {{ page.title }}" />
-            </p>
-        </div>
-        
-        <div class="col-md-6">
-            <header>
-                <h1 property="dc:title">{{ page.title }}</h1>
-            </header>
-            <p><span property="dc:description">{{ page.description }}</span></p>
-            <ul class="list-unstyled">
-                <li><span property="dc:extent">{{ page.pages }} pages</span></li>
-                <li><span property="dc:medium">{{ page.media }}</span></li>
-                <li><span property="dc:format">{{ page.size }} inches</span></li>
-                <li><span property="dc:date">{{ page.date }}</span></li>
-            </ul>
-            {% if page.buy %}
-                <p>
-                    <a href="http://{{ page.buy }}">Buy</a>
-                </p>
-            {% endif %}
+<article resource="{{ page.stub }}">
+  <h1 property="dc:title">{{ page.title }}</h1>
 
-            {%if page.extra %}
-                <p>
-                    {{ page.extra }}
-                </p>
-            {% endif %}
-        </div>
-        
-    </div>
+  <p><span property="dc:description">{{ page.description }}</span></p>
 
-    <!-- details -->
-    {{ page.content }}
+  <ul class="list-unstyled">
+      <li><span property="dc:extent">{{ page.pages }} pages</span></li>
+      <li><span property="dc:medium">{{ page.media }}</span></li>
+      <li><span property="dc:format">{{ page.size }} inches</span></li>
+      <li><span property="dc:date">{{ page.date }}</span></li>
+  </ul>
+
+  {% if page.buy %}
+  <p>
+    <a href="http://{{ page.buy }}">Buy</a>
+  </p>
+  {% endif %}
+
+  {%if page.extra %}
+  <p>
+    {{ page.extra }}
+  </p>
+  {% endif %}
+
+  {{ page.content }}
 
 </article>
