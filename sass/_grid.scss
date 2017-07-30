@@ -67,11 +67,10 @@
   // scss-lint:disable MergeableSelector
   // needed for the flex layout
   flex: 1 1 200px;
-  margin-bottom: 1rem;
 }
 
 
-// Use Item Grid for sketchbooks, zines, drawings, etc...
+// Use Item Grid for zines, drawings, etc...
 // flex fallback where no grid support
 .item-grid {
   display: flex;
@@ -107,6 +106,70 @@
 .item-panel:last-child { padding-right: 0; }
 
 
+// flex fallback where no grid support
+.sketchbook-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sketchbook-panel {
+  // needed for the flex layout
+  flex: 1 1 200px;
+  padding-right: 10px;
+}
+
+@supports(display: grid ) {
+  .sketchbook-grid {
+    display: grid;
+    // scss-lint:disable PropertySpelling
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 48%);
+    grid-template-rows: auto;
+    margin: 0;
+  }
+
+  .sketchbook-panel { padding-right: 0; }
+}
+
+.sketchbook-header,
+.sketchbook-footer {
+  flex: 0 1 100%;
+  grid-column: 1 / -1;
+}
+
+
+// flex fallback where no grid support
+.shop-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shop-panel {
+  // needed for the flex layout
+  flex: 1 1 200px;
+  padding-right: 10px;
+}
+
+@supports(display: grid) {
+  .shop-grid {
+    display: grid;
+    // scss-lint:disable PropertySpelling
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 48%);
+    grid-template-rows: auto;
+    margin: 0;
+  }
+
+  .shop-panel { padding-right: 0; }
+}
+
+.shop-header,
+.shop-footer {
+  flex: 0 1 100%;
+  grid-column: 1 / -1;
+}
+
+
 @media (min-width: 640px) {
   .wrapper {
     // scss-lint:disable PropertySpelling
@@ -117,20 +180,30 @@
     grid-template-columns: auto;
     grid-template-rows: 40px 45px auto;
     margin: 0 auto;
+    // TODO 768 would be nice?
     max-width: 640px;
   }
 
   .item-grid {
     // scss-lint:disable PropertySpelling
     grid-template-columns: repeat(auto-fill, 170px);
-    margin: 0;
+    margin: 2rem 0 0;
+  }
+
+  .sketchbook-grid {
+    // scss-lint:disable PropertySpelling
+    grid-template-columns: repeat(auto-fill, 145px);
+    margin: 2rem 0 0;
+  }
+
+  .shop-grid {
+    // scss-lint:disable PropertySpelling
+    grid-template-columns: repeat(auto-fill, 200px);
+    margin: 2rem 0 0;
   }
 }
 
-
 // We need to set the margin used on flex items to 0 as we have gaps in grid.
 @supports (display: grid) {
-  .wrapper > * {
-    margin: 0;
-  }
+  .wrapper > * { margin: 0; }
 }

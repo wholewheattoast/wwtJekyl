@@ -1,9 +1,9 @@
 ---
-layout: base_full_width
+layout: base_grid
 title: Archive
 ---
 
-<section id="Tags">
+<section class="tags">
   <h2>Tags</h2>
     <ul class="list-unstyled list-inline">
       {% assign sorted_tags = (site.tags | sort:last) %}
@@ -11,26 +11,24 @@ title: Archive
         {% assign t = tag | first %}
         {% assign posts = tag | last %}
          <li>
-          <a href="/tag/{{ t }}">
+          <a class="bare-link" href="/tag/{{ t }}">
             {{t | downcase | replace:" ","-" }} ({{ posts | size }})
-          </a> 
+          </a>
         </li>
       {% endfor %}
     </ul>
 </section>
 
-<section>
+<section class="archive-posts">
   <h2>Posts</h2>
   <ol class="list-unstyled">
     {% for post in site.posts %}
       <li>
         <time datetime="{{post.date|date:"%F"}}">{{post.date|date:"%F"}}</time>
-        &nbsp;&nbsp;
-        <a href="{{site.baseurl}}{{ post.url }}">
+        <a class="bare-link" href="{{site.baseurl}}{{ post.url }}">
           {{ post.title }}
         </a>
       </li>
     {% endfor %}
   </ol>
 </section>
-

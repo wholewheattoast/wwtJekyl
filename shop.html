@@ -1,62 +1,59 @@
 ---
-layout: base_full_width
+layout: base_grid
 title: Shop | wholewheattoast
 description: Zines and Comics for sale.
 stub: shop.html
 ---
 
-<article id="Shop">
-  <div class="row margin_top">
-    <section class="col-md-3 col-sm-4 item">
-      <img src="/image/posts/tumblr_o497zcIH7F1qzzxb4o1_1280.jpg" alt="" />
-      <h2>$10 Drawing</h2>
-      <p>4.25" x 5.5" Black ink.</p>
-      <p>Shipping included.</p>
-      <p><a href="/drawings/quarter_sheet_blk.html">See examples</a></p>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <div class="form-group">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="HWWZCMBFH64WC">
-          <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">Add to Cart</button>
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </div>
-      </form>
-    </section>
-    
-    <section class="col-md-3 col-sm-4 item">
-      <a href="/publications/fax-simile-11.html">
-        <img src="/image/publications/fax-simile-11/fax-simile-11-cover.gif" title="Fax Simile 11" alt="Fax Simile 11" />
-      </a>
-      <h2>Fax Simile 11</h2>
-      {% include buy-button-fax-simile-11.ext %}
-    </section>
+<article class="shop shop-grid">
+  <section class="shop-panel">
+    <img src="/image/posts/tumblr_o497zcIH7F1qzzxb4o1_1280.jpg" alt="" />
+    <h2>$10 Drawing</h2>
+    <p>4.25" x 5.5" Black ink.</p>
+    <p>Shipping included.</p>
+    <p><a href="/drawings/quarter_sheet_blk.html">See examples</a></p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <div class="form-group">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="HWWZCMBFH64WC">
+        <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">
+          Add to Cart
+        </button>
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </div>
+    </form>
+  </section>
 
-    <section class="col-md-3 col-sm-4 item">
+  <section class="shop-panel">
+    <a href="/publications/fax-simile-11.html">
+      <img src="/image/publications/fax-simile-11/fax-simile-11-cover.gif"
+        title="Fax Simile 11" alt="Fax Simile 11" />
+    </a>
+    <h2>Fax Simile 11</h2>
+    <p>
+      <a class="btn btn-paypall" href="/publications/fax-simile-11.html">
+        Buy
+      </a>
+    </p>
+  </section>
+
+    <section class="shop-panel">
       <a href="/publications/isometric-tuna-6.html">
         <img src="/image/publications/isometric-tuna-6/isometric-tuna-06-front-cover.gif"
           alt="Isometric Tuna 6" title="Isometric Tuna 6" />
       </a>
       <h2>Isometric Tuna 6</h2>
-      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="JRMMCRUTU9XRS">
-          <input type="hidden" name="on0" value="Shipping">
-          <div class="form-group">
-            <label for="iso_5_buy">Options</label>
-            <select name="os0" id="iso_6_buy">
-              <option value="USA">US $3.00 USD</option>
-            <option value="Outside USA">Outside USA $4.00 USD</option>
-            </select>
-          </div>
-          <input type="hidden" name="currency_code" value="USD">
-          <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">Add to Cart</button>
-          <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-      </form>
+      <p>
+        <a class="btn btn-paypall" href="/publications/isometric-tuna-6.html">
+        Buy
+        </a>
+      </p>
     </section>
 
-    <section class="col-md-3 col-sm-4 item">
+    <section class="shop-panel">
       <a href="/publications/isometric-tuna-5.html">
-        <img src="/image/publications/isometric-tuna-5/isometric-tuna-5-cover-thumb.gif" alt="Isometric Tuna 5" title="Isometric Tuna 5" />
+        <img src="/image/publications/isometric-tuna-5/isometric-tuna-5-cover-thumb.gif"
+          alt="Isometric Tuna 5" title="Isometric Tuna 5" />
       </a>
       <h2>Isometric Tuna 5</h2>
       <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -71,16 +68,17 @@ stub: shop.html
             </select>
           </div>
           <input type="hidden" name="currency_code" value="USD">
-          <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">Add to Cart</button>
+          <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">
+            Add to Cart
+          </button>
           <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
       </form>
     </section>
-  </div>
 
-  <div class="row margin_top">
-    <section class="col-md-3 col-sm-4 item">
+    <section class="shop-panel">
       <a href="/publications/fax-simile-10.html">
-        <img src="/image/publications/fax-simile-10/fax-simile-10-cover-thumb.gif" alt="Fax Simile 10" title="Fax Simile 10" />
+        <img src="/image/publications/fax-simile-10/fax-simile-10-cover-thumb.gif"
+          alt="Fax Simile 10" title="Fax Simile 10" />
       </a>
       <h2>Fax Simile 10</h2>
       <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -95,36 +93,42 @@ stub: shop.html
             </select>
           </div>
           <input type="hidden" name="currency_code" value="USD">
-          <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">Add to Cart</button>
+          <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">
+            Add to Cart
+          </button>
           <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
       </form>
     </section>
 
-    <section class="col-md-3 col-sm-4 item">
+    <section class="shop-panel">
       <a href="/publications/fax-simile-9.html">
-        <img src="/image/publications/fax-simile-9/fax-simile-09-front-cover-thumb.jpg" alt="Fax Simile 9" title="Fax Simile 9" />
+        <img src="/image/publications/fax-simile-9/fax-simile-09-front-cover-thumb.jpg"
+          alt="Fax Simile 9" title="Fax Simile 9" />
       </a>
       <h2>Fax Simile 9</h2>
       <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="VG27T7FUVRYXY">
-          <input type="hidden" name="on0" value="Shipping">
-          <div class="form-group">
-            <label for="fs_9_buy">Options</label>
-            <select name="os0" id="fs_9_buy">
-              <option value="US">US $1.50 USD</option>
-              <option value="Non-US">Non-US $2.00 USD</option>
-            </select>
-          </div>
-          <input type="hidden" name="currency_code" value="USD">
-          <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">Add to Cart</button>
-          <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="VG27T7FUVRYXY">
+        <input type="hidden" name="on0" value="Shipping">
+        <div class="form-group">
+          <label for="fs_9_buy">Options</label>
+          <select name="os0" id="fs_9_buy">
+            <option value="US">US $1.50 USD</option>
+            <option value="Non-US">Non-US $2.00 USD</option>
+          </select>
+        </div>
+        <input type="hidden" name="currency_code" value="USD">
+        <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">
+          Add to Cart
+        </button>
+        <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
       </form>
     </section>
 
-    <section class="col-md-3 col-sm-4 item">
+    <section class="shop-panel">
       <a href="/publications/fax-simile-8.html">
-        <img src="/image/publications/fax-simile-8/fax-simile-08-icon.gif" alt="Link to Fax Simile 8" title="Fax Simile 8" />
+        <img src="/image/publications/fax-simile-8/fax-simile-08-icon.gif"
+          alt="Link to Fax Simile 8" title="Fax Simile 8" />
       </a>
       <h2>Fax Simile 8</h2>
       <!-- Fax Simile 8 paypal button -->
@@ -140,14 +144,17 @@ stub: shop.html
             </select>
           </div>
           <input type="hidden" name="currency_code" value="USD">
-          <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">Add to Cart</button>
+          <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">
+            Add to Cart
+          </button>
           <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
       </form>
     </section>
 
-    <section class="col-md-3 col-sm-4 item">
+    <section class="shop-panel">
       <a href="/publications/fax-simile-7.html">
-        <img src="image/publications/fax-simile-7/fax-simile-07-icon.png" alt="Link to Fax Simile 7" title="Fax Simile 7" />
+        <img src="image/publications/fax-simile-7/fax-simile-07-icon.png"
+          alt="Link to Fax Simile 7" title="Fax Simile 7" />
       </a>
       <h2>Fax Simile 7</h2>
       <!-- Fax Simile 7 paypal button -->
@@ -163,16 +170,17 @@ stub: shop.html
           </select>
         </div>
         <input type="hidden" name="currency_code" value="USD">
-        <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">Add to Cart</button>
+        <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">
+          Add to Cart
+        </button>
         <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
         </form>
     </section>
-  </div>
 
-  <div class="row margin_top">
-    <section class="col-md-3 col-sm-4 item">
+    <section class="shop-panel">
       <a href="/publications/fax_simile_6.html">
-        <img src="image/publications/fax_simile_6/Fax-Similie-06-icon.png" alt="Link to Fax Simile 6" title="Fax Simile 6" />
+        <img src="image/publications/fax_simile_6/Fax-Similie-06-icon.png"
+          alt="Link to Fax Simile 6" title="Fax Simile 6" />
       </a>
       <h2>Fax Simile 6</h2>
       <!-- Fax Simile 6 paypal button -->
@@ -188,12 +196,14 @@ stub: shop.html
           </select>
         </div>
         <input type="hidden" name="currency_code" value="USD">
-        <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">Add to Cart</button>
+        <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">
+          Add to Cart
+        </button>
         <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
       </form>
     </section>
 
-     <section class="col-md-3 col-sm-4 item">
+     <section class="shop-panel">
       <a href="/publications/fax_simile_5.html">
         <img src="image/publications/fax_simile_5/fax-simile-5-icon.png" alt="Link to Fax Simile 5" title="Fax Simile 5" />
       </a>
@@ -211,14 +221,17 @@ stub: shop.html
           </select>
         </div>
         <input type="hidden" name="currency_code" value="USD">
-        <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">Add to Cart</button>
+        <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">
+          Add to Cart
+        </button>
         <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
       </form>
     </section>
 
-    <section class="col-md-3 col-sm-4 item">
+    <section class="shop-panel">
       <a href="publications/isometric-tuna-4.html">
-        <img src="image/publications/isometric-tuna-4/isometric-tuna-4-icon.png" alt="Link to Isometric Tuna 4" title="Isometric Tuna 4" />
+        <img src="image/publications/isometric-tuna-4/isometric-tuna-4-icon.png"
+          alt="Link to Isometric Tuna 4" title="Isometric Tuna 4" />
       </a>
       <h2>Isometric Tuna 4</h2>
       <!-- Isometric Tuna 4 paypal button -->
@@ -234,14 +247,14 @@ stub: shop.html
             </select>
         </div>
         <input type="hidden" name="currency_code" value="USD">
-        <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">Add to Cart</button>
+        <button type="submit" name="submit" class="btn btn-default btn-sm btn-paypall">
+          Add to Cart
+        </button>
         <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
       </form>
     </section>
-  </div>
 
-  <div class="row margin_top">
-    <div class="col-md-4 pull-right">
+    <div class="pull-right">
       <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
         <div class="form-group">
           <input type="hidden" name="cmd" value="_s-xclick">
@@ -254,5 +267,4 @@ stub: shop.html
         </div>
       </form>
     </div>
-  </div>
 </article>

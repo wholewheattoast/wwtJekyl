@@ -59,10 +59,24 @@ img {
 .accent { color: $warm-accent-color; }
 
 // buttons
-.btn-paypall {
-  background-color: $grandis;
-  border: 0;
+.btn {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
+
+.btn-paypall { background-color: $grandis; }
+
+.btn-paypall:hover { color: $body-color; }
 
 // helpers
 // TODO replace center_text with center-text
@@ -81,8 +95,8 @@ img {
 // This is to allow using bootstrap syntax on li without junking
 // up the markup with all those extra rows.
 .list-grid {
-  p,
-  li { margin-bottom: 2em; }
+  li,
+  p { margin-bottom: 2em; }
 }
 
 
@@ -95,7 +109,7 @@ img {
   .logo {
     display: inline;
     width: 100px;
-    }
+  }
 }
 
 .site-nav {
@@ -148,32 +162,37 @@ img {
   li:last-of-type { margin-right: 0; }
   }
 
-.tag,
-.tag:focus,
-.tag:hover,
-.tag:visited {
-  //background-color: $body-color;
-  //border-radius: 2px;
-  //color: $white;
-  //padding: 4px 6px;
+
+// Blog Archive
+.tags {
+  a:focus,
+  a:hover { text-decoration: underline; }
+
+  .list-inline li { margin-right: 1rem; }
 }
 
+.archive-posts {
+  a:focus,
+  a:hover { text-decoration: underline; }
+
+  li {
+    height: $line-height;
+    overflow: hidden;
+  }
+
+  li time { margin-right: 1rem; }
+}
+
+
+// Tags
 .tag::after { content: ','; }
 
 .tag:last-of-type::after { content: ''; }
 
 
 // Sketchbooks
-// TODO merge (if used) sketchbook_index and sb_index
-// TODO replace sketchbook_index with sketchbook-index
-.sketchbook-index {
-  li {
-    display: inline;
-    padding: .75em;
-  }
-}
+.sketchbook-panel p { margin: 0; }
 
-// TODO check if sb_index used
 // TODO replace sb_index with sb-index
 .sb-index {
   h2 { text-transform: capitalize; }
@@ -206,7 +225,6 @@ img {
   top: calc(50% - 4em);
 }
 
-
 // Publications
 // TODO replace #Portfolio with .portfolio
 .portfolio {
@@ -221,6 +239,9 @@ img {
       padding: 1em;
     }
   }
+  h3 { margin-bottom: 0; }
+  ul,
+  ol { margin-top: 0; }
 }
 
 .bg-om2014 {
@@ -248,19 +269,6 @@ img {
   span { background-color: $white; }
 }
 
-// portfolio block
-.portfolio-block {
-  font-size: 1.5rem;
-
-  li { height: 8em; }
-
-  span {
-    display: inline-block;
-    margin: 1.5em 2em;
-    padding: 1em;
-  }
-}
-
 // TODO these layouts are exactly the same, Concat and update pages.
 // TODO replace #NCD_page with .ncd-page
 // TODO replace #Comics_page with .comics-page
@@ -272,11 +280,6 @@ img {
 }
 
 // Shop
-.item h2 {
-  font-size: 1.25em;
-  margin-bottom: 1em;
-}
-
 form.cart { display: inline-block; }
 
 @import 'media-queries';
