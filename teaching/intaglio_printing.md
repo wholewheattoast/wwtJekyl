@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: base_grid
 title: wwt | Etching
 description: Etching How To
 ---
