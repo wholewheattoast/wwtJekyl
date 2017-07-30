@@ -1,6 +1,11 @@
 <div>
-    <h2>Contact</h2>
-    Shawn Eisenach<br />
-    <i class="icon-mobile-phone"> </i> <a hreff="tel:+17074840051">707-484-0051</a><br />
-    <i class="icon-envelope"> </i> <a href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
+  <h2>Contact</h2>
+  <ul class="list-unstyled">
+    <li>Shawn Eisenach</li>
+    <li><a href="tel:+17074840051">707-484-0051</a></li>
+    <li>
+      <a href="mailto:shawn@wholewheattoast.com">shawn@wholewheattoast.com</a>
+    </li>
+  </ul>
 </div>
+
