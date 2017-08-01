@@ -1,15 +1,16 @@
 ---
-layout: base_full_width
+layout: base_grid
 ---
 
-<article id="NCD_page" resource="{{ page.stub }}">
-  <div class="row">
-    <div class="col-lg-6 col-md-6">
-      <p>{{ content }}</p>
-    </div>
-    <div class="col-lg-4 col-md-6 pull-right">
-      <h1 property="dc:title">{{ page.title }}</h1>
-      {% include nav_with_index.ext %}
-    </div>
-  </div>
+<article resource="{{ page.stub }}">
+  <h1 property="dc:title">{{ page.title }}</h1>
+
+  {% include nav_with_index.ext %}
+
+  <p>
+    <span property="http://purl.org/dc/dcmitype/Image">
+      {{ content }}
+    </span>
+  </p>
+
 </article>
