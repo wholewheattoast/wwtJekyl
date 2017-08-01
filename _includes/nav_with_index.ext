@@ -1,27 +1,25 @@
-<div class="row">
-    <div class="col-md-12">
-        <nav class="nav_with_index">
-                <ol class="list-unstyled list-inline">
-                    {% if page.index %}
-                        <li>
-                            <a href="{{ page.prev }}.html" title="prev" rel="prev">prev</a>
-                        </li>
-                        <li>
-                            <a href="{{ page.index }}">index</a>
-                        </li>
-                        <li>
-                            <a href="{{ page.next }}.html" title="next" rel="next">next</a>
-                        </li>
-                    {% else %}
-                        <li>
-                            <a href="{{ page.prev }}.html" title="prev" rel="prev">prev</a>
-                        </li>
-                        <li>
-                            <a href="{{ page.next }}.html" title="next" rel="next">next</a>
-                        </li>
-                    {% endif %}
+<nav class="nav_with_index">
+  <ul class="list-unstyled list-inline">
+    {% if page.index %}
+      <li>
+        <a href="{{ page.prev }}.html" title="prev" rel="prev">prev</a>
+      </li>
 
-                </ol>
-        </nav>
-    </div>
-</div>
+      <li>
+        <a href="{{ page.index }}">index</a>
+      </li>
+
+      <li>
+        <a href="{{ page.next }}.html" title="next" rel="next">next</a>
+      </li>
+    {% else %}
+      <li>
+        <a href="{{ page.prev }}.html" title="prev" rel="prev">prev</a>
+      </li>
+
+      <li>
+        <a href="{{ page.next }}.html" title="next" rel="next">next</a>
+      </li>
+  {% endif %}
+  </ul>
+</nav>
