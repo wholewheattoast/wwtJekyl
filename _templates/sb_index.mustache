@@ -6,25 +6,25 @@ stub: sketchbooks/{{sb_url_safe_name}}/index.html
 date:
 ---
 
-<section class="sb_index">
-  <h2>{{sb_display_name}}</h2>
+<article class="sb_index">
+  <h1>{{sb_display_name}}</h1>
 
   {{#metadata}}
-    <p>{{date}}</p>
+  <p>{{date}}</p>
   {{/metadata}}
-  
+
   <ol class="list-unstyled row list-grid">
     {{#sb_spreads}}
-      <li class="col-xs-6 col-sm-4 col-md-3">
-        <a href="/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.html"
-          title="{{sb_display_name}} {{spread}}">
-          <img 
-            src="/{{image_dir}}/thumbs/{{sb_url_safe_name}}-{{spread}}.jpg" 
-            title="{{sb_display_name}} {{spread}}"
-            alt="{{sb_display_name}} {{spread}} page"
-          />
-        </a>
-      </li>
+    <li class="col-xs-6 col-sm-4 col-md-3">
+      <a href="/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.html"
+        title="{{sb_display_name}} {{spread}}">
+        <img
+          src="/{{image_dir}}/thumbs/{{sb_url_safe_name}}-{{spread}}.jpg"
+          title="{{sb_display_name}} {{spread}}"
+          alt=""
+        />
+      </a>
+    </li>
     {{/sb_spreads}}
   </ol>
-</h2>
+</article>
