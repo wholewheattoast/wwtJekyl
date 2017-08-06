@@ -1,13 +1,13 @@
 <article class="entry h-entry blog-post">
   <header class="entry-header">
-    <h1>
+    <h2>
       <a class="bare-link permalink u-url" href="{{site.baseurl}}{{post.url}}"
         title="permalink | {{post.title}}">
         <time class="dt-published" datetime="{{post.date|date:"%F"}}">
           {{post.date|date:"%b %d, %Y"}}
         </time>
       </a>
-    </h1>
+    </h2>
   </header>
   <section class="e-content entry-content">
     {{ post.content }}

@@ -167,8 +167,11 @@ img {
 .tags {
   a:focus,
   a:hover { text-decoration: underline; }
-
-  .list-inline li { margin-right: 1rem; }
+  
+  .list-inline li {
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
 }
 
 .archive-posts {
