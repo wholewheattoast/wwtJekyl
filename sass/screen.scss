@@ -178,9 +178,8 @@ img {
   li {
     height: $line-height;
     overflow: hidden;
+    time { margin-right: 1rem; }
   }
-
-  li time { margin-right: 1rem; }
 }
 
 
@@ -192,6 +191,11 @@ img {
 
 // Sketchbooks
 .sketchbook-panel p { margin: 0; }
+
+// this is for sketchbooks listed as a verticle list rather then grid
+.sketchbook-list {
+  li { margin-bottom: 1.5rem; }
+}
 
 // TODO replace sb_index with sb-index
 .sb-index {
@@ -239,7 +243,9 @@ img {
       padding: 1em;
     }
   }
+
   h3 { margin-bottom: 0; }
+
   ul,
   ol { margin-top: 0; }
 }
@@ -270,10 +276,8 @@ img {
 }
 
 // TODO these layouts are exactly the same, Concat and update pages.
-// TODO replace #NCD_page with .ncd-page
 // TODO replace #Comics_page with .comics-page
-#Comics_page,
-#NCD_page {
+#Comics_page {
   h1,
   // todo replace nav_with_index with nav-with-index
   .nav-with-index { text-align: right; }

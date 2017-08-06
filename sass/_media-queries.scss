@@ -1,28 +1,4 @@
-/* Media Querries
-============================================== */
-/* 480px Smartphones */
-/*
-@media (max-width: 480px) {
-  #full_width .container { width: 98%; }
-
-  h1 { font-size: 1.75em; }
-  h2 { font-size: 1.5em; }
-  h3 { font-size: 1.25em; }
-
-  ol.inline > li,
-  ul.inline > li {
-    display: inline-block;
-    padding-left: .125em;
-    padding-right: .125em;
-  }
-  
-  .site_header nav li { font-size: 1.125rem; }
-  
-  .post p { font-size: 1rem; }
-
-  #blog-pagination { text-align: right; }
-}
-*/
+// Media Querries
 
 @media (min-width: 640px) {
   .about,
@@ -31,28 +7,11 @@
   }
 }
 
-/* 767 "smartphones and small tablets */
-/*
-@media (max-width: 767px) {
-  body { margin-top: 0; }
-}
-*/
-
-/* 768 Portrait tablets */
-@media (min-width: 768px) and (max-width: 979px) {
-  #NCD_page {
-    nav {
-      margin-top: 1em;
-      text-align: right;
-    }
-  }
-}
-
 
 @media (max-width: 980px) {
   .sb-nav {
     position: relative;
-    right: 0px;
+    right: 0;
     text-align: right;
     top: 0;
   }
