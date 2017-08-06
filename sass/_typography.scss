@@ -1,0 +1,54 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { color: $body-color; }
+
+h1 { font-size: 1.5em; }
+
+h2 { font-size: 1.25em; }
+
+h3 { font-size: 1em; }
+
+a,
+a:visited {
+  color: $body-color;
+  outline: 0;
+  text-decoration: underline;
+  transition: color .25s;
+}
+
+a:hover,
+a:focus {
+  color: $link-color;
+  text-decoration: none;
+}
+
+.bare-link,
+.bare-link:hover,
+.bare-link:focus {
+  color: $body-color;
+  text-decoration: none;
+}
+
+li { margin-bottom: .5em; }
+
+.list-inline {
+  li { display: inline; }
+}
+
+// TODO replace inline_dl with inline-dl
+.inline-dl dt {
+  clear: left;
+  float: left;
+  margin: 0 2rem 0 0;
+  text-align: right;
+}
+
+.inline-dl dd { margin: 0 0 .5rem; }
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}

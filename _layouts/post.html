@@ -1,32 +1,30 @@
 ---
-layout: base_full_width
+layout: base_grid
 ---
 
-<article class="post h-entry">
-  <h2>
-    <a class="permalink u-url bare-link" href="{{site.baseurl}}{{post.url}}" title="permalink | {{page.title}}">
-      <time class="dt-published" datetime="{{page.date|date:"%F"}}">
-        {{page.date|date:"%b %d, %Y"}}
-      </time>
-    </a>
-  </h2>
-  <div class="row">
-    <div class="col-md-8">
-      <section class="e-content">
-        {{ content }}
-      </section>
-      <footer>
-        {% if page.tags %}
-          <ul class="list-unstyled list-inline">
-            {% assign sorted_tags = (page.tags | sort:last) %}
-            {% for tag in sorted_tags %}
-              <li>
-                <a href="/tag/{{tag}}" class="tag">{{tag}}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      </footer>
-    </div>
-  </div>
+<article class="entry h-entry">
+  <header class="entry-header">
+    <h2>
+      <a class="permalink u-url bare-link" href="{{site.baseurl}}{{post.url}}" title="permalink | {{page.title}}">
+        <time class="dt-published" datetime="{{page.date|date:"%F"}}">
+          {{page.date|date:"%b %d, %Y"}}
+        </time>
+      </a>
+    </h2>
+  </header>
+  <section class="e-content entry-content">
+    {{ content }}
+  </section>
+  <footer class="entry-footer">
+    {% if page.tags %}
+      <ul class="list-unstyled list-inline">
+        {% assign sorted_tags = (page.tags | sort:last) %}
+        {% for tag in sorted_tags %}
+          <li>
+            <a href="/tag/{{tag}}" class="tag">{{tag}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </footer>
 </article>

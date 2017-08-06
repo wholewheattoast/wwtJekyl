@@ -3,17 +3,19 @@
   {% include post.ext %}
 {% endfor %}
 
-  <nav id="blog-pagination">
-    <ul class="list-unstyled list-inline">
-      {% if paginator.next_page %}
-        <li>
-          <a href="{{site.baseurl}}{{paginator.next_page_path}}" rel="next">Older Posts</a>
-        </li>
-      {% endif %}
-      {% if paginator.previous_page %}
-        <li>
-          <a href="{{site.baseurl}}{{paginator.previous_page_path}}" rel="prev">Newer Posts</a>
-        </li>
-      {% endif %}
-    </ul>
-  </nav>
+<nav class="blog-pagination">
+  <ul class="list-unstyled list-inline">
+  {% if paginator.previous_page %}
+      <li>
+        <a href="{{site.baseurl}}{{paginator.previous_page_path}}"
+          rel="prev">Newer Posts</a>
+      </li>
+    {% endif %}
+    {% if paginator.next_page %}
+      <li>
+        <a href="{{site.baseurl}}{{paginator.next_page_path}}"
+          rel="next">Older Posts</a>
+      </li>
+    {% endif %}
+  </ul>
+</nav>

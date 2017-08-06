@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/">
+    <title>{{ page.title }}</title>
+    <meta charset="UTF-8" />
+    <meta name="dc.title" content="{{ page.title }}" /> 
+    <meta name="dc.creator" content="Shawn Eisenach" />
+    <meta name="dc.description" content="{{ page.description }}" />
+    <meta name="dc.type" content="Text" /> 
+    <meta name="dc.format" content="text/html" /> 
+    <meta name="dc.identifier" content="http://www.wholewheattoast.com/{{ page.stub }}" />
+    <meta name="dc.modified" content="{{ site.time | date_to_xmlschema }}" />
+    <meta name="dc.created" content="{{ page.date }}" />
+    <meta name="dc.language" content="en" />
+    
+    <link href='{{site.url}}/feed.xml' rel='alternate' type='application/atom+xml'>
+    
+    <link href="http://www.flickr.com/photos/wholewheattoast/" rel="me">
+    <link href="https://twitter.com/wholewheattoast" rel="me">
+    <link href="https://github.com/wholewheattoast" rel="me">
+    <link href="http://instagram.com/wholewheattoast" rel="me">
+    <link href="http://pinboard.in/u:wholewheattoast" rel="me">
+    <link href="http://wholewheattoast.tumblr.com" rel="me">
+
+    <link rel="pingback" href="https://webmention.io/www.wholewheattoast.com/xmlrpc" />
+    <link rel="webmention" href="https://webmention.io/www.wholewheattoast.com/webmention" />
+
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/image/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/screen.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <!-- scripts -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+
+      <!-- google analytics -->
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-8121186-5']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+  </head>
+
+  <body class="h-card vcard" prefix="dc: http://purl.org/dc/terms/" id="full_width">
+
+    <div class="wrapper">
+      {% include site_header_grid.ext %}
+      <div class="site-content">
+        {{ content }}
+      </div>
+      {% include site_footer_grid.ext %}
+    </div>
+
+  </body>
+</html>
