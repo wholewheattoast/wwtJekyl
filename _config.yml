@@ -12,14 +12,15 @@ url: http://www.wholewheattoast.com
 incremental: true
 
 # Outputting
-permalink:     date
-paginate_path: /page:num
+# permalink:     date
+# Produces a cleaner folder structure when using categories
+permalink: /:year/:month/:title.html
 timezone: America/Los_Angeles
 
 ## Where things are
 #source:      .
 destination: _site/
-plugins_dir:     _plugins/
+plugins_dir: _plugins/
 includes:    _includes/
 
 ## Handling Reading
@@ -34,12 +35,12 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 #future:      false
 show_drafts: null
 limit_posts: 0
-#permalink:   pretty
-paginate:    5
 
 # Plugins
 whitelist: []
-gems:      [jekyll-paginate]
+# gems:      [jekyll-paginate]
+plugins:
+  - jekyll-paginate-v2
 
 # Conversion
 markdown:    rdiscount
@@ -49,3 +50,14 @@ excerpt_separator: "\n\n"
 
 rdiscount:
   extensions: []
+  
+  
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true

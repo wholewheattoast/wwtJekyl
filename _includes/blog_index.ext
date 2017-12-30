@@ -1,21 +1,24 @@
-<!-- Show last 5 posts here -->
+<!-- Show last 5 posts here, set in _config -->
 {% for post in paginator.posts %}
   {% include post.ext %}
 {% endfor %}
 
 <nav class="blog-pagination">
-  <ul class="list-unstyled list-inline">
-  {% if paginator.previous_page %}
-      <li>
-        <a href="{{site.baseurl}}{{paginator.previous_page_path}}"
-          rel="prev">Newer Posts</a>
+<!-- 
+    Showing buttons to move to the next and to the previous list of posts (pager buttons).
+  -->
+  {% if paginator.total_pages > 1 %}
+  <ul class="pager list-unstyled list-inline">
+      {% if paginator.previous_page %}
+      <li class="previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="prev">Newer Posts</a>
       </li>
-    {% endif %}
-    {% if paginator.next_page %}
-      <li>
-        <a href="{{site.baseurl}}{{paginator.next_page_path}}"
-          rel="next">Older Posts</a>
+      {% endif %}
+      {% if paginator.next_page %}
+      <li class="next">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="next">Older Posts</a>
       </li>
-    {% endif %}
+      {% endif %}
   </ul>
+  {% endif %}
 </nav>
