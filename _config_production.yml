@@ -1,5 +1,5 @@
 name: wholewheattoast
-description: Personal website of shawn eisenach
+description: Personal web site of shawn eisenach
 author: shawn eisenach
 author_email: shawn@wholewheattoast.com
 
@@ -11,18 +11,18 @@ baseurl:
 url: http://www.wholewheattoast.com
 
 # Outputting
-permalink:     date
-paginate_path: /page:num
-timezone: America/Los_Angeles
+#permalink:     date
+permalink:  /:year/:month/:title.html
+timezone:   America/Los_Angeles
 
 ## Where things are
 #source:      .
 destination: /var/www/wholewheattoast.com/public_html/
-plugins_dir:     _plugins/
+plugins_dir: _plugins/
 includes:    _includes/
 
 ## Handling Reading
-safe:        false
+safe:         false
 include:      [".htaccess"]
 exclude: [sass, README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
 keep_files:   [".git", ".svn"]
@@ -30,21 +30,30 @@ encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 ## Filtering Content
-#future:      false
+#future:     false
 show_drafts: null
 limit_posts: 0
-#permalink:   pretty
-paginate:    5
 
 # Plugins
 whitelist: []
-gems:      [jekyll-paginate]
+plugins:
+  - jekyll-paginate-v2
 
 # Conversion
-markdown:    rdiscount
-highlighter: pygments
-lsi:         false
-excerpt_separator: "\n\n"
+markdown:           rdiscount
+highlighter:        pygments
+lsi:                false
+excerpt_separator:  "\n\n"
 
 rdiscount:
   extensions: []
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true

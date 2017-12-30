@@ -18,7 +18,7 @@ layout: base_grid
   <footer class="entry-footer">
     {% if page.tags %}
       <ul class="list-unstyled list-inline">
-        {% assign sorted_tags = (page.tags | sort:last) %}
+        {% assign sorted_tags = page.tags | sort:last %}
         {% for tag in sorted_tags %}
           <li>
             <a href="/tag/{{tag}}" class="tag">{{tag}}</a>
@@ -27,4 +27,24 @@ layout: base_grid
       </ul>
     {% endif %}
   </footer>
+  <nav class="blog-pagination">
+  <!-- 
+    Showing buttons to move to the next and to the previous list of posts (pager buttons).
+  -->
+  {% if paginator.total_pages > 1 %}
+  <ul class="pager list-unstyled">
+      {% if paginator.previous_page %}
+      <li class="previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="prev">&larr; Newer Posts</a>
+      </li>
+      {% endif %}
+      {% if paginator.next_page %}
+      <li class="next">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="next">Older Posts &rarr;</a>
+      </li>
+      {% endif %}
+  </ul>
+  {% endif %}
+</nav>
+
 </article>
