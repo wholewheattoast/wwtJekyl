@@ -28,7 +28,7 @@ def munge_instagram_images(post, image):
         initiate image download
     """
     url = post["images"][image]["url"]
-    # remove cache paramiter
+    # remove cache parameter
     clean_url = toast_tools.split_on_sep("?", url)
     filename, file_extension = os.path.splitext(clean_url)
     image_path = u"{}/instagram-{}-{}{}".format(
@@ -63,13 +63,13 @@ def create_image_post_from_instagram(post, file_name):
         else:
             munge_instagram_images(post, image)
 
-    # Not sure ATM how to deal with unicode in liqued? str them for now.
+    # Not sure ATM how to deal with unicode in liquid? str them for now.
     formated_tags = []
     for i in post["tags"]:
         formated_tags.append(str(i))
     post["formated_tags"] = formated_tags
 
-    # save a copy of th edited json
+    # save a copy of the edited json
     edited_post_archive_file_path = u"{}_edited/{}.json".format(
         POSTS_ARCHIVE, formated_file_name)
     with open(edited_post_archive_file_path, "w") as f:
@@ -95,7 +95,7 @@ def format_post_title_and_dates(post):
     # was issue where an emoji followed a qutoed sting.
     title_wo_tags = toast_tools.split_on_sep(
         "#", post[u"caption"][u"text"]).replace('"', '').rstrip()
-    
+
     # make a version of caption test w/o tags
     # here since i don't want 'id' for post caption
     if len(title_wo_tags) > 0:

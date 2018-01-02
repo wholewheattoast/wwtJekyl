@@ -81,8 +81,8 @@ def write_out_template(dictionary, path, fn, template):
     """
         Render the dictionary using the given template.
 
-        Saves the file with file_name
-        to the location specified by the path
+        'fn' is the file name
+        'path' the location to save to
     """
     html_path = u"{}/{}".format(path, fn)
     results_template = open("../_templates/{}".format(template)).read()

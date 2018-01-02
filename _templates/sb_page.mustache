@@ -1,114 +1,36 @@
 ---
-layout: base_full_width
+layout: base_grid
 title: {{sb_display_name}} {{spread}}
-description: {{sb_display_name}} {{spread}}
 stub: sketchbooks/{{sb_url_safe_name}}/index.html
-date: 
 ---
 
-<article itemscope itemtype="http://schema.org/VisualArtwork" class="sketchbook_page">
-  <div class="row">
-    <div class="col-md-10">
-      <h2 itemprop="name"><a class="bare-link" href="/sketchbooks/{{sb_url_safe_name}}/index.html">
-        {{sb_display_name}}</a> | {{spread}}
-      </h2>
-      <p>
-        <img 
-          itemprop="image"
-          src="/image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.jpg" 
-          title="{{sb_display_name}} {{spread}}" 
-          alt="" 
-        />
-      </p>
+<article itemscope itemtype="http://schema.org/VisualArtwork" class="sketchbook-page">
+  <h2 itemprop="name">
+    <a class="bare-link" href="/sketchbooks/{{sb_url_safe_name}}/index.html">
+      {{sb_display_name}}
+    </a> | {{spread}}
+  </h1>
 
-      <nav>
-        <ul class="list-unstyled sb-nav">
-          <li>
-            <a href="{{sb_url_safe_name}}-{{prev}}.html" rel="prev" title="prev">prev | {{prev}}</a>
-          </li>
-          <li>
-            <a href="index.html" title="index">index</a>
-          </li>
-          <li>
-            <a href="{{sb_url_safe_name}}-{{next}}.html" rel="next" title="next">next | {{next}}</a>
-          </li>
-        </ul>
-      </nav>
+  <p>
+    <img
+      itemprop="image"
+      src="/image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.jpg"
+      title="{{sb_display_name}} {{spread}}"
+      alt=""
+    />
+  </p>
 
-      <div class="row">
-        {{#verso_metadata}}
-          <section class="col-md-6 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
-            <h3 itemprop="name">{{page_number}}</h3>
-            <dl class="inline_dl">
-              {{#created}}<dt>Date:</dt><dd><time itemprop="dateCreated" datetime="{{created}}">{{created}}</time></dd>{{/created}}
-              {{#earliest_date}}<dt>Earliest Date:</dt><dd><time itemprop="dateCreated" datetime="{{earliest_date}}">{{earliest_date}}</time></dd>{{/earliest_date}}
-              {{#latest_date}}<dt>Latest Date:</dt><dd><time itemprop="dateCreated" datetime="{{latest_date}}">{{latest_date}}</time></dd>{{/latest_date}}
-              {{#contributor}}<dt>contributor:</dt><dd><span itemprop="contributor">{{contributor}}</span></dd>{{/contributor}}
-              {{#location}}<dt>Location:</dt><dd><span itemprop="locationCreated">{{location}}</span></dd>{{/location}}
-              {{#medium}}<dt>Medium:</dt><dd>{{{medium}}}</dd>{{/medium}}
-              {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd>{{/description}}
-              {{#subject}}<dt>Subject:</dt><dd><span itemprop="about">{{subject}}</span></dd>{{/subject}}
-            </dl>
-            {{#html-transcription}}
-            <div class="transcription">
-              {{{html-transcription}}}
-            </div>
-            {{/html-transcription}}
-          </section>
-        {{/verso_metadata}}
-        {{#recto_metadata}}
-          <section class="col-md-6 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
-            <h3 itemprop="name">{{page_number}}</h3>
-            <dl class="inline_dl">
-              {{#created}}<dt>Date:</dt><dd><time itemprop="dateCreated" datetime="{{created}}">{{created}}</time></dd>{{/created}}
-              {{#earliest_date}}<dt>Earliest Date:</dt><dd><time itemprop="dateCreated" datetime="{{earliest_date}}">{{earliest_date}}</time></dd>{{/earliest_date}}
-              {{#latest_date}}<dt>Latest Date:</dt><dd><time itemprop="dateCreated" datetime="{{latest_date}}">{{latest_date}}</time></dd>{{/latest_date}}
-              {{#contributor}}<dt>contributor:</dt><dd><span itemprop="contributor">{{contributor}}</span></dd>{{/contributor}}
-              {{#location}}<dt>Location:</dt><dd><span itemprop="locationCreated">{{location}}</span></dd>{{/location}}
-              {{#medium}}<dt>Medium:</dt><dd>{{{medium}}}</dd>{{/medium}}
-              {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd>{{/description}}
-              {{#subject}}<dt>Subject:</dt><dd><span itemprop="about">{{subject}}</span></dd>{{/subject}}
-            </dl>
-            {{#html-transcription}}
-            <div class="transcription">
-              {{{html-transcription}}}
-            </div>
-            {{/html-transcription}}
-          </section>
-        {{/recto_metadata}}
-        {{#front-cover_metadata}}
-          <section class="col-md-6 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
-            <h3 itemprop="name">{{page_number}}</h3>
-            <dl class="inline_dl">
-              {{#created}}<dt>Date:</dt><dd><time itemprop="dateCreated" datetime="{{created}}">{{created}}</time></dd>{{/created}}
-              {{#earliest_date}}<dt>Earliest Date:</dt><dd><time itemprop="dateCreated" datetime="{{earliest_date}}">{{earliest_date}}</time></dd>{{/earliest_date}}
-              {{#latest_date}}<dt>Latest Date:</dt><dd><time itemprop="dateCreated" datetime="{{latest_date}}">{{latest_date}}</time></dd>{{/latest_date}}
-              {{#contributor}}<dt>contributor:</dt><dd><span itemprop="contributor">{{contributor}}</span></dd>{{/contributor}}
-              {{#location}}<dt>Location:</dt><dd><span itemprop="locationCreated">{{location}}</span></dd>{{/location}}
-              {{#medium}}<dt>Medium:</dt><dd>{{{medium}}}</dd>{{/medium}}
-              {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd>{{/description}}
-              {{#subject}}<dt>Subject:</dt><dd><span itemprop="about">{{subject}}</span></dd>{{/subject}}
-              {{#transcription}}<dt>Transcription:</dt><dd><span itemprop="text">{{transcription}}</span></dd>{{/transcription}}
-            </dl>
-          </section>
-        {{/front-cover_metadata}}
-        {{#back-cover_metadata}}
-          <section class="col-md-6 col-sm-6" itemscope itemtype="http://schema.org/VisualArtwork">
-            <h3 itemprop="name">{{page_number}}</h3>
-            <dl class="inline_dl">
-              {{#created}}<dt>Date:</dt><dd><time itemprop="dateCreated" datetime="{{created}}">{{created}}</time></dd>{{/created}}
-              {{#earliest_date}}<dt>Earliest Date:</dt><dd><time itemprop="dateCreated" datetime="{{earliest_date}}">{{earliest_date}}</time></dd>{{/earliest_date}}
-              {{#latest_date}}<dt>Latest Date:</dt><dd><time itemprop="dateCreated" datetime="{{latest_date}}">{{latest_date}}</time></dd>{{/latest_date}}
-              {{#contributor}}<dt>contributor:</dt><dd><span itemprop="contributor">{{contributor}}</span></dd>{{/contributor}}
-              {{#location}}<dt>Location:</dt><dd><span itemprop="locationCreated">{{location}}</span></dd>{{/location}}
-              {{#medium}}<dt>Medium:</dt><dd>{{{medium}}}</dd>{{/medium}}
-              {{#description}}<dt>Description:</dt><dd itemprop="description">{{description}}</dd>{{/description}}
-              {{#subject}}<dt>Subject:</dt><dd><span itemprop="about">{{subject}}</span></dd>{{/subject}}
-              {{#transcription}}<dt>Transcription:</dt><dd><span itemprop="text">{{transcription}}</span></dd>{{/transcription}}
-            </dl>
-          </section>
-        {{/back-cover_metadata}}
-      </div>
-    </div>
-  </div>
+  <nav>
+    <ul class="list-unstyled sb-nav">
+      <li>
+        <a href="{{sb_url_safe_name}}-{{prev}}.html" rel="prev" title="prev">prev | {{prev}}</a>
+      </li>
+      <li>
+        <a href="index.html" title="index">index</a>
+      </li>
+      <li>
+        <a href="{{sb_url_safe_name}}-{{next}}.html" rel="next" title="next">next | {{next}}</a>
+      </li>
+    </ul>
+  </nav>
 </article>
