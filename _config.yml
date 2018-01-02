@@ -51,14 +51,7 @@ excerpt_separator: "\n\n"
 rdiscount:
   extensions: []
   
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      excerpt_separator: "<!--more-->"
-
+  
 # Pagination Settings
 pagination:
   enabled: true

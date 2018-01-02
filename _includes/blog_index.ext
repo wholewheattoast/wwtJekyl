@@ -1,25 +1,6 @@
 <!-- Show last 5 posts here, set in _config -->
 {% for post in paginator.posts %}
-  {% if post.excerpt != post.content %}
-    <article class="entry h-entry blog-post">
-      <header class="entry-header">
-        <h2>
-        <a class="bare-link permalink u-url" href="{{site.baseurl}}{{post.url}}"
-          title="permalink | {{post.title}}">
-          <time class="dt-published" datetime="{{post.date|date:"%F"}}">
-            {{post.date|date:"%b %d, %Y"}}
-          </time>
-          | {{post.title}}
-        </a>
-      </h2>
-      <p>
-        <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
-      </p>
-      </header>
-    </article>
-  {% else %}
-    {% include post.ext %}
-  {% endif %}
+  {% include post.ext %}
 {% endfor %}
 
 <nav class="blog-pagination">
