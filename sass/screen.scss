@@ -138,20 +138,32 @@ img {
   font-size: 1.25rem;
 }
 
-.entry-header {
-  h1 {
-    margin-bottom: 8px;
+.blog-post {
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
   }
 
+  p:first-child { margin-top: 0; }
+}
+
+.entry-header {
+  h1 { margin-bottom: 8px; }
   .permalink {
+/*
     color: $muted;
     a { color: $muted; }
+*/
     a:hover,
     a:focus {
       border-bottom: solid;
       text-decoration: none;
     }
   }
+}
+
+.entry-footer {
+  .tags { float: right; }
 }
 
 //TODO replace #blog-pagination with .blog-pagination

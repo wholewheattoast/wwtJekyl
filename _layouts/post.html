@@ -2,7 +2,7 @@
 layout: base_grid
 ---
 
-<article class="entry h-entry">
+<article class="entry h-entry blog-post">
   <header class="entry-header">
     <h2>
       <a class="permalink u-url bare-link" href="{{site.baseurl}}{{post.url}}" title="permalink | {{page.title}}">
@@ -17,7 +17,7 @@ layout: base_grid
   </section>
   <footer class="entry-footer">
     {% if page.tags %}
-      <ul class="list-unstyled list-inline">
+      <ul class="list-unstyled list-inline tags">
         {% assign sorted_tags = page.tags | sort:last %}
         {% for tag in sorted_tags %}
           <li>
