@@ -26,7 +26,7 @@ body {
   color: $body-color;
   font-feature-settings: 'kern';
   font-size: 1rem;
-  margin-top: 0;
+  margin-top: 1rem;
   text-rendering: optimizeLegibility;
 }
 
@@ -115,6 +115,8 @@ img {
 .site-nav {
   a:hover,
   a:focus { text-decoration: underline; }
+  
+  .slected { color: red; }
 
   ul { margin-bottom: 0; }
   li {
@@ -123,6 +125,19 @@ img {
   }
 
   li:last-child { margin-right: 0; }
+}
+
+// dumb 2003 css nav highlighting shit
+.about a.about,
+.archive a.archive,
+.portfolio a.portfolio,
+.sketchbooks a.sketchbooks,
+.shop a.shop,
+.zines a.zines {
+  color: red;
+
+  a:hover,
+  a:focus { text-decoration: none; }
 }
 
 // is this used anywhere?
@@ -140,7 +155,8 @@ img {
 
 .blog-post {
   h2 {
-    font-size: 1.25rem;
+//     font-size: 1.25rem;
+    font-size: 18px;
     margin-bottom: 0;
   }
 
@@ -205,19 +221,19 @@ img {
 
 
 // Sketchbooks
+article.sketchbooks { margin-top: 1.25rem; }
 .sketchbook-panel p { margin: 0; }
 
+// TODO after updating to grid layout remove this
 // this is for sketchbooks listed as a verticle list rather then grid
 .sketchbook-list {
   li { margin-bottom: 1.5rem; }
 }
 
-// TODO replace sb_index with sb-index
 .sb-index {
   h2 { text-transform: capitalize; }
 }
 
-// TODO replace sketchbook_page with sketchbook-page
 .sketchbook-page {
   h2 {
     font-size: 16px;
@@ -226,7 +242,6 @@ img {
 
   h3 { font-size: 1em; }
 
-  // TODO replace inline_dl with inline-dl
   .inline-dl {
     font-size: .85rem;
     dd { margin: 0 0 .5rem 6rem;}
@@ -245,7 +260,12 @@ img {
 }
 
 // Publications
-// TODO replace #Portfolio with .portfolio
+.zines {
+  section {
+    margin-bottom: 2rem;
+  }
+}
+
 .portfolio {
   .color-block {
     font-size: 1.5rem;
