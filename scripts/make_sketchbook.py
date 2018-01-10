@@ -134,8 +134,8 @@ def make_pages(spreads_list):
 def make_index(spreads_list):
     """Build index from a 'spreads_list'."""
     sb_dict = {}
-    sb_dict["SB_DISPLAY_NAME"] = SB_DISPLAY_NAME
-    sb_dict["SB_URL_SAFE_NAME"] = SB_URL_SAFE_NAME
+    sb_dict["sb_display_name"] = SB_DISPLAY_NAME
+    sb_dict["sb_url_safe_name"] = SB_URL_SAFE_NAME
     sb_dict["sb_spreads"] = spreads_list
     sb_dict["image_dir"] = SB_IMAGE_DIR
     sb_dict["html_dir"] = SB_DIR

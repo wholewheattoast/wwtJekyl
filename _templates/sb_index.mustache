@@ -1,21 +1,22 @@
 ---
-layout: base_full_width
+layout: base_grid
 title: {{sb_display_name}}
 description: {{sb_display_name}} sketchbook
 stub: sketchbooks/{{sb_url_safe_name}}/index.html
-date:
+nav-1: sketchbooks
 ---
 
-<article class="sb_index">
-  <h1>{{sb_display_name}}</h1>
+<article class="item-grid">
+  <header class="item-header">
+    <h1>{{sb_display_name}}</h1>
 
-  {{#metadata}}
-  <p>{{date}}</p>
-  {{/metadata}}
+    {{#metadata}}
+    <p>{{date}}</p>
+    {{/metadata}}
+  </header>
 
-  <ol class="list-unstyled row list-grid">
-    {{#sb_spreads}}
-    <li class="col-xs-6 col-sm-4 col-md-3">
+  {{#sb_spreads}}
+    <div class="item-panel">
       <a href="/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.html"
         title="{{sb_display_name}} {{spread}}">
         <img
@@ -24,7 +25,6 @@ date:
           alt=""
         />
       </a>
-    </li>
-    {{/sb_spreads}}
-  </ol>
+    </div>
+  {{/sb_spreads}}
 </article>
