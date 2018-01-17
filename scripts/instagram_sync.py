@@ -21,12 +21,17 @@ BLOG_IMG_DIR = parser.get('blog_setup', 'posts_img_dir')
 POSTS_ARCHIVE = parser.get('blog_setup', 'posts_archive')
 
 
+# TODO upgrade script to python 3
+
+
 def munge_instagram_images(post, image):
     """
         formating urls to get paths
         save local path info to post
         initiate image download
     """
+    # TODO it would be nice to read full_resolution img enough to get
+    # dimensions and store these
     url = post["images"][image]["url"]
     # remove cache parameter
     clean_url = toast_tools.split_on_sep("?", url)
@@ -43,25 +48,44 @@ def munge_instagram_images(post, image):
     toast_tools.get_img_from_url(image_path, clean_url)
 
 
+def try_for_full_resolution_url(post):
+    """
+        Attempt to get full_resolution url from instagram.
+
+        Instagram doesn't supply the full resolution image so I have to guess.
+    """
+    import os
+    import requests
+
+    insta_img_endpoint = "https://scontent.cdninstagram.com/t51.2885-15/"
+    url = post["images"]["standard_resolution"]["url"]
+    url_basename = os.path.basename(url)
+
+    full_res_url = "{}{}".format(insta_img_endpoint, url_basename)
+    r = requests.get(full_res_url)
+    if r.status_code == 200:
+        post["images"]["full_resolution"] = {}
+        post["images"]["full_resolution"]["url"] = full_res_url
+        munge_instagram_images(post, "full_resolution")
+    else:
+        print "!!!!!!!!!! HTTP {}".format(r.status_code)
+        print ".......... Possibly Instagram has not provided a full res img"
+        print "\n"
+
+
 def create_image_post_from_instagram(post, file_name):
     """
         Iterate through images.
         Get each format, rename for clarity.
         Create a post for post.
     """
-    post["images"]["full_resolution"] = {}
+
+    # images taken inside instagram seem to be capped at 640 x 640 and
+    # do not appear to get a "full_resolution" image.
+    try_for_full_resolution_url(post)
 
     for image in post["images"]:
-        if image == "full_resolution":
-            url = post["images"]["standard_resolution"]["url"]
-            # attempt to "guess" full image url, may break in future
-            to_remove = "s640x640/sh0.08/e35/"
-            full_image_url = url.replace(to_remove, "")
-            # save "full" url to image
-            post["images"]["full_resolution"]["url"] = full_image_url
-            munge_instagram_images(post, "full_resolution")
-        else:
-            munge_instagram_images(post, image)
+        munge_instagram_images(post, image)
 
     # Not sure ATM how to deal with unicode in liquid? str them for now.
     formated_tags = []
@@ -92,12 +116,12 @@ def format_post_title_and_dates(post):
 
     # remove tags from display title.
     # also removing quotation marks due to issues with yaml headers.
-    # was issue where an emoji followed a qutoed sting.
+    # was issue where an emoji followed a quoted sting.
     title_wo_tags = toast_tools.split_on_sep(
         "#", post[u"caption"][u"text"]).replace('"', '').rstrip()
 
-    # make a version of caption test w/o tags
-    # here since i don't want 'id' for post caption
+    # make a version of caption test w/o tags here
+    # since i don't want 'id' for post caption
     if len(title_wo_tags) > 0:
         post[u"caption"][u"cleaned_text"] = title_wo_tags
     # if post has no title (for file name)

@@ -1,16 +1,31 @@
 ---
 layout: post
 title: {{{title}}}
-tags: {{formated_tags}}
+tags: {{{formated_tags}}}
 date: {{display_date}}
 ---
 
 {{#images}}
-{{#full_resolution}}
+
   <p>
-    <img src="/image/posts/{{local}}" alt="" title="{{title}}" />
+    <img
+      srcset="
+        {{#low_resolution}}
+        /image/posts/{{local}} {{width}}w,
+        {{/low_resolution}}
+        {{#standard_resolution}}
+        /image/posts/{{local}} {{width}}w,
+        {{/standard_resolution}}
+        {{#full_resolution}}
+        /image/posts/{{local}} 1080w
+        {{/full_resolution}}
+        "
+      src="/image/posts/{{#standard_resolution}}{{local}}{{/standard_resolution}}"
+      alt=""
+      title="{{title}}"
+    />
   </p>
-{{/full_resolution}}
+
 {{/images}}
 
 
@@ -64,9 +79,11 @@ date: {{display_date}}
     }
     {{/standard_resolution}}
     {{#full_resolution}}
-    standard_resolution: {
+    full_resolution: {
       url: {{url}}
       local: {{local}}
+      width: {{width}}
+      height: {{height}}
     }
     {{/full_resolution}}
   }
