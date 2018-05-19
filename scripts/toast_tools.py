@@ -31,10 +31,20 @@ def auth_tumblr(config):
     return client
 
 
+def create_dir_if_not_exists(dir_path):
+    """Check if dir_path exists, and if not creates it."""
+    if not os.path.exists(dir_path):
+        os.makedirs(dir_path)
+        print "---------- Created  {}".format(dir_path)
+
+
 def write_out_json(thing, directory, fn):
     """
-        JSON Load a 'thing'
-        Write to 'dir'/'filename'
+    Write out a `thing` as json.
+
+    thing: some object to write out as json
+    directory: location to write to
+    fn: filename to write to
     """
     results_path = "{}/json".format(directory)
     results_json = "{}.json".format(fn)
@@ -58,7 +68,11 @@ def write_out_json(thing, directory, fn):
 
 def write_out_yaml(thing, directory, fn):
     """
-        Write thing as yaml to a file.
+    Write a 'thing' out as as yaml to a file.
+
+    thing: some object to write out as json
+    directory: location to write to
+    fn: filename to use
     """
     results_path = "{}/yaml".format(directory)
     results_yaml = "{}.yaml".format(fn)
@@ -79,10 +93,11 @@ def write_out_yaml(thing, directory, fn):
 
 def write_out_template(dictionary, path, fn, template):
     """
-        Render the dictionary using the given template.
+    Render the dictionary using the given template.
 
-        'fn' is the file name
-        'path' the location to save to
+    path: the location to write to
+    fn: filename to use
+    template: which mustache template use when rendering
     """
     html_path = u"{}/{}".format(path, fn)
     results_template = open("../_templates/{}".format(template)).read()
@@ -99,8 +114,9 @@ def write_out_template(dictionary, path, fn, template):
 
 def sort_nicely(l):
     """
-        Sort the given list in the way that humans expect.
-        From http://nedbatchelder.com/blog/200712.html#e20071211T054956
+    Sort the given list in the way that humans expect.
+
+    Cribbed from http://nedbatchelder.com/blog/200712.html#e20071211T054956
     """
     convert = lambda text: int(text) if text.isdigit() else text
     alphanum_key = lambda key: [convert(c) for c in re.split('([0-9]+)', key)]

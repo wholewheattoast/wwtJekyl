@@ -16,3 +16,6 @@ scripts/instagram-sync.ini
 scripts/twitter-sync.ini
 
 .com.apple.backupd.mdmv36926116
+
+.python-version
+.vscode/
