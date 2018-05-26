@@ -2,7 +2,7 @@
 
 from nose.tools import assert_equal
 
-from sketchbook_tools import (
+from .sketchbook_tools import (
     assemble_spreads,
     sort_image_list,
     sb_url_safe_name,

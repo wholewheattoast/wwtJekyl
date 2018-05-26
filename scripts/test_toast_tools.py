@@ -4,6 +4,7 @@ from nose.tools import assert_equal
 
 
 from toast_tools import (
+    clean_string,
     sort_nicely,
 )
 
@@ -15,3 +16,7 @@ def test_sort_nicely():
         sort_nicely(unsorted_list),
         ['0', '1', 'a', 'b', 'c']
     )
+
+
+def clean_string():
+    raise ValueError('This needs a test')

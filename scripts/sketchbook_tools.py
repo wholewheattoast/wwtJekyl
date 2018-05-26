@@ -1,7 +1,7 @@
 """Tools for making sketchbooks."""
 import os
 
-from toast_tools import (
+from .toast_tools import (
     sort_nicely,
 )
 
@@ -65,7 +65,7 @@ def assemble_spreads(sb_name, sorted_image_list):
         if item_split[1] == "cover":
             spread[item] = item.replace(" ", "-")
         else:
-            print "---------- item_split is {}".format(item_split)
+            print("---------- item_split is {}".format(item_split))
             spread["verso"] = item_split[0]
             spread["recto"] = item_split[1]
 
@@ -88,7 +88,7 @@ def assemble_spreads(sb_name, sorted_image_list):
                 (sorted_image_list[i - 1]).replace(" ", "-")
             )
         except IndexError:
-            print "woops index error on prev"
+            print("woops index error on prev")
 
         spreads_list.append(temp_spread_dict)
 

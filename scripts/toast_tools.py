@@ -62,8 +62,6 @@ def write_out_json(thing, directory, fn):
     except ValueError as e:
         print ".......... ValueError {}".format(e)
         print "!!!!!!!!!! {}".format(thing)
-    except:
-        print ".......... Unexpected error:", sys.exc_info()[0]
 
 
 def write_out_yaml(thing, directory, fn):
@@ -126,8 +124,7 @@ def sort_nicely(l):
 
 
 def split_on_sep(seperator, thing):
-    result = thing.split(seperator, 1)[0]
-    return result
+    return thing.split(seperator, 1)[0]
 
 
 def get_img_from_url(image_path, url):
