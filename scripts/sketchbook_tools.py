@@ -1,9 +1,24 @@
 """Tools for making sketchbooks."""
 import os
 
-from .toast_tools import (
+from toast_tools import (
     sort_nicely,
 )
+
+
+def create_dir_if_not_exists(sketchbook):
+    """Create a directory to place sketchbook files into if necessary."""
+    dir_path = "../sketchbooks/{}".format(
+        sb_url_safe_name(sketchbook)
+    )
+
+    img_path = sb_image_dir(sketchbook)
+
+    if not os.path.exists(dir_path) and os.path.exists(img_path):
+        os.makedirs(dir_path)
+        print "---------- Created  {}".format(dir_path)
+    else:
+        print("!!!!!!!!!!!! No images in img_path?  Maybe a typo?")
 
 
 def sb_url_safe_name(name):

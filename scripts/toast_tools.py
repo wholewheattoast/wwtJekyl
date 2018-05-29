@@ -31,13 +31,6 @@ def auth_tumblr(config):
     return client
 
 
-def create_dir_if_not_exists(dir_path):
-    """Check if dir_path exists, and if not creates it."""
-    if not os.path.exists(dir_path):
-        os.makedirs(dir_path)
-        print "---------- Created  {}".format(dir_path)
-
-
 def write_out_json(thing, directory, fn):
     """
     Write out a `thing` as json.

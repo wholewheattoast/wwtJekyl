@@ -6,6 +6,7 @@ import yaml
 
 from sketchbook_tools import (
     assemble_spreads,
+    create_dir_if_not_exists,
     sb_display_name,
     sb_url_safe_name,
     sort_image_list,
@@ -13,11 +14,13 @@ from sketchbook_tools import (
 )
 
 from toast_tools import (
-    create_dir_if_not_exists,
     write_out_template,
 )
 
-# TODO what work needs to be done to just run this on entire sb dir?
+
+THE_BIG_LIST = [
+    "garbage-filter",
+]
 
 
 def make_sorted_image_list(sb_img_dir_path, url_safe_name):
@@ -53,18 +56,19 @@ def make_sorted_image_list(sb_img_dir_path, url_safe_name):
                 pass
     # sanity check output
     if len(sb_image_files) == 0:
-        print "!!!!!!!!!!!! Nothing here?  Maybe a typo?"
+        print("!!!!!!!!!!!! Nothing here?  Maybe a typo?")
         pass
     else:
         sorted_image_list = sort_image_list(sb_image_files)
         return sorted_image_list
 
 
-def make_pages(spreads_list):
-    """Build pages from a 'spreads_list'."""
+def make_pages(sketchbook, spreads_list):
+    """Build pages for sb named `sketchbook`from a 'spreads_list'."""
     for item in spreads_list:
         spread_name = "{}-{}".format(
-            sb_url_safe_name(args.sb_name), item["spread"].replace(" ", "-")
+            sb_url_safe_name(sketchbook),
+            item["spread"].replace(" ", "-")
         )
         file_name = "{}.html".format(spread_name)
 
@@ -72,37 +76,48 @@ def make_pages(spreads_list):
 
         write_out_template(
             item,
-            "../sketchbooks/{}".format(sb_url_safe_name(args.sb_name)),
+            "../sketchbooks/{}".format(sb_url_safe_name(sketchbook)),
             file_name,
             "sb_page.mustache",
         )
 
 
-def make_index(spreads_list):
-    """Build index from a `spreads_list`."""
+def make_index(sketchbook, spreads_list):
+    """
+    Build a sketchbook's index page.
+
+    sketchbook: Name of sketchbook
+    spreads_list: list of sketchbook page spreads in order
+    """
     sb_dict = {}
-    sb_dict["sb_display_name"] = sb_display_name(args.sb_name)
-    sb_dict["sb_url_safe_name"] = sb_url_safe_name(args.sb_name)
+    sb_dict["sb_display_name"] = sb_display_name(sketchbook)
+    sb_dict["sb_url_safe_name"] = sb_url_safe_name(sketchbook)
     sb_dict["sb_spreads"] = spreads_list
-    sb_dict["image_dir"] = sb_image_dir(args.sb_name)
-    sb_dict["html_dir"] = "../sketchbooks/{}".format(sb_url_safe_name(args.sb_name))
+    sb_dict["image_dir"] = sb_image_dir(sketchbook)
+    sb_dict["html_dir"] = "../sketchbooks/{}".format(sb_url_safe_name(sketchbook))
 
     # attempt to grab top level metadata for index page
     try:
         # YAML files are in image dir. this is stable while built pages are not
         metadata_file_path = "{}/metadata/{}-index.yaml".format(
-            sb_image_dir(args.sb_name), sb_url_safe_name(args.sb_name))
-        print ".......... metadata_file_path = {}".format(metadata_file_path)
+            sb_image_dir(sketchbook),
+            sb_url_safe_name(sketchbook)
+        )
+        print(".......... metadata_file_path = {}".format(metadata_file_path))
         with open(metadata_file_path, 'r') as metadata_file:
             metadata_file_obj = yaml.load(metadata_file)
             sb_dict["metadata"] = metadata_file_obj
-            print ".......... found metadata for {} index".format(sb_url_safe_name(args.sb_name))
+            print(".......... found metadata for {} index".format(
+                sb_url_safe_name(sketchbook)
+            ))
     except IOError:
-        print ".......... no metadata found for {} index".format(sb_display_name(args.sb_name))
+        print(".......... no metadata found for {} index".format(
+            sb_display_name(sketchbook)
+        ))
 
     write_out_template(
         sb_dict,
-        "../sketchbooks/{}".format(sb_url_safe_name(args.sb_name)),
+        "../sketchbooks/{}".format(sb_url_safe_name(sketchbook)),
         "index.html",
         "sb_index.mustache"
     )
@@ -116,7 +131,7 @@ parser.add_argument("sb_name", help="The name of the sketchbook")
 # TODO add param to override sb name when not same as dir name
 # For example "perdef"
 # OR use a config file per sb ?
-# would need to change use of args.sb_name and use a varialbe instead
+# would need to change use of args.sb_name and use a variable instead
 
 # TODO logic to handle IFC
 # Only old sketchbooks will start with ifc
@@ -124,22 +139,33 @@ parser.add_argument("sb_name", help="The name of the sketchbook")
 
 args = parser.parse_args()
 
-# set up
-print "========== SB_DISPLAY_NAME = {}".format(sb_display_name(args.sb_name))
-print "========== SB_URL_SAFE_NAME = {}".format(sb_url_safe_name(args.sb_name))
-print "========== SB_IMAGE_DIR = {}".format(sb_image_dir(args.sb_name))
-print "========== SB_DIR is {}".format("../sketchbooks/{}".format(
-    sb_url_safe_name(args.sb_name)
-))
+sketchbooks_to_process = []
 
-create_dir_if_not_exists("../sketchbooks/{}".format(sb_url_safe_name(args.sb_name)))
+if args.sb_name == "ALL":
+    sketchbooks_to_process = THE_BIG_LIST
+else:
+    sketchbooks_to_process = [args.sb_name]
+    print("========== SB_DISPLAY_NAME = {}".format(sb_display_name(args.sb_name)))
+    print("========== SB_URL_SAFE_NAME = {}".format(sb_url_safe_name(args.sb_name)))
+    print("========== SB_IMAGE_DIR = {}".format(sb_image_dir(args.sb_name)))
+    print("========== SB_DIR is {}".format("../sketchbooks/{}".format(
+        sb_url_safe_name(args.sb_name)
+    )))
 
-this_sorted_image_list = make_sorted_image_list(
-    sb_image_dir(args.sb_name),
-    sb_url_safe_name(args.sb_name)
-)
-this_spreads = assemble_spreads(args.sb_name, this_sorted_image_list)
-make_index(this_spreads)
-make_pages(this_spreads)
 
-print ".......... All Done!!!"
+for sketchbook in sketchbooks_to_process:
+    print(("========== Processing {}").format(sketchbook))
+
+    create_dir_if_not_exists(sketchbook)
+
+    this_sorted_image_list = make_sorted_image_list(
+        sb_image_dir(sketchbook),
+        sb_url_safe_name(sketchbook)
+    )
+
+    this_spreads = assemble_spreads(sketchbook, this_sorted_image_list)
+    make_index(sketchbook, this_spreads)
+    make_pages(sketchbook, this_spreads)
+    print(("========== Finished {}").format(sketchbook))
+
+print(".......... All Done!!!")
