@@ -34,6 +34,8 @@ def make_sorted_image_list(sb_img_dir_path, url_safe_name):
     """
     # make a list of ignored names
     # TODO can i put this somewhere else?  feels sloppy?
+    # TODO I could convert these if i use a filter below
+    # if thing_to_ignore not in name append(name)
     ignored_name_1 = "{}-front-cover-icon.jpg".format(url_safe_name)
     ignored_name_2 = "{}_cover_icon.jpg".format(
         url_safe_name.replace("-", "_")
@@ -59,7 +61,13 @@ def make_sorted_image_list(sb_img_dir_path, url_safe_name):
         print("!!!!!!!!!!!! Nothing here?  Maybe a typo?")
         pass
     else:
-        sorted_image_list = sort_image_list(sb_image_files)
+        # TODO when i'm less tired rewrite with filter
+        # TODO should I do this above?
+        filtered_list = []
+        for item in sb_image_files:
+            if " thumb" not in item and "@2x" not in item:
+                filtered_list.append(item)
+        sorted_image_list = sort_image_list(filtered_list)
         return sorted_image_list
 
 
