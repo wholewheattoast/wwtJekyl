@@ -87,7 +87,7 @@
   display: grid;
   margin: 0 auto;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  
+
 //   grid-row
 }
 
@@ -199,8 +199,13 @@
     max-width: 640px;
   }
 
+  // TODO should i rename this something like "sketchbook-covers-grid"?
+  .sketchbook-grid {
+    // scss-lint:disable PropertySpelling
+    grid-template-columns: repeat(auto-fill, 100px);
+}
+
   .item-grid,
-  .sketchbook-grid,
   .shop-grid {
     // scss-lint:disable PropertySpelling
     grid-template-columns: repeat(auto-fill, 200px);

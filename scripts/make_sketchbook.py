@@ -20,6 +20,8 @@ from toast_tools import (
 
 THE_BIG_LIST = [
     "garbage-filter",
+    "pretty-lady",
+    "sausage-barrier",
 ]
 
 
