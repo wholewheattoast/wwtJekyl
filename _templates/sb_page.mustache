@@ -14,6 +14,11 @@ nav-1: sketchbooks
 
   <p>
     <img
+      srcset="
+        /image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}-thumb.jpg 384w,
+        /image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.jpg 720w,
+        /image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}@2x.jpg 1440w,
+      "
       itemprop="image"
       src="/image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.jpg"
       title="{{sb_display_name}} {{spread}}"

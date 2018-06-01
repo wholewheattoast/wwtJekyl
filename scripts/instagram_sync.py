@@ -20,15 +20,15 @@ BLOG_POSTS_DIR = parser.get('blog_setup', 'mount_point')
 BLOG_IMG_DIR = parser.get('blog_setup', 'posts_img_dir')
 POSTS_ARCHIVE = parser.get('blog_setup', 'posts_archive')
 
-
 # TODO upgrade script to python 3
 
 
 def munge_instagram_images(post, image):
     """
-        formating urls to get paths
-        save local path info to post
-        initiate image download
+    Format urls to get paths.
+
+    save local path info to post
+    initiate image download
     """
     # TODO it would be nice to read full_resolution img enough to get
     # dimensions and store these
@@ -50,9 +50,9 @@ def munge_instagram_images(post, image):
 
 def try_for_full_resolution_url(post):
     """
-        Attempt to get full_resolution url from instagram.
+    Attempt to get full_resolution url from instagram.
 
-        Instagram doesn't supply the full resolution image so I have to guess.
+    Instagram doesn't supply the full resolution image so I have to guess.
     """
     import os
     import requests
@@ -75,11 +75,11 @@ def try_for_full_resolution_url(post):
 
 def create_image_post_from_instagram(post, file_name):
     """
-        Iterate through images.
-        Get each format, rename for clarity.
-        Create a post for post.
-    """
+    Iterate through images, format, and create a post.
 
+    Get each format, rename for clarity.
+    Create a post for post.
+    """
     # images taken inside instagram seem to be capped at 640 x 640 and
     # do not appear to get a "full_resolution" image.
     try_for_full_resolution_url(post)
@@ -116,7 +116,7 @@ def format_post_title_and_dates(post):
 
     # remove tags from display title.
     # also removing quotation marks due to issues with yaml headers.
-    # was issue where an emoji followed a quoted sting.
+    # this was issue where an emoji followed a quoted sting.
     title_wo_tags = toast_tools.split_on_sep(
         "#", post[u"caption"][u"text"]).replace('"', '').rstrip()
 
@@ -132,6 +132,8 @@ def format_post_title_and_dates(post):
 
     # clean up title
     # tumblr tunc-ed around 48 chars
+    # TODO there is an issue here if more then one posts have non unique names
+    # in the first 48 chars
     cleaned_title = toast_tools.clean_string(title_wo_tags).replace(" ", "-").lower()[0:48]
 
     formated_file_name = u"{}-{}.html".format(
@@ -150,7 +152,6 @@ get_recent_posts = requests.get(recent_posts)
 
 # instagram api docs refer to this as an envelope
 envelope = json.loads(get_recent_posts.content)
-
 
 if envelope['meta']['code'] != 200:
     print "!!!!!!!!!! client returned {}".format(envelope['meta']['code'])
@@ -176,7 +177,9 @@ else:
             if updated_post["type"] == "image":
                 print u"========== Creating: {}".format(formated_file_name)
                 create_image_post_from_instagram(
-                    updated_post, formated_file_name)
+                    updated_post,
+                    formated_file_name,
+                )
             else:
                 print "********** {} is unsupported.".format(
                     updated_post["type"])
