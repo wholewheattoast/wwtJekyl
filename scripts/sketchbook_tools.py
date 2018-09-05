@@ -16,9 +16,11 @@ def create_dir_if_not_exists(sketchbook):
 
     if not os.path.exists(dir_path) and os.path.exists(img_path):
         os.makedirs(dir_path)
-        print "---------- Created  {}".format(dir_path)
+        print("---------- Created  {}".format(dir_path))
+    elif os.path.exists(dir_path) and not os.path.exists(img_path):
+        print("!!!!!!!!!!!! No images img_path?  Maybe a typo?")
     else:
-        print("!!!!!!!!!!!! No images in img_path?  Maybe a typo?")
+        print("!!!!!!!!!!!! yay??? what should this say or do?")
 
 
 def sb_url_safe_name(name):
