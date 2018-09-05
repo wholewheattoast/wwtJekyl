@@ -20,6 +20,7 @@ from toast_tools import (
 
 THE_BIG_LIST = [
     "garbage-filter",
+    "pci",
     "pretty-lady",
     "sausage-barrier",
 ]
@@ -113,15 +114,15 @@ def make_index(sketchbook, spreads_list):
             sb_image_dir(sketchbook),
             sb_url_safe_name(sketchbook)
         )
-        print(".......... metadata_file_path = {}".format(metadata_file_path))
+        print(".......... Metadata_file_path = {}".format(metadata_file_path))
         with open(metadata_file_path, 'r') as metadata_file:
             metadata_file_obj = yaml.load(metadata_file)
             sb_dict["metadata"] = metadata_file_obj
-            print(".......... found metadata for {} index".format(
+            print(".......... Found metadata for {} index".format(
                 sb_url_safe_name(sketchbook)
             ))
     except IOError:
-        print(".......... no metadata found for {} index".format(
+        print(".......... No metadata found for {} index".format(
             sb_display_name(sketchbook)
         ))
 

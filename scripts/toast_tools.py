@@ -1,4 +1,4 @@
-from ConfigParser import SafeConfigParser
+from configparser import SafeConfigParser
 
 import json
 import yaml
@@ -45,16 +45,16 @@ def write_out_json(thing, directory, fn):
 
     if not os.path.exists(results_path):
         os.makedirs(results_path)
-        print ".......... Created  {}".format(results_path)
+        print(".......... Created  {}".format(results_path))
 
     try:
         loaded_json = json.dumps(thing)
         with open(fullpath, "w") as json_results_file:
             json_results_file.write(loaded_json)
-            print ".......... Wrote out {}".format(results_json)
+            print(".......... Wrote out {}".format(results_json))
     except ValueError as e:
-        print ".......... ValueError {}".format(e)
-        print "!!!!!!!!!! {}".format(thing)
+        print(".......... ValueError {}".format(e))
+        print("!!!!!!!!!! {}".format(thing))
 
 
 def write_out_yaml(thing, directory, fn):
@@ -71,15 +71,15 @@ def write_out_yaml(thing, directory, fn):
 
     if not os.path.exists(results_path):
         os.makedirs(results_path)
-        print ".......... Created  {}".format(results_path)
+        print(".......... Created  {}".format(results_path))
 
     try:
         dumped_yaml = yaml.dump(thing)
         with open(fullpath, "w") as yaml_results_file:
             yaml_results_file.write(dumped_yaml)
-            print ".......... Wrote out {}".format(results_yaml)
+            print(".......... Wrote out {}".format(results_yaml))
     except:
-        print ".......... Unexpected error:", sys.exc_info()[0]
+        print(".......... Unexpected error:", sys.exc_info()[0])
 
 
 def write_out_template(dictionary, path, fn, template):
@@ -90,7 +90,7 @@ def write_out_template(dictionary, path, fn, template):
     fn: filename to use
     template: which mustache template use when rendering
     """
-    html_path = u"{}/{}".format(path, fn)
+    html_path = "{}/{}".format(path, fn)
     results_template = open("../_templates/{}".format(template)).read()
     html_results = pystache.render(results_template, dictionary)
     # need to encode to pass to write()
@@ -99,8 +99,8 @@ def write_out_template(dictionary, path, fn, template):
     )
 
     with open(html_path, "w") as html_file:
-        html_file.write(html_results_encoded)
-        print u".......... Wrote out  {}".format(html_path)
+        html_file.write(html_results_encoded.decode('utf-8'))
+        print(".......... Wrote out  {}".format(html_path))
 
 
 def sort_nicely(l):
@@ -122,9 +122,9 @@ def split_on_sep(seperator, thing):
 
 def get_img_from_url(image_path, url):
     if os.path.isfile(image_path):
-        print "---------- Already downloaded {}".format(url)
+        print("---------- Already downloaded {}".format(url))
     else:
-        print "---------- Downloading {}".format(url)
+        print("---------- Downloading {}".format(url))
         with open(image_path, 'w') as f:
             f.write(requests.get(url).content)
 
