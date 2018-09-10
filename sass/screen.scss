@@ -26,7 +26,7 @@ body {
   color: $body-color;
   font-feature-settings: 'kern';
   font-size: 1rem;
-  margin-top: 1rem;
+  margin-top: 0;
   text-rendering: optimizeLegibility;
 }
 
@@ -79,19 +79,15 @@ img {
 .btn-paypall:hover { color: $body-color; }
 
 // helpers
-// TODO replace center_text with center-text
 .center-text { text-align: center; }
 .tight { margin: 0; }
-// TODO replace margin_top with margin-top
 .margin-top { margin-top: 1.5rem; }
-// TODO replace margin_top_more with margin-top-more
 .margin-top-more { margin-top: 3rem; }
-// TODO replace margin-bottom with margin-bottom
 .margin-bottom { margin-bottom: 1.5rem; }
-// TODO replace margin_bottom_more with margin-bottom-more
 .margin-bottom-more { margin-bottom: 3rem; }
 
 // grid fixes
+// TODO no longer using bootstrap can i remove this?
 // This is to allow using bootstrap syntax on li without junking
 // up the markup with all those extra rows.
 .list-grid {
@@ -104,7 +100,10 @@ img {
 // TODO replace site_header with site-header
 .site-header {
   a { color: $body-color; }
-  h1 { margin-bottom: 1rem; }
+  h1 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
 
   .logo {
     display: inline;
@@ -118,7 +117,10 @@ img {
   
   .slected { color: red; }
 
-  ul { margin-bottom: 0; }
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    }
   li {
     font-size: 1.5rem;
     margin-right: 1rem;

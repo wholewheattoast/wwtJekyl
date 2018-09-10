@@ -1,4 +1,4 @@
-from ConfigParser import SafeConfigParser
+from configparser import SafeConfigParser
 
 import datetime
 import json
@@ -6,7 +6,12 @@ import os
 import os.path
 import requests
 
-import toast_tools
+from toast_tools import (
+    split_on_sep,
+    get_img_from_url,
+    write_out_template,
+    clean_string,
+)
 
 
 parser = SafeConfigParser()
@@ -34,9 +39,9 @@ def munge_instagram_images(post, image):
     # dimensions and store these
     url = post["images"][image]["url"]
     # remove cache parameter
-    clean_url = toast_tools.split_on_sep("?", url)
+    clean_url = split_on_sep("?", url)
     filename, file_extension = os.path.splitext(clean_url)
-    image_path = u"{}/instagram-{}-{}{}".format(
+    image_path = "{}/instagram-{}-{}{}".format(
         BLOG_IMG_DIR,
         post["id"],
         image,
@@ -45,7 +50,7 @@ def munge_instagram_images(post, image):
         post["id"],
         image,
         file_extension)
-    toast_tools.get_img_from_url(image_path, clean_url)
+    get_img_from_url(image_path, clean_url)
 
 
 def try_for_full_resolution_url(post):
@@ -68,9 +73,9 @@ def try_for_full_resolution_url(post):
         post["images"]["full_resolution"]["url"] = full_res_url
         munge_instagram_images(post, "full_resolution")
     else:
-        print "!!!!!!!!!! HTTP {}".format(r.status_code)
-        print ".......... Possibly Instagram has not provided a full res img"
-        print "\n"
+        print("!!!!!!!!!! HTTP {}".format(r.status_code))
+        print(".......... Possibly Instagram has not provided a full res img")
+        print("\n")
 
 
 def create_image_post_from_instagram(post, file_name):
@@ -94,12 +99,12 @@ def create_image_post_from_instagram(post, file_name):
     post["formated_tags"] = formated_tags
 
     # save a copy of the edited json
-    edited_post_archive_file_path = u"{}_edited/{}.json".format(
+    edited_post_archive_file_path = "{}_edited/{}.json".format(
         POSTS_ARCHIVE, formated_file_name)
     with open(edited_post_archive_file_path, "w") as f:
         json.dump(post, f)
 
-    toast_tools.write_out_template(
+    write_out_template(
         post,
         BLOG_POSTS_DIR,
         file_name,
@@ -117,26 +122,26 @@ def format_post_title_and_dates(post):
     # remove tags from display title.
     # also removing quotation marks due to issues with yaml headers.
     # this was issue where an emoji followed a quoted sting.
-    title_wo_tags = toast_tools.split_on_sep(
-        "#", post[u"caption"][u"text"]).replace('"', '').rstrip()
+    title_wo_tags = split_on_sep(
+        "#", post["caption"]["text"]).replace('"', '').rstrip()
 
     # make a version of caption test w/o tags here
     # since i don't want 'id' for post caption
     if len(title_wo_tags) > 0:
-        post[u"caption"][u"cleaned_text"] = title_wo_tags
+        post["caption"]["cleaned_text"] = title_wo_tags
     # if post has no title (for file name)
     if len(title_wo_tags) == 0:
         title_wo_tags = post["id"]
 
-    post[u"title"] = title_wo_tags
+    post["title"] = title_wo_tags
 
     # clean up title
     # tumblr tunc-ed around 48 chars
     # TODO there is an issue here if more then one posts have non unique names
     # in the first 48 chars
-    cleaned_title = toast_tools.clean_string(title_wo_tags).replace(" ", "-").lower()[0:48]
+    cleaned_title = clean_string(title_wo_tags).replace(" ", "-").lower()[0:48]
 
-    formated_file_name = u"{}-{}.html".format(
+    formated_file_name = "{}-{}.html".format(
         post_converted_dt.strftime('%Y-%m-%d'),
         cleaned_title
     )
@@ -154,32 +159,32 @@ get_recent_posts = requests.get(recent_posts)
 envelope = json.loads(get_recent_posts.content)
 
 if envelope['meta']['code'] != 200:
-    print "!!!!!!!!!! client returned {}".format(envelope['meta']['code'])
+    print("!!!!!!!!!! client returned {}".format(envelope['meta']['code']))
     if envelope['meta']['error_type']:
-        print "!!!!!!!!!! {}".format(envelope['meta']['error_type'])
-        print "!!!!!!!!!! {}".format(envelope['meta']['error_message'])
+        print("!!!!!!!!!! {}".format(envelope['meta']['error_type']))
+        print("!!!!!!!!!! {}".format(envelope['meta']['error_message']))
 else:
     for post in envelope["data"]:
         updated_post, formated_file_name = format_post_title_and_dates(post)
 
         # save a copy of the original json
         # TODO consider adding a timestamp to title to keep historical records
-        post_archive_file_path = u"{}/{}.json".format(
+        post_archive_file_path = "{}/{}.json".format(
             POSTS_ARCHIVE, formated_file_name)
         with open(post_archive_file_path, "w") as f:
             json.dump(post, f)
 
-        post_path = u"{}/{}".format(BLOG_POSTS_DIR, formated_file_name)
+        post_path = "{}/{}".format(BLOG_POSTS_DIR, formated_file_name)
 
         if os.path.isfile(post_path):
-            print u"========== Already exists: {} ".format(formated_file_name)
+            print("========== Already exists: {} ".format(formated_file_name))
         else:
             if updated_post["type"] == "image":
-                print u"========== Creating: {}".format(formated_file_name)
+                print("========== Creating: {}".format(formated_file_name))
                 create_image_post_from_instagram(
                     updated_post,
                     formated_file_name,
                 )
             else:
-                print "********** {} is unsupported.".format(
-                    updated_post["type"])
+                print("********** {} is unsupported.".format(
+                    updated_post["type"]))

@@ -125,7 +125,7 @@ def get_img_from_url(image_path, url):
         print("---------- Already downloaded {}".format(url))
     else:
         print("---------- Downloading {}".format(url))
-        with open(image_path, 'w') as f:
+        with open(image_path, 'wb') as f:
             f.write(requests.get(url).content)
 
 
