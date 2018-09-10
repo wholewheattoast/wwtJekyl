@@ -154,6 +154,7 @@ img {
 }
 
 .blog-post {
+  max-width: 640px;
   h2 {
 //     font-size: 1.25rem;
     font-size: 18px;
@@ -179,10 +180,10 @@ img {
 }
 
 .entry-footer {
+  ul { margin-top: 0; }
   .tags { float: right; }
 }
 
-//TODO replace #blog-pagination with .blog-pagination
 .blog-pagination {
   margin-top: 2rem;
   ul { text-align: right; }
