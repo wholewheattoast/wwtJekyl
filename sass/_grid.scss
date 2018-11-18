@@ -111,11 +111,14 @@
 @supports(display: grid ) {
   .item-grid { margin: 0; }
 
+  .item-header,
+  .item-footer,
   .item-panel {
-    grid-auto-rows: minmax(150px, auto);
     margin-left: 0;
     margin-right: 0;
   }
+
+  .item-panel { grid-auto-rows: minmax(150px, auto); }
 }
 
 // flex fallback where no grid support
