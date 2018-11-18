@@ -113,6 +113,8 @@
 
   .item-panel {
     grid-auto-rows: minmax(150px, auto);
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -215,7 +217,7 @@
 // TODO this needs work
 @media (min-width: 800px) {
   .wrapper { max-width: 60%; }
-  
+
   .sketchbook-grid {
     // scss-lint:disable PropertySpelling
     grid-template-columns: repeat(auto-fill, 100px);

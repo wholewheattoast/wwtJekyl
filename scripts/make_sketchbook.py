@@ -26,6 +26,9 @@ THE_BIG_LIST = [
     "sausage-barrier",
 ]
 
+# TODO this script should take readable name or url safe name w/o error
+# currently only take url safe name as argument
+
 
 def make_sorted_image_list(sb_img_dir_path, url_safe_name):
     """
@@ -105,7 +108,7 @@ def make_index(sketchbook, spreads_list):
     sb_dict["sb_display_name"] = sb_display_name(sketchbook)
     sb_dict["sb_url_safe_name"] = sb_url_safe_name(sketchbook)
     sb_dict["sb_spreads"] = spreads_list
-    sb_dict["image_dir"] = sb_image_dir(sketchbook)
+    sb_dict["image_dir"] = sb_image_dir(sb_url_safe_name(sketchbook))
     sb_dict["html_dir"] = "../sketchbooks/{}".format(sb_url_safe_name(sketchbook))
 
     # attempt to grab top level metadata for index page
