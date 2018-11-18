@@ -5,7 +5,7 @@ mint/config/db.php
 _site/*
 _posts/css/screen.css
 _posts/image/publications/milk_boy/milk_boy_fc.png
-css/
+css/*
 .Python
 bin/
 lib/
