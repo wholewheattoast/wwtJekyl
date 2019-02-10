@@ -1,4 +1,4 @@
-from configparser import SafeConfigParser
+import configparser
 
 import datetime
 import json
@@ -14,7 +14,7 @@ from toast_tools import (
 )
 
 
-parser = SafeConfigParser()
+parser = configparser.ConfigParser()
 parser.read("instagram-sync.ini")
 
 REDIRECT_URI = parser.get("instagram_api", "redirect_uri")
@@ -25,8 +25,6 @@ BLOG_POSTS_DIR = parser.get('blog_setup', 'mount_point')
 BLOG_IMG_DIR = parser.get('blog_setup', 'posts_img_dir')
 POSTS_ARCHIVE = parser.get('blog_setup', 'posts_archive')
 
-# TODO upgrade script to python 3
-
 
 def munge_instagram_images(post, image):
     """
@@ -35,8 +33,6 @@ def munge_instagram_images(post, image):
     save local path info to post
     initiate image download
     """
-    # TODO it would be nice to read full_resolution img enough to get
-    # dimensions and store these
     url = post["images"][image]["url"]
     # remove cache parameter
     clean_url = split_on_sep("?", url)
@@ -53,6 +49,7 @@ def munge_instagram_images(post, image):
     get_img_from_url(image_path, clean_url)
 
 
+# TODO this is probably a lost cause
 def try_for_full_resolution_url(post):
     """
     Attempt to get full_resolution url from instagram.
@@ -122,16 +119,27 @@ def format_post_title_and_dates(post):
     # remove tags from display title.
     # also removing quotation marks due to issues with yaml headers.
     # this was issue where an emoji followed a quoted sting.
-    title_wo_tags = split_on_sep(
-        "#", post["caption"]["text"]).replace('"', '').rstrip()
+    try:
+        title_wo_tags = split_on_sep(
+            "#", post["caption"]["text"]).replace('"', '').rstrip()
+    except TypeError:
+        # Check if post has a title
+        title_wo_tags = "Untitled {}".format(post_converted_dt)
 
     # make a version of caption test w/o tags here
     # since i don't want 'id' for post caption
     if len(title_wo_tags) > 0:
-        post["caption"]["cleaned_text"] = title_wo_tags
-    # if post has no title (for file name)
-    if len(title_wo_tags) == 0:
-        title_wo_tags = post["id"]
+        # Instagram doesn't have a caption if there is no title
+        try:
+            post["caption"]["cleaned_text"] = title_wo_tags
+        except TypeError:
+            # let's build out a caption
+            temp_dict = {}
+            temp_dict["id"] = post["id"]
+            temp_dict["text"] = title_wo_tags
+            temp_dict["created_time"] = post["created_time"]
+            temp_dict["cleaned_text"] = title_wo_tags
+            post["caption"] = temp_dict
 
     post["title"] = title_wo_tags
 
