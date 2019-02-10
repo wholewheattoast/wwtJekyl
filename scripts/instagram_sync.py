@@ -46,7 +46,7 @@ def munge_instagram_images(post, image):
         post["id"],
         image,
         file_extension)
-    get_img_from_url(image_path, clean_url)
+    get_img_from_url(image_path, url)
 
 
 # TODO this is probably a lost cause
