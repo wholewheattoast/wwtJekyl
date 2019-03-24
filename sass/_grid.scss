@@ -87,8 +87,6 @@
   display: grid;
   margin: 0 auto;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
-//   grid-row
 }
 
 .item-header { margin-bottom: 0; }
@@ -190,6 +188,61 @@
   .wrapper > * { margin: 0; }
 }
 
+// TODO is zine best name for this layout?
+// Use this layout for displaying book style pages and spreads
+.zine-grid {
+  width: 100%;
+  margin: 0;
+  /* display: grid;*/
+  column-gap: 0;
+  row-gap: 1rem;
+}
+
+/* no grid support? */
+.zine-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.zine-grid {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 50% 50%;
+  // TODO check this min value
+  grid-auto-rows: minmax(150px, auto);
+}
+
+// TODO revist the flex fallback, not quite right
+.panel {
+  /* needed for the flex layout*/
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1 1 50%;
+}
+
+// spread is two pages, will take up full width of container
+.spread { grid-column: 1 / 3; }
+
+.spread {
+    /* needed for the flex layout*/
+    flex: 1 1 100%;
+}
+
+// We need to set the margin used on flex items to 0 as we have gaps in grid.
+@supports (display: grid) {
+  .zine-grid > * {
+    margin: 0;
+  }
+}
+
+
+// phone-ish
+@media (max-width: 480px) {
+    .zine-grid {
+      grid-template-columns: 1fr;
+      row-gap: .5rem;
+  }
+}
 
 @media (min-width: 640px) {
   .wrapper {
