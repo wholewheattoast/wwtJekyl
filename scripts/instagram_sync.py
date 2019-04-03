@@ -147,7 +147,10 @@ def format_post_title_and_dates(post):
     # tumblr tunc-ed around 48 chars
     # TODO there is an issue here if more then one posts have non unique names
     # in the first 48 chars
-    cleaned_title = clean_string(title_wo_tags).replace(" ", "-").lower()[0:48]
+    cleaned_title = clean_string(title_wo_tags) \
+        .replace(" ", "-").replace(u"\u2018", "").replace(u"\u2019", "") \
+        .replace(u"\u201c", "").replace(u"\u201d", "") \
+        .lower()[0:48]
 
     formated_file_name = "{}-{}.html".format(
         post_converted_dt.strftime('%Y-%m-%d'),
