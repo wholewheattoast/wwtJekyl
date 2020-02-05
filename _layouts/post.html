@@ -12,9 +12,11 @@ layout: base_grid
       </a>
     </h2>
   </header>
+
   <section class="e-content entry-content">
     {{ content }}
   </section>
+
   <footer class="entry-footer">
     {% if page.tags %}
       <ul class="list-unstyled list-inline tags">
@@ -27,24 +29,26 @@ layout: base_grid
       </ul>
     {% endif %}
   </footer>
+
   <nav class="blog-pagination">
-  <!-- 
-    Showing buttons to move to the next and to the previous list of posts (pager buttons).
-  -->
-  {% if paginator.total_pages > 1 %}
-  <ul class="pager list-unstyled">
-      {% if paginator.previous_page %}
-      <li class="previous">
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="prev">&larr; Newer Posts</a>
+    <!-- 
+      Showing buttons to move to the next and to the previous list of posts (pager buttons).
+    -->
+    <ul class="list-inline">
+    {% if page.previous.url %}
+      <li class="prev">
+        <a rel="prev" title="previous post" href="{{page.previous.url}}">
+          &larr; {{page.previous.title}}
+        </a>
       </li>
-      {% endif %}
-      {% if paginator.next_page %}
+    {% endif %}
+    {% if page.next.url %}
       <li class="next">
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="next">Older Posts &rarr;</a>
+        <a rel="next" title="next post" href="{{page.next.url}}">
+          {{page.next.title}} &rarr;
+        </a>
       </li>
-      {% endif %}
-  </ul>
-  {% endif %}
-</nav>
+    {% endif %}
+  </nav>
 
 </article>

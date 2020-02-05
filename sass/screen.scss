@@ -188,9 +188,14 @@ img {
 
 .blog-pagination {
   margin-top: 2rem;
-  ul { text-align: right; }
-  li:first-child { margin-right: 2em; }
-  li:last-of-type { margin-right: 0; }
+  ul {
+      display: flex;
+      padding-left: 0;
+  }
+  .prev,
+  .next { flex: 1; }
+
+  .next { text-align: right; }
   }
 
 
