@@ -1,6 +1,8 @@
-.jekyll-metadata
-*.scssc
 .DS_Store
+.jekyll-metadata
+.nova/
+.tool-versions
+*.scssc
 mint/config/db.php
 _site/*
 _posts/css/screen.css
