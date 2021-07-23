@@ -115,6 +115,7 @@ img {
   a:hover,
   a:focus { text-decoration: underline; }
   
+  // TODO use color variable here
   .slected { color: red; }
 
   ul {
@@ -136,13 +137,14 @@ img {
 .sketchbooks a.sketchbooks,
 .shop a.shop,
 .zines a.zines {
+  // TODO use color variable here
   color: red;
 
   a:hover,
   a:focus { text-decoration: none; }
 }
 
-// is this used anywhere?
+// TODO is this used anywhere?
 .menu li { display: inline; }
 
 // TODO replace main_body with main-body
@@ -233,7 +235,7 @@ article.sketchbooks { margin-top: 1.25rem; }
 .sketchbook-panel p { margin: 0; }
 
 // TODO after updating to grid layout remove this
-// this is for sketchbooks listed as a verticle list rather then grid
+// this is for sketchbooks listed as a vertical list rather then grid
 .sketchbook-list {
   li { margin-bottom: 1.5rem; }
 }
