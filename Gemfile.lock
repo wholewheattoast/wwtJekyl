@@ -48,6 +48,8 @@ GEM
       listen (~> 3.0)
     kramdown (2.3.1)
       rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     liquid (4.0.3)
     listen (3.6.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -73,6 +75,7 @@ DEPENDENCIES
   compass
   jekyll
   jekyll-paginate-v2
+  kramdown-parser-gfm
   rdiscount (= 2.2.0.2)
 
 BUNDLED WITH
