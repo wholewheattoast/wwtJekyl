@@ -40,7 +40,7 @@ plugins:
   - jekyll-paginate-v2
 
 # Conversion
-markdown:           rdiscount
+markdown:           kramdown
 highlighter:        pygments
 lsi:                false
 excerpt_separator:  "\n\n"
