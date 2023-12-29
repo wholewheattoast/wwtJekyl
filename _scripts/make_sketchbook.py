@@ -79,7 +79,7 @@ def make_sorted_image_list(sb_img_dir_path, url_safe_name):
 
 
 def make_pages(sketchbook, spreads_list):
-    """Build pages for sb named `sketchbook`from a 'spreads_list'."""
+    """Build pages for sb named `sketchbook` from a 'spreads_list'."""
     for item in spreads_list:
         spread_name = "{}-{}".format(
             sb_url_safe_name(sketchbook),
@@ -88,6 +88,9 @@ def make_pages(sketchbook, spreads_list):
         file_name = "{}.html".format(spread_name)
 
         item["all-data"] = spreads_list
+        # I want to try and pass in file_name to item to use for stub,
+        # which will be used to create the permalink for use in eleventy
+        item["file-name"] = file_name
 
         write_out_template(
             item,
@@ -120,7 +123,7 @@ def make_index(sketchbook, spreads_list):
         )
         print(".......... Metadata_file_path = {}".format(metadata_file_path))
         with open(metadata_file_path, 'r') as metadata_file:
-            metadata_file_obj = yaml.load(metadata_file)
+            metadata_file_obj = yaml.safe_load(metadata_file)
             sb_dict["metadata"] = metadata_file_obj
             print(".......... Found metadata for {} index".format(
                 sb_url_safe_name(sketchbook)
