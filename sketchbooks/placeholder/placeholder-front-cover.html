@@ -1,41 +1,42 @@
 ---
-layout: base_full_width
+layout: base_grid
 title: Placeholder front-cover
-description: Placeholder front-cover
-stub: sketchbooks/placeholder/index.html
-date: 
+stub: sketchbooks/placeholder/placeholder-front-cover.html
+nav-1: sketchbooks
 ---
 
-<article itemscope itemtype="http://schema.org/VisualArtwork" class="sketchbook_page">
-  <div class="row">
-    <div class="col-md-10">
-      <h2 itemprop="name">Placeholder | front-cover</h2>
-      <p>
-        <img 
-          itemprop="image"
-          src="/image/sketchbooks/placeholder/placeholder-front-cover.jpg" 
-          title="Placeholder front-cover" 
-          alt="" 
-        />
-      </p>
+<article itemscope itemtype="http://schema.org/VisualArtwork" class="sketchbook-page">
+  <h2 itemprop="name">
+    <a class="bare-link" href="/sketchbooks/placeholder/index.html">
+      Placeholder
+    </a> | front-cover
+  </h1>
 
-      <nav>
-        <ul class="list-unstyled sb-nav">
-          <li>
-            <a href="placeholder-back-cover.html" rel="prev" title="prev">prev | back-cover</a>
-          </li>
-          <li>
-            <a href="index.html" title="index">index</a>
-          </li>
-          <li>
-            <a href="placeholder-ifc-001.html" rel="next" title="next">next | ifc-001</a>
-          </li>
-        </ul>
-      </nav>
+  <p>
+    <img
+      srcset="
+        /image/sketchbooks/placeholder/placeholder-front-cover-thumb.jpg 384w,
+        /image/sketchbooks/placeholder/placeholder-front-cover.jpg 720w,
+        /image/sketchbooks/placeholder/placeholder-front-cover@2x.jpg 1440w
+      "
+      itemprop="image"
+      src="/image/sketchbooks/placeholder/placeholder-front-cover.jpg"
+      title="Placeholder front-cover"
+      alt=""
+    />
+  </p>
 
-      <div class="row">
-      </div>
-    </div>
-  </div>
+  <nav>
+    <ul class="list-unstyled sb-nav">
+      <li>
+        <a href="placeholder-back-cover.html" rel="prev" title="prev">prev | back-cover</a>
+      </li>
+      <li>
+        <a href="index.html" title="index">index</a>
+      </li>
+      <li>
+        <a href="placeholder-ifc-001.html" rel="next" title="next">next | ifc-001</a>
+      </li>
+    </ul>
+  </nav>
 </article>
-

@@ -19,12 +19,52 @@ from toast_tools import (
 
 # THE_BIG_LIST is a list of all the sketchbooks that can be automatically re-processed.
 THE_BIG_LIST = [
+    "04-16-04",
+    "24-inch-curved",
+    "a-skeleter",
+    "active-excluder",
+    "baba-lasagna",
+    "boiled-oysters",
+    "brainerd",
+    "bullet-points",
+    "brown-palace",
+    "champ",  # TODO verify
+    "deleter",
+    "dependent-verification",
+    "employee-backpack",
+    "epsilon-one",
+    "egyptian-bun",
+    "flemish-giant",
+    "food-poisson",
+    "green-tea",
+    "griffonnages",
     "garbage-filter",
+    "hospitality",
+    "illiterate-fascist",
+    "kaput-kaput",
+    "mind-jelly",
+    "modern-fireplaces",
+    "mold-car",
     "new-perennials",
     "night-bus",
     "pci",
+    "perdef", 
+    "persian-cucumber",
+    "placeholder",
+    "pointed-stick", # TODO verify
+    "pretextual-business-decisions",
     "pretty-lady",
+    "release-agent",
+    "reset-counter",
+    "rome-sack",
     "sausage-barrier",
+    "smiling-dolphin",
+    "sentient-mennonite",
+    "stork-bites",
+    "supernormal",
+    "t-toad",
+    "unsolicited-material",
+    "weltverlachung",
 ]
 
 # TODO this script should take readable name or url safe name w/o error
@@ -48,6 +88,7 @@ def make_sorted_image_list(sb_img_dir_path, url_safe_name):
     ignored_name_2 = "{}_cover_icon.jpg".format(
         url_safe_name.replace("-", "_")
     )
+    ignored_name_1 = "{}-front-cover-icon.jpg".format(url_safe_name)
 
     ignored_name_list = [".DS_Store", ignored_name_1, ignored_name_2]
 
