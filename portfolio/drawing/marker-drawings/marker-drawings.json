@@ -1,0 +1,3 @@
+{
+    "permalink": "/drawing/marker-drawings/{{ page.fileSlug }}.{{ page.outputFileExtension }}"
+}

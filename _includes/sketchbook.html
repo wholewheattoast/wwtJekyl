@@ -1,0 +1,27 @@
+---
+layout: base_grid
+---
+
+<article class="sketchbook_page">
+  <div class="row">
+    <div class="col-lg-8 col-md-12">
+      {{ content }}
+    </div>
+    <div class="col-md-4 col-lg-3">
+      <h2 property="dc:title">{{ title }}</h2>
+      <nav>
+        <ol class="list-unstyled list-inline">
+          <li>
+            <a class="bare_link" rel="prev" href="{{ prev-page }}">prev</a>
+          </li>
+          <li>
+            <a class="bare_link" rel="contents" href="{{ index-page }}">index</a>
+          </li>
+          <li>
+            <a class="bare_link" rel="next" href="{{ next-page }}">next</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  å</div>
+</article>

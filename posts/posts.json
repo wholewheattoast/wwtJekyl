@@ -1,0 +1,4 @@
+{
+    "tags": "post",
+    "permalink": "{{ page.date | date: '%Y' }}/{{ page.date | date: '%m' }}/{{ page.fileSlug }}.{{ page.outputFileExtension }}"
+}

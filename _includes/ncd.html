@@ -1,0 +1,39 @@
+---
+layout: base_grid
+---
+
+<article resource="{{ page.stub }}">
+  <h2 property="dc:title">{{ title }}</h2>
+
+<nav class="nav_with_index">
+    <ul class="list-unstyled list-inline">
+      {% if index %}
+        <li>
+          <a href="{{ prev }}.html" title="prev" rel="prev">prev</a>
+        </li>
+  
+        <li>
+          <a href="{{ index }}">index</a>
+        </li>
+  
+        <li>
+          <a href="{{ next }}.html" title="next" rel="next">next</a>
+        </li>
+      {% else %}
+        <li>
+          <a href="{{ prev }}.html" title="prev" rel="prev">prev</a>
+        </li>
+  
+        <li>
+          <a href="{{ next }}.html" title="next" rel="next">next</a>
+        </li>
+    {% endif %}
+    </ul>
+  </nav>
+  <p>
+    <span property="http://purl.org/dc/dcmitype/Image">
+      {{ content }}
+    </span>
+  </p>
+
+</article>

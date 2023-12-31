@@ -1,0 +1,26 @@
+{
+  "name": "wwt-eleventy",
+  "version": "1.0.0",
+  "description": "Personal site of shawn eisenach, now built with eleventy",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wholewheattoast/wwt-eleventy.git"
+  },
+  "keywords": [
+    "art",
+    "blog"
+  ],
+  "author": "shawn eisenach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wholewheattoast/wwt-eleventy/issues"
+  },
+  "homepage": "https://github.com/wholewheattoast/wwt-eleventy#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

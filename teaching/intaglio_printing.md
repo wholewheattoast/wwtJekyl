@@ -2,6 +2,7 @@
 layout: base_grid
 title: wwt | Etching
 description: Etching How To
+permalink: teaching/etching.html
 ---
 
 # PRINTING THE INTAGLIO PLATE:

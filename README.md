@@ -1,4 +1,2 @@
-wwtJekyl
-========
-
-anther sloppy attempt to start using my site again
+# wwt-eleventy
+Personal site of shawn eisenach, now built with eleventy.

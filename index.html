@@ -5,7 +5,30 @@ description: personal site of shawn eisenach
 stub: index.html
 date: 2013-11-04
 pagination: 
-  enabled: true
+  data: collections.post
+  size: 5
+  alias: posts
+  reverse: true
 ---
 
-{% include blog_index.ext %}
+{% for post in posts %}
+  <h2>
+    <a href="{{ post.url }}">
+      <time class="dt-published" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+        {{ post.date | date: "%b %d, %Y" }}
+      </time>
+    </a>
+  </h2>
+  {{ post.content }}
+{% endfor %}
+
+<nav class="blog-pagination">
+  <ul class="pager list-unstyled list-inline">
+    {% if pagination.href.next %}
+    <li class="next"><a href={{pagination.href.next}}>Older Posts</a></li>
+    {% endif %}
+    {% if pagination.href.previous %}
+    <li class="prev"><a href={{pagination.href.previous}}>Newer Posts</a></li>
+    {% endif %}
+  </ul>
+</nav>
