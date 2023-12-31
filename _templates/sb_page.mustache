@@ -13,12 +13,19 @@ nav-1: sketchbooks
   </h1>
 
   <p>
-    <img
+    <!-- commenting out srcset for now till i figur out out how to run against sb without srcset images -->
+    <!-- <img
       srcset="
         /image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}-thumb.jpg 384w,
         /image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.jpg 720w,
         /image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}@2x.jpg 1440w
       "
+      itemprop="image"
+      src="/image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.jpg"
+      title="{{sb_display_name}} {{spread}}"
+      alt=""
+    /> -->
+    <img
       itemprop="image"
       src="/image/sketchbooks/{{sb_url_safe_name}}/{{sb_url_safe_name}}-{{spread}}.jpg"
       title="{{sb_display_name}} {{spread}}"
