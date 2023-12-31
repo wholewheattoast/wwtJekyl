@@ -17,10 +17,11 @@ from toast_tools import (
     write_out_template,
 )
 
-
+# THE_BIG_LIST is a list of all the sketchbooks that can be automatically re-processed.
 THE_BIG_LIST = [
     "garbage-filter",
     "new-perennials",
+    "night-bus",
     "pci",
     "pretty-lady",
     "sausage-barrier",
