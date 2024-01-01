@@ -1,0 +1,44 @@
+---
+layout: base_grid
+permalink: /blog/archive.html
+---
+
+<section class="tags">
+  <h2>Tags</h2>
+    <ul class="list-unstyled list-inline">
+      {% assign sorted_tags = collections.tagsList | sort:last %}
+
+      {% for tag in sorted_tags %}
+      {% assign sorted_items = tag | sort:last %}
+      <!-- something about this need to iterate again?
+      Will fix when i have time -->
+      <!-- TODO fix the sorting here -->
+      {% for item in tag %}
+      {% if item != "post" %}
+        {% assign t = item | first %}
+        {% assign posts = item| last %}
+         <li>
+          <a class="bare-link" href="/tag/{{ item }}">
+            {{item | downcase | replace:" ","-" }}
+            <!-- {{t | downcase | replace:" ","-" }} ({{ posts | size }}) -->
+          </a>
+        </li>
+      {% endif %}
+      {% endfor %}
+      {% endfor %}
+    </ul>
+</section>
+
+<section class="archive-posts">
+    <h2>Posts</h2>
+    <ol class="list-unstyled">
+    {% for post in collections["post"] reversed %}
+      <li>
+          <time>{{post.date | date: '%Y-%m-%d'}}</time>
+          <a href="{{ post.url }}">
+            {{ post.data.title }}
+          </a>
+      </li>
+    {% endfor %}
+    </ol>
+</section>

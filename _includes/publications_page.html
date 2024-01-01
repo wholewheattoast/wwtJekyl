@@ -1,0 +1,31 @@
+---
+layout: base_grid
+---
+
+<article resource="{{ stub }}">
+  <h2 property="dc:title">{{ title }}</h2>
+
+  <p><span property="dc:description">{{ description }}</span></p>
+
+  <ul class="list-unstyled">
+      <li><span property="dc:extent">{{ pages }} pages</span></li>
+      <li><span property="dc:medium">{{ media }}</span></li>
+      <li><span property="dc:format">{{ size }} inches</span></li>
+      <li><span property="dc:date">{{ date }}</span></li>
+  </ul>
+
+  {% if buy %}
+  <p>
+    <a href="http://{{ buy }}">Buy</a>
+  </p>
+  {% endif %}
+
+  {%if extra %}
+  <p>
+    {{ extra }}
+  </p>
+  {% endif %}
+
+  {{ content }}
+
+</article>

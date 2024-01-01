@@ -1,0 +1,53 @@
+---
+layout: base_grid
+---
+
+{% assign previousPost = collections.post | getPreviousCollectionItem: page %}
+{% assign nextPost = collections.post | getNextCollectionItem: page %}
+
+<article class="entry h-entry blog-post">
+  <header class="entry-header">
+    <h2>
+      <a class="bare-link permalink u-url" href="{{ page.url }}"
+        title="permalink | {{ title }}">
+        <time class="dt-published" datetime="{{ page.date | date: '%Y-%m-%d' }}">
+          {{ page.date | date: "%b %d, %Y" }}
+        </time>
+      </a>
+    </h2>
+  </header>
+  <section class="e-content entry-content">
+    {{ content }}
+  </section>
+  <footer class="entry-footer">
+    {% if tags %}
+    <ul class="list-inline list-unstyled tags">
+      {% for tag in tags %}
+        {% if tag != "post" %}
+          <li>
+            <a class="tag" href="/tag/{{ tag }}">{{ tag }}</a>
+          </li>
+        {% endif %}
+      {%-endfor %}
+    </ul>
+    {% endif %}
+  </footer>
+
+  <nav class="blog-pagination">
+    <ul class="list-inline">
+      {% if previousPost %}
+      <li class="prev">
+        <a rel="prev" href="{{ previousPost.url }}">
+          {{ previousPost.data.title }}
+        </a>
+      </li>
+      {% endif %}
+      {% if nextPost %}
+      <li class="next">
+        <a rel="next" href="{{ nextPost.url }}">
+          {{ nextPost.data.title }}
+        </a>
+      </li>
+    {% endif %}
+  </nav>
+</article>

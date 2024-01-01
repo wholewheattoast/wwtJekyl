@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head prefix="dc: http://purl.org/dc/terms/">
+    <meta charset="UTF-8" />
+    <title>{{ page.title }}</title>
+    <meta name="dc.title" content="{{ page.title }}" /> 
+    <meta name="dc.creator" content="Shawn Eisenach" />
+    <meta name="dc.description" content="{{ page.description }}" />
+    <meta name="dc.type" content="Text" /> 
+    <meta name="dc.format" content="text/html" /> 
+    <meta name="dc.identifier" content="http://www.wholewheattoast.com/{{ page.stub }}" />
+    <meta name="dc.created" content="{{ page.date }}" />
+    <meta name="dc.language" content="en" />
+
+    <link href='{{site.url}}/feed.xml' rel='alternate' type='application/atom+xml'>
+
+    <link href="http://www.flickr.com/photos/wholewheattoast/" rel="me">
+    <link href="https://github.com/wholewheattoast" rel="me">
+    <link href="http://instagram.com/wholewheattoast" rel="me">
+
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/image/favicon.ico">
+
+    <!-- CSS -->
+    <link href="/css/screen.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="h-card vcard {{page.nav-1}}" prefix="dc: http://purl.org/dc/terms/" id="full_width" data-this-top-nav="{{page.nav-1}}">
+
+    <div class="wrapper">
+      <header class="site-header">
+        <h1>
+          <a class="bare-link" href="/index.html">wholewheattoast</a>
+        </h1>
+      </header>
+      <nav class="site-nav">
+        <ul class="list-unstyled list-inline">
+          <li><a class="bare-link about" href="/about.html">about</a></li>
+          <li><a class="bare-link archive" href="/blog/archive.html">archive</a></li>
+          <li><a class="bare-link portfolio" href="/works.html">portfolio</a></li>
+          <li><a class="bare-link sketchbooks" href="/sketchbooks.html">sketchbooks</a></li>
+          <li><a class="bare-link shop" href="/shop.html">shop</a></li>
+          <li><a class="bare-link zines" href="/publications.html">zines</a></li>
+        </ul>
+      </nav>
+      <main class="site-content">
+        {{ content }}
+      </main>
+      <footer class="site-footer">
+        <ul class="list-unstyled">
+          <li>Shawn Eisenach 2002-2023</li>
+          <li>
+            <a class="bare-link" href="mailto:hello@wholewheattoast.com">
+              hello@wholewheattoast.com
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

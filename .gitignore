@@ -21,3 +21,5 @@ scripts/twitter-sync.ini
 
 .python-version
 .vscode/
+
+node_modules/
