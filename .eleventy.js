@@ -5,6 +5,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("image");
   eleventyConfig.addPassthroughCopy("tumblr_files");
   eleventyConfig.addPassthroughCopy("keybase.txt");
+  
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   eleventyConfig.addFilter("justYear", (dateString) => {
     dateObj = new Date(dateString);
