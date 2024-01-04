@@ -12,14 +12,18 @@ pagination:
 ---
 
 {% for post in posts %}
-  <h2>
-    <a href="{{ post.url }}">
-      <time class="dt-published" datetime="{{ post.date | date: '%Y-%m-%d' }}">
-        {{ post.date | date: "%b %d, %Y" }}
-      </time>
-    </a>
-  </h2>
+<article class="entry h-entry blog-post">
+  <header class="entry-header">
+    <h2>
+      <a href="{{ post.url }}">
+        <time class="dt-published" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+          {{ post.date | date: "%b %d, %Y" }}
+        </time>
+      </a>
+    </h2>
+  </header>
   {{ post.content }}
+</article>
 {% endfor %}
 
 <nav class="blog-pagination">
