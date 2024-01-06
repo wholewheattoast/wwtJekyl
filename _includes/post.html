@@ -34,17 +34,17 @@ layout: base_grid
   </footer>
 
   <nav class="blog-pagination">
-    <ul class="list-inline">
+    <ul class="list-unstyled">
       {% if previousPost %}
       <li class="prev">
-        <a rel="prev" href="{{ previousPost.url }}">
+        <- <a rel="prev" href="{{ previousPost.url }}">
           {{ previousPost.data.title }}
         </a>
       </li>
       {% endif %}
       {% if nextPost %}
       <li class="next">
-        <a rel="next" href="{{ nextPost.url }}">
+        -> <a rel="next" href="{{ nextPost.url }}">
           {{ nextPost.data.title }}
         </a>
       </li>

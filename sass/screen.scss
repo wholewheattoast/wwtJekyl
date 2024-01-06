@@ -188,24 +188,13 @@ img {
   .tags { float: right; }
 }
 
-.blog-pagination {
-  margin-top: 2rem;
-  ul {
-      display: flex;
-      padding-left: 0;
-  }
-  .prev,
-  .next { flex: 1; }
-
-  .next { text-align: right; }
-  }
-
+.blog-pagination { margin-top: 2rem; }
 
 // Blog Archive
 .tags {
   a:focus,
   a:hover { text-decoration: underline; }
-  
+
   .list-inline li {
     margin-right: 1rem;
     white-space: nowrap;
