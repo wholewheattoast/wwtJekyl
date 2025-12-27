@@ -13,6 +13,7 @@ bin/
 lib/
 include/
 *.pyc
+image-processed/
 scripts/tumblr_jekyll.ini
 scripts/instagram-sync.ini
 scripts/twitter-sync.ini

@@ -1,4 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const mustachePlugin = require("@11ty/eleventy-plugin-mustache");
 // consider for update after ver 3
 // const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const Image = require("@11ty/eleventy-img");
@@ -11,6 +12,7 @@ module.exports = function(eleventyConfig) {
       closingSingleTag: "default" // opt-out of <img/>-style XHTML single tags
     }
   });
+  eleventyConfig.addPlugin(mustachePlugin);
   // Only one module.exports per configuration file, please!
   eleventyConfig.addShortcode("image", async function (src, alt, sizes) {
     let metadata = await Image(src, {
