@@ -23,7 +23,7 @@ charset = utf-8
 indent_style = space
 indent_size = 4
 
-[*.{html, md}]
+[*.{css, html, md}]
 indent_style = space
 indent_size = 2
 
