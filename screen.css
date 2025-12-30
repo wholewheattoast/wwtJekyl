@@ -599,7 +599,21 @@ this is for sketchbooks listed as a vertical list rather then grid
 /* Shop */
 form.cart { display: inline-block; }
 
-/* Table stuff */
+/* Table stuff what the hell */
+th,
+td {
+  padding-right: 2rem;
+}
+
+th {
+  border-bottom: solid 2px var(--body-color);
+  font-weight: bold;
+}
+
+tbody tr:first-child td {
+  padding-top: .5rem;
+}
+
 .align-right {
   text-align: right;
 }
