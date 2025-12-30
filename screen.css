@@ -1,0 +1,631 @@
+@layer reset;
+
+/* variables */
+:root {
+/* Colors */
+  --white: #fff;
+  --body-color: #101;
+  --warm-accent-color: #ff2727;
+  --old-link-color: #4b9be9;
+  --link-color: #176abe;
+  --muted: #4c4c4c;
+  --success-green: #29b473;
+  --grandis: #ffd390;
+  
+  /* typography */
+  /* todo do i use this? */
+  --font-size: 18px;
+  /* (font-size * 1.5) */
+  --line-height: 27px;
+  --basline-grid: 6px;
+  --line-height-new: 1.5;
+}
+
+@layer reset {
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+  */
+  
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      /* stylelint-disable-next-line declaration-block-no-shorthand-property-overrides */
+      font: inherit;
+      vertical-align: baseline;
+  }
+  
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+
+  body {
+    line-height: calc(var(--line-height-new) * var(--font-size));
+  }
+
+  ol, ul {
+    list-style: none;
+  }
+  
+  blockquote, q {
+    quotes: none;
+  }
+
+  blockquote::before, blockquote::after,
+  q::before,
+  q::after {
+    content: '';
+    content: none;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+}
+
+/* typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { color: var(--body-color); }
+
+h1 { font-size: 1.5em; }
+
+h2 { font-size: 1.25em; }
+
+h3 { font-size: 1em; }
+
+a,
+a:visited {
+  color: var(--body-color);
+  outline: 0;
+  text-decoration: underline;
+  transition: color .25s;
+}
+
+a:hover,
+a:focus {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+p {
+  max-width: 68ch;
+}
+
+.bare-link,
+.bare-link:hover,
+.bare-link:focus {
+  color: var(--body-color);
+  text-decoration: none;
+}
+
+li { margin-bottom: .5em; }
+
+.list-inline {
+  & li { display: inline; }
+}
+
+.inline-dl dt {
+  clear: left;
+  float: left;
+  margin: 0 2rem 0 0;
+  text-align: right;
+}
+
+.inline-dl dd { margin: 0 0 .5rem; }
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Grid Layout */
+
+.site-header {
+  grid-area: site-header;
+  grid-column: 1 / -1;
+}
+
+.site-nav { grid-area: site-nav; }
+.site-footer { grid-area: site-footer; }
+.site-content { grid-area: site-content; }
+
+.entry-header { grid-area: entry-header; }
+.entry-content { grid-area: entry-content; }
+.entry-pagination { grid-area: entry-pagination; }
+
+ /* handle no grid support */
+.wrapper {
+  margin: 0 auto;
+}
+
+@supports(display: grid ) {
+  .wrapper {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "site-header"
+                         "site-nav"
+                         "site-content"
+                         "site-footer";
+    grid-template-rows: 40px auto auto;
+    margin: 0 auto;
+  }
+}
+
+/* entry grid */
+.entry {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-areas: "entry-header"
+                       "entry-content"
+                       "entry-footer";
+}
+
+@supports( display: grid ) {
+  .entry {
+    display: grid;
+    grid-template-rows: auto;
+    margin: 0 0 1.5em;
+  }
+}
+
+.entry-header,
+.entry-footer {
+  flex: 0 1 100%;
+  grid-column: 1 / -1;
+}
+
+.entry-content {
+  /* needed for the flex layout */
+  flex: 1 1 200px;
+}
+
+/* Use Item Grid for zines, drawings, etc... */
+.item-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@supports(display: grid) {
+  .item-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin: 0 auto;
+  }
+}
+
+.item-header { margin-bottom: 0; }
+
+.item-footer,
+.item-header {
+  flex: 0 1 100%;
+  grid-column: 1 / -1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.item-panel {
+  flex: 1 1 200px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@supports(display: grid ) {
+  .item-grid { margin: 0; }
+
+  .item-header,
+  .item-footer,
+  .item-panel {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .item-panel {
+    grid-auto-rows: minmax(150px, auto);
+  }
+}
+
+.sketchbook-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sketchbook-panel {
+  flex: 1 1 200px;
+  padding-right: 10px;
+}
+
+@supports(display: grid ) {
+  .sketchbook-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, 28%);
+    grid-template-rows: auto;
+    margin: 0;
+  }
+
+  .sketchbook-panel { padding-right: 0; }
+}
+
+.sketchbook-header,
+.sketchbook-footer {
+  flex: 0 1 100%;
+  grid-column: 1 / -1;
+}
+
+.shop-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shop-panel {
+  flex: 1 1 200px;
+  padding-right: 10px;
+}
+
+@supports(display: grid) {
+  .shop-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, 48%);
+    grid-template-rows: auto;
+    margin: 0;
+  }
+
+  .shop-panel { padding-right: 0; }
+}
+
+.shop-header,
+.shop-footer {
+  flex: 0 1 100%;
+  grid-column: 1 / -1;
+}
+
+@supports (display: grid) {
+  .wrapper > * { margin: 0; }
+}
+
+@media (width >= 640px) {
+  .wrapper {
+    grid-template-areas: "site-header"
+                         "site-nav"
+                         "site-content"
+                         "site-footer";
+    grid-template-columns: auto;
+    grid-template-rows: 40px auto auto;
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  /* TODO should i rename this something like "sketchbook-covers-grid"? */
+  .sketchbook-grid {
+    grid-template-columns: repeat(auto-fill, 20%);
+}
+
+  .item-grid,
+  .shop-grid {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+}
+
+@media (width >= 800px) {
+  .wrapper { max-width: 60%; }
+
+  .sketchbook-grid {
+    grid-template-columns: repeat(auto-fill, 100px);
+  }
+}
+
+@media (width >= 640px) and (width <= 799px) {
+  .wrapper { max-width: 80%; }
+}
+
+/* Base Styles */
+html { font: 1em/1.5 helvetica, sans-serif; }
+
+body {
+  background-color: var(--white);
+  color: var(--body-color);
+  font-feature-settings: 'kern';
+  font-size: var(--font-size);
+  margin-top: 0;
+  text-rendering: optimizelegibility;
+}
+
+/* set up vertical spacing
+via http://csswizardry.com/2012/06/single-direction-margin-declarations/ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ul,
+ol,
+dd,
+p,
+figure,
+pre,
+table,
+fieldset,
+hr { margin-bottom: 1.5rem; }
+
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* color */
+.accent { color: $warm-accent-color; }
+
+/* buttons */
+.btn {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn-paypall { background-color: var(--grandis); }
+.btn-paypall:hover { color: var(--body-color); }
+
+/* helpers */
+/* todo can i set up a rhythm with a base variable and calc? */
+.center-text { text-align: center; }
+.margin-top { margin-top: 1.5rem; }
+.margin-top-more { margin-top: 3rem; }
+.margin-bottom { margin-bottom: 1.5rem; }
+.margin-bottom-more { margin-bottom: 3rem; }
+.tight { margin: 0; }
+
+.sr-only {
+  /* from https://webaim.org/techniques/css/invisiblecontent/ */
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+/* site header */
+.site-header {
+  & a { color: var(--body-color); }
+
+  & h1 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  & .logo {
+    display: inline;
+    width: 100px;
+  }
+}
+
+/* top nav */
+.site-nav {
+  margin-bottom: 1.25em;
+  
+  a:hover,
+  a:focus { text-decoration: underline; }
+
+  .slected { color: var(--warm-accent-color); }
+
+  & ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+
+  & li {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  & li:last-child { margin-right: 0; }
+}
+
+/* dumb 2003 css nav highlighting shit
+TODO could use data attributes for this
+TODO do i even still use this? */
+.about a.about,
+.archive a.archive,
+.portfolio a.portfolio,
+.sketchbooks a.sketchbooks,
+.shop a.shop,
+.zines a.zines {
+  &:hover,
+  &:focus { text-decoration: none; }
+  
+  border-bottom: 2px solid var(--warm-accent-color);
+}
+
+/* Entries */
+/* TODO i'm leaning towards using the term entry rather then post */
+.entry,
+.post {
+  font-size: 1.25rem;
+}
+
+.blog-post {
+  max-width: 640px;
+  
+  & h2 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  p:first-child { margin-top: 0; }
+}
+
+.entry-header {
+  h1 { margin-bottom: 8px; }
+  
+  .permalink {
+    a:hover,
+    a:focus {
+      border-bottom: solid;
+      text-decoration: none;
+    }
+  }
+}
+
+.entry-footer {
+  ul { margin-top: 0; }
+  .tags { float: right; }
+}
+
+.blog-pagination { margin-top: 2rem; }
+
+/* Blog Archive */
+.tags {
+  a:focus,
+  a:hover { text-decoration: underline; }
+
+  .list-inline li {
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+}
+
+.archive-posts {
+  a:focus,
+  a:hover { text-decoration: underline; }
+
+  li {
+    height: var(--line-height);
+    overflow: hidden;
+    time { margin-right: 1rem; }
+  }
+}
+
+/* Tags */
+.tag::after { content: ','; }
+.tag:last-of-type::after { content: ''; }
+
+/* Sketchbooks */
+.sketchbook-panel p { margin: 0; }
+
+/* TODO after updating to grid layout remove this
+this is for sketchbooks listed as a vertical list rather then grid
+- sketchbooks/cave3/index.html
+- sketchbooks/12-27-03/index.html
+*/
+.sketchbook-list {
+  li { margin-bottom: 1.5rem; }
+}
+
+.sb-index {
+  h2 { text-transform: capitalize; }
+}
+
+.sketchbook-page {
+  h2 {
+    font-size: 16px;
+    text-transform: capitalize;
+  }
+
+  h3 { font-size: 1em; }
+
+  .inline-dl {
+    font-size: .85rem;
+    dd { margin: 0 0 .5rem 6rem; }
+
+    dt {
+      font-weight: normal;
+      margin: 0;
+      width: 2em;
+    }
+  }
+}
+
+.sb-nav {
+  position: fixed;
+  right: 2em;
+  top: calc(50% - 4em);
+}
+
+.portfolio {
+  & .color-block {
+    font-size: 1.5rem;
+
+    li { height: 8em; }
+
+    span {
+      display: inline-block;
+      margin: 1.5em 2em;
+      padding: 1em;
+    }
+  }
+
+  h3 { margin-bottom: 0; }
+
+  ul,
+  ol { margin-top: 0; }
+}
+
+/* Shop */
+form.cart { display: inline-block; }
+
+/* Table stuff */
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+table {
+  border-spacing: 6px;
+}
+
+/* Media Querries */
+
+@media (width >= 640px) {
+  .about,
+  .posts {
+    p { font-size: 1.375rem; }
+  }
+}
+
+@media (width <= 980px) {
+  .sb-nav {
+    position: relative;
+    right: 0;
+    text-align: right;
+    top: 0;
+  }
+}

@@ -36,6 +36,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLiquidFilter("dateToRfc3339", pluginRss.dateToRfc3339);
   eleventyConfig.addLiquidFilter("dateToRfc822", pluginRss.dateToRfc822);
 
+  eleventyConfig.addPassthroughCopy("screen.css");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("image");
   eleventyConfig.addPassthroughCopy("image-processed");

@@ -22,11 +22,13 @@
   "homepage": "https://github.com/wholewheattoast/wwt-eleventy#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "@11ty/eleventy-plugin-rss": "^1.2.0"
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "stylelint-config-standard": "^39.0.1"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-mustache": "^1.0.1",
-    "@11ty/eleventy-upgrade-help": "^3.0.2"
+    "@11ty/eleventy-upgrade-help": "^3.0.2",
+    "stylelint": "^16.26.1"
   }
 }
