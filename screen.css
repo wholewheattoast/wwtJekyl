@@ -628,6 +628,22 @@ table {
 
 /* Media Querries */
 
+@media (width < 640px) {
+  /* keep img's full width on narrow viewports
+  trying this way since many posts have img nested in p */
+  /* TODO might be easier to set a margin then unset for `p:has(img)` ? */
+  & blockquote:not(:has(img)),
+  & h1:not(:has(img)),
+  & h2:not(:has(img)),
+  & h3:not(:has(img)),
+  & ol:not(:has(img)),
+  & ul:not(:has(img)),
+  & p:not(:has(img)) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 @media (width >= 640px) {
   .about,
   .posts {
