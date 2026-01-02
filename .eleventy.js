@@ -1,6 +1,6 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const mustachePlugin = require("@11ty/eleventy-plugin-mustache");
-// consider for update after ver 3
+// consider the updated plugin and transform at some point in the future
 // const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const Image = require("@11ty/eleventy-img");
 

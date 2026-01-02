@@ -109,6 +109,7 @@ a:focus {
 }
 
 p {
+  margin-top: 1.25rem;
   max-width: 68ch;
 }
 

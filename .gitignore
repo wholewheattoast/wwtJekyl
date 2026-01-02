@@ -24,3 +24,6 @@ scripts/twitter-sync.ini
 .vscode/
 
 node_modules/
+
+.cache/
+_posts/
