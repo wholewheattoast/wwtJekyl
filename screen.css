@@ -9,6 +9,7 @@
   --old-link-color: #4b9be9;
   --link-color: #176abe;
   --muted: #4c4c4c;
+  --silver: #ccc;
   --success-green: #29b473;
   --grandis: #ffd390;
   
@@ -97,7 +98,7 @@ h3 { font-size: 1em; }
 
 a,
 a:visited {
-  color: var(--body-color);
+  color: var(--link-color);
   outline: 0;
   text-decoration: underline;
   transition: color .25s;
@@ -112,6 +113,19 @@ a:focus {
 p {
   margin-top: 1.25rem;
   max-width: 68ch;
+}
+
+q {
+  font-style: italic;
+  &:before,
+  &:after {
+    content: '"';
+  }
+}
+
+cite {
+  font-weight: bold;
+  font-size: 1.125rem;
 }
 
 .bare-link,
@@ -441,6 +455,10 @@ img {
 .site-nav {
   margin-bottom: 1.25em;
   
+  & a {
+    color: var(--body-color);
+  }
+  
   a:hover,
   a:focus { text-decoration: underline; }
 
@@ -615,6 +633,11 @@ th {
 tbody tr:first-child td {
   padding-top: .5rem;
 }
+
+/* not sure about this */
+/* tr {
+  border-bottom: 1px solid var(--silver);
+} */
 
 .align-right {
   text-align: right;
