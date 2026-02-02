@@ -620,6 +620,10 @@ this is for sketchbooks listed as a vertical list rather then grid
 form.cart { display: inline-block; }
 
 /* Table stuff what the hell */
+table {
+  border-spacing: 6px;
+}
+
 th,
 td {
   padding-right: 2rem;
@@ -647,8 +651,8 @@ tbody tr:first-child td {
   text-align: left;
 }
 
-table {
-  border-spacing: 6px;
+.no-wrap {
+  text-wrap: nowrap;
 }
 
 /* Media Querries */
