@@ -29,6 +29,7 @@
     "@11ty/eleventy-img": "^4.0.2",
     "@11ty/eleventy-plugin-mustache": "^1.0.1",
     "@11ty/eleventy-upgrade-help": "^3.0.2",
+    "sharp": "^0.34.5",
     "stylelint": "^16.26.1"
   }
 }
